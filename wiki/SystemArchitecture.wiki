@@ -5,9 +5,8 @@
 Explain existing programs from client (Tyler)
 
 
-= Programs on Desktop PC =
+- Programs on Desktop PC -
 
-Programs on Desktop PC
   * *Remote Servo Controller* 
   * *ViLAN Explorer*
   * *ViLAN Explorer2*

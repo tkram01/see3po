@@ -13,8 +13,13 @@ Explain existing programs from client (Tyler)
 
 = DLLs on Desktop PC =
 
+  * *RobotHost* 
+  * *RobotCommands*
 
 = Programs on Embedded System (WinCE) =
 
+  * *LocalBrain* 
 
 = DLLs on Embedded System (WinCE) =
+  * *ViLAN Camera* 
+  * _*RobotClient*_ 

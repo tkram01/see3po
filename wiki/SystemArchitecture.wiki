@@ -1,0 +1,14 @@
+#System Architecture (Description of Programs)
+
+= Introduction =
+
+Explain existing programs from client (Tyler)
+
+
+= Details =
+
+Programs on Desktop PC
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+  

@@ -1,0 +1,10 @@
+bin\Debug\LocalBrain.exe
+bin\Debug\LocalBrain.pdb
+bin\Debug\RobotCommands.dll
+bin\Debug\RobotCommands.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\LocalBrain.MainForm.resources
+obj\Debug\LocalBrain.Properties.Resources.resources
+obj\Debug\LocalBrain.csproj.GenerateResource.Cache
+obj\Debug\LocalBrain.exe
+obj\Debug\LocalBrain.pdb

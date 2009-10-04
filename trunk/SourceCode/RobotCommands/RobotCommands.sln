@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCommands", "RobotCommands.csproj", "{5D476A24-BFFB-4679-B934-AB1A43135BEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D476A24-BFFB-4679-B934-AB1A43135BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D476A24-BFFB-4679-B934-AB1A43135BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D476A24-BFFB-4679-B934-AB1A43135BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D476A24-BFFB-4679-B934-AB1A43135BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

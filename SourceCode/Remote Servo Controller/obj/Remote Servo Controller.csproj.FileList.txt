@@ -1,0 +1,11 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Remote_Servo_Controller.MainForm.resources
+obj\Debug\Remote_Servo_Controller.Properties.Resources.resources
+obj\Debug\Remote Servo Controller.csproj.GenerateResource.Cache
+bin\Debug\Remote Servo Controller.exe
+bin\Debug\Remote Servo Controller.pdb
+obj\Debug\Remote Servo Controller.exe
+obj\Debug\Remote Servo Controller.pdb
+bin\Debug\RobotCommands.dll
+bin\Debug\RobotCommands.pdb
+obj\Debug\Remote_Servo_Controller.ServoPositionDialog.resources

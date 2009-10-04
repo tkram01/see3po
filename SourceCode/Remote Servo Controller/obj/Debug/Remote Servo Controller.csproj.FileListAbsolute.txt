@@ -1,0 +1,13 @@
+C:\Data\Projects\ViLAN\Remote Servo Controller\obj\Debug\Remote Servo Controller.exe
+C:\Data\Projects\ViLAN\Remote Servo Controller\obj\Debug\Remote Servo Controller.pdb
+C:\Data\Projects\ViLAN\Remote Servo Controller\bin\Debug\Remote Servo Controller.exe
+C:\Data\Projects\ViLAN\Remote Servo Controller\bin\Debug\Remote Servo Controller.pdb
+C:\Data\Projects\ViLAN\Remote Servo Controller\bin\Debug\RobotCommands.dll
+C:\Data\Projects\ViLAN\Remote Servo Controller\bin\Debug\RobotCommands.pdb
+C:\Data\Projects\ViLAN\Remote Servo Controller\obj\Debug\ResolveAssemblyReference.cache
+C:\Data\Projects\ViLAN\Remote Servo Controller\obj\Debug\Remote_Servo_Controller.ServoPositionDialog.resources
+C:\Data\Projects\ViLAN\Remote Servo Controller\obj\Debug\Remote_Servo_Controller.MainForm.resources
+C:\Data\Projects\ViLAN\Remote Servo Controller\obj\Debug\Remote_Servo_Controller.Properties.Resources.resources
+C:\Data\Projects\ViLAN\Remote Servo Controller\obj\Debug\Remote Servo Controller.csproj.GenerateResource.Cache
+C:\Users\tyler\Desktop\ViLANN\Remote Servo Controller\obj\Debug\Remote Servo Controller.exe
+C:\Users\tyler\Desktop\ViLANN\Remote Servo Controller\obj\Debug\Remote Servo Controller.pdb

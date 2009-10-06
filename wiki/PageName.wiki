@@ -11,3 +11,11 @@ In particular, where is the schedule? Getting one up is a top priority, so you c
 _Reply from the team:_
 
 ----
+
+== October 6 ==
+
+You are misusing the Downloads page in Google code. It's for project releases (code and documentation) for the end user, not for internal documents. Make proper wiki pages for those.
+
+_Reply from the team:_
+
+----

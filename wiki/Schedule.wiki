@@ -1,22 +1,24 @@
 = Schedule for the See3PO project =
 
-==October== 
+===October=== 
+  *  9 - All team members have been trained by Tyler
   *  8 - Project Roles Assigned
-  * 11 - Two Narratives completed [], Mission Statement Completed[]
+  * 11 - Two Narratives completed [2 writers, 2 reviewers] 
+         Mission Statement Completed[2 writers, 2 reviewers]
   * 18 - Two Use-Cases completed
+  * 31 - Tyler's code is successfully running
+===November===
 
-*November*
+===December===
 
-*December*
+===January===
 
-*January*
+===February===
 
-*February*
+===March===
 
-*March*
+===April===
 
-*April*
-
-*May*
+===May===
 
   * 21 - Deliverable Due

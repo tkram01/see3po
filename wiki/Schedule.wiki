@@ -1,6 +1,8 @@
-= A Project Schedule =
+= A Project Schedule for the See3PO project =
 
 *October* 
+  *11 - Two Narratives completed [], Mission Statement Completed[]
+  *18 - Two Use-Cases completed
 
 *November*
 

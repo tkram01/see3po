@@ -1,4 +1,5 @@
 #summary Project-wide duties
+#labels Featured
 
 
 = Short-Term Tasks =
@@ -19,5 +20,3 @@
   * SVN 
   * Weekly Meeting  
   * Wiki 
-
-

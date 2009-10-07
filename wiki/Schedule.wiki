@@ -1,4 +1,4 @@
-#labels Featured
+#labels Featured,Phase-Implementation
 = Schedule for the See3PO project =
 
 ===October=== 

@@ -3,28 +3,29 @@
 
 = Short-Term Tasks =
 
-Vision Statement
-    Write  []
-    Review [all]
 
-Short Stories[]
+* Vision Statement
 
-Use Cases[]
+ #  Write 
+
+ #  Review 
+
+* Short Stories
+
+* Use Cases
 
 
 
 = Long-Term Duties =
 
 
-Specification []
+* Specification 
 
-SVN [] 
+* SVN 
 
-Weekly Meeting  [] 
+* Weekly Meeting  
 
-Wiki []
-
-
+* Wiki 
 
 
 

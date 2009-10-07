@@ -1,4 +1,4 @@
-#System Architecture (Description of Programs)
+#summary System Architecture (Description of Programs)
 
 = Introduction =
 

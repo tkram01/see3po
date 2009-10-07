@@ -1,0 +1,30 @@
+#summary The Vision and Requirements of See3PO
+#labels Phase-Design
+
+= Vision =
+
+Add vision here.
+
+
+= Requirements=
+
+
+=== Camera Interface ===
+  * The camera must be made to interface directly with the robot's on-board computer
+
+=== Wireless Image Transmission (Robot to PC) ===
+  * The robot will gather images from the on-board camera
+  * [optional] the on-board computer will compress the images for transmission
+  * The robot will transmit to the desktop PC
+
+=== Wireless Control Transmission (PC to Robot) ===
+  * The PC will must transmit instructions in such as way that poor connections will not result in catastrophe. 
+
+
+=== Floor Plan Processing === 
+  * Using some representation of a floor plan, possibly an image and a scale, the central computer must create a model of the floor for use by the path-finding algorithm. 
+
+=== Path-finding ===
+  * Using the data from the floor plan and visual data from the robot, the central computer will design a route from the robot's current location to the destination
+  * Path-finding must auto-correct based on new visual data from the robot
+  * [optional] Path-finding must account for discrepancies between the floor plan and reality, such as obstacles. 

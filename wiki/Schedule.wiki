@@ -1,8 +1,8 @@
 = A Project Schedule for the See3PO project =
 
 *October* 
-  *11 - Two Narratives completed [], Mission Statement Completed[]
-  *18 - Two Use-Cases completed
+  * 11 - Two Narratives completed [], Mission Statement Completed[]
+  * 18 - Two Use-Cases completed
 
 *November*
 
@@ -18,4 +18,4 @@
 
 *May*
 
-  *21 - Deliverable Due
+  * 21 - Deliverable Due

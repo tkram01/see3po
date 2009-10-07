@@ -3,13 +3,13 @@
 
 ===October=== 
 
-|| *Date* || *Task* || *Status* ||
-||  9 || All team members have been trained by Tyler|| ||
-||  8 ||Project Roles Assigned || ||
-|| 11 ||Two Narratives completed [ 2 writers, 2 reviewers] || ||
-|| ||  Mission Statement Completed [ 2 writers, 2 reviewers]|| ||
-|| 18 || Two Use-Cases completed || ||
-|| 31 || Tyler's code is successfully running|| ||
+|| *Task* || *Due* || *Status* || *Taken By*||
+|| All team members have been trained by Tyler || 10/09/09 || 2/5 || All ||
+|| Project Roles Assigned || 10/09/09 || || ||
+|| Two Narratives completed [ 2 writers, 2 reviewers ] ||  10/11/09 || || ||
+|| Mission Statement Completed [ 2 writers, 2 reviewers]|| 10/11/09 || || ||
+|| Two Use-Cases completed || 10/18/09 || || ||
+|| Tyler's code is successfully running || 10/31/09 || || All ||
 
 ===November===
 
@@ -24,6 +24,6 @@
 ===April===
 
 ===May===
-|| *Date* || *Task* || *Status* ||
-|| 21 || Deliverable Due || ||
+|| *Task* ||*Due* ||*Status* || *Taken By*||
+|| Deliverable Due || 05/21/09||||||
  

@@ -1,14 +1,13 @@
-#summary One-sentence summary of this page.
-
 = A Project Schedule =
-October 
-November
-December
-January
-February
-March
-April
-May
+
+* *October* 
+* *November*
+* *December*
+* *January*
+* *February*
+* *March*
+* *April*
+* *May*
   21 - Deliverable Due
 
 

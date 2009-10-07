@@ -1,7 +1,7 @@
-Team Meeting
-	Date: 10/1/2009
-	Time: 4:00 PM
-	Location: M-1-612
+=Team Meeting=
+	* Date: 10/1/2009
+	* Time: 4:00 PM
+	* Location: M-1-612
 Meeting called by:	Team	Type of meeting:	Kick off meeting
 Facilitator:	Frank	Note taker:	Jacky
 Timekeeper:	None		

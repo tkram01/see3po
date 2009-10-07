@@ -24,14 +24,14 @@ During the last meeting with Tyler, Nick and Debarati obtained the basic idea of
 3.	Second Meeting with Tyler on next Wednesday. 
 4.	Might have to divide into sub-group depends on which parts we will be doing.
 5.	The end-of-month goal is that we have to be able to handle all the code and configurations, and make the robot works without Tyler.
-||Action items		||Person responsible	||Deadline||
+||*Action items*||*Person responsible*	||*Deadline*||
 	||Install Visio Studio 2008 on your PC	||All	||10/04/2009|| 
-	Gain access to Vision Lab (where the robot is)	All	10/05/2009
-	Schedule a time with Tyler on next Wednesday	Frank	10/06/2009
-	Setup google code and group	Frank	10/03/2009
-	Upload the source code to google code	Nick	10/05/2009
-	Send Frank google ID in order to setup permission	Hao Wu	10/03/2009
-	Create accounts on testing PC for team members 	Nick	10/04/2009
+	||Gain access to Vision Lab (where the robot is)	||All	||10/05/2009||
+	||Schedule a time with Tyler on next Wednesday	||Frank	||10/06/2009||
+	||Setup google code and group	||Frank	||10/03/2009||
+	||Upload the source code to google code	||Nick	||10/05/2009||
+	||Send Frank google ID in order to setup permission ||Hao Wu	||10/03/2009||
+	||Create accounts on testing PC for team members 	||Nick	||10/04/2009||
 Other Information
 	
 1.	Debarati will be in charge of the documentation for our project (tech writer role).

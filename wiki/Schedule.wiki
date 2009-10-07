@@ -4,7 +4,11 @@
 ===October=== 
 
 || *Task* || *Due* || *Status* || *Taken By*||
-|| All team members have been trained by Tyler || 10/09/09 || 2/5 || All ||
+|| Decide Team Name || 10/02/09 || Complete || All ||
+|| Create Google Code || 10/02/09 || Complete || Frank ||
+|| Project Specifications || 10/02/09 || Complete || Debarati ||
+|| Post Minutes from Meeting 1 || 10/02/09 || Complete || Jackie ||
+|| Post Code from Tyler ||  10/02/09 || Complete || Nick ||
 || Project Roles Assigned || 10/09/09 || || ||
 || Two Narratives completed [ 2 writers, 2 reviewers ] ||  10/11/09 || || ||
 || Mission Statement Completed [ 2 writers, 2 reviewers]|| 10/11/09 || || ||

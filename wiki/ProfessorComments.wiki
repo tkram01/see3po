@@ -1,0 +1,21 @@
+= Comments and questions from the Professor =
+
+----
+
+== October 6 ==
+
+This Google code wiki shows almost no recent progress at all. There is in fact quite a bit visible at the Google group. That is a much better place to find it than in email among team members, but not where it really belongs, which is _here_ on the wiki.
+
+In particular, where is the schedule? Getting one up is a top priority, so you can see whether you are on track.
+
+_Reply from the team:_
+
+----
+
+== October 6 ==
+
+You are misusing the Downloads page in Google code. It's for project releases (code and documentation) for the end user, not for internal documents. Make proper wiki pages for those.
+
+_Reply from the team:_
+
+----

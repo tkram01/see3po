@@ -1,4 +1,3 @@
-#summary Comments and questions from the Professor
 = Comments and questions from the Professor =
 
 ----

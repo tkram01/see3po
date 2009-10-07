@@ -4,29 +4,20 @@
 = Short-Term Tasks =
 
 
-* Vision Statement
-
- #  Write 
-
- #  Review 
-
-* Short Stories
-
-* Use Cases
+  * Vision Statement
+    #  Write 
+    #  Review 
+  * Short Stories
+  * Use Cases
 
 
 
 = Long-Term Duties =
 
 
-* Specification 
-
-* SVN 
-
-* Weekly Meeting  
-
-* Wiki 
-
-
+  * Specification 
+  * SVN 
+  * Weekly Meeting  
+  * Wiki 
 
 

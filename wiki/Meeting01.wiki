@@ -13,9 +13,9 @@
 ==Minutes==
 
 ===Agenda item:===	
-# Team name.
-# Schedule
-# End-of-month goal.
+  # Team name.
+  # Schedule
+  # End-of-month goal.
 ===Discussion:===	
 During the last meeting with Tyler, Nick and Debarati obtained the basic idea of how the robot system designed and work, as well as the source code. But, we still not 100% sure the design and whether we got the entire code. Also, we need to know what parts of the project that Tyler wants us to work on. Nick might have some documentation about Tyler’s requirements, he will send us later. Other than that, we also have to ready for the project, i.e. set up the environment on our PC and familiar with the setups and installations. Hope we all can really know the whole setup all installation or even have to compile the code at the end of this month.
 ===Conclusions:	===

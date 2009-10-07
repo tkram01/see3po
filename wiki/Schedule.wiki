@@ -1,19 +1,11 @@
 = A Project Schedule =
 
-* *October* 
-* *November*
-* *December*
-* *January*
-* *February*
-* *March*
-* *April*
-* *May*
-  21 - Deliverable Due
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+*October* 
+*November*
+*December*
+*January*
+*February*
+*March*
+*April*
+*May*
+  *21 - Deliverable Due

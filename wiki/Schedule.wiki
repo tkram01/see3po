@@ -1,6 +1,7 @@
-= A Project Schedule for the See3PO project =
+= Schedule for the See3PO project =
 
-*October* 
+==October== 
+  *  8 - Project Roles Assigned
   * 11 - Two Narratives completed [], Mission Statement Completed[]
   * 18 - Two Use-Cases completed
 

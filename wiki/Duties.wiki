@@ -1,0 +1,31 @@
+#summary Project-wide duties
+
+
+= Short-Term Tasks =
+
+Vision Statement
+    Write  []
+    Review [all]
+
+Short Stories[]
+
+Use Cases[]
+
+
+
+= Long-Term Duties =
+
+
+Specification []
+
+SVN [] 
+
+Weekly Meeting  [] 
+
+Wiki []
+
+
+
+
+
+

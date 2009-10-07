@@ -3,7 +3,7 @@
 = Introduction =
 
 Explain existing programs from client (Tyler)<br>
-<img alt="" src="http://see3po.googlegroups.com/web/system config.jpg" width="400" height="198" />
+<img alt="" src="http://see3po.googlegroups.com/web/system config.jpg" width="857" height="453" />
 
 = Programs on Desktop PC =
 

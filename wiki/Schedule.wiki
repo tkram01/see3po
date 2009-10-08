@@ -25,12 +25,13 @@
 
 ===November===
 || *Task* 												|| *Due* 		|| *Status* 	|| *Taken By*	||
-|| Pathfinding Complete									|| 01/01/2010	|| 				|| Debarati, Nick, Frank ||
-|| Robot fixes complete									|| 01/01/2010	|| 				|| Jacky, Hao ||
+|| Emulator Complete									|| 11/15/2009	|| 				||  			||
+|| UI floorplan handling Complete						|| 11/15/2009	|| 				||  			||
+
 ===December===
 
 ===January===
-|| *Task* 												|| *Due* 		|| *Status* 	|| *Taken By*	||
+|| *Task* 											|| *Due* 		|| *Status* 	|| *Taken By*	||
 || *Pathfinding Complete*							|| 01/01/2010	|| 				|| Debarati, Nick, Frank ||
 || *Robot fixes complete*							|| 01/01/2010	|| 				|| Jacky, Hao 	||
 ===February===
@@ -41,5 +42,5 @@
 
 ===May===
 || *Task* ||*Due* ||*Status* || *Taken By*||
-|| Deliverable Due || 05/21/09||||||
+|| *Deliverable Due* || 05/21/09||||||
  

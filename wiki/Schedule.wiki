@@ -3,29 +3,36 @@
 
 ===October=== 
 
-|| *Task* || *Due* || *Status* || *Taken By*||
-|| Install Visio Studio 2008 on your PC	||10/04/2009|| Complete || All ||
-|| Gain access to Vision Lab ||10/05/2009|| Waiting for response || All||
-|| Schedule a time with Tyler on next Wednesday ||10/06/2009|| Complete || Frank ||
-|| Send Frank google ID in order to setup permission ||10/03/2009|| Complete || Hao ||
-|| Create accounts on testing PC for team members ||10/04/2009|| Complete ||Nick ||
-|| Decide Team Name || 10/05/09 || Complete || All ||
-|| Create Google Code || 10/05/09 || Complete || Frank ||
-|| Create and post Project Specifications || 10/05/09 || Complete || Debarati ||
-|| Post Minutes from Meeting 1 || 10/05/09 || Complete || Jackie ||
-|| Post Code from Tyler ||  10/05/09 || Complete || Nick ||
-|| Project Roles Assigned || 10/09/09 || || ||
-|| Two Narratives completed [ 2 writers, 2 reviewers ] ||  10/11/09 || || ||
-|| Mission Statement Completed [ 2 writers, 2 reviewers]|| 10/11/09 || || ||
-|| Two Use-Cases completed || 10/18/09 || || ||
-|| *Tyler's code is successfully running* || 10/31/09 || || All ||
+|| *Task* 												|| *Due* 		|| *Status* 	|| *Taken By*	||
+|| Install Visio Studio 2008 on your PC					|| 10/04/2009	|| Complete		|| All 			||
+|| Gain access to Vision Lab 							|| 10/05/2009	|| 				|| All			||
+|| Schedule a time with Tyler on next Wednesday 		|| 10/06/2009	|| Complete 	|| Frank 		||
+|| Send Frank google ID in order to setup permission	|| 10/03/2009	|| Complete 	|| Hao 			||
+|| Create accounts on testing PC for team members 		|| 10/04/2009	|| Complete 	||Nick 			||
+|| Decide Team Name 									|| 10/05/2009 	|| Complete 	|| All 			||
+|| Create Google Code 									|| 10/05/2009 	|| Complete 	|| Frank 		||
+|| Create and post Project Specifications 				|| 10/05/2009 	|| Complete 	|| Debarati 	||
+|| Post Minutes from Meeting 1 							|| 10/05/2009	|| Complete 	|| Jackie 		||
+|| Post Code from Tyler 								|| 10/05/2009 	|| Complete 	|| Nick 		||
+|| Post Minutes from Boss Meeting 2 					|| 10/08/2009	|| Complete 	|| Jackie 		||
+|| Project Roles Assigned 								|| 10/09/2009 	|| 				|| 				||
+|| Post Minutes from Team Meeting 2 					|| 10/09/2009	|| 			 	|| Jackie 		||
+|| Personal Wikis Completed					|| 10/11/2009	|| 			 	|| All	 		||
+|| Two Narratives completed _2 writers, 2 reviewers_	|| 10/11/2009 	|| 				|| 				||
+|| Mission Statement Completed _2 writers, 2 reviewers_	|| 10/11/2009 	|| 				|| 				||
+|| Two Use-Cases completed 								|| 10/18/2009 	|| 				|| 				||
+|| *Tyler's code is successfully running* 				|| 10/31/2009 	|| 				|| All 			||
 
 ===November===
-
+|| *Task* 												|| *Due* 		|| *Status* 	|| *Taken By*	||
+|| Pathfinding Complete									|| 01/01/2010	|| 				|| Debarati, Nick, Frank ||
+|| Robot fixes complete									|| 01/01/2010	|| 				|| Jacky, Hao ||
 ===December===
 
 ===January===
-
+|| *Task* 												|| *Due* 		|| *Status* 	|| *Taken By*	||
+|| *Pathfinding Complete*							|| 01/01/2010	|| 				|| Debarati, Nick, Frank ||
+|| *Robot fixes complete*							|| 01/01/2010	|| 				|| Jacky, Hao 	||
 ===February===
 
 ===March===

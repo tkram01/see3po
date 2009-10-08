@@ -1,0 +1,13 @@
+#summary A list of websites that are important to the project
+
+=== Basic Micro ===
+http://basicmicro.com/ViewPage.aspx?ContentCode=d_basicatompro <br>
+The Basic Atom Pro is the microprocessor used in the robot. This page provides documentation and  software. 
+
+=== Point Grey ===
+http://www.ptgrey.com/products/dragonfly2/index.asp <br>
+The camera(s) that will be used by the robot. 
+
+=== Lynx Motion ===
+http://www.lynxmotion.com/ <br>
+The company from which the robot's parts were purchased.

@@ -1,0 +1,7 @@
+#summary Frank Marino
+
+= Duties =
+
+  * Team Leader
+  * Member of the Pathfinding/UI subgroup
+

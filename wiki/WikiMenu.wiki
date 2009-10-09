@@ -1,3 +1,3 @@
 #summary The sidebar of the Wiki Pages
 
-*[[schedule]]
+*[Schedule]

@@ -1,4 +1,5 @@
 #summary The sidebar of the Wiki Pages
+#labels Deprecated
 
  * Project Management
   ** [Requirements]

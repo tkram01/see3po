@@ -1,13 +1,16 @@
-#summary One-sentence summary of this page.
+#summary Development of Path Finding
 
 = Introduction =
 
-Add your content here.
+Path finding has been broadly used in Robots and AI game.
 
 
-= Details =
+= Algorithms =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
+Search strategies includes *uninformed search* (such as [Breadth-first search]) and *informed search*. Since we will have floor plan for our robot, informed search is considered.
+
+  * *A**
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
+= References =

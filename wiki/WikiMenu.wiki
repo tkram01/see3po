@@ -5,7 +5,7 @@
   ** [Requirements]
   ** [Schedule]
   ** [Duties]
-  ** Meetings
+  ** [Meetings]
  * Development
   ** [DevelopmentEnvironment]
   ** [SystemArchitecture]

@@ -4,7 +4,7 @@
 
 Path finding has been broadly used in Robots and AI game (for example, Fieldrunner as shown in Figure 1).
 
-[http://see3po.googlegroups.com/web/Fieldrunner.jpg]
+[http://see3po.googlegroups.com/web/Fieldrunner.png]
 <br>
 Figure 1. Fieldrunner
 

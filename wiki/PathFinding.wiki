@@ -7,7 +7,7 @@ Path finding has been broadly used in Robots and AI game.
 
 = Algorithms =
 
-Search strategies includes *uninformed search* (such as [breadth-firstSearch Breadth-first search]) and *informed search*. Since we will have floor plan for our robot, informed search is considered.
+Search strategies includes *uninformed search* (such as [[Breadth-first search]]) and *informed search*. Since we will have floor plan for our robot, informed search is considered.
 
   * *A**
   * Headings, paragraphs, and lists

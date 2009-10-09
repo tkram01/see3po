@@ -20,7 +20,7 @@ Search strategies includes *uninformed search* (such as [[Breadth-first search]]
 
 = Established Codes =
 
-  * Programming Game AI by Example (C++) by Mat Buckland.
+  * Programming Game AI by Example by Mat Buckland.(C++)
 
 = References =
 

@@ -7,7 +7,7 @@
   ** [Duties]
   ** [Meetings]
  * Development
-  ** [DevelopmentEnvironment]
-  ** [SystemArchitecture]
-  ** [Websites] 
+  ** [DevelopmentEnvironment Environment]
+  ** [SystemArchitecture Architecture]
+  ** [Websites Resources] 
  * [ProfessorComments]

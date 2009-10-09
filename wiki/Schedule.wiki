@@ -7,7 +7,7 @@
 || Install Visio Studio 2008 on your PC					|| 10/04/2009	|| Complete		|| All 			||
 || Gain access to Vision Lab 							|| 10/05/2009	|| 				|| All			||
 || Schedule a time with Tyler on next Wednesday 		|| 10/06/2009	|| Complete 	|| [Frank] 		||
-|| Send [Frank] google ID in order to setup permission	|| 10/03/2009	|| Complete 	|| Hao 			||
+|| Send [Frank] google ID in order to setup permission	|| 10/03/2009	|| Complete 	|| [Hao] 			||
 || Create accounts on testing PC for team members 		|| 10/04/2009	|| Complete 	|| [Nick]		||
 || Decide Team Name 									|| 10/05/2009 	|| Complete 	|| All 			||
 || Create Google Code 									|| 10/05/2009 	|| Complete 	|| [Frank] 		||
@@ -21,6 +21,7 @@
 || Two Narratives completed                             || 10/11/2009 	|| 				|| [Frank], [Nick]			||
 || Mission Statement Completed                          || 10/11/2009 	|| 				|| All			||
 || Photograph the Robot 								|| 10/11/2009 	|| 				|| [Nick]		||
+|| Format the Wiki, Add a SideBar                       || 10/11/2009 	|| Complete  	|| [Hao]		||
 || Two Use-Cases completed 								|| 10/18/2009 	|| 				|| 				||
 || *Tyler's code is successfully running* 				|| 10/31/2009 	|| 				|| All 			||
 || Emulator Complete									|| 10/13/2009	|| 				|| [Frank]		||

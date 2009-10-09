@@ -48,5 +48,5 @@
 
 ===Other Information===
  * Please use google group to discuss proejct related matters, so we can tracking down our decision making process. For example, we can post our individual vision statements on google group and then put the integrated one on google code. 
- * If a picture is needed for wiki page, upload the picture to google group, so you can create a link to it. (Please refer to [SystemArchitecture Architecture])  
+ * If a picture is needed for wiki page, upload the picture to google group, so you can create a link to it. (Please refer to [SystemArchitecture Architecture]). Or, visit http://code.google.com/p/support/wiki/WikiSyntax for detail. 
  * The wiki page names of personal info should be Frank, Nick, Jacky, Debarati, HaoWu. 

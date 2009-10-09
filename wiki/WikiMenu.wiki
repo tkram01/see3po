@@ -1,4 +1,12 @@
 #summary The sidebar of the Wiki Pages
 
- * [Schedule]
-  ** [test]
+ * Project Management
+  ** [Requirements]
+  ** [Schedule]
+  ** [Duties]
+  ** Meetings
+ * Development
+  ** [DevelopmentEnvironment]
+  ** [SystemArchitecture]
+  ** [Websites] 
+ * [ProfessorComments]

@@ -5,9 +5,15 @@
 Add your content here.
 
 
-= Details =
+= Input/Output =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=== Input ===
+As assigned by client (Tyler), we will have a floor plan in image format (*.bmp, *.png, or *.jpg)
+
+=== Output ===
+2 dimension array (as tiles of floor plan).
+Tile size might be similar to actual size of robot.
+
+= Issues =
+
+  * 4-direction movement vs. 8-direction movement

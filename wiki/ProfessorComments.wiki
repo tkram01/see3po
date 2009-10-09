@@ -19,4 +19,7 @@ You are misusing the Downloads page in Google code. It's for project releases (c
 
 _Reply from the team:_
 
+We have moved internal documents to source.
+Downloads page has been reserved for project releases.
+
 ----

@@ -10,15 +10,15 @@ Add vision here.
 === User Interface [debaratibos], [hchengwang], [frankmarinojr]===
   * This interface, located on the central computer, will manage loading the floor plans, selecting destinations, and will act as a front end to the rest of the software. 
 
-=== Camera Interface [wuhaosdwh], [yubad2000]=== 
+=== Camera Interface [wuhaosdwh], [Jacky]=== 
   * The camera must be made to interface directly with the robot's on-board computer
 
-=== Wireless Image Transmission (Robot to PC)[wuhaosdwh], [yubad2000] ===
+=== Wireless Image Transmission (Robot to PC)[wuhaosdwh], [Jacky] ===
   * The robot will gather images from the on-board camera
   * [optional] the on-board computer will compress the images for transmission
   * The robot will transmit to the desktop PC
 
-=== Wireless Control Transmission (PC to Robot)[wuhaosdwh], [yubad2000] ===
+=== Wireless Control Transmission (PC to Robot)[wuhaosdwh], [Jacky] ===
   * The PC will must transmit instructions in such as way that poor connections will not result in catastrophe. 
 
 === Floor Plan Processing [debaratibos], [hchengwang], [frankmarinojr]=== 

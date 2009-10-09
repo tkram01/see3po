@@ -1,4 +1,5 @@
 #summary A list of websites that are important to the project
+#labels Featured
 
 === Basic Micro ===
 http://basicmicro.com/ViewPage.aspx?ContentCode=d_basicatompro <br>

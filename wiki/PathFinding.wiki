@@ -15,6 +15,10 @@ Search strategies includes *uninformed search* (such as [[Breadth-first search]]
   * * Genetic Algorithms *
   * * Reinforcement Learning *
 
+= Established Codes =
+
+  * Programming Game AI by Example (C++)
+
 = References =
 
   * Russell, S., & Norvig, P. (2003) Artificial Intelligence: A Modern Approach.

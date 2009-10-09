@@ -1,4 +1,5 @@
 #summary Development of Floor Plan Processing
+#labels Host
 
 The given floor plan (as image file) will be processed into a 2-dimension array to represent "tiles". Each "tile" should be either walkable or unwalkable.
 

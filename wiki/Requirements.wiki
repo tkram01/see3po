@@ -7,7 +7,7 @@ Add vision here.
 
 
 = Requirements=
-=== User Interface [debaratibos], [hchengwang], [frankmarinojr]===
+=== User Interface [debaratibos], [Nick], [frankmarinojr]===
   * This interface, located on the central computer, will manage loading the floor plans, selecting destinations, and will act as a front end to the rest of the software. 
 
 === Camera Interface [wuhaosdwh], [Jacky]=== 

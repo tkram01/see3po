@@ -38,3 +38,14 @@ D:\Projects\ViLAN\ViLAN Explorer2\bin\Debug\RobotHost.dll
 D:\Projects\ViLAN\ViLAN Explorer2\bin\Debug\RobotHost.pdb
 C:\Users\tyler\Desktop\ViLANN\ViLAN Explorer2\obj\Debug\ViLAN Explorer.exe
 C:\Users\tyler\Desktop\ViLANN\ViLAN Explorer2\obj\Debug\ViLAN Explorer.pdb
+D:\Documents\School\CS682\villian\obj\Debug\ViLAN Explorer.exe
+D:\Documents\School\CS682\villian\obj\Debug\ViLAN Explorer.pdb
+D:\Documents\School\CS682\villian\bin\Debug\ViLAN Explorer.exe
+D:\Documents\School\CS682\villian\bin\Debug\ViLAN Explorer.pdb
+D:\Documents\School\CS682\villian\bin\Debug\RobotHost.pdb
+D:\Documents\School\CS682\villian\bin\Debug\Nexus3Input.pdb
+D:\Documents\School\CS682\villian\bin\Debug\RobotCommands.pdb
+D:\Documents\School\CS682\villian\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\CS682\villian\obj\Debug\ViLAN_Explorer.MainForm.resources
+D:\Documents\School\CS682\villian\obj\Debug\ViLAN_Explorer.Properties.Resources.resources
+D:\Documents\School\CS682\villian\obj\Debug\ViLAN Explorer.csproj.GenerateResource.Cache

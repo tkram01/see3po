@@ -28,11 +28,12 @@
 
 ===November===
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||
+|| Talk with Venture Capitalists                        || 11/12/2009	
 || *[FloorPlanProcessing]  Complete*                    || 11/15/2009	|| 				||  [Nick], [Debarati], [Frank] ||
 
 ===December===
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||
-|| Talk with Venture Capitalists                        || 12/12/2009	|| 				||  			||
+|| 				||  			||
 
 ===January===
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||

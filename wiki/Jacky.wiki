@@ -1,11 +1,10 @@
 #summary Jacky's profile
 #labels Deprecated
 
-= Introduction =
+Name: Chung-Hsien Yu A.K.A Jacky
 
-Under construction!!
+= Duties =
 
-
-= Details =
-
-Under construction!!
+  * Meeting Minutes/note taker.
+  * SVN support.
+  * Member of the hardware subgroup.

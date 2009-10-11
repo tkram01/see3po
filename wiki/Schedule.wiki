@@ -1,3 +1,4 @@
+#summary Schedule for the See3po project
 #labels Featured,Phase-Implementation,Scheduling
 = Schedule for the See3PO project =
 

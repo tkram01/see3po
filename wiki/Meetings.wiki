@@ -1,5 +1,5 @@
 #summary The list of all meeting and minutes
-#labels Scheduling
+#labels Meeting
 
 = Team Meeting =
 

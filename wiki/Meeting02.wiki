@@ -1,4 +1,5 @@
 #summary Meeting #2, 10/8/2009
+#labels Meeting
 
 =Weekly Team Meeting #2=
 	* Date: 10/8/2009

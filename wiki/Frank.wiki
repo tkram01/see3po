@@ -1,7 +1,7 @@
 #summary Frank Marino
+#labels Deprecated
 
 = Duties =
 
   * Team Leader
   * Member of the Pathfinding/UI subgroup
-

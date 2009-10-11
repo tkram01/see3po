@@ -1,4 +1,5 @@
 #summary Development Environment.
+#labels Featured
 
 = Introduction =
 

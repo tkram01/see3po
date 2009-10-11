@@ -21,3 +21,4 @@ Box-Count Dimension module by [Nick]. (Java)
 = Issues =
 
   * 4-direction movement vs. 8-direction movement
+  * Clear unnecessary information

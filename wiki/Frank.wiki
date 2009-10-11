@@ -4,4 +4,4 @@
 = Duties =
 
   * Team Leader
-  * Member of the Pathfinding/UI subgroup
+  * Member of the [PathFinding Path-finding]/UI subgroup

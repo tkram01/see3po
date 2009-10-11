@@ -12,16 +12,16 @@
 || Decide Team Name 									|| 10/05/2009 	|| Complete 	|| All 			||
 || Create Google Code 									|| 10/05/2009 	|| Complete 	|| [Frank] 		||
 || Create and post Project Specifications 				|| 10/05/2009 	|| Complete 	|| [Debarati] 	||
-|| Post Minutes from Meeting 1 							|| 10/05/2009	|| Complete 	|| [Jackie] 		||
+|| Post Minutes from Meeting 1 							|| 10/05/2009	|| Complete 	|| [Jacky] 		||
 || Post Code from Tyler 								|| 10/05/2009 	|| Complete 	|| [Nick] 		||
 || Post Minutes from Boss Meeting 2 					|| 10/08/2009	|| Complete 	|| [Jackie] 		||
 || Project Roles Assigned 								|| 10/09/2009 	|| Complete		|| All			||
-|| Post Minutes from Team Meeting 2 					|| 10/09/2009	|| Complete	 	|| [Jackie] 		||
+|| Post Minutes from Team Meeting 2 					|| 10/09/2009	|| Complete	 	|| [Jacky]  		||
 || Personal Wikis Completed                             || 10/11/2009	|| 			 	|| All	 		||
 || Two Narratives completed                             || 10/11/2009 	|| 				|| [Frank], [Nick]			||
 || Mission Statement Completed                          || 10/11/2009 	|| 				|| All			||
 || Photograph the Robot 								|| 10/11/2009 	|| 				|| [Nick]		||
-|| Format the Wiki, Add a SideBar                       || 10/11/2009 	|| Complete  	|| [Hao]		||
+|| Format the Wiki, Add a Side Bar                       || 10/11/2009 	|| Complete  	|| [Jacky] 		||
 || Two Use-Cases completed 								|| 10/18/2009 	|| 				|| 				||
 || *Tyler's code is successfully running* 				|| 10/31/2009 	|| 				|| All 			||
 || Emulator Complete									|| 10/13/2009	|| 				|| [Frank]		||

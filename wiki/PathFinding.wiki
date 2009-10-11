@@ -23,6 +23,8 @@ Search strategies includes *uninformed search* (such as [[Breadth-first search]]
 
   * Programming Game AI by Example by Mat Buckland.(C++)
 
+= Issues =
+
 = References =
 
   * Russell, S., & Norvig, P. (2003) Artificial Intelligence: A Modern Approach.

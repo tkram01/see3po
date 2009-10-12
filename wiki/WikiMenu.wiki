@@ -12,7 +12,8 @@
   ** [Websites Resources] 
   ** [PathFinding Path Finding] 
   ** [FloorPlanProcessing Floor Plan Processing] 
- * [ProfessorComments Professor's Comments]
+ * Professor's Comments
+  ** [ProfessorComments Professor's Comments (Oct. 6)]
  * Group Member
   ** [Frank]
   ** [Nick]

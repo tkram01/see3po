@@ -18,3 +18,12 @@ D:\Projects\ViLAN\LocalBrain\obj\Debug\LocalBrain.Properties.Resources.resources
 D:\Projects\ViLAN\LocalBrain\obj\Debug\LocalBrain.csproj.GenerateResource.Cache
 D:\Projects\ViLAN\LocalBrain\obj\Debug\LocalBrain.exe
 D:\Projects\ViLAN\LocalBrain\obj\Debug\LocalBrain.pdb
+D:\Documents\School\CS682\LocalBrain\bin\Debug\LocalBrain.exe
+D:\Documents\School\CS682\LocalBrain\bin\Debug\LocalBrain.pdb
+D:\Documents\School\CS682\LocalBrain\bin\Debug\RobotCommands.pdb
+D:\Documents\School\CS682\LocalBrain\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\CS682\LocalBrain\obj\Debug\LocalBrain.MainForm.resources
+D:\Documents\School\CS682\LocalBrain\obj\Debug\LocalBrain.Properties.Resources.resources
+D:\Documents\School\CS682\LocalBrain\obj\Debug\LocalBrain.csproj.GenerateResource.Cache
+D:\Documents\School\CS682\LocalBrain\obj\Debug\LocalBrain.exe
+D:\Documents\School\CS682\LocalBrain\obj\Debug\LocalBrain.pdb

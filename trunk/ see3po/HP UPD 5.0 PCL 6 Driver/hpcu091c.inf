@@ -1,0 +1,1261 @@
+;Hewlett-Packard LaserJet combined printer driver INF file  for Windows 2000 and XP
+;Copyright  Hewlett-Packard 2004
+
+[Version]
+Signature="$Windows NT$"
+Provider=%HP% 
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318} 
+Class=Printer 
+CatalogFile=hpcu091c.cat
+DriverVer=07/09/2009,61.091.12.106
+
+; Manufacturer section.
+;
+; This section lists all of the manufacturers
+; that we will display in the Dialog box
+;The format of TargetOSVersion, the version decoration, is as follows:
+;NT[Architecture][.[OSMajorVersion][.[OSMinorVersion][.[ProductType][.SuiteMask]]]]
+
+;NT 
+;Operating system version recognition is supported for Windows XP and later NT-based operating systems. 
+;
+;Architecture 
+;Identifies the hardware platform. This must be x86 or ia64. 
+;
+;OSMajorVersion 
+;A number representing the operating system's major version number. For Windows XP, this number is 5. 
+;
+;OSMinorVersion 
+;A number representing the operating system's minor version number. For Windows XP, this number is 1. 
+;
+;ProductType 
+;0x0000003 (VER_NT_SERVER)
+
+[MANUFACTURER]
+%HP%=HP
+
+; Model sections
+;
+; Each section here corresponds with an entry listed in the
+; [Manufacturer] section, above. The models will be displayed in the order 
+; that they appear in the INF file.
+
+[HP]
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co5005
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co3FFB
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co614B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co238A
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co478A
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co8F88
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co9AB9
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co9ADF
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co5B94
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoE22F
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co862F
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co4E2D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5917,USBPRINT\VID_03F0&PID_5917&REV_0100
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5a17,USBPRINT\VID_03F0&PID_5a17&REV_0100
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5b17,USBPRINT\VID_03F0&PID_5b17&REV_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co045D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co1544
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co7F92
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoC49C
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co8745
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoBFC1 
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co051D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoE544
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co7F62
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoC5DC
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co7545
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoBF33
+                   
+
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co045D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co1544
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co7F92
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoC49C
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co8745
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoBFC1
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co051D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoE544
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co7F62
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoC5DC
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co7545
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoBF33
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5217,USBPRINT\VID_03F0&PID_5217&REV_0100
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5317,USBPRINT\VID_03F0&PID_5317&REV_0100
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5417,USBPRINT\VID_03F0&PID_5417&REV_0100
+
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoE8A9
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co725B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoF919
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co5E98
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoED1A
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co38BC
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co9F3D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co2CBF
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_4F17,USBPRINT\VID_03F0&PID_4F17&REV_0100
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_4E17,USBPRINT\VID_03F0&PID_4E17&REV_0100
+
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La27BB
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La27BB&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La27BB&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8117,DOT4PRT\VID_03F0&PID_8117&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8117&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8117&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8117&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8117&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_LaE77A
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_LaE77A&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_LaE77A&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8217,DOT4PRT\VID_03F0&PID_8217&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8217&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8217&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8217&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8217&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La26AB
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La26AB&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La26AB&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8017,DOT4PRT\VID_03F0&PID_8017&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8017&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8017&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8017&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8017&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co79F3
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co49F1
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoD9F0
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co29F0
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoAAB8
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoA988
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co69D9
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_4417,USBPRINT\VID_03F0&PID_4417&REV_0100
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5017,USBPRINT\VID_03F0&PID_5017&REV_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_La788B,Hewlett-PackardHP_La788B,USBPRINT\VID_03F0&PID_4517
+"HP Universal Printing PCL 6"= hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_La9AD2,Hewlett-PackardHP_La9AD2,USBPRINT\VID_03F0&PID_4C17
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_LaD7CE,Hewlett-PackardHP_LaD7CE,USBPRINT\VID_03F0&PID_4D17
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5117,USBPRINT\VID_03F0&PID_5117&REV_0100,USBPRINT\VID_03F0&PID_5117&PRINT_HPZ,USBPRINT\VID_03F0&PID_5117&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co73FC
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoB27D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoB0FD
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co717C
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoB5FD
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoADF2
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoCDF3
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co6DF0
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co0DF1
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co6DF5
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoC9AB
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co090A
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co08EA
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoC84B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co0B2A
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\VID_03F0&PID_5117,LPTENUM\VID_03F0&PID_5117&REV_0100,LPTENUM\VID_03F0&PID_5117&PRINT_HPZ,LPTENUM\VID_03F0&PID_5117&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co73FC
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoB27D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoB0FD
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co717C
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoB5FD
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoADF2
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoCDF3
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co6DF0
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co0DF1
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co6DF5
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoC9AB
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co090A
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co08EA
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoC84B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co0B2A
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co73FC
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoB27D
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoB0FD
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co717C
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoB5FD
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoADF2
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoCDF3
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co6DF0
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co0DF1
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co6DF5
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoC9AB
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co090A
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co08EA
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoC84B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co0B2A
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CM12EE
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CM12EE&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CM12EE&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7117,DOT4PRT\VID_03F0&PID_7117&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7117&PRINT_HPZ,DOT4PRT\VID_03F0&PID_7117&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7117&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_7117&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CM21AA
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CM21AA&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CM21AA&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7717,DOT4PRT\VID_03F0&PID_7717&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7717&PRINT_HPZ,DOT4PRT\VID_03F0&PID_7717&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7717&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_7717&REV_0100&DOT4&PRINT_HPZ
+
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CoC45C
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CoC45C&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CoC45C&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_6F17,DOT4PRT\VID_03F0&PID_6F17&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_6F17&PRINT_HPZ,DOT4PRT\VID_03F0&PID_6F17&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_6F17&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_6F17&REV_0100&DOT4&PRINT_HPZ
+
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co23A3
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co23A3&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co23A3&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7C17,DOT4PRT\VID_03F0&PID_7C17&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7C17&PRINT_HPZ,DOT4PRT\VID_03F0&PID_7C17&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7C17&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_7C17&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co1D89
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co1D89&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co1D89&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9517,DOT4PRT\VID_03F0&PID_9517&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9517&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9517&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9517&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9517&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co227F
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co227F&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co227F&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7C17,DOT4PRT\VID_03F0&PID_9517&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7C17&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9517&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_7C17&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9517&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La608B
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La608B&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La608B&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9717,DOT4PRT\VID_03F0&PID_9717&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9717&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9717&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9717&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9717&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_LaE9DD
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_LaE9DD&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_LaE9DD&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8317,DOT4PRT\VID_03F0&PID_8317&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8317&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8317&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8317&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8317&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La8800
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La8800&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La8800&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9617&REV_0100,DOT4PRT\VID_03F0&PID_9617&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9617&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9617&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_9617&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9617&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La38DC
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La38DC&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La38DC&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8417,DOT4PRT\VID_03F0&PID_8417&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8417&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8417&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8417&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8417&REV_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CM21AA
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CM12EE
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoC45C
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co23A3
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co1D89
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_LaE9DD
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_La8800
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_La38DC
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,usbprint\Hewlett-PackardHP_Co79B4
+"HP Universal Printing PCL 6" = hpcu0916.gpd,usbprint\Hewlett-PackardHP_Co9BF8
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,usbprint\Hewlett-PackardHP_LaF552
+"HP Universal Printing PCL 6" = hpcu0916.gpd,usbprint\Vid_03f0&Pid_3817
+"HP Universal Printing PCL 6" = hpcu0916.gpd,usbprint\Vid_03f0&Pid_3817&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,usbprint\Hewlett-PackardHP_CoBA25
+"HP Universal Printing PCL 6" = hpcu0916.gpd,usbprint\Hewlett-PackardHP_Co0F30
+"HP Universal Printing PCL 6" = hpcu0916.gpd,usbprint\Hewlett-PackardHP_Co9885
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_CoF1B4,DOT4PRT\Hewlett-PackardHP_CoF1B4&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_CoF1B4&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_6217&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6217&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_6217&Rev_0100&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_6217&Rev_0100&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_6217,DOT4PRT\VID_03F0&PID_6217&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_Co2FFA,DOT4PRT\Hewlett-PackardHP_Co2FFA&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_Co2FFA&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_6317&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6317&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6317&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6317&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_6317,DOT4PRT\vid_03f0&pid_6317&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_3217&mi_00&PRINT_HPZ,DOT4PRT\vid_03f0&pid_3217&Rev_0100&mi_00&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\Vid_03f0&Pid_3217&mi_00&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_3217&Rev_0100&mi_00&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_3317&mi_00&PRINT_HPZ,DOT4PRT\vid_03f0&pid_3317&Rev_0100&mi_00&PRINT_HPZ
+"HP Universal Printing PCL 6"= hpcu0916.gpd,DOT4PRT\Vid_03f0&Pid_3317&mi_00&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_3317&Rev_0100&mi_00&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_3417&mi_00&PRINT_HPZ,DOT4PRT\vid_03f0&pid_3417&Rev_0100&mi_00&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\Vid_03f0&Pid_3417&mi_00&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_3417&Rev_0100&mi_00&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_3517&mi_00&PRINT_HPZ,DOT4PRT\vid_03f0&pid_3517&Rev_0100&mi_00&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\Vid_03f0&Pid_3517&mi_00&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_3517&Rev_0100&mi_00&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_6417&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6417&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6417&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6417&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_6417,DOT4PRT\vid_03f0&pid_6417&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6
+"HP Universal Printing PCL 6"= hpcu0916.gpd,DOT4PRT\vid_03f0&pid_6617&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6617&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6617&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_6617&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"= hpcu0916.gpd,DOT4PRT\vid_03f0&pid_6617,DOT4PRT\vid_03f0&pid_6617&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_La023A,DOT4PRT\Hewlett-PackardHP_La023A&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_La023A&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7317&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7317&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7317&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7317&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7317,DOT4PRT\vid_03f0&pid_7317&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_LaC2FB,DOT4PRT\Hewlett-PackardHP_LaC2FB&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_LaC2FB&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7617&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7617&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7617&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7617&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7617,DOT4PRT\vid_03f0&pid_7617&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_LaBA10,DOT4PRT\Hewlett-PackardHP_LaBA10&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_LaBA10&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7217&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7217&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7217&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7217&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7217,DOT4PRT\vid_03f0&pid_7217&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_La6B11,DOT4PRT\Hewlett-PackardHP_La6B11&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_La6B11&DOT4&PRING_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7917&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7917&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7917&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7917&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7917,DOT4PRT\vid_03f0&pid_7917&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-Packardhp_La9090,DOT4PRT\Hewlett-PackardHP_La9090&PRINT_HPZ,DOT4PRT\Hewlett-Packardhp_La9090&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7517&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7517&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7517&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7517&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7517,DOT4PRT\vid_03f0&pid_7517&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_LaE1E9,DOT4PRT\Hewlett-PackardHP_LaE1E9&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_LaE1E9&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7a17&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7a17&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7a17&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7a17&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7a17,DOT4PRT\vid_03f0&pid_7a17&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_La619B,DOT4PRT\Hewlett-PackardHP_La619B&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_La619B&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7417&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7417&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7417&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7417&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7417,DOT4PRT\vid_03f0&pid_7417&Rev_0100
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_La9862,DOT4PRT\Hewlett-PackardHP_La9862&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_La9862&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_9717&PRINT_HPZ,DOT4PRT\vid_03f0&pid_9717&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9717&REV_0100&PRINT_HPZ,DOT4PRT\VID_03F0&PID_9717&REV_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_9717,DOT4PRT\VID_03F0&PID_9717&REV_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_CoEC5C,DOT4PRT\Hewlett-PackardHP_CoEC5C&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_CoEC5C&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7b17&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7b17&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7b17&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7b17&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7b17,DOT4PRT\vid_03f0&pid_7b17&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_Co3554,DOT4PRT\Hewlett-PackardHP_Co3554&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_Co3554&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7d17&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7d17&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7d17&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7d17&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7d17,DOT4PRT\vid_03f0&pid_7d17&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-PackardHP_Co994D,DOT4PRT\Hewlett-PackardHP_Co994D&PRINT_HPZ,DOT4PRT\Hewlett-PackardHP_Co994D&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7817&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7817&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7817&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_7817&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_7817,DOT4PRT\vid_03f0&pid_7817&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-Packardhp_LaA304,DOT4PRT\Hewlett-Packardhp_LaA304&PRINT_HPZ,DOT4PRT\Hewlett-Packardhp_LaA304&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_2917&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2917&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2917&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2917&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_2917,DOT4PRT\vid_03f0&pid_2917&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-Packardhp_La5304,DOT4PRT\Hewlett-Packardhp_La5304&PRINT_HPZ,DOT4PRT\Hewlett-Packardhp_La5304&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_2517&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2517&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2517&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2517&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_2517,DOT4PRT\vid_03f0&pid_2517&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-Packardhp_La3305,DOT4PRT\Hewlett-Packardhp_La3305&PRINT_HPZ,DOT4PRT\Hewlett-Packardhp_La3305&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_2A17&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2A17&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2A17&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2A17&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_2A17,DOT4PRT\vid_03f0&pid_2A17&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\hewlett-packardhp_co650A,DOT4PRT\hewlett-packardhp_co650A&PRINT_HPZ,DOT4PRT\hewlett-packardhp_co650A&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_1c17&PRINT_HPZ,DOT4PRT\vid_03f0&pid_1c17&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_1c17&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_1c17&Rev_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6,DOT4PRT\Hewlett-Packardhp_coC8EB,DOT4PRT\Hewlett-Packardhp_coC8EB&PRINT_HPZ,DOT4PRT\Hewlett-Packardhp_coC8EB&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_1f17&PRINT_HPZ,DOT4PRT\vid_03f0&pid_1f17&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_1f17&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_1f17&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_1f17&Rev_0400,DOT4PRT\vid_03f0&pid_1f17&Rev_0400&PRINT_HPZ,DOT4PRT\vid_03f0&pid_1f17&Rev_0400&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_1f17,DOT4PRT\vid_03f0&pid_1f17&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,LPTENUM\HPUPD_PCL6
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_2317&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2317&DOT4&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2317&Rev_0100&PRINT_HPZ,DOT4PRT\vid_03f0&pid_2317&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\vid_03f0&pid_2317,DOT4PRT\vid_03f0&pid_2317&Rev_0100
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8A17&REV_0100,DOT4PRT\VID_03F0&PID_8A17&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CoAB37,USBPRINT\Hewlett-PackardHP_CoAB37
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_LaAE38
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_La3E2E
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_La39AE
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_La5039
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_LaF0AF
+"HP Universal Printing PCL 6" = hpcu0916.gpd,USBPRINT\VID_03F0&PID_5c17,USBPRINT\VID_03F0&PID_5c17&REV_0100,USBPRINT\VID_03F0&PID_5c17&REV_0100&PRINT_HPZ
+
+
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8517&REV_0100,DOT4PRT\VID_03F0&PID_8517&REV_0100&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8517&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CoF94C,USBPRINT\Hewlett-PackardHP_CoF94C
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8B17&Rev_0100,DOT4PRT\VID_03F0&PID_8B17&Rev_0100&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8B17&Rev_0100&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6" = hpcu0916.gpd,DOT4PRT\Hewlett-Packardhp_Co99F8,DOT4PRT\Hewlett-Packardhp_Co99F8&PRINT_HPZ,DOT4PRT\Hewlett-Packardhp_Co99F8&DOT4&PRINT_HPZ,USBPRINT\Hewlett-Packardhp_Co99F8
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co94A2
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co94A2&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_Co94A2&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8C17,DOT4PRT\VID_03F0&PID_8C17&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8C17&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8C17&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8C17&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8C17&REV_0100&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoF94C
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_LaAE38
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_La3E2E
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_La39AE
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_La5039
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_LaF0AF
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_La0E3B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoAB37
+
+
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_La3696
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La3696
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La3696&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_La3696&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8D17,DOT4PRT\VID_03F0&PID_8D17&REV_0100
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8D17&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8D17&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8D17&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8D17&REV_0100&DOT4&PRINT_HPZ
+
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co9E83
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co8E93
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoEE16
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8717&rev_0100, DOT4PRT\VID_03F0&PID_8717
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8717&rev_0100&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8717&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8717&rev_0100&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8717&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8717
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8817&rev_0100, DOT4PRT\VID_03F0&PID_8817
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8817&rev_0100&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8817&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8817&rev_0100&DOT4&PRINT_HPZ,DOT4PRT\VID_03F0&PID_8817&DOT4&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\VID_03F0&PID_8817
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CoEE16
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CoEE16&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,DOT4PRT\Hewlett-PackardHP_CoEE16&DOT4&PRINT_HPZ
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\vid_03f0&pid_012a,USBPRINT\vid_03f0&pid_012a&REV_0100,USBPRINT\vid_03f0&pid_012a&PRINT_HPZ,USBPRINT\vid_03f0&pid_012a&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_La8B57
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_La8537
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_La07D6
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_LaCB17
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\vid_03f0&pid_012a,LPTENUM\vid_03f0&pid_012a&REV_0100,LPTENUM\vid_03f0&pid_012a&PRINT_HPZ,LPTENUM\vid_03f0&pid_012a&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_La8B57
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_La8537
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_La07D6
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_LaCB17
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\vid_03f0&pid_072A,USBPRINT\vid_03f0&pid_072A&REV_0100,USBPRINT\vid_03f0&pid_072A&PRINT_HPZ,USBPRINT\vid_03f0&pid_072A&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co3AAB
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoFBEA
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoFB1A
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co3B4B
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co993B
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_CoDD3B
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co213A
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,USBPRINT\Hewlett-PackardHP_Co3539
+
+
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\vid_03f0&pid_072A,LPTENUM\vid_03f0&pid_072A&REV_0100,LPTENUM\vid_03f0&pid_072A&PRINT_HPZ,LPTENUM\vid_03f0&pid_072A&REV_0100&PRINT_HPZ
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co3AAB
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoFBEA
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoFB1A
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co3B4B
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co993B
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_CoDD3B
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co213A
+"HP Universal Printing PCL 6"  = hpcu0916.gpd,LPTENUM\Hewlett-PackardHP_Co3539
+
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co3AAB
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoFBEA
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoFB1A
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co3B4B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co993B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_CoDD3B
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co213A
+"HP Universal Printing PCL 6" = hpcu0916.gpd,WSDPRINT\Hewlett-PackardHP_Co3539
+; Release Specific Model Name for UPD
+"HP Universal Printing PCL 6 (v5.0)" = hpcu0916.gpd,LPTENUM\HPUPDPCL6_v5.0
+
+
+; OEM URLS
+;
+; This sections gives the URL for manufacturers found in the Manufacturers section
+[OEM URLS]
+%HP% = "http://go.microsoft.com/fwlink/?LinkID=37&prd=10798&sbp=Printers"
+
+;
+; MS Driver Core installs
+;
+; These sections are used by Printer OEMs to install MS provided drivers
+
+; Installer Sections
+;
+; These sections control file installation, and reference all files that
+; need to be copied. The section name will be assumed to be the driver
+; file, unless there is an explicit DriverFile section listed.
+;
+
+
+[hpcu0916.gpd.NTx86]
+CopyFiles=HPPRPROC,UI,PCL6RENDER,DMC_x86,GPD_PCL6_COMMON1,DATA_FILES,STRING_DLL,MANUAL_DUPLEX,RES_PCL6,PCLXL_GPD_P3,HELP,HP_UNIDRV,SERVICES,MYS_UI,PORTMON_FILES,@hpcu0916.hpx,COINSTALL,FXCOMPCHANNEL,FXCOMPCHANNEL_SYSCOPY,EAC,PNPDLL,PNPDLL_SYSCOPY,LANGMON,LEDM,LEDM_SYSCOPY,CAPI_32,HPJOBCAPS,FXCOM_WRAPPER,IMAGING
+DataFile=hpcu0916.gpd
+DriverFile=unidrv.dll
+ConfigFile=hpmdp091.dll
+HelpFile=unidrv.hlp
+LanguageMonitor=%LANGUAGE_MONITOR%
+
+ 
+PrintProcessor=%PRINT_PROCESSOR% 
+AddReg=RegSettings
+DelFiles=DEL9xFILE
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+
+; Coinstaller sections
+
+[hpcu0916.gpd.NTx86.CoInstallers]
+AddReg      = CoLaunchInstall.AddReg
+CopyFiles   = COINSTALL
+
+[CoLaunchInstall.AddReg]
+HKR,,CoInstallers32,0x10000,"hpmco091.dll,UPDCoInstallerEntryProc"
+
+[COINSTALL]
+hpmco091.dll,,,0x000000
+hpmprein.dll,,,0x000000
+difxapi.dll,,,0x000000
+
+
+; Copy Sections
+;
+; Lists of files that are actually copied. These sections are referenced
+; from the installer sections, above. Create a section, even if it 
+; only copies a single file, rather than using the @filename notation. This 
+; will ensure compatibility with the NOVELL P&P Environment too.
+; If it's a color profile (since the DestinationDirs can only handle sections, and not
+; individual files) then a section is a must.
+
+;Name of the File to be deleted
+[DEL9xFILE]
+hpzimn12.DLL 
+
+[CAPI_32]
+hpcc3091.DLL,hpcc3091.DLL,,0x00000020
+
+[LANGMON]
+hppmopjl.dll,,,0x00000020
+
+[HPPRPROC]
+hpcpp091.dll,hpcpp091.dll,,0x00000020
+
+
+[UI]
+hpcui091.DLL,hpcui091.DLL,,0x00000020
+hpcpe091.dll,hpcpe091.dll,,,0x00000020
+hpmup091.bin,,,0x00000020
+
+[PCL6RENDER]
+hpc6r091.dll,hpc6r091.dll,,0x00000020
+
+[GPD_PCL6_COMMON1]
+hpc6m091.gpd,hpc6m091.gpd,,0x00000020
+hpcsm091.gpd,hpcsm091.gpd,,0x00000020
+
+[STRING_DLL]
+hpcst091.dll,hpcst091.dll,,0x00000020
+hpcur091.dll,,0x00000020
+
+[DATA_FILES]
+hpcu0916.xml,hpcu0916.xml,,0x00000020
+hpcsc091.DTD,hpcsc091.DTD,,0x00000020
+hpcu0916.gpd,hpcu0916.gpd,,0x00000020
+hpcu091c.ini,hpcu091c.ini,,0x00000020
+
+[MANUAL_DUPLEX]
+hpcev091.DLL,hpcev091.DLL,,0x00000020
+
+[HELP]
+HPCHL091.CAB,HPCHL091.CAB,,0x00000020
+
+[SERVICES]
+hpcls091.DLL,hpcls091.DLL,,0x00000020
+hpcss091.dll,hpcss091.dll,,0x00000020
+
+[RES_PCL6]
+pclxl.DLL,pclxl.DLL,,0x00000020
+
+[PCLXL_GPD_P3]
+pjl.GPD,pjl.GPD,,0x00000020
+pclxl.GPD,pclxl.GPD,,0x00000020
+
+[EAC]
+cioum.dll,cioum.dll,,0x00000020
+cioum32.msi,cioum32.msi,,0x00000020
+
+[PNPDLL]
+hpcpn091.dll,hpcpn091.dll,,0x00000020
+
+[PNPDLL_SYSCOPY]
+hpcpn091.dll,hpcpn091.dll,,0x00000020
+
+[FXCOM_WRAPPER]
+hpfxcomw.dll,hpfxcomw.dll,,0x00000020
+
+[FXCOMPCHANNEL]
+fxcompchannel.dll,,,0x00000020
+
+[LEDM]
+hppccompio.dll,hppccompio.dll,,0x00000020
+
+[FXCOMPCHANNEL_SYSCOPY]
+fxcompchannel.dll,,,0x00000020
+
+[LEDM_SYSCOPY]
+hppccompio.dll,hppccompio.dll,,0x00000020
+
+[DMC_x86]
+hpcdmc32.dll,,,0x00000020
+hpbcfgre.DLL,hpbcfgre.DLL,,0x00000020
+hpcpu091.CFG,hpcpu091.cf_,,0x00000020
+
+[HP_UNIDRV]
+UNIDRV.DLL,UNIDRV.DLL,,0x00000020
+UNIRES.DLL,UNIRES.DLL,,0x00000020
+UNIDRVUI.DLL,UNIDRVUI.DLL,,0x00000020
+STDNAMES.GPD,STDNAMES.GPD,,0x00000020 
+UNIDRV.HLP,UNIDRV.HLP,,0x00000020
+STDDTYPE.GDL,STDDTYPE.GDL,,0x00000020
+STDSCHEM.GDL,STDSCHEM.GDL,,0x00000020
+STDSCHMX.GDL,STDSCHMX.GDL,,0x00000020
+
+
+[MYS_UI]
+hpcu0915.dem,,,0x00000020
+hpmur091.dll,,,0x00000020
+hpmux091.dll,,,0x00000020
+hpmpm081.dll,,,0x00000020
+hpmpw081.dll,,,0x00000020
+hpmdp091.dll,,,0x00000020
+hpmsn091.dll,,,0x00000020
+hpmsl091.dll,,,0x00000020
+hpcsat20.dll,,,0x00000020
+
+[PORTMON_FILES]
+hpmpm081.dll,,,0x00000020
+hpmpw081.dll,,,0x00000020
+HPMNQUE.DLL,,,0x00000020
+HPMNNDPS.DLL,,,0x00000020
+hpmtp091.dll,,,0x00000020
+hpmja091.dll,,,0x00000020
+hpmml091.dll,,,0x00000020
+
+[HPJOBCAPS]
+HPJobCaps.dll,,,0x00000020
+[IMAGING]
+hpfie091.dll,,,0x00000020
+
+[SourceDisksNames]
+98="PDL_COMMON",hpcu091c.CAB,,
+97="PDL_LANG",%LocaleCABFile%,,
+96=%DiskID%,,,
+99=%DiskID%,,,"drivers\dot4\Win2000"
+
+[SourceDisksFiles]
+hppmopjl.dll=98
+hpcu0916.gpd=98
+hpcu091c.ini=98 
+hpcpp091.dll=98 
+hpcui091.DLL=98
+hpcpe091.dll=98
+hpc6r091.dll=98
+hpcsm091.gpd=98
+hpcst091.dll=98
+hpcur091.dll=98
+hpcpn091.dll=98
+cioum32.msi=98
+cioum.dll=98
+hpmco091.dll=96
+hpmprein.dll=96
+difxapi.dll=99
+hpcu0916.hpx=98
+hpcev091.DLL=98
+hpcls091.DLL=98
+hpcss091.dll=98
+hpcpu091.cf_=96
+HPCDMC32.DLL=98
+hpbcfgre.DLL=96
+hpcu0916.xml=98
+hpcsc091.DTD=98
+STDNAMES.GPD=98 
+UNIDRV.DLL=98
+UNIRES.DLL=98 
+UNIDRVUI.DLL=98
+UNIDRV.HLP=97
+HPCHL091.CAB=98
+pclxl.DLL=98
+pjl.GPD=98
+pclxl.GPD=98
+hpc6m091.gpd=98
+hpcsm091.gpd=98
+hpmdp091.dll=98
+hpmux091.dll =98
+hpmur091.dll =98
+hpcu0915.dem  =98
+hpmtp091.dll  =98
+HPMNNDPS.DLL =98
+HPMNQUE.DLL=98
+hpmup091.bin   =96
+hpmja091.dll = 98
+hpmml091.dll= 98
+hpmpm081.dll =98
+hpmpw081.dll   =98
+hpmsn091.dll=98
+hpmsl091.dll=98
+hpcsat20.dll=98
+fxcompchannel.dll=98
+STDDTYPE.GDL=98
+STDSCHEM.GDL=98
+STDSCHMX.GDL=98
+hppccompio.dll=98
+hpcc3091.DLL=98
+hpfxcomw.dll=98
+HPJobCaps.dll=98
+hpfie091.dll=98
+
+[DestinationDirs]
+DefaultDestDir=66000
+HPPRPROC=66001 
+PORTMON_FILES=66002
+COINSTALL = 66002
+PNPDLL_SYSCOPY=66002
+LANGMON=66002
+FXCOMPCHANNEL_SYSCOPY=66002
+LEDM_SYSCOPY=66002
+
+[RegSettings]
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"MystStdInstall",0x00010001,1 
+HKCU,%HP_DRIVER_SUPPORT_NON_HP%\,"MystDeviceVerify",0x00010001,0x200 
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"DemFileName",0x00000000,hpcu0915.dem 
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"VerifyPDL",0x00000000,PCL6 
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"ExtensionDlls",0x00000000,"hpmux091.dll;"
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"RealCfgDll",0x00000000,UNIDRVUI.DLL
+HKLM,%HP_DIRECT_CONNECT_REG_PATH%,"DirectConnectBiDiSupported",0x00010001,1
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"EnableIE7Launch",0x00010001,0
+
+;[String Section]
+
+[Strings]      
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2enww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0401]      ; Arabic
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2arww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0403]      ; Catalan
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2caww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0404]      ; Chinese (Traditional)
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2zhtw.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0804]      ; Chinese (Simplified)
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="P6i2zhcn.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0405]       ; Czech
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2csww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0406]      ; Danish
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2daww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0413]        ;Dutch
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2nlww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0409]      ; English
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2enww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.040B]        ;Finnish
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2fiww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.040C]      ;French
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2frww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0407]      ;German
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2deww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0408]       ;Greek
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2elww.cab" 
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.040D]        ;Hebrew
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2heww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.040E]       ;Hungerian 
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2huww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0410]       ;Italian
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2itww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0411]       ;Japanese
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2jaww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0412]        ;Korean
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2koww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0814]        ;Norwegian
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2noww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0415]        ;Polish
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2plww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0416]        ;Portugese
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2ptww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0419]        ;Russian
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2ruww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.041B]        ;Slovak 
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2skww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.040A]       ;Spanish
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2esww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.041D]        ;Swedish
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2svww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.041E]        ;Thai
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2thww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.041F]        ;Turkish (Turkce)
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2trww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.041A]        ;Croatian - Croatia
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2hrww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0402]        ;Bulgarian - Bulgaria
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2bgww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0425]        ;Estonian - Estonia
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2etww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0421]        ;Indonesian - Indonesia
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2idww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll" 
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+ 
+[Strings.043F]        ;Kazakh - Kazakhstan
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2kkww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0427]        ;Lithuanian - Lithuania
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2ltww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0426]        ;Latvian - Latvia
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2lvww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0418]        ;Romanian - Romania
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2roww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.081A]        ;Serbian (Latin) - Serbia
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2srww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0424]        ;Slovenian - Slovenia
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2slww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.0422]        ;Ukrainian - Ukraine
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2ukww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"
+
+[Strings.042A]        ;Vietnamese - Vietnam
+PrinterClassName="Printers" 
+DiskID="HP Universal Printing PCL Printer Driver Disk"
+PRINT_PROCESSOR="HPCPP091,hpcpp091.dll" 
+HP="HP" 
+HP_Mombi_Driver_Name="HP Universal Printing PCL 6"
+HP_Mombi_Driver_Name_Ver="HP Universal Printing PCL 6 (v5.0)"
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3" 
+HP_DIRECT_CONNECT_REG_PATH="Software\Hewlett-Packard\San Diego Shared IO"
+LocaleCABFile ="p6i2viww.cab"
+LANGUAGE_MONITOR="HPPMOPJL,hppmopjl.dll"
+HP_DRIVER_SUPPORT_NON_HP = "Software\Hewlett-Packard\HP Print Settings"

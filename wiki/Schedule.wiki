@@ -17,7 +17,7 @@
 || Post Code from Tyler 								|| 10/05/2009 	|| Complete 	|| [Nick] 		||
 || Project Roles Assigned 								|| 10/09/2009 	|| Complete		|| All			||
 || Post Minutes from Team Meeting 2 					|| 10/09/2009	|| Complete	 	|| [Jacky]  		||
-|| Personal Wikis Completed                             || 10/11/2009	|| 			 	|| All	 		||
+|| Personal Wikis Completed                             || 10/11/2009	|| Complete			 	|| All	 		||
 || Two Narratives completed                             || 10/11/2009 	|| 				|| [Frank], [Nick]			||
 || Mission Statement Completed                          || 10/11/2009 	|| 				|| All			||
 || Photograph the Robot 								|| 10/11/2009 	|| 				|| [Nick]		||

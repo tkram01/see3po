@@ -6,5 +6,6 @@ Located under LocalBrainEmulator, this program will eventually emulate both the 
 
 
 = Details =
-  * || 10/13/2009 || a working emulator is up with the following functions: 
-<br> connects to the Exlporer (GUI) Program || 
+|| Date || Notes ||
+|| 10/13/2009 || a working emulator is up with the following functions:<br> connects to the Exlporer (GUI) Program || 
+|| || ||

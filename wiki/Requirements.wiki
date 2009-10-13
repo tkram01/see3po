@@ -7,7 +7,7 @@ Add vision here.
 
 
 = Requirements=
-=== User Interface [debaratibos], [Nick], [frankmarinojr]===
+=== User Interface [Debarati], [Nick], [frankmarinojr]===
   * This interface, located on the central computer, will manage loading the floor plans, selecting destinations, and will act as a front end to the rest of the software. 
 
 === Camera Interface [wuhaosdwh], [Jacky]=== 
@@ -21,13 +21,13 @@ Add vision here.
 === Wireless Control Transmission (PC to Robot)[wuhaosdwh], [Jacky] ===
   * The PC will must transmit instructions in such as way that poor connections will not result in catastrophe. 
 
-=== [FloorPlanProcessing Floor Plan Processing] [debaratibos], [Nick], [frankmarinojr]=== 
+=== [FloorPlanProcessing Floor Plan Processing] [Debarati], [Nick], [frankmarinojr]=== 
   * Using some representation of a floor plan, possibly an image and a scale, the central computer must create a model of the floor for use by the path-finding algorithm. 
 
-=== Location [debaratibos], [Nick], [frankmarinojr]===
+=== Location [Debarati], [Nick], [frankmarinojr]===
   * Using the images and the robot, and the floor plan, the central PC will establish the location of the robot. 
 
-=== [PathFinding Path-finding] [debaratibos], [Nick], [frankmarinojr]===
+=== [PathFinding Path-finding] [Debarati], [Nick], [frankmarinojr]===
   * Using the data from the floor plan, the central computer will design a route from the robot's current location to the destination
   * Path-finding must auto-correct based on new visual data from the robot
   * [optional] Path-finding must account for discrepancies between the floor plan and reality, such as obstacles. 

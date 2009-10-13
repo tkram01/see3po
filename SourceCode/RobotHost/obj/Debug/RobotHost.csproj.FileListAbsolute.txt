@@ -5,3 +5,9 @@ D:\Projects\ViLAN\RobotHost\bin\Debug\RobotCommands.dll
 D:\Projects\ViLAN\RobotHost\bin\Debug\RobotCommands.pdb
 D:\Projects\ViLAN\RobotHost\obj\Debug\RobotHost.dll
 D:\Projects\ViLAN\RobotHost\obj\Debug\RobotHost.pdb
+D:\Documents\School\CS682\Robot Host\bin\Debug\RobotHost.dll
+D:\Documents\School\CS682\Robot Host\bin\Debug\RobotHost.pdb
+D:\Documents\School\CS682\Robot Host\bin\Debug\RobotCommands.pdb
+D:\Documents\School\CS682\Robot Host\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\CS682\Robot Host\obj\Debug\RobotHost.dll
+D:\Documents\School\CS682\Robot Host\obj\Debug\RobotHost.pdb

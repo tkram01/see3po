@@ -1,0 +1,10 @@
+#summary An emulator for the robot, to be used for testing the pathfinding algorithms without the robot.
+
+= Introduction =
+
+Located under LocalBrainEmulator, this program will eventually emulate both the robot and Tyler's voodoo program, accepting move commands and supplying location and facing of the robot. 
+
+
+= Details =
+  * || 10/13/2009 || a working emulator is up with the following functions: 
+<br> connects to the Exlporer (GUI) Program || 

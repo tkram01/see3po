@@ -24,7 +24,7 @@
 || Format the Wiki, Add a Side Bar                       || 10/11/2009 	|| Complete  	|| [Jacky] 		||
 || Two Use-Cases completed 								|| 10/18/2009 	|| 				|| 				||
 || *Tyler's code is successfully running* 				|| 10/31/2009 	|| 				|| All 			||
-|| Emulator Complete									|| 10/13/2009	|| Complete				|| [Frank]		||
+||[LocalBrainEmulator] Complete 									|| 10/31/2009	|| Complete				|| [Frank]		||
 
 ===November===
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||

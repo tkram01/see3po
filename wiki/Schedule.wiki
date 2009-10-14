@@ -2,7 +2,7 @@
 #labels Featured,Phase-Implementation,Scheduling
 = Schedule for the See3PO project =
 
-===October=== 
+===October 2009=== 
 
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||
 || Install Visio Studio 2008 on your PC					|| 10/04/2009	|| Complete		|| All 			||
@@ -36,7 +36,7 @@
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||
 
 
-===January===
+===January 2010===
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||
 || *[PathFinding] Complete*                             || 01/01/2010	|| 				|| [Debarati], [Nick], [Frank] ||
 || *Robot fixes complete*                               || 01/01/2010	|| 				|| [Jacky], [Hao] 	||

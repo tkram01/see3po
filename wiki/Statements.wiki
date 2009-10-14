@@ -21,7 +21,7 @@ See3PO is for you. You need a See3PO.<br>
 
  See3PO is a project which tries to mimic how animals know their
 position through their vision and memory while being at the place
-where they have been before.  A robot with video camera is used to
+where they have been before. A robot with video camera is used to
 simulate a moving animal. The robot transmit the video stream to a
 "main brain" computer which stores the surrounding information. By
 comparing the current view from the video with the surrounding, the

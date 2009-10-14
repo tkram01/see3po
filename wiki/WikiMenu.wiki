@@ -12,11 +12,10 @@
   ** [Websites Resources] 
   ** [PathFinding Path Finding] 
   ** [FloorPlanProcessing Floor Plan Processing] 
- * Professor's Comments
-  ** [ProfessorComments Professor's Comments (Oct. 6)]
  * Group Member
   ** [Frank]
   ** [Nick]
   ** [Debarati]
   ** [Hao]
   ** [Jacky]
+ * [ProfessorComments Professor's Comments]

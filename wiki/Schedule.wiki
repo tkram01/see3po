@@ -10,7 +10,7 @@
 || Schedule a time with Tyler on next Wednesday || 10/06/2009|| Complete || [Frank] ||10/06/2009 ||
 || Send [Frank] google ID in order to setup permission|| 10/03/2009|| Complete||[Hao]|| 10/03/2009 ||
 || Create accounts on testing PC for team members || 10/04/2009	|| Complete ||[Nick]||10/04/2009	||
-|| Decide Team Name || 10/05/2009 || Complete|| All ||10/05/2009 ||
+|| Decide [ProjectName Team Name] || 10/05/2009 || Complete|| All ||10/05/2009 ||
 || Create Google Code|| 10/05/2009 || Complete 	|| [Frank] ||10/05/2009 ||
 || Create and post Project Specifications || 10/05/2009 || Complete || [Debarati] ||10/05/2009 ||
 || Post Minutes from Meeting 1 || 10/05/2009|| Complete || [Jacky] ||10/05/2009	||

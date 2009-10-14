@@ -4,10 +4,10 @@
 
 ===October 2009=== 
 
-|| *Task* || *Due* || *Status*|| *Taken By*   ||
-|| Install Visio Studio 2008 on your PC	|| 10/04/2009	|| Complete|| All ||
-|| Gain access to Vision Lab|| 10/05/2009|| || All||
-|| Schedule a time with Tyler on next Wednesday || 10/06/2009	|| Complete || [Frank] ||
+|| *Task* || *Due* || *Status*|| *Taken By*   ||*Completed Date*   ||
+|| Install Visio Studio 2008 on your PC	|| 10/04/2009	|| Complete|| All || 10/04/2009 ||
+|| Gain access to Vision Lab|| 10/05/2009|| || All|| 10/05/2009 ||
+|| Schedule a time with Tyler on next Wednesday || 10/06/2009|| Complete ||10/06/2009 ||
 || Send [Frank] google ID in order to setup permission|| 10/03/2009|| Complete||[Hao]||
 || Create accounts on testing PC for team members || 10/04/2009	|| Complete ||[Nick]||
 || Decide Team Name || 10/05/2009 || Complete|| All ||

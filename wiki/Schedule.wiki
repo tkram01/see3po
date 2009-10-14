@@ -7,18 +7,18 @@
 || *Task* || *Due* || *Status*|| *Taken By*   || *Completed Date*   ||
 || Install Visio Studio 2008 on your PC	|| 10/04/2009	|| Complete|| All || 10/04/2009 ||
 || Gain access to Vision Lab|| 10/05/2009|| || All|| 10/05/2009 ||
-|| Schedule a time with Tyler on next Wednesday || 10/06/2009|| Complete || 10/06/2009 ||
+|| Schedule a time with Tyler on next Wednesday || 10/06/2009|| Complete || [Frank] ||10/06/2009 ||
 || Send [Frank] google ID in order to setup permission|| 10/03/2009|| Complete||[Hao]|| 10/03/2009 ||
 || Create accounts on testing PC for team members || 10/04/2009	|| Complete ||[Nick]||10/04/2009	||
 || Decide Team Name || 10/05/2009 || Complete|| All ||10/05/2009 ||
 || Create Google Code|| 10/05/2009 || Complete 	|| [Frank] ||10/05/2009 ||
-|| Create and post Project Specifications || 10/05/2009 || Complete || [Debarati] ||
-|| Post Minutes from Meeting 1 	|| 10/05/2009	|| Complete 	|| [Jacky] 		||
-|| Post Code from Tyler 								|| 10/05/2009 	|| Complete 	|| [Nick] 		||
-|| Project Roles Assigned 								|| 10/09/2009 	|| Complete		|| All			||
-|| Post Minutes from Team Meeting 2 					|| 10/09/2009	|| Complete	 	|| [Jacky]  		||
-|| Personal Wikis Completed                             || 10/11/2009	|| Complete			 	|| All	 		||
-|| Two Narratives completed                             || 10/11/2009 	|| 				|| [Frank], [Nick]			||
+|| Create and post Project Specifications || 10/05/2009 || Complete || [Debarati] ||10/05/2009 ||
+|| Post Minutes from Meeting 1 || 10/05/2009|| Complete || [Jacky] ||10/05/2009	||
+|| Post Code from Tyler || 10/05/2009 	|| Complete 	|| [Nick] ||10/05/2009 	||
+|| Project Roles Assigned || 10/09/2009 || Complete || All || 10/09/2009 ||
+|| Post Minutes from Team Meeting 2 || 10/09/2009 || Complete || [Jacky]  || 10/09/2009 ||
+|| Personal Wikis Completed || 10/11/2009 || Complete || All ||10/11/2009 ||
+|| Two Narratives completed  || 10/11/2009 ||  Complete || [Frank], [Nick]|| 10/11/2009 ||
 || Mission Statement Completed                          || 10/11/2009 	|| 				|| All			||
 || Photograph the Robot|| 10/11/2009 	|| || [Nick]		||
 || Format the Wiki, Add a Side Bar                       || 10/11/2009 	|| Complete  	|| [Jacky] 		||

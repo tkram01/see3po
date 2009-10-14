@@ -4,29 +4,29 @@ We were trying to figure out the name of the project. First, we were thinking of
 
 === Features of Robot ===
 
-Auto-pilot<br>
-Aware<br>
-Camera<br>
-Carrier<br>
-Delivering<br>
-Intelligent<br>
-Machine<br>
-Mobile<br>
-Mule<br>
-Navigate<br>
-Optical<br>
-Optimal<br>
-Path<br>
-Patrol<br>
-Probe<br>
-Robot<br>
-Scout<br>
-Seeing<br>
-Spy<br>
-Travel<br>
-Viewing<br>
-Vision<br>
-Watching<br>
+  *Auto-pilot<br>
+  *Aware<br>
+  *Camera<br>
+  *Carrier<br>
+  *Delivering<br>
+  *Intelligent<br>
+  *Machine<br>
+  *Mobile<br>
+  *Mule<br>
+  *Navigate<br>
+  *Optical<br>
+  *Optimal<br>
+  *Path<br>
+  *Patrol<br>
+  *Probe<br>
+  *Robot<br>
+  *Scout<br>
+  *Seeing<br>
+  *Spy<br>
+  *Travel<br>
+  *Viewing<br>
+  *Vision<br>
+  *Watching<br>
 
 === Possible Prefix: ===
 
@@ -48,5 +48,7 @@ Watching<br>
   *Navigator
 
 === Decision ===
+
+Decided by voting.
 
 = See3PO =

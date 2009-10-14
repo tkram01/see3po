@@ -33,4 +33,10 @@ kinds of vehicles then can be developed. Therefore, in the future, we
 hope to see that people will take "driver-less" taxis or buses to
 work, benefited from the result of our research.
 
-= Hao =
+= [Hao] =
+
+The See3po robot is as simple as a toy car, however, with its “eyes” and “brain”, it can be easily familiar with our home. If we are worried about our cute baby, not sure about whether the gas is turned off in a cold winter night, don’t worry, the robot can easily keep an eye on that. In the near future, the robot can easily get stuff for us at home. When we are tired after a long day work, what can be much more happiness if someone gets us a hot coffee? Furthermore, the See3po group can help it to transform as a housekeeper so that we can save the time and have fun with our family. There is no best for See3po, only better.
+
+= [Debarati] =
+
+See3PO aims to provide for a way to help a robot find its way from one location to another, in an efficient manner, without any human intervention. Initially this two locations would be both on the same floor of a building, with a scope to extend this furthur in future.

@@ -22,6 +22,7 @@
 || Mission Statement Completed                          || 10/11/2009 	|| 				|| All			||
 || Photograph the Robot 								|| 10/11/2009 	|| 				|| [Nick]		||
 || Format the Wiki, Add a Side Bar                       || 10/11/2009 	|| Complete  	|| [Jacky] 		||
+|| [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communication protocols document] || 10/13/2009 || Complete  	|| [Jacky] 		||
 || Two Use-Cases completed 								|| 10/18/2009 	|| 				|| 				||
 || *Tyler's code is successfully running* 				|| 10/31/2009 	|| 				|| All 			||
 ||[LocalBrainEmulator] Complete 									|| 10/31/2009	|| Complete				|| [Frank]		||

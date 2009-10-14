@@ -4,48 +4,48 @@ We were trying to figure out the name of the project. First, we were thinking of
 
 === Features of Robot ===
 
-  *Auto-pilot<br>
-  *Aware<br>
-  *Camera<br>
-  *Carrier<br>
-  *Delivering<br>
-  *Intelligent<br>
-  *Machine<br>
-  *Mobile<br>
-  *Mule<br>
-  *Navigate<br>
-  *Optical<br>
-  *Optimal<br>
-  *Path<br>
-  *Patrol<br>
-  *Probe<br>
-  *Robot<br>
-  *Scout<br>
-  *Seeing<br>
-  *Spy<br>
-  *Travel<br>
-  *Viewing<br>
-  *Vision<br>
-  *Watching<br>
+  * Auto-pilot<br>
+  * Aware<br>
+  * Camera<br>
+  * Carrier<br>
+  * Delivering<br>
+  * Intelligent<br>
+  * Machine<br>
+  * Mobile<br>
+  * Mule<br>
+  * Navigate<br>
+  * Optical<br>
+  * Optimal<br>
+  * Path<br>
+  * Patrol<br>
+  * Probe<br>
+  * Robot<br>
+  * Scout<br>
+  * Seeing<br>
+  * Spy<br>
+  * Travel<br>
+  * Viewing<br>
+  * Vision<br>
+  * Watching<br>
 
 === Possible Prefix: ===
 
-  *i-
-  *eye-
-  *e-
-  *my-
-  *see-
+  * i-
+  * eye-
+  * e-
+  * my-
+  * see-
 
 === Potential Name: ===
-  *ViLANN  
-  *Nexus7 
-  *See-3PO 
-  *VVALLE 
-  *Scout / Mule 
-  *Probe
-  *Marc P.
-  *eye-Robot
-  *Navigator
+  * ViLANN  
+  * Nexus7 
+  * See-3PO 
+  * VVALLE 
+  * Scout / Mule 
+  * Probe
+  * Marc P.
+  * eye-Robot
+  * Navigator
 
 === Decision ===
 

@@ -1,6 +1,6 @@
 #summary Detail of gaining access of VisLab
 
-We obtained Marc Pomplun's (lab director) agreement to access VisLab .
+We obtained Marc Pomplun's (lab director) agreement to access VisLab.
 However, department administrator might consider the security of lab and he was not able to create accounts for all team members.
 
 Since Tyler, [Frank], and [Nick] have access codes, other team members could still access VisLab by appointments.

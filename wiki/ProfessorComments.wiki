@@ -18,7 +18,7 @@ Schedule entries have been arranged in chronological order.
 
 Out of date items were rescheduled.
 
-We added a Emulator page.
+We added a [LocalBrainEmulator Emulator] page.
 
 ----
 

@@ -26,7 +26,7 @@
 ||[http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communication protocols document] || 10/13/2009 || Complete  	|| [Jacky] 		|| 10/13/2009 ||
 || Mission [Statements Statement] Chosen 		|| 10/15/2009 	||  			|| All 			|| 						||
 || [Logo] Chosen 								|| 10/15/2009 	||  			|| All 			|| 						||
-|| Two [Use-Cases] completed 					|| 10/18/2009 	|| 				|| 				|| 						||
+|| Two [UseCases] completed 					|| 10/18/2009 	|| 				|| 				|| 						||
 || *Tyler's code is successfully running* 		|| 10/31/2009 	|| 				|| All 			||						||
 ||[LocalBrainEmulator] Returns Position, Facing	|| 10/31/2009	|| 				|| [Frank]		||						||
 

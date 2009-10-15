@@ -13,17 +13,17 @@
 || Decide [ProjectName Team Name] 				|| 10/05/2009 	|| Complete		|| All 			|| 10/05/2009 			||
 || Create Google Code							|| 10/05/2009 	|| Complete 	|| [Frank] 		|| 10/05/2009 			||
 || Create and post Project Specifications 		|| 10/05/2009 	|| Complete 	|| [Debarati] 	|| 10/05/2009 			||
-|| Post Minutes from Team [Meeting01] 			|| 10/05/2009	|| Complete 	|| [Jacky] 		|| 10/05/2009			||
+|| Post Minutes from [TeamMeeting1] 			|| 10/05/2009	|| Complete 	|| [Jacky] 		|| 10/05/2009			||
 || Post Code from Tyler 						|| 10/05/2009 	|| Complete 	|| [Nick] 		|| 10/05/2009 			||
 || Project Roles Assigned 						|| 10/09/2009 	|| Complete 	|| All 			|| 10/09/2009 			||
-|| Post Minutes from Team [Meeting02] 			|| 10/09/2009 	|| Complete 	|| [Jacky]  	|| 10/09/2009 			||
+|| Post Minutes from Team Meeting 2 			|| 10/09/2009 	|| Complete 	|| [Jacky]  	|| 10/09/2009 			||
 || Personal Wikis Completed 					|| 10/11/2009 	|| Complete 	|| All 			|| 10/11/2009 			||
 || Two [Narratives] completed 					|| 10/11/2009 	|| Complete 	|| [Frank], [Nick]|| 10/11/2009 		||
 || Format the Wiki, Add a Side Bar  			|| 10/11/2009 	|| Complete 	|| [Jacky] 		|| 10/11/2009 			||
 ||[LocalBrainEmulator] Connects to PC			|| 10/11/2009	|| Complete		|| [Frank]		|| 10/11/2009			||
 || Mission [Statements Statement] Submitted 	|| 10/13/2009 (R) || Complete 	|| All 			|| 10/11/2009 			||
 || Photograph the Robot							|| 10/13/2009 (R) || Complete 	|| [Nick] 		|| 10/13/2009 			||
-||[http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communication protocols document] || 10/13/2009 || Complete  	|| [Jacky] 		||
+||[http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communication protocols document] || 10/13/2009 || Complete  	|| [Jacky] 		|| 10/13/2009 ||
 || Mission [Statements Statement] Chosen 		|| 10/15/2009 	||  			|| All 			|| 						||
 || [Logo] Chosen 								|| 10/15/2009 	||  			|| All 			|| 						||
 || Two [Use-Cases] completed 					|| 10/18/2009 	|| 				|| 				|| 						||
@@ -53,3 +53,7 @@
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||
 || *Deliverable Due*                                    || 05/21/09     ||              ||              ||
  
+
+= Note =
+
+Edit this in an editor, it's tabbed so that the columns line up, but that makes it look terrible in the online edit window. 

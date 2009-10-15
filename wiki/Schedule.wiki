@@ -4,32 +4,35 @@
 
 ===October 2009=== 
 
-|| *Task* || *Due* || *Status*|| *Taken By*   || *Completed Date*   ||
-|| Install Visio Studio 2008 on your PC	|| 10/04/2009	|| Complete|| All || 10/04/2009 ||
-|| ~~ Gain access to Vision Lab ~~|| ~~10/05/2009~~|| ~~Pending~~ || ~~All~~ || [AccessVisLab Detail]  || 
-|| Schedule a time with Tyler on next Wednesday || 10/06/2009|| Complete || [Frank] ||10/06/2009 ||
-|| Send [Frank] google ID in order to setup permission|| 10/03/2009|| Complete||[Hao]|| 10/03/2009 ||
-|| Create accounts on testing PC for team members || 10/04/2009	|| Complete ||[Nick]||10/04/2009	||
-|| Decide [ProjectName Team Name] || 10/05/2009 || Complete|| All ||10/05/2009 ||
-|| Create Google Code|| 10/05/2009 || Complete 	|| [Frank] ||10/05/2009 ||
-|| Create and post Project Specifications || 10/05/2009 || Complete || [Debarati] ||10/05/2009 ||
-|| Post Minutes from Meeting 1 || 10/05/2009|| Complete || [Jacky] ||10/05/2009	||
-|| Post Code from Tyler || 10/05/2009 	|| Complete 	|| [Nick] ||10/05/2009 	||
-|| Project Roles Assigned || 10/09/2009 || Complete || All || 10/09/2009 ||
-|| Post Minutes from Team Meeting 2 || 10/09/2009 || Complete || [Jacky]  || 10/09/2009 ||
-|| Personal Wikis Completed || 10/11/2009 || Complete || All ||10/11/2009 ||
-|| Two [Narratives] completed || 10/11/2009 || Complete || [Frank], [Nick]|| 10/11/2009 ||
-|| Format the Wiki, Add a Side Bar  || 10/11/2009 || Complete || [Jacky] ||10/11/2009 ||
-|| Mission [Statements Statement] Completed || 10/13/2009 (R) || In processing || All ||
-|| Photograph the Robot|| 10/13/2009 (R)|| In processing || [Nick] ||
+|| *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
+|| Install Visio Studio 2008 on your PC			|| 10/04/2009	|| Complete 	|| All 			|| 10/04/2009 			||
+|| ~~ Gain access to Vision Lab ~~				|| ~~10/05/2009~~|| ~~Pending~~ || ~~All~~ 		|| [AccessVisLab Detail] || 
+|| Schedule Boss Meeting 1 						|| 10/06/2009	|| Complete 	|| [Frank] 		|| 10/06/2009 			||
+|| Send [Frank] google ID 						|| 10/03/2009	|| Complete		|| [Hao]		|| 10/03/2009 			||
+|| Create accounts on testing PC for team members || 10/04/2009	|| Complete 	|| [Nick]		|| 10/04/2009			||
+|| Decide [ProjectName Team Name] 				|| 10/05/2009 	|| Complete		|| All 			|| 10/05/2009 			||
+|| Create Google Code							|| 10/05/2009 	|| Complete 	|| [Frank] 		|| 10/05/2009 			||
+|| Create and post Project Specifications 		|| 10/05/2009 	|| Complete 	|| [Debarati] 	|| 10/05/2009 			||
+|| Post Minutes from [TeamMeeting1] 			|| 10/05/2009	|| Complete 	|| [Jacky] 		|| 10/05/2009			||
+|| Post Code from Tyler 						|| 10/05/2009 	|| Complete 	|| [Nick] 		|| 10/05/2009 			||
+|| Project Roles Assigned 						|| 10/09/2009 	|| Complete 	|| All 			|| 10/09/2009 			||
+|| Post Minutes from Team Meeting 2 			|| 10/09/2009 	|| Complete 	|| [Jacky]  	|| 10/09/2009 			||
+|| Personal Wikis Completed 					|| 10/11/2009 	|| Complete 	|| All 			|| 10/11/2009 			||
+|| Two [Narratives] completed 					|| 10/11/2009 	|| Complete 	|| [Frank], [Nick]|| 10/11/2009 		||
+|| Format the Wiki, Add a Side Bar  			|| 10/11/2009 	|| Complete 	|| [Jacky] 		|| 10/11/2009 			||
+||[LocalBrainEmulator] Connects to PC			|| 10/11/2009	|| Complete		|| [Frank]		|| 10/11/2009			||
+|| Mission [Statements Statement] Submitted 	|| 10/13/2009 (R) || Complete 	|| All 			|| 10/11/2009 			||
+|| Photograph the Robot							|| 10/13/2009 (R) || Complete 	|| [Nick] 		|| 10/13/2009 			||
 ||[http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communication protocols document] || 10/13/2009 || Complete  	|| [Jacky] 		||
-|| Two Use-Cases completed 								|| 10/18/2009 	|| 				|| 				||
-|| *Tyler's code is successfully running* 				|| 10/31/2009 	|| 				|| All 			||
-||[LocalBrainEmulator] Complete 									|| 10/31/2009	|| Complete				|| [Frank]		||
+|| Mission [Statements Statement] Chosen 		|| 10/15/2009 	||  			|| All 			|| 						||
+|| [Logo] Chosen 								|| 10/15/2009 	||  			|| All 			|| 						||
+|| Two [Use-Cases] completed 					|| 10/18/2009 	|| 				|| 				|| 						||
+|| *Tyler's code is successfully running* 		|| 10/31/2009 	|| 				|| All 			||						||
+||[LocalBrainEmulator] Returns Position, Facing	|| 10/31/2009	|| 				|| [Frank]		||						||
 
 ===November===
 || *Task*                                               || *Due*        || *Status*     || *Taken By*   ||
-|| *Talk with Venture Capitalists*                        || 11/12/2009	|| 				||  			||
+|| *Talk with [VentureCapitalists]*                     || 11/12/2009	|| 				||  			||
 || *[FloorPlanProcessing]  Complete*                    || 11/15/2009	|| 				||  [Nick], [Debarati], [Frank] ||
 
 ===December===

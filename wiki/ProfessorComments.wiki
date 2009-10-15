@@ -12,6 +12,14 @@ Several items marked 10/11 haven't been completed and haven't been rescheduled.
 
 The Emulator is marked as complete, but I can't find anywhere on the wiki a description of what the emulator emulates, where to find its code, and how it was tested.
 
+_Reply from the team:_
+
+Schedule entries have been arranged in chronological order.
+
+Out of date items were rescheduled.
+
+We added a Emulator page.
+
 ----
 
 == October 6 ==
@@ -21,6 +29,8 @@ This Google code wiki shows almost no recent progress at all. There is in fact q
 In particular, where is the schedule? Getting one up is a top priority, so you can see whether you are on track.
 
 _Reply from the team:_
+
+Please see "Schedule" page.
 
 ----
 

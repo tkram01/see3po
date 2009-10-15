@@ -14,9 +14,9 @@ The Emulator is marked as complete, but I can't find anywhere on the wiki a desc
 
 _Reply from the team:_
 
-Schedule entries have been arranged in chronological order.
+Schedule entries have been arranged in chronological order. Please see [Schedule] page.
 
-Out of date items were rescheduled.
+Out of date items were rescheduled. Please see [Schedule] page.
 
 We added a [LocalBrainEmulator Emulator] page.
 

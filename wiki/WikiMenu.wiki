@@ -10,8 +10,8 @@
   ** [SystemArchitecture Architecture]
   ** [DevelopmentEnvironment Environment]
   ** [Websites Resources] 
-  ** [PathFinding Path Finding] 
   ** [FloorPlanProcessing Floor Plan Processing] 
+  ** [PathFinding Path Finding] 
  * Group Member
   ** [Frank]
   ** [Nick]

@@ -1,4 +1,4 @@
-#Summary Risk Analysis of See3PO project
+#summary Risk Analysis of See3PO project
 
 || *Risk* || *Possibility* || *Response* ||
 || Can't find driver for video cam on WinCE. || <font color=red> *High* </font>|| Develop our own or change video cam ||

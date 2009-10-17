@@ -1,0 +1,6 @@
+#summary Risk Analysis of See3PO project
+
+|| *Risk* || *Possibility* || *Response* ||
+|| Can't find driver for video cam on WinCE. || High || Develop our own or change video cam ||
+|| Robot out of order or break. || Medium || Develop emulators and spare parts ||
+|| Same type of project has existed. || Low || Can learn from it or share information ||

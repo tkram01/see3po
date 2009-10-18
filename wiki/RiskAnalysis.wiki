@@ -2,5 +2,8 @@
 
 || *Risk* || *Probability* || *Severity* || *Response* ||
 || Can't find WinCE driver for video cam. || <font color=red> *High* </font>|| <font color=red> *High* </font>|| Develop our own or change video cam ||
-|| Robot out of order or break. || <font color=green> Medium </font>|| <font color=red> *High* </font>|| Develop emulators and spare parts ||
+|| Robot out of order or break. || <font color=yellow> Medium </font>|| <font color=red> *High* </font>|| Develop emulators and spare parts ||
 || Same type of project has existed. || Low || Low || Can learn from it or share information ||
+|| Zombie Apocalypse ||  <font color=green>Low</font> || <font color=red> *High* </font> || Wall up the entrances to the school, gather the ammo ||
+|| Tyler leaves town forever|| <font color=green>Low</font> ||  <font color=red> *High* </font> || Speak to MERL about a new contact person, speak to UMASS about using the robot ||
+|| Tyler fails to deliver Voodoo algorithm on time || <font color=yellow>Medium</font> || <font color=yellow>Medium</font> || Continue working with emulator, or use alternate system to get the location ||

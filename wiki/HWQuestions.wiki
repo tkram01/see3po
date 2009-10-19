@@ -1,0 +1,7 @@
+#summary Questions about hardware
+
+ ** How to upload/update files onto robot's embedded computer?
+ 
+ ** How to upload/update programs onto ATOM microchip?
+
+ ** Need username and password to download [http://www.ptgrey.com/products/dragonfly2/index.asp camera's] driver from [http://www.ptgrey.com/support/downloads/index.asp manufacture's website]. 

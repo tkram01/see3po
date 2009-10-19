@@ -13,6 +13,8 @@
   ** [Websites Resources] 
   ** [FloorPlanProcessing Floor Plan Processing] 
   ** [PathFinding Path Finding] 
+  ** Hardware
+     *** Questions
  * Group Member
   ** [Frank]
   ** [Nick]

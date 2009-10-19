@@ -1,0 +1,36 @@
+#summary BossMeeting2
+#labels Meeting
+=Meeting with Tyler=
+	* Date: 10/21/2009
+	* Time: 6:30 PM
+	* Location: S-3-135 
+	* Meeting called by:	Tyler
+	* Type of meeting:	Business/Progress
+	* Facilitator:	Frank/Tyler	
+	* Note taker:	
+	* Attendees:
+	* Absent: 
+
+==Minutes==
+
+
+===Agenda item:===	
+  * Tyler will view our progress
+  * Discuss the interface between his program/class and ours
+  * Pathfinding questions:
+     # Location or Location and Facing?
+     # 8-way, 4-way directionality?
+     # Restrictions on floorplan image
+  * Discuss Emulator
+  * Hardware Questions:  
+     # How to upload/update files onto robot's embedded computer?
+     # How to upload/update programs onto ATOM microchip?
+     # Need username and password to download [http://www.ptgrey.com/products/dragonfly2/index.asp camera's] driver from [http://www.ptgrey.com/support/downloads/index.asp manufacture's website]. 
+  * Discuss Mission Statement
+  
+  * Reconcile Schedule with Tyler
+===Discussion:===	
+
+===Conclusions:	===
+
+===Other Information===

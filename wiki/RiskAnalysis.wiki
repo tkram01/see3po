@@ -6,5 +6,5 @@
 || Software || Tyler fails to deliver Voodoo algorithm on time || <font color=orange> Medium </font> || <font color=orange> Medium </font> || Continue working with emulator, or use alternate system to get the location ||
 ||  || Zombie Apocalypse ||  <font color=green> Low </font> || <font color=red> *High* </font> || Wall up the entrances to the school, gather the ammo ||
 || Team Member || Tyler leaves town forever|| <font color=green> Low </font> ||  <font color=red> *High* </font> || Speak to MERL about a new contact person, speak to UMASS about using the robot ||
-|| Team Member || Team member(s) leave || <font color=green> Low </font> ||  <font color=orange> Medium </font> || 1. All team members document everything from now on. <br> 2. Other team members take over his/her responsibilities ||
+|| Team Member || Team member(s) leave || <font color=green> Low </font> ||  <font color=orange> Medium </font> || * All team members document everything from now on. <br> * Other team members take over his/her responsibilities ||
 || Other || Same type of project has existed. ||  <font color=green> Low </font> ||  <font color=green> Low </font> || Can learn from it or share information ||

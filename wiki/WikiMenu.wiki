@@ -14,7 +14,7 @@
   ** [FloorPlanProcessing Floor Plan Processing] 
   ** [PathFinding Path Finding] 
   ** Hardware
-     *** [HWQestion Questions]
+     *** [HWQestions Questions]
  * Group Member
   ** [Frank]
   ** [Nick]

@@ -12,10 +12,18 @@ namespace LocalBrainEmulator
 {
     public partial class MainForm : Form
     {
+        private const int HEIGHT = 50;
+        private const int WIDTH = 50;
+
         delegate void DGuiCallVoid();
         delegate void DGuiCallString(string str);
         delegate void DGuiCallBuffer(byte[] buffer);
 
+        private RobotSprite sprite;
+        private Image floorPlan;
+        private Image buffer;
+        private Graphics bg;
+        private Graphics fg;
         private CRobotClient client;
         //private CServosController servos;
         //private CMotorsController motors;
@@ -23,6 +31,20 @@ namespace LocalBrainEmulator
         public MainForm()
         {
             InitializeComponent();
+
+            buffer = new Bitmap(livePanel.Width, livePanel.Height);
+            fg = Graphics.FromHwnd(livePanel.Handle);
+            bg = Graphics.FromImage(buffer);
+
+            floorPlan = new Bitmap("testFloor.jpg");
+            livePanel.BackgroundImage = floorPlan;
+            Image spriteImage = new Bitmap("sprite.png");
+            sprite = new RobotSprite(new Bitmap(spriteImage, HEIGHT, WIDTH), new Point(livePanel.Width/2, livePanel.Height/2));
+
+            drawToBuffer();
+            drawFromBuffer();
+
+            //livePanel.draw
 
             client = new CRobotClient(this);
             //servos = new CServosController(this);
@@ -142,26 +164,26 @@ namespace LocalBrainEmulator
 
         public void HandleMotorsMessage(byte[] buffer)
         {
-            //if (InvokeRequired)
-            //{
-            //    Invoke(new DGuiCallBuffer(HandleMotorsMessage), buffer);
-            //    return;
-            //}
+            int leftSpeed = buffer[3] < 128 ? buffer[3] : buffer[3] - 255;
+            int rightSpeed = buffer[5] < 128 ? buffer[5] : buffer[5] - 255;
 
-            //string msg = "Motors Message Received: ";
-            //for (int i = 0; i < buffer.Length; i++)
-            //    msg += buffer[i] + " ";
+            string msg = "Motors Message Received: ";
+            for (int i = 0; i < buffer.Length; i++)
+                msg += buffer[i] + "\n\r ";
+            PostMessage(msg);
 
-            //PostMessage(msg);
+            msg =  "\n\r speeds: " + leftSpeed + " " + rightSpeed;
+            PostMessage(msg);
 
-            //if (motors.IsConnected)
-            //{
-            //    byte[] newbuffer = new byte[buffer.Length - 1];
-            //    for (int i = 1; i < buffer.Length; i++)
-            //        newbuffer[i - 1] = buffer[i];
+            if (leftSpeed != 0 || rightSpeed != 0)
+            {
+                sprite.move(leftSpeed, rightSpeed);
+                drawToBuffer();
+                drawFromBuffer();
+            }
 
-            //    motors.Send(newbuffer);
-            //}
+            msg = "\n\r facing: " + sprite.facing;
+            PostMessage(msg);
         }
 
         private void remoteConnectMenuItem_Click(object sender, EventArgs e)
@@ -186,6 +208,17 @@ namespace LocalBrainEmulator
             //    motors.Disconnect();
             //else
             //    motors.Connect();
+        }
+
+        private void drawFromBuffer()
+        {
+            fg.DrawImage(buffer, new Point(0, 0));
+        }
+
+        private void drawToBuffer()
+        {
+            bg.DrawImage(floorPlan, 0, 0, livePanel.Width, livePanel.Height);
+            bg.DrawImage(sprite.image, sprite.position.X, sprite.position.Y, 50, 50);
         }
 
         private void exitMenuItem_Click(object sender, EventArgs e)

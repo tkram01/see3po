@@ -8,4 +8,5 @@ Located under LocalBrainEmulator, this program will eventually emulate both the 
 = Details =
 || Date || Notes ||
 || 10/13/2009 || a working emulator is up with the following functions:<br> connects to the Exlporer (GUI) Program || 
+|| 10/19/2009 || The emulator now tracks the location and displays the robot's location on a mock floor plan.  ||
 || || ||

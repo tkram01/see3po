@@ -1,10 +1,10 @@
 #summary Risk Analysis of See3PO project
 
 || *Category* || *Risk* || *Probability* || *Severity* || *Response* ||
-|| Hardware/Software || Can't find WinCE driver for video cam. || <font color=red> *High* </font>|| <font color=red> *High* </font>|| Develop our own or change video cam ||
-|| Hardware || Robot out of order or break. || <font color=orange> Medium </font>|| <font color=red> *High* </font>|| Develop emulators and spare parts ||
-|| Software || Tyler fails to deliver Voodoo algorithm on time || <font color=orange> Medium </font> || <font color=orange> Medium </font> || Continue working with emulator, or use alternate system to get the location ||
+|| Hardware/Software || Can't find WinCE driver for video cam. || <font color=red> *High* </font>|| <font color=red> *High* </font>|| 1. Develop our own driver.<br> 2. Change video camera with available driver. ||
+|| Hardware || Robot out of order or break. || <font color=orange> Medium </font>|| <font color=red> *High* </font>|| 1. Develop emulators. <br> 2. Buy spare parts which are easier to break ||
+|| Software || Tyler fails to deliver Voodoo algorithm on time || <font color=orange> Medium </font> || <font color=orange> Medium </font> || 1. Continue working with emulator.<br> 2. Use alternate system to get the location (such as GPS) ||
 ||  || Zombie Apocalypse ||  <font color=green> Low </font> || <font color=red> *High* </font> || Wall up the entrances to the school, gather the ammo ||
-|| Team Member || Tyler leaves town forever|| <font color=green> Low </font> ||  <font color=red> *High* </font> || Speak to MERL about a new contact person, speak to UMASS about using the robot ||
-|| Team Member || Team member(s) leave || <font color=green> Low </font> ||  <font color=orange> Medium </font> || * All team members document everything from now on. <br> * Other team members take over his/her responsibilities ||
+|| Team Member || Tyler leaves town forever|| <font color=green> Low </font> ||  <font color=red> *High* </font> || 1. Speak to MERL about a new contact person.<br> 2. speak to UMASS about using the robot ||
+|| Team Member || Team member(s) leave || <font color=green> Low </font> ||  <font color=orange> Medium </font> || 1. All team members document everything from now on. <br> 2.  Other team members take over his/her responsibilities ||
 || Other || Same type of project has existed. ||  <font color=green> Low </font> ||  <font color=green> Low </font> || Can learn from it or share information ||

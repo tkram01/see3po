@@ -1,5 +1,5 @@
 #summary a program supplied by Tyler which will supply location and facing data
-#labels Host
+#labels Host,Featured
 
 = Introduction =
 

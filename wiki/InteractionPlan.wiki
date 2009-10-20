@@ -3,10 +3,9 @@
 = Introduction =
 
 This plan will detail how each component deals with one another. The major components are: 
-  * [Robot] / [Emulator]
+  * [LocalBrain] / [LocalBrainEmulator]
   * [GUI]
-  * [Pathfinding] algorithms
+  * [PathFinding] algorithms
   * [Voodoo Tyler's Voodoo] Alrotithm
 
 = Details =
-

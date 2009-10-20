@@ -7,4 +7,6 @@
 ||  || Zombie Apocalypse ||  <font color=green> Low </font> || <font color=red> *High* </font> || Wall up the entrances to the school, gather the ammo ||
 || Team Member || Tyler leaves town forever|| <font color=green> Low </font> ||  <font color=red> *High* </font> || 1. Speak to MERL about a new contact person.<br> 2. speak to UMASS about using the robot ||
 || Team Member || Team member(s) leave || <font color=green> Low </font> ||  <font color=orange> Medium </font> || 1. All team members document everything from now on. <br> 2.  Other team members take over his/her responsibilities ||
+|| Team Member|| One or more team member become ill and/or unavailable at a critical point ||  <font color=orange> Medium</font> ||  <font color=orange> Medium </font> || Others have to distribute their work among the rest. <br>  ||
+|| Other|| University and/or city gets shutdown due to some reason(e.g. flu epidemic) for more than a week ||  <font color=orange> Medium</font> ||  <font color=green> Low</font> || 1. Team members can communicate through emails and/or gtalk etc. and continue to work. <br>  ||
 || Other || Same type of project has existed. ||  <font color=green> Low </font> ||  <font color=green> Low </font> || 1. Analyze established works and learn from them. <br>  ||

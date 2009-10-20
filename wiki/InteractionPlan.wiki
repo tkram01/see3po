@@ -6,6 +6,6 @@ This plan will detail how each component deals with one another. The major compo
   * [LocalBrain] / [LocalBrainEmulator]
   * [Host] GUI
   * [PathFinding] algorithms
-  * Tyler's [VoodooAlrotithm]
+  * Tyler's [VoodooAlgorithm]
 
 = Details =

@@ -4,7 +4,7 @@
 
 This plan will detail how each component deals with one another. The major components are: 
   * [LocalBrain] / [LocalBrainEmulator]
-  * [GUI]
+  * [Host] GUI
   * [PathFinding] algorithms
   * [Voodoo Tyler's Voodoo] Alrotithm
 

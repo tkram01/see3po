@@ -4,8 +4,7 @@
 = Introduction =
 
 This program will receive image data from LocalBrain (through the [Host]), <br>
-and supply the [Pathfinding] component with location and facing data. 
+and supply the [PathFinding] component with location and facing data. 
 
 
 = Details =
-

@@ -1,5 +1,5 @@
 #summary The GUI running on the desktop
-#labels Host
+#labels Host,Featured
 = Introduction =
 
 This program will handle user inputs such as

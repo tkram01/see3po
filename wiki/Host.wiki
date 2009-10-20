@@ -1,0 +1,14 @@
+#summary The GUI running on the desktop
+#labels Host
+= Introduction =
+
+This program will handle user inputs such as
+  * Floorplan input - the user will select an image file to be used as the floorplan
+  * destination selection - the user will select the endpoint of the robot's path
+
+It will also act as the middle-man between the other components: 
+  * Passing images from the [LocalBrain] to the [VoodooAlgorithm]
+  * Passing location and facing data from [VoodooAlgorithm] to [PathFinding]
+  * Passing movement information from the [Pathfinding] to the  [LocalBrain]
+
+= Details =

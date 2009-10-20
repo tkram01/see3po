@@ -3,6 +3,10 @@
 
 = Introduction =
 
+Our Pathfinding component will receive location and facing data from the VoodooAlgorithm, and in turn supply the LocalBrain with movement commands. 
+
+----
+
 Path finding has been broadly used in Robots and AI game (for example, Fieldrunner as shown in Figure 1).
 
 [http://see3po.googlegroups.com/web/Fieldrunner.png]

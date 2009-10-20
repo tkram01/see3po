@@ -9,6 +9,6 @@ This program will handle user inputs such as
 It will also act as the middle-man between the other components: 
   * Passing images from the [LocalBrain] to the [VoodooAlgorithm]
   * Passing location and facing data from [VoodooAlgorithm] to [PathFinding]
-  * Passing movement information from the [Pathfinding] to the  [LocalBrain]
+  * Passing movement information from the [PathFinding] to the  [LocalBrain]
 
 = Details =

@@ -1,5 +1,4 @@
 #summary Project-wide duties
-#labels Featured
 
 
 = Short-Term Tasks =

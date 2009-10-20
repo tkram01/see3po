@@ -1,5 +1,5 @@
 #summary Development of Path Finding
-#labels Host
+#labels Host,Featured
 
 = Introduction =
 

@@ -1,0 +1,12 @@
+#summary A plan for communication between components.
+#labels Phase-Design
+= Introduction =
+
+This plan will detail how each component deals with one another. The major components are: 
+  * [Robot] / [Emulator]
+  * [GUI]
+  * [Pathfinding] algorithms
+  * [Voodoo Tyler's Voodoo] Alrotithm
+
+= Details =
+

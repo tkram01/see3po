@@ -26,7 +26,7 @@ Search strategies includes *uninformed search* (such as [[Breadth-first search]]
 
 = Established Codes =
 
-  * [http://quickgraph.codeplex.com/ QuickGraph] 
+  * [http://quickgraph.codeplex.com/ QuickGraph] (Graph Data Structures And Algorithms for .Net)
   * Programming Game AI by Example by Mat Buckland.(C++)
 
 = Issues =

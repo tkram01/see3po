@@ -38,7 +38,7 @@ Search strategies includes *uninformed search* (such as [[Breadth-first search]]
 || *Task* || *Status* || *Due Date* || *Complete* ||
 || Established codes evaluation || In processing || 11/07/2009 || ||
 || Algorithms evaluation || In processing || 11/14/2009 || ||
-|| Implementation || || ||
+|| Implementation || || || ||
 
 
 

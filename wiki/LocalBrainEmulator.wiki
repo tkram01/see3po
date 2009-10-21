@@ -13,7 +13,7 @@ Located under LocalBrainEmulator, this program will eventually emulate both the 
 
 = Testing =
 
-Date: Oct. 21, 2009.
-People: Frank, Nick, and Tyler.
-Machine: Desktop Computer in VisLab
-Task: Two programs, ViLAN Explorer and LocalBrainEmulator, are executed and a connection between ViLAN Explorer and LocalBrainEmulator are established. The user interface in ViLAN Explorer was used to send commands to LocalBrainEmulator, and LocalBrainEmulator was able to receive commands successfully. LocalBrainEmulator also showed a image to display to movement of emulator according to received commands.
+ * Date: Oct. 21, 2009.
+ * People: Frank, Nick, and Tyler.
+ * Machine: Desktop Computer in VisLab
+ * Task: Two programs, ViLAN Explorer and LocalBrainEmulator, are executed and a connection between ViLAN Explorer and LocalBrainEmulator are established. The user interface in ViLAN Explorer was used to send commands to LocalBrainEmulator, and LocalBrainEmulator was able to receive commands successfully. LocalBrainEmulator also showed a image to display to movement of emulator according to received commands.

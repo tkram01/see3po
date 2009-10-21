@@ -17,6 +17,7 @@ Figure 1. Fieldrunner
 
 Search strategies includes *uninformed search* (such as [[Breadth-first search]]) and *informed search*. Since we will have floor plan for our robot, *informed search* is considered.
 
+  *  Dijkstra 
   *  A`*` search 
   *  Hill-climbing search 
   *  Simulated Annealing 
@@ -28,6 +29,9 @@ Search strategies includes *uninformed search* (such as [[Breadth-first search]]
   * Programming Game AI by Example by Mat Buckland.(C++)
 
 = Issues =
+
+  * Algorithm choice
+
 
 = References =
 

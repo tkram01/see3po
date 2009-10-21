@@ -1,0 +1,12 @@
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\bin\Debug\PathPlaning.exe
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\bin\Debug\PathPlaning.pdb
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\obj\Debug\ResolveAssemblyReference.cache
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\obj\Debug\PathPlaning.Properties.Resources.resources
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\obj\Debug\PathPlaning.csproj.GenerateResource.Cache
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\obj\Debug\PathPlaning.exe
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\obj\Debug\PathPlaning.pdb
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\obj\Debug\PathPlaning.Form1.resources
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\bin\Debug\QuickGraph.Data.dll
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\bin\Debug\QuickGraph.dll
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\bin\Debug\QuickGraph.Glee.dll
+F:\Nick\UMassBoston\CS682\PathPlaning\PathPlaning\PathPlaning\bin\Debug\QuickGraph.Graphviz.dll

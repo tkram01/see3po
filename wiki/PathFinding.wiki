@@ -33,6 +33,13 @@ Search strategies includes *uninformed search* (such as [[Breadth-first search]]
 
   * Algorithm choice
 
+= To-Do List and Schedule =
+
+|| *Task* || *Status* || *Due Date* || *Complete* ||
+|| Algorithms selection || In processing || 10/31 || ||
+|| Established codes evaluation || In processing || 11/7 || ||
+
+
 
 = References =
 

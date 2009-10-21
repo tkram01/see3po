@@ -17,6 +17,8 @@ As assigned by client (Tyler), we will have a floor plan in image format (bmp, p
 2 dimension array (as tiles of floor plan).
 Tile size might be similar to actual size of robot.
 
+[http://code.google.com/p/see3po/source/browse/trunk/SourceCode/FloorPlanProcessing/FloorPlanBoxes.JPG]
+
 = Established Codes =
 Box-Count Dimension module by [Nick]. (Java)
 

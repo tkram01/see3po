@@ -15,7 +15,7 @@ Figure 1. Fieldrunner
 
 = Algorithms =
 
-Search strategies includes *uninformed search* (such as [[Breadth-first search]]) and *informed search*. Since we will have floor plan for our robot, *informed search* is considered.
+Search strategies includes *uninformed search* (such as Breadth-first search, Depth-first search, and so on) and *informed search*. Since we will have floor plan for our robot, *informed search* is considered.
 
   *  Dijkstra 
   *  A`*` search 

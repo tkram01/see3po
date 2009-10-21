@@ -11,6 +11,8 @@ Add your content here.
 === Input ===
 As assigned by client (Tyler), we will have a floor plan in image format (bmp, png, or jpg)
 
+[http://www.cs.umb.edu/img/third_floor_map.gif]
+
 === Output ===
 2 dimension array (as tiles of floor plan).
 Tile size might be similar to actual size of robot.

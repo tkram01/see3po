@@ -27,10 +27,10 @@
 || Mission [Statements Statement] Chosen 		|| 10/15/2009 	|| Complete		|| All 			|| 	10/15/2009			||
 || [Logo] Chosen 								|| 10/15/2009 	|| Complete		|| All 			|| 	10/15/2009			||
 || 3 [riskAnalysis] from each					|| 10/20/2009	|| Complete		|| All 			|| 10/18/2009			||
-|| Film the Robot Video		 					|| 10/21/2009 	|| 				|| [Frank], [Nick] || 					||
-|| Gather all the questions we have about hardware || 10/21/2009 || 			|| [Hao], [Jacky]||						||
-|| Follow up on getting access to Vision Lab 	|| 10/21/2009 	|| 				|| [Frank] 		||						||
+|| Film the Robot Video		 					|| 10/21/2009 	|| 				|| [Frank], [Nick] || 10/21/2009		||
+|| Gather all the questions we have about hardware || 10/21/2009 || 			|| [Hao], [Jacky]|| 10/21/2009 		||
 || [InteractionPlan] completed 					|| 10/28/2009	|| 				|| 				|| 						||
+|| Follow up on getting access to Vision Lab 	|| 10/22/2009 (R)|| 				|| [Frank] 		||						||
 || *Tyler's code is successfully running* 		|| 10/31/2009 	|| 				|| All 			||						||
 || Two [UseCases] completed 					|| 10/31/2009 	|| Rescheduled	|| 				|| 						||
 || [LocalBrainEmulator] Returns Position, Facing|| 10/31/2009	|| Complete		|| [Frank]		|| 10/19/2009			||

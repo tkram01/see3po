@@ -8,8 +8,8 @@
 	* Type of meeting:	Business/Progress
 	* Facilitator:	Frank/Tyler	
 	* Note taker:	
-	* Attendees:
-	* Absent: 
+	* Attendees: Frank, Hao Wu, Jacky, Nick
+	* Absent: Debarati
 
 ==Minutes==
 
@@ -29,7 +29,24 @@
   * Discuss Mission Statement
 
 ===Discussion:===	
+  Software -
 
+  Hardware -
+   # Learned how to upload files on to embedded computer.
+   # Learned how to upload files on to ATOM.
+   # Checked the communication protocols with Tyler. And, we found out that the current program uploaded on ATOM is not the source code we expected. 
+   # Reproduced the hardware issues on robot.
+   # Discussed how to perform tests on robot.  
 ===Conclusions:	===
+  Software - 
 
+  Hardware - 
+   * Tyler will try to find the correct source code of current version running on ATOM. If Tyler can't find it, we have to develop our own.
+   * Tyler will provide a USB cable for uploading program to embedded computer and a serial cable for uploading program to ATOM.
+   * Tyler will give us the username and password for accessing the download site of our video camera's manufacture.
+   * Jacky have to revise the communication protocol document since the wrong source code was provided.
+   * Hao Wu will be working on a testing version of local brain application which allows the embedded computer sends motor control commands to ATOM directly. Besides, we might consider log all transactions to a file as well as read commands from a file in the near future. 
+   * There are 2 issues we found today:
+    # Local brain might receive 2 commands at the same time.
+    # The responses to the command from local brain on ATOM, such as making sounds or motor movement, sometimes stall. i.e. User hits making beep bottom five times, but ATOM only makes sound one time.   
 ===Other Information===

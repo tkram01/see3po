@@ -30,7 +30,8 @@
 
 ===Discussion:===	
   Software -
-
+   # Tyler would like to have a  robust data structure that stores the pathfinding data, including the floorplan and move data, as well as the current location from the Voodoo algorithm
+   # We discussed image-to-floorplan-to-pathfinding options.
   Hardware -
    # Learned how to upload files on to embedded computer.
    # Learned how to upload files on to ATOM.

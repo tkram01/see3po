@@ -5,3 +5,4 @@
  ** How to upload/update programs onto ATOM microchip?
 
  ** Need username and password to download [http://www.ptgrey.com/products/dragonfly2/index.asp camera's] driver from [http://www.ptgrey.com/support/downloads/index.asp manufacture's website]. 
+ Ans: Tyler has registered an account on the website. He will provide us the username and password.

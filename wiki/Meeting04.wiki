@@ -26,17 +26,12 @@
   * Subgroup meeting. 
 ===Conclusions:	===
   # Divide the presentation into 3 to 4 sections. Start with the introduction of what is the project and how it works, then describe the progresses of the project as well as the way of how we manage the project. Next, show a demo video of how the robot works. Then, last, mention how we are going to implement this idea into our real life.  
-  # Read the mission statements from each member, and then chose 2 of your favorites.
-  # Create a blank risk analysis page on our wiki, and let each member fill in at least three risk analysis. So, after that we can integrate them. 
+  # The host will directly send the motor control commands, not the direction, to the robot.
+  # The protocol document need to be revised since the wrong source code was used. 
 ===Action List:	===  
 || *Action items* || *Person responsible* || *Deadline* ||
-||Vote for your 2 favorite mission statements || All	||10/16/2009||
-||Create a risk analysis page on wiki ||Frank	||10/16/2009|| 
-||Upload logo ||Frank	||10/17/2009|| 
-||3 risk analysis	|| All 	||10/18/2009||
-||Get Tyler's feedback on our mission statements ||Frank	||10/20/2009|| 
-||Follow up on getting access to Vision Lab || Frank	||10/21/2009||
-||Gather all the questions we have about hardware || Hao, Jacky || 10/21/2009||
-||Giving some though on how to present our project || All || 10/22/2009||
-
+||Find the correct version of code on ATOM  || Tyler	||10/24/2009||
+||Revise protocol document ||Jacky	||10/25/2009|| 
+||Create a test version local brain interface with driving bottoms || Hao ||10/31/2009|| 
+ 
 ===Other Information===

@@ -31,9 +31,12 @@
 || Gather all the questions we have about hardware || 10/21/2009 || Complete	|| [Hao], [Jacky]|| 10/21/2009 		||
 || [InteractionPlan] completed 					|| 10/28/2009	|| 				|| 				|| 						||
 || Follow up on getting access to Vision Lab 	|| 10/22/2009 (R)|| 				|| [Frank] 		||						||
+|| Find the correct version of code on ATOM || 10/24/2009 || Complete || Tyler || 10/22/2009 ||
+|| Revise [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc protocol document] (Version 2.0) || 10/25/2009 || Complete || Jacky || 10/23/2009 || 
 || *Tyler's code is successfully running* 		|| 10/31/2009 	|| 				|| All 			||						||
 || Two [UseCases] completed 					|| 10/31/2009 	|| Rescheduled	|| 				|| 						||
 || [LocalBrainEmulator] Returns Position, Facing|| 10/31/2009	|| Complete		|| [Frank]		|| 10/19/2009			||
+|| Test version local brain with driving functions || 10/31/2009 || Hao || ||
 
 ===November===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||

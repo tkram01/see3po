@@ -26,7 +26,7 @@
 || [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communication protocols document] || 10/13/2009 || Complete  	|| [Jacky] 		|| 10/13/2009 ||
 || Mission [Statements Statement] Chosen 		|| 10/15/2009 	|| Complete		|| All 			|| 	10/15/2009			||
 || [Logo] Chosen 								|| 10/15/2009 	|| Complete		|| All 			|| 	10/15/2009			||
-|| 3 [riskAnalysis] from each					|| 10/20/2009	|| Complete		|| All 			|| 10/18/2009			||
+|| 3 [RiskAnalysis risk analysis] from each					|| 10/20/2009	|| Complete		|| All 			|| 10/18/2009			||
 || Film the Robot Video		 					|| 10/21/2009 	|| Complete		|| [Frank], [Nick] || 10/21/2009		||
 || Gather all the questions we have about hardware || 10/21/2009 || Complete	|| [Hao], [Jacky]|| 10/21/2009 		||
 || [InteractionPlan] completed 					|| 10/28/2009	|| 				|| 				|| 						||

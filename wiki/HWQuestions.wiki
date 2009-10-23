@@ -18,4 +18,5 @@
    # Build the program then the compiled bin file will be upload to ATOM. 
 
  ** Need username and password to download [http://www.ptgrey.com/products/dragonfly2/index.asp camera's] driver from [http://www.ptgrey.com/support/downloads/index.asp manufacture's website]. 
- Ans: Tyler has registered an account on the website. He has provided us the username and password. If you need the username and password, please contact [Jacky].
+ Ans:
+  Tyler has registered an account on the website. He has provided us the username and password. If you need the username and password, please contact [Jacky].

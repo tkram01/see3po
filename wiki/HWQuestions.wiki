@@ -2,9 +2,9 @@
 
  ** How to upload/update files onto robot's embedded computer?
  Ans: 
-   # [http://www.microsoft.com/windowsmobile/en-us/downloads/microsoft/activesync-download.mspx Download ] ActiveSync application and then install.
+   # [http://www.microsoft.com/windowsmobile/en-us/downloads/microsoft/activesync-download.mspx Download ActiveSync] application and then install.
    # Connect Host and embedded computer with USB cable.
-   # Run ActiveSync application.  
+   # Run [http://www.microsoft.com/windowsmobile/en-us/downloads/microsoft/activesync-download.mspx ActiveSync] application.  
    # Click on explore bottom.
    # The folders and files should show up in an explore window.
    # Drag and drop the file needs to be uploaded. 

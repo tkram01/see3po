@@ -40,6 +40,8 @@
    # Discussed how to perform tests on robot.  
 ===Conclusions:	===
   Software - 
+   * We decided to choose 4-direction movement.
+   * Definition of "Optimal Path": The lowest steps from starting porint to target.
 
   Hardware - 
    * Tyler will try to find the correct source code of current version running on ATOM. If Tyler can't find it, we have to develop our own.

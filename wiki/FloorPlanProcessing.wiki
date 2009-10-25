@@ -12,6 +12,7 @@ Add your content here.
 As assigned by client (Tyler), we will have a floor plan in image format (bmp, png, or jpg)
 
 [http://www.cs.umb.edu/img/third_floor_map.gif]
+[http://see3po.googlegroups.com/attach/2feb91d66cd52d11/UMass+-+Science+Building+-+3rd+Floor+(2).jpg?view=1&part=4]
 
 === Output ===
 2 dimension array (as tiles of floor plan).

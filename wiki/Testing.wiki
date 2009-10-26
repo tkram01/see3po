@@ -6,12 +6,12 @@
 || Test Name || Description ||  Completed ||
 || || || ||
 
-= [FloorPlanProcessing] Floor Plan Processing =
+= [FloorPlanProcessing Floor Plan Processing] =
 
 || Test Name || Description ||  Completed ||
 || || || ||
 
-= [RobotEmulator] Robot Emulator =
+= [LocalBrainEmulator Robot Emulator] =
 
 || Test Name || Description ||  Completed ||
 || || || ||

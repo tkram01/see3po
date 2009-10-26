@@ -6,10 +6,10 @@ The following commands will be available in the completed version:
 
 || *Command* || *Description* ||
 || Listen || Listen for client connections ||
-|| Stop || Stop listening for client connections
+|| Stop || Stop listening for client connections ||
 || Disconnect || Disconnect from current client ||
 || # # || Move the left and right wheels respective integer number of steps steps, between -10 and 10 ||
-|| 5 5 || Move both wheels 5 steps
-|| -1 1 || Move the left wheel 1 step in reverse and the right wheel 1 step forward 
+|| 5 5 || Move both wheels 5 steps ||
+|| -1 1 || Move the left wheel 1 step in reverse and the right wheel 1 step forward ||
 || Location || Give the current location of the robot ||
 || Facing || Give the current facing of the robot ||

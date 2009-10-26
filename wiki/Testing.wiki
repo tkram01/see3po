@@ -1,17 +1,33 @@
 #summary Testing milestones
 
+This page will outline current testing goals and completed tests. As components advance, new tests will be introduced. 
 
-= [PathFinding Path Finding] =
+== Development Tools ==
 
-|| Test Name || Description ||  Completed ||
-|| || || ||
-
-= [FloorPlanProcessing Floor Plan Processing] =
+=== [HostCLI Command Line Interface] ===
 
 || Test Name || Description ||  Completed ||
 || || || ||
 
-= [LocalBrainEmulator Robot Emulator] =
+=== [LocalBrainEmulator Robot Emulator] ===
 
 || Test Name || Description ||  Completed ||
 || || || ||
+
+== Components == 
+
+=== [Hardware] ===
+
+|| Test Name || Description ||  Completed ||
+|| || || ||
+
+=== [PathFinding Path Finding] ===
+
+|| Test Name || Description ||  Completed ||
+|| || || ||
+
+=== [FloorPlanProcessing Floor Plan Processing] ===
+
+|| Test Name || Description ||  Completed ||
+|| || || ||
+

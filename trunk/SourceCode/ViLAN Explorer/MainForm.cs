@@ -149,7 +149,7 @@ namespace ViLAN_Explorer
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			host.Send(new byte[] {0x01, 0x10, 0x00, byte.Parse((string)((Button)sender).Tag), 0x00, 0x00, 0xEF}, true);
+            host.Send(new byte[] { 0x01, 0x10, 0x00, byte.Parse((string)((Button)sender).Tag), 0x00, 0x00, 0x00, 0xEF }, true);
 		}
 
 		private void driveButton_Click(object sender, MouseEventArgs e)

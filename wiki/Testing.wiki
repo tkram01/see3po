@@ -6,28 +6,24 @@ This page will outline current testing goals and completed tests. As components 
 
 === [HostCLI Command Line Interface] ===
 
-|| Test Name || Description ||  Completed ||
-|| || || ||
+|| Test Name || Description || Boolean: Success ||  Completed ||
+|| Connect || test connection || Connection recognized by Emulator || ||
+|| Send Move 1 1 || Test a move command || emulator sees command 1 1 || ||
+|| Send Move -1 1 || Test negative move command || emulator sees -1 1 || ||
 
 === [LocalBrainEmulator Robot Emulator] ===
 
-|| Test Name || Description ||  Completed ||
-|| || || ||
+|| Test Name || Description || Boolean: Success ||  Completed ||
+|| Receive Move 1 1 || Test correct move commands || Location Returns (0, 1):0|| ||
+|| Receive Move -1 1 || Test correct move commands || Location Returns (0, 0):?|| ||
 
 == Components == 
 
-=== [Hardware] ===
-
-|| Test Name || Description ||  Completed ||
-|| || || ||
-
 === [PathFinding Path Finding] ===
 
-|| Test Name || Description ||  Completed ||
-|| || || ||
+|| Test Name || Description || Boolean: Success ||  Completed ||
+|| || || || ||
 
 === [FloorPlanProcessing Floor Plan Processing] ===
-
-|| Test Name || Description ||  Completed ||
-|| || || ||
-
+|| Test Name || Description || Boolean: Success ||  Completed ||
+|| || || || ||

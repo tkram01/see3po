@@ -12,8 +12,8 @@ namespace LocalBrainEmulator
 {
     public partial class MainForm : Form
     {
-        private const int HEIGHT = 50;
-        private const int WIDTH = 50;
+        private const int HEIGHT = 20;
+        private const int WIDTH = 20;
 
         delegate void DGuiCallVoid();
         delegate void DGuiCallString(string str);
@@ -38,7 +38,7 @@ namespace LocalBrainEmulator
 
             floorPlan = new Bitmap("testFloor.jpg");
             livePanel.BackgroundImage = floorPlan;
-            Image spriteImage = new Bitmap("sprite.png");
+            Image spriteImage = new Bitmap("sprite3.png");
             sprite = new RobotSprite(new Bitmap(spriteImage, HEIGHT, WIDTH), new Point(livePanel.Width/2, livePanel.Height/2));
 
             drawToBuffer();
@@ -181,8 +181,8 @@ namespace LocalBrainEmulator
                 drawToBuffer();
                 drawFromBuffer();
             }
-
-            msg = "\n\r facing: " + sprite.facing;
+            msg = "\n\r position: " + sprite.position;
+            msg += "\n\r facing: " + sprite.facing;
             PostMessage(msg);
         }
 
@@ -218,7 +218,7 @@ namespace LocalBrainEmulator
         private void drawToBuffer()
         {
             bg.DrawImage(floorPlan, 0, 0, livePanel.Width, livePanel.Height);
-            bg.DrawImage(sprite.image, sprite.position.X, sprite.position.Y, 50, 50);
+            bg.DrawImage(sprite.image, sprite.position.X, sprite.position.Y, WIDTH, HEIGHT);
         }
 
         private void exitMenuItem_Click(object sender, EventArgs e)

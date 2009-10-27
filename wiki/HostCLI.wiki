@@ -16,7 +16,7 @@ The following commands will be available in the completed version:
 || Exit || exit the program ||
 
 ==Moving== 
-Move commands move in increments of 5 steps. This translates to (LeftSpeed - RightSpeed) * 2.5 degrees turned and (LeftSpeed + RightSpeed) * 2.5 steps forward. 
+Move commands move in increments of 5 steps. This translates to (!LeftSpeed - !RightSpeed) {{{*}}} 2.5 degrees turned and (!LeftSpeed + !RightSpeed) {{{*}}} 2.5 steps forward. 
 
 For example: 
 || 5 5 || Move 25 steps forward ||

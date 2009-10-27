@@ -7,15 +7,20 @@ This page will outline current testing goals and completed tests. As components 
 === [HostCLI Command Line Interface] ===
 
 || Test Name || Description || Boolean: Success ||  Completed ||
-|| Connect || test connection || Connection recognized by Emulator || ||
-|| Send Move 1 1 || Test a move command || emulator sees command 1 1 || ||
-|| Send Move -1 1 || Test negative move command || emulator sees -1 1 || ||
+|| Connect || test connection || Connection recognized by Emulator || 10/27/09 ||
+|| Send Move 1 1 || Test a move command || emulator sees command 1 1 || 10/27/09 ||
+|| Send Move -1 1 || Test negative move command || emulator sees -1 1 || 10/27/09 ||
+|| Receive Location || Test location return ||  (250, 250) || ||
+|| Receive Facing || Test facing return || (0) || ||
 
 === [LocalBrainEmulator Robot Emulator] ===
 
 || Test Name || Description || Boolean: Success ||  Completed ||
-|| Receive Move 1 1 || Test correct move commands || Location Returns (0, 1):0|| ||
-|| Receive Move -1 1 || Test correct move commands || Location Returns (0, 0):?|| ||
+|| Receive Move 1 1 || Test correct move commands || Location: (250, 255) Facing: 0|| 10/27/09 ||
+|| Receive Move 1 -1 || Test correct move commands || Location:(250, 250) Facing: 5|| 10/27/09 ||
+|| Receive Move -1 1 || Test counterclockwise move || Location:(250, 250) Facing: 355|| ||
+|| Receive Location || Test location return || HostCLI displays (250, 250) || ||
+|| Receive Facing || Test facing return || HostCLI displays (0) || ||
 
 == Components == 
 

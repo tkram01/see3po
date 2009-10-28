@@ -19,16 +19,29 @@ This page will outline current testing goals and completed tests. As components 
 || Receive Move 1 1 || Test correct move commands || Location: (250, 255) Facing: 0|| 10/27/09 ||
 || Receive Move 1 -1 || Test correct move commands || Location:(250, 250) Facing: 5|| 10/27/09 ||
 || Receive Move -1 1 || Test counterclockwise move || Location:(250, 250) Facing: 355|| ||
-|| Receive Location || Test location return || HostCLI displays (250, 250) || ||
-|| Receive Facing || Test facing return || HostCLI displays (0) || ||
-
+|| Send Location || Test location return || HostCLI displays (250, 250) || ||
+|| Send Facing || Test facing return || HostCLI displays (0) || ||
+|| Recieve Path || Recieve a path F3/L90/F2 from the CORE || Location: (260, 265) Facing: 90 || ||
 == Components == 
+
+=== [CORE] ===
+
+|| Test Name || Description || Boolean: Success ||  Completed ||
+|| || || || ||
+|| Store Path || Send a path F3/L90/F2 to the Emulator || Location: (260, 265) Facing: 90 || ||
+
+=== [FloorPlanProcessing Floor Plan Processing] ===
+|| Test Name || Description || Boolean: Success ||  Completed ||
+|| || || || ||
+|| Send FloorPlan || Send a representation of the 3rd Floor floorplan to the CORE || Location: (260, 265) Facing: 90 || ||
+
+=== [GUI] ===
+|| Test Name || Description || Boolean: Success ||  Completed ||
+|| Display FloorPlan || Display FloorPlan from CORE || || ||
+|| Display Path || Display Path from CORE || || ||
 
 === [PathFinding Path Finding] ===
 
 || Test Name || Description || Boolean: Success ||  Completed ||
 || || || || ||
-
-=== [FloorPlanProcessing Floor Plan Processing] ===
-|| Test Name || Description || Boolean: Success ||  Completed ||
-|| || || || ||
+|| Send Path || Send a path F3/L90/F2 to the CORE || Location: (260, 265) Facing: 90 || ||

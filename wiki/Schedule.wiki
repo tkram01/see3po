@@ -47,7 +47,7 @@
 
 ===November===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
-|| [FloorPlanProcessing] [Testing Conversion Test] complete        || 11/07/2009	|| 				|| [Debarati] ||		||
+|| [FloorPlanProcessing] [Testing Conversion Test] complete        || 11/09/2009	|| 				|| [Debarati] ||		||
 || *Talk with [VentureCapitalists]*             || 11/12/2009	|| 				||  			|| 						||
 || [PathFinding][Emulator] [Testing SendPath]   || 11/31/2009	|| 				||  [Nick] [Frank] ||		||
 || [FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan] || 11/31/2009	|| 				||  [Nick] [Debarati] ||		||

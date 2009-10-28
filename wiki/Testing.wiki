@@ -28,7 +28,9 @@ This page will outline current testing goals and completed tests. As components 
 
 || Test Name || Description || Boolean: Success ||  Completed ||
 || || || || ||
-|| Store Path || Send a path F3/L90/F2 to the Emulator || Location: (260, 265) Facing: 90 || ||
+|| Store Path || Recieve a Path from the PathFinding || || ||
+|| Store Location || Recieve a Location from VooDoo || || ||
+|| Store FloorPlan || Recieve a Floor Plan from FloorPlanProcessing || || ||
 
 === [FloorPlanProcessing Floor Plan Processing] ===
 || Test Name || Description || Boolean: Success ||  Completed ||

@@ -1,0 +1,18 @@
+#summary The Final User Interface
+= GUI =
+
+The GUI have the following functions/properties
+
+Menu:
+  * Import FloorPlan Images for conversion
+  * Load/Save FloorPlan files
+
+Video Display:
+  * Display Video from the Robot
+
+FloorPlan Display: 
+  * Displays the floor plan
+  * Displays a sprite representing the robot's location and facing
+  * Displays the current and possible paths
+
+  * Clicking on a part of the floor plan will select that location as the destination

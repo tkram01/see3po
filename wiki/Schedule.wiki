@@ -35,7 +35,7 @@
 || [HostCLI][LocalBrainEmulator] [Testing Connect]		|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
 || [HostCLI][LocalBrainEmulator] [Testing Send Move 1 1]	|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
 || [HostCLI][LocalBrainEmulator] [Testing Send Move 1 -1]	|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
-|| [HostCLI] [Tests Send Move -1 1]				|| 10/28/2009	|| 				|| Frank		|| 						||
+|| [HostCLI] [Testing Send Move -1 1]				|| 10/28/2009	|| 				|| Frank		|| 						||
 || [HostCLI][LocalBrainEmulator] [Testing Send Move 1 -1]	|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
 || [InteractionPlan] completed 					|| 10/28/2009	|| 				|| 				|| 						||
 || [HostCLI][LocalBrainEmulator] [Testing Receive Location]|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||

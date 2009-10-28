@@ -4,6 +4,6 @@
 
 The CORE will contain the following data:
 
-  * The Current Floor Plan: *{{{FloorPlanNode[][] floorPlan}}}*
-  * The Current Path: *{{{Queue<Move> path}}}*
-  * The Current Location and Facing: *{{{Location location}}}*
+  * The Current Floor Plan:           *{{{FloorPlanNode[][] floorPlan}}}*
+  * The Current Path:                 *{{{Queue<Move> path}}}*
+  * The Current Location and Facing:  *{{{Location location}}}*

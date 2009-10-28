@@ -4,7 +4,12 @@
 
 A competitive workplace is a productive workplace. In the spirit of the general good, we may, at times, help out in the evolution of other projects by supplying our own selective pressure. 
 
-Phase 1: Investor Meeting
-Possible Sabotage:
+improving [http://code.google.com/p/visitme/ VisitMe]
+===Investor Meeting===
+Possible acts of Sabotage:
   # destroy all props
   # destroy smoke machine only, making it impossible to achieve "awesomeness"
+
+===Wiki===
+Possible acts of Sabotage:
+  # ~~Destroy cool log with a ripoff of Google's logo~~ Apparently someone has already completed this

@@ -8,4 +8,4 @@ This plan will detail how each component deals with one another. The major compo
   * [PathFinding] algorithms
   * Tyler's [VoodooAlgorithm]
 
-= Details =
+http://code.google.com/p/see3po/source/browse/trunk/Images/diagram.png

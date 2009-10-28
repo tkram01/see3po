@@ -1,0 +1,9 @@
+#summary A Central Data Structure used and edited by all components
+
+= CORE =
+
+The CORE will contain the following data:
+
+  * The Current Floor Plan: *FloorPlanNode[][] floorPlan*
+  * The Current Path: *Queue<Move> path*
+  * The Current Location and Facing: *Location location*

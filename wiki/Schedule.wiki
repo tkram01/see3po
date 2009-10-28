@@ -26,7 +26,7 @@
 || [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communication protocols document] || 10/13/2009 || Complete  	|| [Jacky] 		|| 10/13/2009 ||
 || Mission [Statements Statement] Chosen 		|| 10/15/2009 	|| Complete		|| All 			|| 	10/15/2009			||
 || [Logo] Chosen 								|| 10/15/2009 	|| Complete		|| All 			|| 	10/15/2009			||
-|| 3 [RiskAnalysis risk analysis] from each					|| 10/20/2009	|| Complete		|| All 			|| 10/18/2009			||
+|| 3 [RiskAnalysis risk analysis] from each		|| 10/20/2009	|| Complete		|| All 			|| 10/18/2009			||
 || Film the Robot Video		 					|| 10/21/2009 	|| Complete		|| [Frank], [Nick] || 10/21/2009		||
 || Gather all the questions we have about hardware || 10/21/2009 || Complete	|| [Hao], [Jacky]|| 10/21/2009 		||
 || Follow up on getting access to Vision Lab 	|| 10/22/2009 (R)|| 				|| [Frank] 		||						||
@@ -35,7 +35,7 @@
 || [HostCLI][LocalBrainEmulator] [Testing Connect]		|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
 || [HostCLI][LocalBrainEmulator] [Testing Send Move 1 1]	|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
 || [HostCLI][LocalBrainEmulator] [Testing Send Move 1 -1]	|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
-|| [HostCLI] [Testing Send Move -1 1]				|| 10/28/2009	|| 				|| Frank		|| 						||
+|| [HostCLI] [Testing Send Move -1 1]		    || 10/28/2009	|| 				|| Frank		|| 						||
 || [HostCLI][LocalBrainEmulator] [Testing Send Move 1 -1]	|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
 || [InteractionPlan] completed 					|| 10/28/2009	|| 				|| 				|| 						||
 || [HostCLI][LocalBrainEmulator] [Testing Receive Location]|| 10/28/2009	|| Complete		|| Frank		|| 10/27/2009			||
@@ -47,13 +47,16 @@
 
 ===November===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
-|| [Emulator] and [Pathfinding] comply with [InteractionPlan] || 11/07/2009	|| 		|| [Frank] [Nick] [Debarati] || 			||
+|| [FloorPlanProcessing] [Testing Conversion Test] complete        || 11/07/2009	|| 				|| [Debarati] ||		||
 || *Talk with [VentureCapitalists]*             || 11/12/2009	|| 				||  			|| 						||
-|| [FloorPlanProcessing] [Tests Conversion Test] complete        || 11/15/2009	|| 				||  [Nick] [Debarati] [Frank] ||		||
+|| [PathFinding][Emulator] [Testing SendPath]   || 11/31/2009	|| 				||  [Nick] [Frank] ||		||
+|| [FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan] || 11/31/2009	|| 				||  [Nick] [Debarati] ||		||
+|| [CORE] [Testing Recieve Tests]               || 11/31/2009	|| 				||  [Nick] [Frank] [Debarati] ||		||
+
 
 ===December===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
-|| *[FloorPlanProcessing] Testing Successully Completed*|| 12/15/2009	|| 		||  [Nick] [Debarati] [Frank] ||		||
+|| *GUI Relese 1* Deliverable || 12/15/2009	|| 		||  [Nick] [Debarati] [Frank] ||		||
 
 ===January 2010===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||

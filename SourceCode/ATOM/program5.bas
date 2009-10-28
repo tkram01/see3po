@@ -16,11 +16,13 @@ right var word			' right speed recieved from command
 
 leftSpeed var word    	' left speed send to motor
 rightSpeed var word   	' right speed send to motor
+initialized var byte
 
 left = 0
 right = 0
 leftSpeed = 3000   		' Left Scorpion stop value.
 rightSpeed = 3000		' Right Scorpion stop value.
+initialized = 0
 
 sound p9, [200\500]		' make a sound when this program started
 
@@ -38,8 +40,8 @@ goto main
 
 
 receive_command:
-  'waiting commands from serial port for 5 seconds
-  serin S_IN, i9600, ret, 5000, ret, [inPacket(0), inPacket(1), inPacket(2), inPacket(3), inPacket(4), inPacket(5), inPacket(6)]
+  'waiting commands from serial port for 3.5 seconds
+  serin S_IN, i9600, ret, 350000, ret, [inPacket(0), inPacket(1), inPacket(2), inPacket(3), inPacket(4), inPacket(5), inPacket(6)]
 
   if (inPacket(0) = COMMAND) and (inPacket(6) = EOT ) then ' check start byte and end byte
     gosub parse_command    	'parse the commmand
@@ -51,8 +53,8 @@ return
 
 
 ret:
-  left = 0    	'stop driving if there is a wrong command
-  right = 0		' or there is no command came in
+  'rightSpeed = 3000    	'stop driving if there is a wrong command
+  'leftSpeed = 3000   	' or there is no command came in
 return
 
 
@@ -82,6 +84,7 @@ parse_command:
     'setting motor speed
     rightSpeed = 3000 - right
     leftSpeed = 3000 + left
+    initialized = 1
     
   else
     sound p9, [100\1000, 100\1000, 100\3000]  ' make sound for command check error
@@ -92,9 +95,11 @@ return
 
 
 drive:
-  for i = 1 to 5
-    pulsout p12, rightSpeed		' Left Scorpion channel.
-    pulsout p13, leftSpeed		' Right Scorpion channel.
-    pause 20
-  next
+  if initialized = 1  then
+     for i = 1 to 5
+       pulsout p12, rightSpeed		' Left Scorpion channel.
+       pulsout p13, leftSpeed		' Right Scorpion channel.
+       pause 20
+     next
+  endif  
 return

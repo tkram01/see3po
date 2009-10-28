@@ -2,6 +2,17 @@
 #labels Featured,Phase-Support
 = Comments and questions from the Professor =
 
+
+----
+
+== October 27 ==
+
+Nice work on tests for the emulator.
+
+Please fix spelling of "receive" - you have it as "recieve" in several places - unfortunately, some of those places are the names of wiki pages.
+
+The Explorer that the emulator works with isn't Microsoft's IE. The fact that it has the same name is a little confusing (to me). Perhaps use its full name (ViLANExplorer) ?
+
 ----
 
 == October 13 ==

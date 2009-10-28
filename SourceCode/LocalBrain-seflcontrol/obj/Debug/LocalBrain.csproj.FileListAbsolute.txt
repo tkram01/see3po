@@ -1,0 +1,10 @@
+C:\see3po\SourceCode\LocalBrain-seflcontrol\obj\Debug\ResolveAssemblyReference.cache
+C:\see3po\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.MainForm.resources
+C:\see3po\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.csproj.GenerateResource.Cache
+C:\see3po\SourceCode\LocalBrain-seflcontrol\bin\Debug\LocalBrain.exe
+C:\see3po\SourceCode\LocalBrain-seflcontrol\bin\Debug\LocalBrain.pdb
+C:\see3po\SourceCode\LocalBrain-seflcontrol\bin\Debug\RobotCommands.dll
+C:\see3po\SourceCode\LocalBrain-seflcontrol\bin\Debug\RobotCommands.pdb
+C:\see3po\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.Properties.Resources.resources
+C:\see3po\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.exe
+C:\see3po\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.pdb

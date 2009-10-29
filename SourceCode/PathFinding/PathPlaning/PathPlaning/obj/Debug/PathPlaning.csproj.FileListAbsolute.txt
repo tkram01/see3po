@@ -22,3 +22,15 @@ D:\see3po\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\ResolveAssemb
 D:\see3po\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\PathPlaning.Form1.resources
 D:\see3po\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\PathPlaning.Properties.Resources.resources
 D:\see3po\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\PathPlaning.csproj.GenerateResource.Cache
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\PathPlaning.exe
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\PathPlaning.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\ResolveAssemblyReference.cache
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\PathPlaning.Form1.resources
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\PathPlaning.Properties.Resources.resources
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\obj\Debug\PathPlaning.csproj.GenerateResource.Cache
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\bin\Debug\PathPlaning.exe
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\bin\Debug\PathPlaning.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\bin\Debug\QuickGraph.Data.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\bin\Debug\QuickGraph.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\bin\Debug\QuickGraph.Glee.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathPlaning\PathPlaning\bin\Debug\QuickGraph.Graphviz.dll

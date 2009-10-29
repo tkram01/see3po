@@ -10,8 +10,7 @@ using QuickGraph.Algorithms;
 using QuickGraph;
 using QuickGraph.Algorithms.ShortestPath;
 using QuickGraph.Algorithms.Observers;
-using System.IO;
-using System.Collections;
+
 
 namespace PathPlaning
 {
@@ -22,37 +21,7 @@ namespace PathPlaning
             InitializeComponent();
         }
 
-        public void loadMap()
-        {
-            StreamReader re = File.OpenText("sampleMap.txt");
-
-            ArrayList data = new ArrayList();
-            ArrayList col = new ArrayList();
-
-            int rowNum = 0, colNum = 0;
-            string input = null;
-            while ((input = re.ReadLine()) != null)
-            {
-                if (colNum == 0)
-                {
-                    colNum = input.Length;
-                }
-
-                rowNum++;
-            }
-                   
-
-            label1.Text += rowNum + " " + colNum;
-
-            string input = null;
-            while ((input = re.ReadLine()) != null)
-            {
-
-            }
-
-            re.Close();
-
-        }
+ 
 
         private void btnGo_Click(object sender, EventArgs e)
         {
@@ -176,7 +145,8 @@ namespace PathPlaning
                 foreach (var u in path)
                     label1.Text += u + "\n";
 
-            this.loadMap();
+            Map mp = new Map("sampleMap.txt");
+            label1.Text += mp.getTile(1, 3);
         }
 
  

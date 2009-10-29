@@ -2,6 +2,13 @@
 #labels Featured,Phase-Support
 = Comments and questions from the Professor =
 
+== October 28 ==
+
+Your [RiskAnalysis Risk Analysis] page lists
+
+Can't find WinCE driver for video cam. 
+
+as high probability high severity. Shouldn't there be a schedule entry for the successful outcome of a search for one?
 
 ----
 

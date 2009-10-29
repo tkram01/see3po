@@ -56,7 +56,7 @@
 
 ===December===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
-|| *GUI Relese 1* Deliverable || 12/15/2009	|| 		||  [Nick] [Debarati] [Frank] ||		||
+|| *GUI Relaese 1* Deliverable || 12/15/2009	|| 		||  [Nick] [Debarati] [Frank] ||		||
 
 ===January 2010===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||

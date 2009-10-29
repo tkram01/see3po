@@ -11,6 +11,7 @@
   ** [SystemArchitecture Architecture]
   ** [DevelopmentEnvironment Environment]
   ** [Websites Resources] 
+  ** [LocalBrainEmulator Emulator]
   ** [FloorPlanProcessing Floor Plan Processing] 
   ** [PathFinding Path Finding] 
   ** Hardware

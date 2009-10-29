@@ -10,6 +10,8 @@ using QuickGraph.Algorithms;
 using QuickGraph;
 using QuickGraph.Algorithms.ShortestPath;
 using QuickGraph.Algorithms.Observers;
+using System.IO;
+using System.Collections;
 
 namespace PathPlaning
 {
@@ -20,8 +22,42 @@ namespace PathPlaning
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void loadMap()
         {
+            StreamReader re = File.OpenText("sampleMap.txt");
+
+            ArrayList data = new ArrayList();
+            ArrayList col = new ArrayList();
+
+            int rowNum = 0, colNum = 0;
+            string input = null;
+            while ((input = re.ReadLine()) != null)
+            {
+                if (colNum == 0)
+                {
+                    colNum = input.Length;
+                }
+
+                rowNum++;
+            }
+                   
+
+            label1.Text += rowNum + " " + colNum;
+
+            string input = null;
+            while ((input = re.ReadLine()) != null)
+            {
+
+            }
+
+            re.Close();
+
+        }
+
+        private void btnGo_Click(object sender, EventArgs e)
+        {
+            
+
             AdjacencyGraph<string, Edge<string>> graph = new AdjacencyGraph<string, Edge<string>>(true);
             Dictionary<Edge<string>, double> edgeCost = new Dictionary<Edge<string>, double>(graph.EdgeCount);
             
@@ -140,8 +176,10 @@ namespace PathPlaning
                 foreach (var u in path)
                     label1.Text += u + "\n";
 
+            this.loadMap();
         }
 
+ 
 
     }
 }

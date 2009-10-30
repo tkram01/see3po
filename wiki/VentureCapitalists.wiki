@@ -1,0 +1,14 @@
+#summary Presentation for pseudo-potential investor.
+
+= Scenarios (Why should you have a See3PO?) =
+
+
+
+
+= Progress (Why we are capable of establishing See3PO) =
+
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+= Future =

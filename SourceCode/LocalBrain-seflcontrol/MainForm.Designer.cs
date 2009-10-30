@@ -117,11 +117,11 @@ namespace LocalBrain
             // 
             this.messageBox.BackColor = System.Drawing.Color.White;
             this.messageBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.messageBox.Location = new System.Drawing.Point(0, 331);
+            this.messageBox.Location = new System.Drawing.Point(0, 303);
             this.messageBox.Multiline = true;
             this.messageBox.Name = "messageBox";
             this.messageBox.ReadOnly = true;
-            this.messageBox.Size = new System.Drawing.Size(638, 100);
+            this.messageBox.Size = new System.Drawing.Size(638, 128);
             this.messageBox.TabIndex = 1;
             // 
             // speedBar
@@ -133,7 +133,7 @@ namespace LocalBrain
             this.speedBar.Minimum = 100;
             this.speedBar.Name = "speedBar";
             this.speedBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.speedBar.Size = new System.Drawing.Size(52, 287);
+            this.speedBar.Size = new System.Drawing.Size(52, 243);
             this.speedBar.TabIndex = 81;
             this.speedBar.TickFrequency = 50;
             this.speedBar.Value = 350;
@@ -141,7 +141,7 @@ namespace LocalBrain
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(511, 218);
+            this.button6.Location = new System.Drawing.Point(511, 207);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(40, 35);
             this.button6.TabIndex = 80;
@@ -152,51 +152,51 @@ namespace LocalBrain
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(463, 218);
+            this.button5.Location = new System.Drawing.Point(463, 207);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(40, 35);
             this.button5.TabIndex = 79;
             this.button5.Tag = "5";
             this.button5.Text = "5";
-            this.button5.Click += new System.EventHandler(this.button1_Click);
+            this.button5.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(415, 218);
+            this.button4.Location = new System.Drawing.Point(415, 207);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(40, 35);
             this.button4.TabIndex = 78;
             this.button4.Tag = "4";
             this.button4.Text = "4";
-            this.button4.Click += new System.EventHandler(this.button1_Click);
+            this.button4.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(511, 165);
+            this.button3.Location = new System.Drawing.Point(511, 174);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(40, 36);
             this.button3.TabIndex = 77;
             this.button3.Tag = "3";
             this.button3.Text = "3";
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(463, 165);
+            this.button2.Location = new System.Drawing.Point(463, 174);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 36);
             this.button2.TabIndex = 76;
             this.button2.Tag = "2";
             this.button2.Text = "2";
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(415, 165);
+            this.button1.Location = new System.Drawing.Point(415, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 36);
             this.button1.TabIndex = 75;
@@ -207,7 +207,7 @@ namespace LocalBrain
             // stopButton
             // 
             this.stopButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.stopButton.Location = new System.Drawing.Point(463, 51);
+            this.stopButton.Location = new System.Drawing.Point(463, 80);
             this.stopButton.Name = "stopButton";
             this.stopButton.Size = new System.Drawing.Size(40, 40);
             this.stopButton.TabIndex = 74;
@@ -218,7 +218,7 @@ namespace LocalBrain
             // backRightButton
             // 
             this.backRightButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.backRightButton.Location = new System.Drawing.Point(511, 99);
+            this.backRightButton.Location = new System.Drawing.Point(511, 128);
             this.backRightButton.Name = "backRightButton";
             this.backRightButton.Size = new System.Drawing.Size(40, 40);
             this.backRightButton.TabIndex = 73;
@@ -229,7 +229,7 @@ namespace LocalBrain
             // backButton
             // 
             this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.backButton.Location = new System.Drawing.Point(463, 99);
+            this.backButton.Location = new System.Drawing.Point(463, 128);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(40, 40);
             this.backButton.TabIndex = 72;
@@ -240,7 +240,7 @@ namespace LocalBrain
             // backLeftButton
             // 
             this.backLeftButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.backLeftButton.Location = new System.Drawing.Point(415, 99);
+            this.backLeftButton.Location = new System.Drawing.Point(415, 128);
             this.backLeftButton.Name = "backLeftButton";
             this.backLeftButton.Size = new System.Drawing.Size(40, 40);
             this.backLeftButton.TabIndex = 71;
@@ -251,7 +251,7 @@ namespace LocalBrain
             // turnLeftButton
             // 
             this.turnLeftButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.turnLeftButton.Location = new System.Drawing.Point(415, 51);
+            this.turnLeftButton.Location = new System.Drawing.Point(415, 80);
             this.turnLeftButton.Name = "turnLeftButton";
             this.turnLeftButton.Size = new System.Drawing.Size(40, 40);
             this.turnLeftButton.TabIndex = 70;
@@ -262,7 +262,7 @@ namespace LocalBrain
             // turnRightButton
             // 
             this.turnRightButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.turnRightButton.Location = new System.Drawing.Point(511, 51);
+            this.turnRightButton.Location = new System.Drawing.Point(511, 80);
             this.turnRightButton.Name = "turnRightButton";
             this.turnRightButton.Size = new System.Drawing.Size(40, 40);
             this.turnRightButton.TabIndex = 69;
@@ -273,7 +273,7 @@ namespace LocalBrain
             // forwardRightButton
             // 
             this.forwardRightButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwardRightButton.Location = new System.Drawing.Point(511, 3);
+            this.forwardRightButton.Location = new System.Drawing.Point(511, 32);
             this.forwardRightButton.Name = "forwardRightButton";
             this.forwardRightButton.Size = new System.Drawing.Size(40, 40);
             this.forwardRightButton.TabIndex = 68;
@@ -284,7 +284,7 @@ namespace LocalBrain
             // forwardButton
             // 
             this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwardButton.Location = new System.Drawing.Point(463, 3);
+            this.forwardButton.Location = new System.Drawing.Point(463, 32);
             this.forwardButton.Name = "forwardButton";
             this.forwardButton.Size = new System.Drawing.Size(40, 40);
             this.forwardButton.TabIndex = 67;
@@ -295,7 +295,7 @@ namespace LocalBrain
             // forwardLeftButton
             // 
             this.forwardLeftButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwardLeftButton.Location = new System.Drawing.Point(415, 3);
+            this.forwardLeftButton.Location = new System.Drawing.Point(415, 32);
             this.forwardLeftButton.Name = "forwardLeftButton";
             this.forwardLeftButton.Size = new System.Drawing.Size(40, 40);
             this.forwardLeftButton.TabIndex = 66;
@@ -314,10 +314,11 @@ namespace LocalBrain
             // 
             // IPaddr
             // 
-            this.IPaddr.Location = new System.Drawing.Point(212, 3);
+            this.IPaddr.Location = new System.Drawing.Point(14, 207);
             this.IPaddr.Name = "IPaddr";
             this.IPaddr.Size = new System.Drawing.Size(144, 23);
             this.IPaddr.TabIndex = 84;
+            this.IPaddr.Text = "192.168.2.166";
             // 
             // button8
             // 
@@ -420,9 +421,9 @@ namespace LocalBrain
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(212, 227);
+            this.button19.Location = new System.Drawing.Point(212, 218);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(144, 40);
+            this.button19.Size = new System.Drawing.Size(144, 28);
             this.button19.TabIndex = 96;
             this.button19.Text = "Clear";
             this.button19.Click += new System.EventHandler(this.button19_Click);

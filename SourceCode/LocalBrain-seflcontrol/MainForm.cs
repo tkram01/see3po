@@ -180,6 +180,7 @@ namespace LocalBrain
 		private void remoteConnectMenuItem_Click(object sender, EventArgs e)
 		{
             IPAddress address;
+            String IPstr;
 
             if (client.IsConnected)
                 client.Disconnect(true);
@@ -187,14 +188,18 @@ namespace LocalBrain
             {
                 try
                 {
-                    address = IPAddress.Parse(IPaddr.Text);
+                    IPstr = IPaddr.Text;
+                    address = IPAddress.Parse(IPstr);
+                    PostMessage("Host IP is: " + IPstr);
                 }
                 catch
                 {
-                    address = IPAddress.Parse("192.168.3.104");
+                    PostMessage("Host IP error!! Use 192.168.2.166");
+                    IPstr ="192.168.2.166";
+                    address = IPAddress.Parse(IPstr);
                 }
+                PostMessage("Connecting to " + IPstr);
                 client.Connect(address);
-
             }
 		}
 
@@ -219,10 +224,6 @@ namespace LocalBrain
 			this.Close();
 		}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void driveButton_Click(object sender, EventArgs e)
         {
@@ -294,7 +295,8 @@ namespace LocalBrain
 
         private void button7_Click(object sender, EventArgs e)
         {
-            IPaddr.Text = IPaddr.Text.Insert(IPaddr.Text.Length + 1, ((Button)sender).Text);
+            //IPaddr.Text = IPaddr.Text.Insert(IPaddr.Text.Length + 1, ((Button)sender).Text);
+            IPaddr.Text = IPaddr.Text + ((Button)sender).Text;
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -304,7 +306,7 @@ namespace LocalBrain
 
         private void button16_Click(object sender, EventArgs e)
         {
-            IPaddr.Text.Remove(IPaddr.Text.Length, 1);
+            IPaddr.Text = IPaddr.Text.Substring(0,IPaddr.Text.Length-1);
         }
 
    	}

@@ -2,23 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 namespace PathPlaning
 {
     class Tile
     {
-        int x, y;
-        String value;
+        String Value;
+        private Point Location;
+        private FloorPlan FloorPlan;
 
         public Tile(int x, int y, String value){
-            this.x = x;
-            this.y = y;
-            this.value = value;
+            Location.X = x;
+            Location.Y = y;
+            this.Value = value;
         }
 
         public override String ToString()
         {
-            return this.value;
+            return this.Value;
         }
     }
 }

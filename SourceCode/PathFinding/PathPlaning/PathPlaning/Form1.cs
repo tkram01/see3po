@@ -145,8 +145,15 @@ namespace PathPlaning
                 foreach (var u in path)
                     label1.Text += u + "\n";
 
-            Map mp = new Map("sampleMap.txt");
-            label1.Text += mp.getTile(1, 3);
+            //FloorPlan mp = new FloorPlan("sampleMap.txt");
+            FloorPlan mp = new FloorPlan("UMassScienceBuilding3F.jpg", 4);
+            //label1.Text += mp.GetTile(1, 3) + "\n";
+
+            mp.SaveTextFile("sampleOutputMap.txt");
+
+            label1.Text += mp.GetXSize() + "\n";
+            label1.Text += mp.GetYSize() + "\n";
+            label1.Text += System.Environment.Version.ToString();
         }
 
  

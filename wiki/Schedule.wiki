@@ -42,7 +42,7 @@
 || [InteractionPlan] completed (And the image successfully shows )|| 10/31/2009(R)	|| 		|| [Frank]				|| 						||
 || Two [UseCases] completed 					|| 10/31/2009 	|| Rescheduled	|| 				|| 						||
 || [LocalBrainEmulator] Returns Position, Facing|| 10/31/2009	|| Complete		|| [Frank]		|| 10/19/2009			||
-|| Test version local brain with driving functions || 10/31/2009 || || Hao || ||
+|| Test version local brain with driving functions || 10/31/2009 || Complete || Hao || 10/30/2009||
 
 ===November===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||

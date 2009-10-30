@@ -44,7 +44,7 @@ This page will outline current testing goals and completed tests. As components 
 
 === [PathFinding Path Finding] ===
 
-Path Finding component is using the Unit Test tools in Visual Studio 2008. Each method in class will has its own testing method (MethodTest()) in testing class ('*'Test.cs). 
+Path Finding component is using the Unit Test tools in Visual Studio 2008. Each method in class will has its own testing method (MethodTest()) in testing class (`*`Test.cs). 
 
 || Test Name || Description || Boolean: Success ||  Completed ||
 || || || || ||

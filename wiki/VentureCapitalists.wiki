@@ -5,10 +5,18 @@
 
 
 
-= Progress (Why we are capable of establishing See3PO) =
+= Why we are capable of establishing See3PO =
 
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== A Strong Group ==
+  * 2 Ph.D. and 3 Master Students
+
+== Established Hardware ==
+
+== High Quality Software Development ==
+  * Object-Oriented Design
+  * Design Patterns
+  * Unit Test
+
+== 
 
 = Future =

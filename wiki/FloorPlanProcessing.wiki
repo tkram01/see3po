@@ -36,7 +36,7 @@ Box-Count Dimension module by [Nick]. (Java)
  * Any color of the pixel that is darker than gray(RGB values) will be treated as un-walkable(need to  confirm if this is acceptable)
  * If on trying to create a block any remainder part is there (for both height and width of the image) that part will be treated as un-walkable. 
 
-= Output Produced for the time being =
+== Output Produced for the time being ==
  
  <u>For Image2,above with block size = 5</u> : http://see3po.googlegroups.com/web/derived.txt
 

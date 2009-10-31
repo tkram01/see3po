@@ -11,9 +11,8 @@ Add your content here.
 === Input ===
 As assigned by client (Tyler), we will have a floor plan in image format (bmp, png, or jpg)
 
-Image1
 [http://www.cs.umb.edu/img/third_floor_map.gif]
-Image2
+
 [http://see3po.googlegroups.com/attach/2feb91d66cd52d11/UMass+-+Science+Building+-+3rd+Floor+(2).jpg?view=1&part=4]
 
 === Output ===
@@ -38,6 +37,6 @@ Box-Count Dimension module by [Nick]. (Java)
 
 == Output Produced for the time being ==
  
- <u>For Image2 above, with block size = 5</u> : http://see3po.googlegroups.com/web/derived.txt
+ <u>For the 2nd floor plan image above, with block size = 5, output is</u> : http://see3po.googlegroups.com/web/derived.txt
 
- <u>For Image2 above, with block size = 1</u> : http://see3po.googlegroups.com/web/original.txt
+ <u>For the 2nd floor plan image above, with block size = 1, output is</u> : http://see3po.googlegroups.com/web/original.txt

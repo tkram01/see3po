@@ -38,6 +38,6 @@ Box-Count Dimension module by [Nick]. (Java)
 
 == Output Produced for the time being ==
  
- <u>For Image2,above with block size = 5</u> : http://see3po.googlegroups.com/web/derived.txt
+ <u>For Image2 above, with block size = 5</u> : http://see3po.googlegroups.com/web/derived.txt
 
  <u>For Image2 above, with block size = 1</u> : http://see3po.googlegroups.com/web/original.txt

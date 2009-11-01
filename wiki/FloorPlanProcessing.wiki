@@ -31,7 +31,9 @@ Box-Count Dimension module by [Nick]. (Java)
 
 = Important points =
  * Need to specify the tile size in order for the program to generate appropriate array
+   # Just put a field in the constructor for now. 
  * Need to specify the image location.
+   # Please explain this further
  * Any color of the pixel that is darker than gray(RGB values) will be treated as un-walkable(need to  confirm if this is acceptable)
  * If on trying to create a block any remainder part is there (for both height and width of the image) that part will be treated as un-walkable. 
 

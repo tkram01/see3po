@@ -19,6 +19,8 @@ Debarati
     
   * This can be scripted with as few as three images: The blank floorplan, the floorplan plus a sprite image, the floorplan plus possible paths. 
 
+  * The simplest way would be to use Tyler's Explorer2 program as a jumping-off point. Keep the video feed box in place, and use the existing input box to display the map. That way, your mouse-click handlers are already in place. 
+
 
 = Layout =
 == Scenarios (Why should you have a See3PO?) ==

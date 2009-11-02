@@ -1,18 +1,47 @@
 #summary Presentation for pseudo-potential investor.
 
-= Scenarios (Why should you have a See3PO?) =
+= Assignments = 
+
+Frank/Nick
+  * Present
+  * Movie
+Hao/Jackie
+  * Make sure that the robot is working with Tyler's original programs
+    # We may want to do a quick presentation, time permitting
+Debarati
+  * Make a mock UI
+  * It should do the following, and can be completely scripted if you want
+    # Import a Picture of a floorplan
+    # Show the Picture in a window (like the emulator does now)
+    # Click the image to select the destination
+    # Draw Path(s) on the picture
+    
+  * This can be scripted with as few as three images: The blank floorplan, the floorplan plus a sprite image, the floorplan plus possible paths. 
 
 
+= Layout =
+== Scenarios (Why should you have a See3PO?) ==
+  * Show Movie (2 minutes)
+  * Slideshow of other uses: 
+    # Security
+    # Surveillance
 
+== UI Presentation ==
+  * Walk through Debarati's mock-up of the UI
+    # Import a Picture
+    # Show the FloorPlan displayed
+    # Show the Paths
+    # Press "Go" or something
 
-= Why we are capable of establishing See3PO? =
-
-== A Strong Group ==
+== Why we are capable of establishing See3PO? ==
+=== A Strong Group ===
   * 2 Ph.D. and 3 Master Students
 
-== Established Hardware ==
+=== Established Hardware ===
 
-== High Quality Software Development ==
+  * Drive the robot around
+
+=== High Quality Software Development ==
   * Object-Oriented Design
   * Design Patterns
   * Unit Test

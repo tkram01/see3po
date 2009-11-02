@@ -5,8 +5,9 @@
 This plan details the interactions between the various components
   * [GUI] - This will hold an instance of Host
   * [Host]  - The core of the program, this will hold instances of the other components
-  * [Status]/[FloorPlanProcessing] - The central data structure, used by Pathfinding, LocalBrain and Voodoo
-  * [PathFinding] - will have {{{Queue<MoveCommand> GetPath(Location)}}} method to get a queue of MoveCommand objects
+  * [Status]
+    # [FloorPlanProcessing FloorPlan] - will be constructed with  {{{ FloorPlan(Image)}}} and store a FloorPlanTile[][] representing the floor
+  * [PathFinding PathFinder] - will have {{{Queue<MoveCommand> GetPath(Location)}}} method to get a queue of MoveCommand objects
   * [LocalBrain] / [LocalBrainEmulator] 
   * [VoodooAlgorithm] will have {{{Location GetLocation(Image)}}} to return a Location object
 

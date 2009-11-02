@@ -30,11 +30,11 @@ Box-Count Dimension module by [Nick]. (Java)
   * Clear unnecessary information (such as numbers in image file)
 
 = Important points =
- * Function to produce array has a signature of this form : int(array) getBlockArray(Bitmap myimage, int blockLength).
- * So here we need to specify the tile size in order for the program to generate appropriate array
-   # Just put a field in the constructor for now - the function to produce the array requires block size as argument and I feel that is okay for now. This way I won't have to hard code any value or change my program structure.
+ 
+ * Need to specify the tile size in order for the program to generate appropriate array
+   # Just put a field in the constructor for now - it is already existing. but in order to call the function to produce the array we still need to specify the block length.
  * Need to specify the image location.
-   # Please explain this further -- the function to produce the array requires the location of the actual image in disk as otherwise it won't have any way to understand what image to work on.
+   # Please explain this further - the program needs to know the location of the actual image in disk as otherwise it won't have any way to understand what image to work on.
  * Any color of the pixel that is darker than gray(RGB values) will be treated as un-walkable(need to  confirm if this is acceptable)
  * If on trying to create a block any remainder part is there (for both height and width of the image) that part will be treated as un-walkable. 
 

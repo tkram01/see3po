@@ -8,6 +8,7 @@ Frank/Nick
 Hao/Jackie
   * Make sure that the robot is working with Tyler's original programs
     # We may want to do a quick presentation, time permitting
+    # If you could make it work on a laptop, separate from the Presentation computer, it would probably make everything move more smoothly. You can set it up as we present, and we don't need to switch programs. 
 Debarati
   * Make a mock UI
   * It should do the following, and can be completely scripted if you want

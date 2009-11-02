@@ -30,7 +30,7 @@ Box-Count Dimension module by [Nick]. (Java)
   * Clear unnecessary information (such as numbers in image file)
 
 = Important points =
- * Function to produce array has a signature of this form : int[,] getBlockArray(Bitmap myimage, int blockLength).
+ * Function to produce array has a signature of this form : int[][] getBlockArray(Bitmap myimage, int blockLength).
  * So here we need to specify the tile size in order for the program to generate appropriate array
    # Just put a field in the constructor for now - the function to produce the array requires block size as argument and I feel that is okay for now. This way I won't have to hard code any value or change my program structure.
  * Need to specify the image location.

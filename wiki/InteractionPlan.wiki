@@ -2,13 +2,12 @@
 #labels Phase-Design
 = Introduction =
 
-This plan will detail how each component deals with one another. The major components are: 
-  
-  * [Host]
-    # [GUI]
-    # [Status]/[FloorPlanProcessing]
-  * [PathFinding]
-  * [LocalBrain] / [LocalBrainEmulator]
-  * [VoodooAlgorithm]
+This plan details the interactions between the various components
+  * [GUI] - This will hold an instance of Host
+  * [Host]  - The core of the program, this will hold instances of the other components
+  * [Status]/[FloorPlanProcessing] - The central data structure, used by Pathfinding, LocalBrain and Voodoo
+  * [PathFinding] - will have {{{Queue<MoveCommand> GetPath(Location)}}} method to get a queue of MoveCommand objects
+  * [LocalBrain] / [LocalBrainEmulator] 
+  * [VoodooAlgorithm] will have {{{Location GetLocation(Image)}}} to return a Location object
 
 http://i45.photobucket.com/albums/f69/FMarino/interactions.jpg

@@ -11,4 +11,4 @@ This plan details the interactions between the various components
   * [LocalBrain] / [LocalBrainEmulator] 
   * [VoodooAlgorithm] will have {{{Location GetLocation(Image)}}} to return a Location object
 
-http://i45.photobucket.com/albums/f69/FMarino/interactions.jpg
+http://i45.photobucket.com/albums/f69/FMarino/interactionsLeft.jpg http://i45.photobucket.com/albums/f69/FMarino/interactionsRight.jpg

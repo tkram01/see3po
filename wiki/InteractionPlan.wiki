@@ -3,9 +3,12 @@
 = Introduction =
 
 This plan will detail how each component deals with one another. The major components are: 
+  
+  * [Host]
+    # [GUI]
+    # [Status]/[FloorPlanProcessing]
+  * [PathFinding]
   * [LocalBrain] / [LocalBrainEmulator]
-  * [Host] GUI
-  * [PathFinding] algorithms
-  * Tyler's [VoodooAlgorithm]
+  * [VoodooAlgorithm]
 
 http://i45.photobucket.com/albums/f69/FMarino/interactions.jpg

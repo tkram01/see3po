@@ -1,7 +1,7 @@
 #summary The Central Data Structure
 
 = Contents =
-  * {{{private Stack<Image> _Images}}} - A Stack of images to be used by the [VooDooAlgorithm], produced by the LocalBrain
-  * {{{private FloorPlan _FloorPlan}}}  - a FloorPlan object, constructed with an image, which will store a {{{FloorPlanTile[][]}}}
+  * {{{private Stack<Image> _Images}}} - A Stack of images to be used by the [VoodooAlgorithm ], produced by the LocalBrain
+  * {{{private FloorPlan _FloorPlan}}}  - a [FloorPlanProcessing FloorPlan] object, constructed with an image, which will store a {{{FloorPlanTile[][]}}}
   * {{{private Queue<MoveCommand> _Moves}}} - A Queue of moves, produced by [PathFinding PathFinder] and used by LocalBrain
-  * {{{private Position _Position}}} - A Position Object, representing the Robot's current position, produced by [VooDooAlgorithm] and used by [PathFinding PathFinder]
+  * {{{private Position _Position}}} - A Position Object, representing the Robot's current position, produced by [VoodooAlgorithm] and used by [PathFinding PathFinder]

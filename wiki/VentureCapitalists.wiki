@@ -23,9 +23,11 @@ Debarati
 
 
 = Outlines =
-== Scenarios (Why should you have a See3PO?) ==
+== Scenario 1 - Deliver Document ==
   * Show Movie (2 minutes)
-  * Slideshow of other uses: 
+
+== Scenario 2 - Pick Up Tennis Balls ==
+== Other Uses == 
     # Security
     # Surveillance
 

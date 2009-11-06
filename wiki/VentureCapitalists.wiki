@@ -32,33 +32,36 @@ Debarati
 == Scenario 1 - Delivering ==
   * Show Movie (2 minutes)
 
-== Scenario 2 - Pick Up Tennis Balls ==
+== Scenario 2 - Picking Up Tennis Balls ==
 
 == And More ... == 
   * Security/ Surveillance
-  * Sweep Leaves
+  * Sweeping Leaves
 
-== UI Presentation ==
-  * Walk through Debarati's mock-up of the UI
-    # Import a Picture
-    # Show the FloorPlan displayed
-    # Show the Paths
-    # Press "Go" or something
+== How? (Mock-up UI Presentation) ==
+  # Import a Picture
+  # Show the FloorPlan displayed
+  # FlorPlan Processing
+  # Walkable Tiles
+  # Graph
+  # Setup Starting and Ending Point
+  # Shortest Path
+  # Press "Go"
 
 == Why we are capable of establishing See3PO? ==
-=== A Strong Group ===
+  * Robust Software Development 
+  * Established Hardware
+  * Excellent Team Members
 
-=== Established Hardware ===
+== Robust Software Development ==
+  * UML (Class Diagram / Sequence Diagram)
+  * Object-oriented Programming / Design Patterns
+  * Unit Test
+
+== Established Hardware ==
 
   * Drive the robot around
 
-=== High Quality Software Development ==
-  * Object-Oriented Design
-  * Design Patterns
-  * Unit Test
-
-= Progress =
-
-
-
-= Future =
+== People ==
+  * Great Communications (UML...)
+  * ...

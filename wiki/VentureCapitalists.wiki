@@ -23,14 +23,20 @@ Debarati
 
 
 = Outlines =
-== Scenario 1 - Deliver Document ==
+
+== See3PO ==
+
+  * Frank, Nick, Jacky, Hao, Debarati
+  * Department of Computer Science
+
+== Scenario 1 - Delivering ==
   * Show Movie (2 minutes)
 
 == Scenario 2 - Pick Up Tennis Balls ==
 
 == And More ... == 
-=== Security/ Surveillance ===
-
+  * Security/ Surveillance
+  * Sweep Leaves
 
 == UI Presentation ==
   * Walk through Debarati's mock-up of the UI

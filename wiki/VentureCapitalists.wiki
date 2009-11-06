@@ -41,7 +41,7 @@ Debarati
 == How? (Mock-up UI Presentation) ==
   # Import a Picture
   # Show the FloorPlan displayed
-  # FlorPlan Processing
+  # FloorPlan Processing
   # Walkable Tiles
   # Graph
   # Setup Starting and Ending Point

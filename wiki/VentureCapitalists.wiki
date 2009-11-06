@@ -58,6 +58,7 @@ Debarati
   * UML (Class Diagram / Sequence Diagram)
   * Object-oriented Programming / Design Patterns
   * Unit Test
+  * Documentation
 
 == Established Hardware ==
 

@@ -35,8 +35,9 @@ Debarati
 == Scenario 2 - Picking Up Tennis Balls ==
 
 == And More ... == 
-  * Security/ Surveillance
+  * Chasing Animals
   * Sweeping Leaves
+  * Security/ Surveillance
 
 == How? (Mock-up UI Presentation) ==
   # Import a Picture

@@ -27,9 +27,10 @@ Debarati
   * Show Movie (2 minutes)
 
 == Scenario 2 - Pick Up Tennis Balls ==
-== Other Uses == 
-    # Security
-    # Surveillance
+
+== And More ... == 
+=== Security/ Surveillance ===
+
 
 == UI Presentation ==
   * Walk through Debarati's mock-up of the UI

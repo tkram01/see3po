@@ -1,0 +1,11 @@
+D:\Documents\School\CS682\GUI\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.MainForm.resources
+D:\Documents\School\CS682\GUI\obj\Debug\ViLAN_Explorer.Properties.Resources.resources
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\Documents\School\CS682\GUI\obj\Debug\ViLAN Explorer.exe
+D:\Documents\School\CS682\GUI\obj\Debug\ViLAN Explorer.pdb
+D:\Documents\School\CS682\GUI\bin\Debug\ViLAN Explorer.exe
+D:\Documents\School\CS682\GUI\bin\Debug\ViLAN Explorer.pdb
+D:\Documents\School\CS682\GUI\bin\Debug\RobotHost.pdb
+D:\Documents\School\CS682\GUI\bin\Debug\Nexus3Input.pdb
+D:\Documents\School\CS682\GUI\bin\Debug\RobotCommands.pdb

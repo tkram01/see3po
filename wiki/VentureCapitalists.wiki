@@ -10,12 +10,7 @@ Hao/Jackie
     # We may want to do a quick presentation, time permitting
     # If you could make it work on a laptop, separate from the Presentation computer, it would probably make everything move more smoothly. You can set it up as we present, and we don't need to switch programs. 
 Debarati
-  * Make a mock UI
-  * It should do the following, and can be completely scripted if you want
-    # Import a Picture of a floorplan
-    # Show the Picture in a window (like the emulator does now)
-    # Click the image to select the destination
-    # Draw Path(s) on the picture
+
     
   * This can be scripted with as few as three images: The blank floorplan, the floorplan plus a sprite image, the floorplan plus possible paths. 
 
@@ -24,32 +19,48 @@ Debarati
 
 = Outlines =
 
-== See3PO ==
+== Intro <font color= "RED">(1 minute)</font> ==
 
+=== Intro Slide <font color= "orange">(1 slide)</font>===
   * Frank, Nick, Jacky, Hao, Debarati
   * Department of Computer Science
+  * See3PO - What does it do?
+    # Autonomous Pathfinding Robot
+    # Vision Based
 
-== Scenario 1 - Delivering ==
+== Why See3PO?  <font color= "RED">(4 minutes)</font> ==
+
+=== Scenario 1 - Delivering <font color= "orange">(2 minutes)</font> ===
   * Show Movie (2 minutes)
 
-== Scenario 2 - Picking Up Tennis Balls ==
+=== Scenario 2 - Picking Up Tennis Balls <font color= "orange">(1 slide)</font> ===
 
-== And More ... == 
+=== And More ... <font color= "orange">(1 slide)</font>=== 
   * Chasing Animals
   * Sweeping Leaves
   * Security/ Surveillance
 
-== How? (Mock-up UI Presentation) ==
-  # Import a Picture
-  # Show the FloorPlan displayed
-  # FloorPlan Processing
-  # Walkable Tiles
-  # Graph
-  # Setup Starting and Ending Point
-  # Shortest Path
-  # Press "Go"
+== How? (Mock-up UI Presentation)<font color= "RED">(8 minutes)</font> ==
 
-== Why we are capable of establishing See3PO? ==
+=== User Interface <font color= "orange">(3 slides)</font> ===
+==== GUIOpen <font color= "orange">(1 slide)</font> ====
+  * Import Images/Open FloorPlan 
+  * Live View from Robot
+==== GUIFloorPlan <font color= "orange">(1 slide)</font> ====
+  * Click floorplan to select Destination
+==== GUIPath <font color= "orange">(1 slide)</font> ====
+  * PathFiner finds shortest route, displays it (blue) along with alternate routes (red)
+
+=== WhereAmI (VooDoo) <font color= "orange">(2 slides/ 3 minutes)</font> ===
+==== What is it? <font color= "orange">(1 slide)</font> ====
+  * Uses Images from the robot to find the robot's current position
+==== Why use it? <font color= "orange">(1 slide)</font>
+  * Works indoors
+  * High precision
+  * Gives Orientation as well as Location
+  * Potentially adjusts to changes in the environment, doors opening, obsticles
+
+== Why we are capable of establishing See3PO? <font color= "RED">(7 minutes)</font>==
   * Robust Software Development 
   * Established Hardware
   * Excellent Team Members

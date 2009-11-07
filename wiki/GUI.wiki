@@ -1,11 +1,16 @@
 #summary The Final User Interface
 = GUI =
 
+http://see3po.googlegroups.com/web/GUIOpened.jpg?gsc=Q1RiXAsAAABR7b9zrTd9tWGkmcBbSRi9
+
 The GUI have the following functions/properties
 
 Menu:
   * Import FloorPlan Images for conversion
   * Load/Save FloorPlan files
+
+http://see3po.googlegroups.com/web/GUIMenu.jpg
+
 
 Video Display:
   * Display Video from the Robot
@@ -13,6 +18,10 @@ Video Display:
 FloorPlan Display: 
   * Displays the floor plan
   * Displays a sprite representing the robot's location and facing
-  * Displays the current and possible paths
+  * Displays the current and possible path
 
-  * Clicking on a part of the floor plan will select that location as the destination
+http://see3po.googlegroups.com/web/GUIFloorPlan.jpg
+
+  * Clicking on a part of the floor plan will select that location as the destination. PathFinding will then calculate shortest path, and display it over the floorplan
+
+http://see3po.googlegroups.com/web/GUIPath.jpg

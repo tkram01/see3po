@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QuickGraph.Representations.AdjacencyGraph" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMggAgAAAEACQgCiBAABABAAAAAHAAEEBAEABAARA=</HashCode>
+      <FileName>AdjacencyGraph.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickGraph.Representations.BidirectionalGraph" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAgEAIAAAAAAAAAACIAAAAATAAAAACAAAAAAEABAAAA=</HashCode>
+      <FileName>BidirectionalGraph.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuickGraph.Representations.EdgeList" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIgAAAAAAAAAAAACBAAAAAAAAAAAAAAEAAAAAAARA=</HashCode>
+      <FileName>EdgeList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

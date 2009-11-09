@@ -6,13 +6,13 @@ using System.Drawing;
 
 namespace PathPlaning
 {
-    class Tile
+    class FloorTile
     {
         String Value;
         private Point Location;
         private FloorPlan FloorPlan;
 
-        public Tile(int x, int y, String value){
+        public FloorTile(int x, int y, String value){
             Location.X = x;
             Location.Y = y;
             this.Value = value;

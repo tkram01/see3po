@@ -43,3 +43,7 @@ Box-Count Dimension module by [Nick]. (Java)
  <u>For the 2nd floor plan image above, with block size = 5, output is</u> : http://see3po.googlegroups.com/web/derived.txt
 
  <u>For the 2nd floor plan image above, with block size = 1, output is</u> : http://see3po.googlegroups.com/web/original.txt
+
+== Test Cases ==
+ * Added unit tests for block lengths of 4-6.
+ * Added one file comparison test for created array and one standard. (for now I tested this using files created by the same program, so is not of much use unless we have a standard array for a standard image of may be block length 1)

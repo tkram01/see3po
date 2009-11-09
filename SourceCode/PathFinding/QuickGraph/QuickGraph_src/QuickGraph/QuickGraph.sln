@@ -1,0 +1,93 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph", "QuickGraph\QuickGraph.csproj", "{5F42D0C5-A525-4891-9A5D-3D8BE4A21626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraphTest", "QuickGraphTest\QuickGraphTest.csproj", "{FD4D1ABC-3E00-44A9-A391-5346F3068576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraphNUnit", "QuickGraphNUnit\QuickGraphNUnit.csproj", "{784A584E-4A0E-4420-BE9A-70094BC0FF01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph.Algorithms", "QuickGraph.Algorithms\QuickGraph.Algorithms.csproj", "{EB884293-9316-41E5-A026-8A0F036E5887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph.Web", "QuickGraph.Web\QuickGraph.Web.csproj", "{2B70A8EC-41D0-458B-BAAA-983895B8B656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickChartWebTest", "http://localhost/QuickChartWebTest/QuickChartWebTest.csproj", "{C243DDE7-D2C7-4372-9F97-E27062DD9EDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph.Algorithms.Graphviz", "QuickGraph.Algorithms.Graphviz\QuickGraph.Algorithms.Graphviz.csproj", "{2108A9E1-8D2F-4677-ACA1-4E88CFC188FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStuff", "TestStuff\TestStuff.csproj", "{9BF9ED0F-9319-4857-979E-6B352AC239A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph.Concepts", "QuickGraph.Concepts\QuickGraph.Concepts.csproj", "{247010DA-C052-46E6-8C02-BF616DF38960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph.Collections", "QuickGraph.Collections\QuickGraph.Collections.csproj", "{CBED5772-5130-4507-A992-56DBA9E4906A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph.Representations", "QuickGraph.Representations\QuickGraph.Representations.csproj", "{34EA963A-01E0-45A9-85E1-B2C85BF50FB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph.Predicates", "QuickGraph.Predicates\QuickGraph.Predicates.csproj", "{5D4BF201-84BB-4C39-817C-58F4A8CD085D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickGraph.Exceptions", "QuickGraph.Exceptions\QuickGraph.Exceptions.csproj", "{CA7F6FC6-CA25-4592-9133-C5CBDDA7E2BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5F42D0C5-A525-4891-9A5D-3D8BE4A21626}.Debug.ActiveCfg = Debug|.NET
+		{5F42D0C5-A525-4891-9A5D-3D8BE4A21626}.Debug.Build.0 = Debug|.NET
+		{5F42D0C5-A525-4891-9A5D-3D8BE4A21626}.Release.ActiveCfg = Release|.NET
+		{5F42D0C5-A525-4891-9A5D-3D8BE4A21626}.Release.Build.0 = Release|.NET
+		{FD4D1ABC-3E00-44A9-A391-5346F3068576}.Debug.ActiveCfg = Debug|.NET
+		{FD4D1ABC-3E00-44A9-A391-5346F3068576}.Debug.Build.0 = Debug|.NET
+		{FD4D1ABC-3E00-44A9-A391-5346F3068576}.Release.ActiveCfg = Release|.NET
+		{FD4D1ABC-3E00-44A9-A391-5346F3068576}.Release.Build.0 = Release|.NET
+		{784A584E-4A0E-4420-BE9A-70094BC0FF01}.Debug.ActiveCfg = Debug|.NET
+		{784A584E-4A0E-4420-BE9A-70094BC0FF01}.Debug.Build.0 = Debug|.NET
+		{784A584E-4A0E-4420-BE9A-70094BC0FF01}.Release.ActiveCfg = Release|.NET
+		{784A584E-4A0E-4420-BE9A-70094BC0FF01}.Release.Build.0 = Release|.NET
+		{EB884293-9316-41E5-A026-8A0F036E5887}.Debug.ActiveCfg = Debug|.NET
+		{EB884293-9316-41E5-A026-8A0F036E5887}.Debug.Build.0 = Debug|.NET
+		{EB884293-9316-41E5-A026-8A0F036E5887}.Release.ActiveCfg = Release|.NET
+		{EB884293-9316-41E5-A026-8A0F036E5887}.Release.Build.0 = Release|.NET
+		{2B70A8EC-41D0-458B-BAAA-983895B8B656}.Debug.ActiveCfg = Debug|.NET
+		{2B70A8EC-41D0-458B-BAAA-983895B8B656}.Debug.Build.0 = Debug|.NET
+		{2B70A8EC-41D0-458B-BAAA-983895B8B656}.Release.ActiveCfg = Release|.NET
+		{2B70A8EC-41D0-458B-BAAA-983895B8B656}.Release.Build.0 = Release|.NET
+		{C243DDE7-D2C7-4372-9F97-E27062DD9EDE}.Debug.ActiveCfg = Debug|.NET
+		{C243DDE7-D2C7-4372-9F97-E27062DD9EDE}.Debug.Build.0 = Debug|.NET
+		{C243DDE7-D2C7-4372-9F97-E27062DD9EDE}.Release.ActiveCfg = Release|.NET
+		{C243DDE7-D2C7-4372-9F97-E27062DD9EDE}.Release.Build.0 = Release|.NET
+		{2108A9E1-8D2F-4677-ACA1-4E88CFC188FE}.Debug.ActiveCfg = Debug|.NET
+		{2108A9E1-8D2F-4677-ACA1-4E88CFC188FE}.Debug.Build.0 = Debug|.NET
+		{2108A9E1-8D2F-4677-ACA1-4E88CFC188FE}.Release.ActiveCfg = Release|.NET
+		{2108A9E1-8D2F-4677-ACA1-4E88CFC188FE}.Release.Build.0 = Release|.NET
+		{9BF9ED0F-9319-4857-979E-6B352AC239A3}.Debug.ActiveCfg = Debug|.NET
+		{9BF9ED0F-9319-4857-979E-6B352AC239A3}.Debug.Build.0 = Debug|.NET
+		{9BF9ED0F-9319-4857-979E-6B352AC239A3}.Release.ActiveCfg = Release|.NET
+		{9BF9ED0F-9319-4857-979E-6B352AC239A3}.Release.Build.0 = Release|.NET
+		{247010DA-C052-46E6-8C02-BF616DF38960}.Debug.ActiveCfg = Debug|.NET
+		{247010DA-C052-46E6-8C02-BF616DF38960}.Debug.Build.0 = Debug|.NET
+		{247010DA-C052-46E6-8C02-BF616DF38960}.Release.ActiveCfg = Release|.NET
+		{247010DA-C052-46E6-8C02-BF616DF38960}.Release.Build.0 = Release|.NET
+		{CBED5772-5130-4507-A992-56DBA9E4906A}.Debug.ActiveCfg = Debug|.NET
+		{CBED5772-5130-4507-A992-56DBA9E4906A}.Debug.Build.0 = Debug|.NET
+		{CBED5772-5130-4507-A992-56DBA9E4906A}.Release.ActiveCfg = Release|.NET
+		{CBED5772-5130-4507-A992-56DBA9E4906A}.Release.Build.0 = Release|.NET
+		{34EA963A-01E0-45A9-85E1-B2C85BF50FB7}.Debug.ActiveCfg = Debug|.NET
+		{34EA963A-01E0-45A9-85E1-B2C85BF50FB7}.Debug.Build.0 = Debug|.NET
+		{34EA963A-01E0-45A9-85E1-B2C85BF50FB7}.Release.ActiveCfg = Release|.NET
+		{34EA963A-01E0-45A9-85E1-B2C85BF50FB7}.Release.Build.0 = Release|.NET
+		{5D4BF201-84BB-4C39-817C-58F4A8CD085D}.Debug.ActiveCfg = Debug|.NET
+		{5D4BF201-84BB-4C39-817C-58F4A8CD085D}.Debug.Build.0 = Debug|.NET
+		{5D4BF201-84BB-4C39-817C-58F4A8CD085D}.Release.ActiveCfg = Release|.NET
+		{5D4BF201-84BB-4C39-817C-58F4A8CD085D}.Release.Build.0 = Release|.NET
+		{CA7F6FC6-CA25-4592-9133-C5CBDDA7E2BB}.Debug.ActiveCfg = Debug|.NET
+		{CA7F6FC6-CA25-4592-9133-C5CBDDA7E2BB}.Debug.Build.0 = Debug|.NET
+		{CA7F6FC6-CA25-4592-9133-C5CBDDA7E2BB}.Release.ActiveCfg = Release|.NET
+		{CA7F6FC6-CA25-4592-9133-C5CBDDA7E2BB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

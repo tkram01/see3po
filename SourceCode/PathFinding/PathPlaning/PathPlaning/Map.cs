@@ -27,7 +27,7 @@ namespace PathPlaning
 
                     for (int i = 0; i < input.Length; i++)
                     {
-                        Tile t = new Tile(i, rowNum, input.Substring(i, 1));
+                        FloorTile t = new FloorTile(i, rowNum, input.Substring(i, 1));
                         col.Add(t);
                     }
 
@@ -71,7 +71,7 @@ namespace PathPlaning
                         CurrentUpLeftPoint.X = j * Scale;
                         CurrentUpLeftPoint.Y = i * Scale;
 
-                        //Two loops inside a Tile
+                        //Two loops inside a FloorTile
                         for (int ti = CurrentUpLeftPoint.Y; ti < CurrentUpLeftPoint.Y + Scale; ti++)
                         {
                             for (int tj = CurrentUpLeftPoint.X; tj < CurrentUpLeftPoint.X + Scale; tj++)
@@ -97,8 +97,8 @@ namespace PathPlaning
                             }
                         }
 
-                        //create a Tile instance
-                        Tile t = new Tile(j, i, Walkable);
+                        //create a FloorTile instance
+                        FloorTile t = new FloorTile(j, i, Walkable);
                         col.Add(t);
                     }
 
@@ -108,12 +108,12 @@ namespace PathPlaning
         }
 
 
-        public Tile GetTile(int x, int y){
+        public FloorTile GetTile(int x, int y){
 
             if (this.GetXSize() > 0 && x < this.GetXSize() &&
                 this.GetYSize() > 0 && y < this.GetYSize())
             {
-                return (Tile)((ArrayList)Tiles[y])[x];
+                return (FloorTile)((ArrayList)Tiles[y])[x];
             }
             else
             {
@@ -137,10 +137,6 @@ namespace PathPlaning
             {
                 return 0;
             }
-            
-        }
-
-        public void ConnectNeighbors(){
 
         }
 

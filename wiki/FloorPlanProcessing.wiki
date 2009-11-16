@@ -47,3 +47,9 @@ Box-Count Dimension module by [Nick]. (Java)
 == Test Cases ==
  * Added unit tests for block lengths of 4-6.
  * Added one file comparison test for a newly created array and a standard array for the same image. (for now I tested this using files created by the same program, so is not of much use unless we have a standard array for a standard image of may be block length 1)
+
+== Relevent Codes ==
+ * Created a simple program which on getting the full path of an image file (till now tested with .jpg and .bmp) and also the block length(equivalent to tile length), will create a 2D array.
+ * Array consists of 0s and 1s, where one 0 represents walkable block and one 1 represents non-walkable block.
+ * Code has been uploaded under FloorPlanProcessing Folder, inside the Folder called ImageTo2DArray
+ * Corresponding unit tests are also present inside one of the sub-folders under ImageTo2DArray.

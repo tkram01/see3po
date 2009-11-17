@@ -38,7 +38,7 @@
 || [HostCLI][LocalBrainEmulator] [Testing Send Move 1 -1]	|| 10/28/2009	|| Complete		|| [Frank]		|| 10/27/2009			||
 || [HostCLI][LocalBrainEmulator] [Testing Receive Location]|| 10/28/2009	|| Complete		|| [Frank]		|| 10/27/2009			||
 || [HostCLI][LocalBrainEmulator] [Testing Receive Facing]	|| 10/28/2009	|| Complete		|| [Frank]		|| 10/27/2009			||
-|| [HostCLI] [Testing Send Move -1 1]		    || 10/31/2009(R)	|| 				|| [Frank]		|| 						||
+|| [HostCLI] [Testing Send Move -1 1]		    || 10/31/2009(R)	|| 	Complete			|| [Frank]		|| 10/27/2009					||
 || [InteractionPlan] completed (And the image successfully shows )|| 10/31/2009(R)	|| 		|| [Frank]				|| 						||
 || Two [UseCases] completed 					|| 10/31/2009 	|| Rescheduled	|| 				|| 						||
 || [LocalBrainEmulator] Returns Position, Facing|| 10/31/2009	|| Complete		|| [Frank]		|| 10/19/2009			||
@@ -47,7 +47,7 @@
 ===November===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
 || [FloorPlanProcessing] [Testing Conversion Test] complete        || 11/09/2009	|| Completed 				|| [Debarati] ||	11/09/2009	||
-|| *Talk with [VentureCapitalists]*             || 11/12/2009	|| 				||  			|| 						||
+|| *Talk with [VentureCapitalists]*             || 11/12/2009	|| 	Completed		||  all			|| 	11/12/2009					||
 || [PathFinding][Emulator] [Testing SendPath]   || 11/31/2009	|| 				||  [Nick] [Frank] ||		||
 || [FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan] || 11/31/2009	|| 				||  [Nick] [Debarati] ||		||
 || [CORE] [Testing Recieve Tests]               || 11/31/2009	|| 				||  [Nick] [Frank] [Debarati] ||		||

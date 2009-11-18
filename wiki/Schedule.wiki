@@ -59,9 +59,12 @@
 
 ===January 2010===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
-|| *[PathFinding] Complete*                     || 01/01/2010	|| 				|| [Debarati] [Nick] [Frank] ||		||
-|| *Robot fixes complete*                       || 01/01/2010	|| 				|| [Jacky] [Hao] ||					||
+|| *[PathFinding] Complete*                     || 01/01/2010	|| 				|| [Debarati] [Nick] [Frank] ||		    ||
+|| *Robot takes incremental commands, drives straight*|| 01/01/2010	|| 				|| [Jacky] [Hao] ||					||
+
 ===February===
+|| *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
+|| *WinCE driver deadline*                      || 02/01/2010	|| 				|| [Jacky] [Hao] ||					    ||
 
 ===March===
 

@@ -2,6 +2,16 @@
 #labels Featured,Phase-Support
 = Comments and questions from the Professor =
 
+== November 18 ==
+
+Nice job on the vc presentation. I thought it followed the guidelines best of all the three. Please post the slides on the wiki, on the right page.
+
+Where is your one step build?
+
+Still no response to the query below.
+
+----
+
 == October 28 ==
 
 Your [RiskAnalysis Risk Analysis] page lists

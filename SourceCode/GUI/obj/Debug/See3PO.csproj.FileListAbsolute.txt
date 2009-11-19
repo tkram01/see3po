@@ -9,3 +9,5 @@ D:\Documents\School\CS682\GUI\bin\Debug\See3PO.exe
 D:\Documents\School\CS682\GUI\bin\Debug\See3PO.pdb
 D:\Documents\School\CS682\GUI\obj\Debug\See3PO.exe
 D:\Documents\School\CS682\GUI\obj\Debug\See3PO.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\obj\Debug\See3PO.exe
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\obj\Debug\See3PO.pdb

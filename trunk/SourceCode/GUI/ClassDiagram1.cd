@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="See3PO.FloorPlan">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAgAAEhAAAAAAAAAAAAABKAAAAAAAAAAAI=</HashCode>
+      <FileName>FloorPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.FloorTile">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAEAIAAAAAAQAAAEAAAAAAABAAAA=</HashCode>
+      <FileName>FloorTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.MainForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="7.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="See3PO.MainForm.DGuiCallVoid" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="See3PO.MainForm.DGuiCallString" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="See3PO.MainForm.DGuiCallBuffer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AY5GAAAlAiJBCGBAAEDQkXBCBIQAgAAJAEoCgAAJAAk=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="See3PO.MoveCommand">
+    <Position X="7.25" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="See3PO.MoveCommand.Direction">
+        <TypeIdentifier>
+          <NewMemberFileName>MoveCommand.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MoveCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.Position">
+    <Position X="0.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.Program" Collapsed="true">
+    <Position X="7.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.RobotSprite">
+    <Position X="6.25" Y="3.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAACAAAAIIAAAEAQBAAAAAIAEAABAAAA=</HashCode>
+      <FileName>RobotSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.Status">
+    <Position X="3" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAEBAAAAACQAgAAAAEACIAAAAEAQAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Status.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.Voodoo">
+    <Position X="0.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Voodoo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="See3PO.Properties.Settings" Collapsed="true">
+    <Position X="2" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

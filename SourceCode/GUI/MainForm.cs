@@ -68,7 +68,6 @@ namespace See3PO
             g = Graphics.FromHwnd(floorPlanPanel.Handle);
             livePanel.BackgroundImage = Image.FromFile("SampleRobotView.jpg");
 
-            status = new Status(floorPlanImage);
             status.path = new Queue<MoveCommand>();
 
             
@@ -122,15 +121,6 @@ namespace See3PO
         private void setDestination(object sender, MouseEventArgs e)
         {
             drawDestination(sender, e);
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, 5));
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.CCW, 18));
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, 8));
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.CW, 18));
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, 4));
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.CCW, 18));
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, 10));
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.CW, 18));
-            status.path.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, 2));
             DrawFloor();
         }
 
@@ -237,8 +227,7 @@ namespace See3PO
                 g.DrawImage(robotSprite.image, robotSprite.position.location);
             if (destLoc != voidPoint)
                 g.DrawImage(destImage, destLoc);
-            if (status.path.Count > 0)
-                g.DrawImage(DrawMoves(), new Point(0, 0));
+
 		}
 
         private Image DrawMoves() {
@@ -388,7 +377,7 @@ namespace See3PO
                 floorPlanImage = new Bitmap(Image.FromFile(importImageDialog.FileName));
             }
             catch (Exception) { }
-
+            status = new Status(floorPlanImage, 3);
             robotStart = new Position(new Point(274, 132), 90);
             robotSprite = new RobotSprite(robotImage, robotStart);
             DrawFloor();

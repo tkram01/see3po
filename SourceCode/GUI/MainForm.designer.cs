@@ -43,7 +43,6 @@ namespace See3PO
             this.messageBox = new System.Windows.Forms.TextBox();
             this.floorPlanPanel = new System.Windows.Forms.Panel();
             this.importImageDialog = new System.Windows.Forms.OpenFileDialog();
-            this.Move = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -167,21 +166,11 @@ namespace See3PO
             this.importImageDialog.Filter = "\"IMAGES|*jpg;*bmp|All|*.*\";";
             this.importImageDialog.InitialDirectory = "\"\"";
             // 
-            // Move
-            // 
-            this.Move.Location = new System.Drawing.Point(404, 464);
-            this.Move.Name = "Move";
-            this.Move.Size = new System.Drawing.Size(95, 37);
-            this.Move.TabIndex = 66;
-            this.Move.Text = "Move";
-            this.Move.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 639);
-            this.Controls.Add(this.Move);
             this.Controls.Add(this.floorPlanPanel);
             this.Controls.Add(this.messageBox);
             this.Controls.Add(this.livePanel);
@@ -218,7 +207,6 @@ namespace See3PO
         private System.Windows.Forms.ToolStripMenuItem saveFloorPlanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importFloorPlanImageToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog importImageDialog;
-        private System.Windows.Forms.Button Move;
 
 	}
 }

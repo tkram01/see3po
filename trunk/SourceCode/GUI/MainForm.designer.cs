@@ -28,6 +28,7 @@ namespace See3PO
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -43,17 +44,33 @@ namespace See3PO
             this.messageBox = new System.Windows.Forms.TextBox();
             this.floorPlanPanel = new System.Windows.Forms.Panel();
             this.importImageDialog = new System.Windows.Forms.OpenFileDialog();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.floorPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadFloorPlanToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFloorPlanToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.importFloorPlanImageToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 617);
+            this.statusStrip.Location = new System.Drawing.Point(0, 563);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1066, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1028, 22);
             this.statusStrip.TabIndex = 23;
             this.statusStrip.Text = "statusStrip";
             // 
@@ -67,10 +84,11 @@ namespace See3PO
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
-            this.connectionMenu});
+            this.connectionMenu,
+            this.floorPlanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1066, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1028, 24);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "mainMenu";
             // 
@@ -133,29 +151,29 @@ namespace See3PO
             // 
             // livePanel
             // 
-            this.livePanel.Location = new System.Drawing.Point(12, 27);
+            this.livePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.livePanel.Location = new System.Drawing.Point(0, 0);
             this.livePanel.Name = "livePanel";
-            this.livePanel.Size = new System.Drawing.Size(492, 428);
+            this.livePanel.Size = new System.Drawing.Size(342, 308);
             this.livePanel.TabIndex = 25;
             // 
             // messageBox
             // 
-            this.messageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.messageBox.BackColor = System.Drawing.Color.White;
-            this.messageBox.Location = new System.Drawing.Point(12, 517);
+            this.messageBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.messageBox.Location = new System.Drawing.Point(0, 0);
             this.messageBox.Multiline = true;
             this.messageBox.Name = "messageBox";
             this.messageBox.ReadOnly = true;
-            this.messageBox.Size = new System.Drawing.Size(1042, 87);
+            this.messageBox.Size = new System.Drawing.Size(342, 227);
             this.messageBox.TabIndex = 58;
             // 
             // floorPlanPanel
             // 
-            this.floorPlanPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.floorPlanPanel.Location = new System.Drawing.Point(510, 27);
+            this.floorPlanPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.floorPlanPanel.Location = new System.Drawing.Point(0, 0);
             this.floorPlanPanel.Name = "floorPlanPanel";
-            this.floorPlanPanel.Size = new System.Drawing.Size(544, 480);
+            this.floorPlanPanel.Size = new System.Drawing.Size(682, 539);
             this.floorPlanPanel.TabIndex = 65;
             this.floorPlanPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.floorPlanPanel_Paint);
             this.floorPlanPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.setDestination);
@@ -166,14 +184,98 @@ namespace See3PO
             this.importImageDialog.Filter = "\"IMAGES|*jpg;*bmp|All|*.*\";";
             this.importImageDialog.InitialDirectory = "\"\"";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.floorPlanPanel);
+            this.splitContainer1.Size = new System.Drawing.Size(1028, 539);
+            this.splitContainer1.SplitterDistance = 342;
+            this.splitContainer1.TabIndex = 66;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.livePanel);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.messageBox);
+            this.splitContainer2.Size = new System.Drawing.Size(342, 539);
+            this.splitContainer2.SplitterDistance = 308;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // floorPlanToolStripMenuItem
+            // 
+            this.floorPlanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setScaleToolStripMenuItem});
+            this.floorPlanToolStripMenuItem.Name = "floorPlanToolStripMenuItem";
+            this.floorPlanToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.floorPlanToolStripMenuItem.Text = "FloorPlan";
+            // 
+            // setScaleToolStripMenuItem
+            // 
+            this.setScaleToolStripMenuItem.Name = "setScaleToolStripMenuItem";
+            this.setScaleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.setScaleToolStripMenuItem.Text = "Set Scale";
+            this.setScaleToolStripMenuItem.Click += new System.EventHandler(this.setScale_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadFloorPlanToolStripMenuItem1,
+            this.saveFloorPlanToolStripMenuItem1,
+            this.importFloorPlanImageToolStripMenuItem1,
+            this.addToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 92);
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.addToolStripMenuItem.Text = "Set Scale";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.Import_Click);
+            // 
+            // loadFloorPlanToolStripMenuItem1
+            // 
+            this.loadFloorPlanToolStripMenuItem1.Name = "loadFloorPlanToolStripMenuItem1";
+            this.loadFloorPlanToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
+            this.loadFloorPlanToolStripMenuItem1.Text = "Load Floor Plan";
+            // 
+            // saveFloorPlanToolStripMenuItem1
+            // 
+            this.saveFloorPlanToolStripMenuItem1.Name = "saveFloorPlanToolStripMenuItem1";
+            this.saveFloorPlanToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
+            this.saveFloorPlanToolStripMenuItem1.Text = "Save Floor Plan";
+            // 
+            // importFloorPlanImageToolStripMenuItem1
+            // 
+            this.importFloorPlanImageToolStripMenuItem1.Name = "importFloorPlanImageToolStripMenuItem1";
+            this.importFloorPlanImageToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
+            this.importFloorPlanImageToolStripMenuItem1.Text = "Import Floor Plan Image";
+            this.importFloorPlanImageToolStripMenuItem1.Click += new System.EventHandler(this.Import_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 639);
-            this.Controls.Add(this.floorPlanPanel);
-            this.Controls.Add(this.messageBox);
-            this.Controls.Add(this.livePanel);
+            this.ClientSize = new System.Drawing.Size(1028, 585);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -185,6 +287,14 @@ namespace See3PO
             this.statusStrip.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            this.splitContainer2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,6 +317,15 @@ namespace See3PO
         private System.Windows.Forms.ToolStripMenuItem saveFloorPlanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importFloorPlanImageToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog importImageDialog;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.ToolStripMenuItem floorPlanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setScaleToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadFloorPlanToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem saveFloorPlanToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem importFloorPlanImageToolStripMenuItem1;
 
 	}
 }

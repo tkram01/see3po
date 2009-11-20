@@ -44,34 +44,31 @@ namespace See3PO
 		short leftSpeed = 0;
 		short rightSpeed = 0;
 
-		public MainForm()
-		{
+        public MainForm()
+        {
+            InitializeComponent();
 
-			InitializeComponent();
-
-			host = new CRobotHost(this);
+            host = new CRobotHost(this);
 
             //camera = new CWebcam(livePanel, null, false);
 
-			//camera.Initialize();
-			//camera.SetReady();
+            //camera.Initialize();
+            //camera.SetReady();
 
-            Center = new Point(floorPlanPanel.Width/2, floorPlanPanel.Height/2);
+            Center = new Point(floorPlanPanel.Width / 2, floorPlanPanel.Height / 2);
             destImage = Image.FromFile("destImage.png");
             destLoc = voidPoint;
 
             robotImage = Image.FromFile("Sprite3.png");
             robotStart = null;
             robotSprite = null;
-
-
+            status = null;
             g = Graphics.FromHwnd(floorPlanPanel.Handle);
             livePanel.BackgroundImage = Image.FromFile("SampleRobotView.jpg");
 
-            //status.path = new Queue<MoveCommand>();
 
-            
-		}
+
+        }
 
         //protected override void OnPaint(PaintEventArgs e)
         //{
@@ -221,7 +218,9 @@ namespace See3PO
 
 		private void DrawFloor()
 		{
-            if (floorPlanImage != null)
+            if (status != null)
+                g.DrawImage(status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+            else if (floorPlanImage != null)
                 g.DrawImage(floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
             if (robotSprite != null)
                 g.DrawImage(robotSprite.image, robotSprite.position.location);
@@ -359,7 +358,6 @@ namespace See3PO
 				return min;
 			else if(value > max)
 				return max;
-
 			return value;
 		}
 
@@ -399,6 +397,12 @@ namespace See3PO
             }
 
             return speeds;
+        }
+
+        private void setScale_Click(object sender, EventArgs e)
+        {
+            PostMessage("Please Click two points on the map whose distance is known");
+            g.FillRectangle(new SolidBrush(Color.FromArgb(25, 255, 0, 0)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
         }
 
 	}

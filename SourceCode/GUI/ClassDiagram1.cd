@@ -15,24 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.MainForm" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="7.25" Width="1.5" />
-    <NestedTypes>
-      <Delegate Name="See3PO.MainForm.DGuiCallVoid" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>MainForm.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
-      <Delegate Name="See3PO.MainForm.DGuiCallString" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>MainForm.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
-      <Delegate Name="See3PO.MainForm.DGuiCallBuffer" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>MainForm.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
-    </NestedTypes>
+    <Position X="2.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AY5GAAAlAiJBCGBAAEDQkXBCBIQAgAAJAEoCgAAJAAk=</HashCode>
       <FileName>MainForm.cs</FileName>
@@ -64,7 +47,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.Program" Collapsed="true">
-    <Position X="7.5" Y="7.25" Width="1.5" />
+    <Position X="2.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -92,16 +75,31 @@
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.Properties.Resources" Collapsed="true">
-    <Position X="4" Y="7.25" Width="1.5" />
+    <Position X="0.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.Properties.Settings" Collapsed="true">
-    <Position X="2" Y="7.25" Width="1.5" />
+    <Position X="0.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
+  <Class Name="PathPlaning.QGPathFinder">
+    <Position X="4.25" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>QGPathFinder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="PathPlaning.PathFinder">
+    <Position X="4.25" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PathFinder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Tahoma" Size="8.25" />
 </ClassDiagram>

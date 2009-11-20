@@ -8,6 +8,6 @@ namespace PathPlaning
 {
     interface PathFinder
     {
-        public ArrayList<FloorTile> getPath();
+        public List<FloorTile> getPath(FloorPlan fp);
     }
 }

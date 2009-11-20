@@ -37,6 +37,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Nexus3\Nexus3 Input\bin\Debug\Nexus3Input.dll</HintPath>
     </Reference>
+    <Reference Include="QuickGraph, Version=3.2.40610.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\QuickGraph.dll</HintPath>
+    </Reference>
     <Reference Include="RobotCommands, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\RobotCommands\bin\Debug\RobotCommands.dll</HintPath>
@@ -71,6 +75,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MoveCommand.cs" />
+    <Compile Include="PathFinder.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +103,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="QGPathFinder.cs" />
     <Compile Include="RobotSprite.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="Voodoo.cs" />

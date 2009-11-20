@@ -11,3 +11,15 @@ D:\Documents\School\CS682\GUI\obj\Debug\See3PO.exe
 D:\Documents\School\CS682\GUI\obj\Debug\See3PO.pdb
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\obj\Debug\See3PO.exe
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\obj\Debug\See3PO.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\obj\Debug\ResolveAssemblyReference.cache
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\obj\Debug\See3PO.MainForm.resources
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\obj\Debug\See3PO.Properties.Resources.resources
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\obj\Debug\See3PO.csproj.GenerateResource.Cache
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\See3PO.exe
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\See3PO.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\QuickGraph.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\RobotCommands.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\RobotHost.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\RobotHost.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\Nexus3Input.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\RobotCommands.pdb

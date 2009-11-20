@@ -7,5 +7,9 @@ namespace PathPlaning
 {
     class QGPathFinder : PathFinder
     {
+        public List<FloorTile> getPath(FloorPlan fp)
+        {
+
+        }
     }
 }

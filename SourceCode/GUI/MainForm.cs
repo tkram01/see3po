@@ -68,7 +68,7 @@ namespace See3PO
             g = Graphics.FromHwnd(floorPlanPanel.Handle);
             livePanel.BackgroundImage = Image.FromFile("SampleRobotView.jpg");
 
-            status.path = new Queue<MoveCommand>();
+            //status.path = new Queue<MoveCommand>();
 
             
 		}

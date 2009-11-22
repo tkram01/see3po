@@ -5,6 +5,7 @@ using System.Linq;
 using System.IO;
 using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using See3PO;
 
 namespace FloorPlanTest
 {
@@ -65,10 +66,9 @@ namespace FloorPlanTest
         [TestMethod]
         public void TestBlockSizefive() // test block size of 5
         {
-            ImageToArray image1 = new ImageToArray(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
+            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
 
-            int[,] arr = image1.createArray();
-            arr = image1.getBlockArray(image1);
+            FloorTile[,] arr = image1.createArray();
             image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt");
             
         }
@@ -76,32 +76,49 @@ namespace FloorPlanTest
         [TestMethod]
         public void TestBlockSizefour() // test block size of 4
         {
-            ImageToArray image1 = new ImageToArray(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 4);
+            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 4);
 
-            int[,] arr = image1.createArray();
-            arr = image1.getBlockArray(image1);
+            FloorTile[,] arr = image1.createArray();
             image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block4.txt");
-
+           
         }
         [TestMethod]
         public void TestBlockSizesix() // test block size of 4
         {
-            ImageToArray image1 = new ImageToArray(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 6);
+            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 6);
 
-            int[,] arr = image1.createArray();
-            arr = image1.getBlockArray(image1);
+            FloorTile[,] arr = image1.createArray();
             image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block6.txt");
-
+           
         }
-             
+
+        [TestMethod]
+        public void TestCreateImageOfBlockFive() // test block size of 5
+        {
+            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
+
+            FloorTile[,] arr = image1.createArray();
+            Bitmap b = image1.toImage();
+            b.Save("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.bmp");
+        }
+
+        [TestMethod]
+        public void TestCreateImageOfBlockOne() // test block size of 1
+        {
+            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 1);
+
+            FloorTile[,] arr = image1.createArray();
+            Bitmap b = image1.toImage();
+            b.Save("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block1.bmp");
+        }
+     
         [TestMethod]
         public void CompareFileTestBlockSizeone() // test block size of 4
         {
-            ImageToArray image1 = new ImageToArray(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
+            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
 
-            int[,] arr = image1.createArray();
-            arr = image1.getBlockArray(image1);
-            image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt"); 
+            FloorTile[,] arr = image1.createArray();
+            image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt");
             int filebyte1;
             int filebyte2;
             // fs1 contains the newly created array file while fs2 contains the standard to check against for this block size 5

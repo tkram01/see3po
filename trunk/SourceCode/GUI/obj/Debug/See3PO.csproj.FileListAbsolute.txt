@@ -23,3 +23,17 @@ F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\RobotHost.dll
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\RobotHost.pdb
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\Nexus3Input.pdb
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\bin\Debug\RobotCommands.pdb
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\obj\Debug\See3PO.exe
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\obj\Debug\See3PO.pdb
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\bin\Debug\See3PO.exe
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\bin\Debug\See3PO.pdb
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\bin\Debug\QuickGraph.dll
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\bin\Debug\RobotCommands.dll
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\bin\Debug\RobotHost.dll
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\bin\Debug\RobotHost.pdb
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\bin\Debug\Nexus3Input.pdb
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\bin\Debug\RobotCommands.pdb
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\obj\Debug\See3PO.MainForm.resources
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\obj\Debug\See3PO.Properties.Resources.resources
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\obj\Debug\See3PO.csproj.GenerateResource.Cache

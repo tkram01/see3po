@@ -2,7 +2,6 @@
 
 * Hardware
  ** How to upload/update files onto robot's embedded computer?
- Ans: 
    # [http://www.microsoft.com/windowsmobile/en-us/downloads/microsoft/activesync-download.mspx Download ActiveSync] application and then install.
    # Connect Host and embedded computer with USB cable.
    # Run [http://www.microsoft.com/windowsmobile/en-us/downloads/microsoft/activesync-download.mspx ActiveSync] application.  
@@ -11,7 +10,6 @@
    # Drag and drop the file needs to be uploaded. 
  
  ** How to upload/update programs onto ATOM microchip?
- Ans:
    # Download [http://basicmicro.com/ViewPage.aspx?ContentCode=d_basicatompro BasicATOMPro ] and then install.
    # Connect ATOM and PC with serial cable (COM port).
    # Run BasicATOMPro program.

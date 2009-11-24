@@ -1,7 +1,7 @@
-#summary Release build
+#summary Proceedure for release builds
 
-* Hardware
- ** How to upload/update files onto robot's embedded computer?
+* **Robot**
+ **How to upload/update files onto robot's embedded computer?**
    # [http://www.microsoft.com/windowsmobile/en-us/downloads/microsoft/activesync-download.mspx Download ActiveSync] application and then install.
    # Connect Host and embedded computer with USB cable.
    # Run [http://www.microsoft.com/windowsmobile/en-us/downloads/microsoft/activesync-download.mspx ActiveSync] application.  
@@ -9,9 +9,14 @@
    # The folders and files should show up in an explore window.
    # Drag and drop the file needs to be uploaded. 
  
- ** How to upload/update programs onto ATOM microchip?
+ **How to upload/update programs onto ATOM microchip?**
    # Download [http://basicmicro.com/ViewPage.aspx?ContentCode=d_basicatompro BasicATOMPro ] and then install.
    # Connect ATOM and PC with serial cable (COM port).
    # Run BasicATOMPro program.
    # Open the source file that need to be uploaded.
    # Build the program then the compiled bin file will be upload to ATOM. 
+   
+* **Host PC**
+   # Label all files with release #
+   # Download all files from https://see3po.googlecode.com/svn/trunk/ see3po/See3PO
+   # Complie GUI solution

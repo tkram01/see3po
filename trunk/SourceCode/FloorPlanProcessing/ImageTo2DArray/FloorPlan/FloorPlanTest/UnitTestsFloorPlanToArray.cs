@@ -7,6 +7,7 @@ using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using See3PO;
 
+
 namespace FloorPlanTest
 {
     /// <summary>
@@ -68,8 +69,8 @@ namespace FloorPlanTest
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
 
-            FloorTile[,] arr = image1.createArray();
-            image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt");
+            image1.createArray();
+            image1.printArray("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt");
             
         }
 
@@ -78,38 +79,108 @@ namespace FloorPlanTest
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 4);
 
-            FloorTile[,] arr = image1.createArray();
-            image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block4.txt");
+            image1.createArray();
+            image1.printArray( "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block4.txt");
            
         }
         [TestMethod]
         public void TestBlockSizesix() // test block size of 4
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 6);
-
-            FloorTile[,] arr = image1.createArray();
-            image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block6.txt");
+            image1.createArray();
+            image1.printArray("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block6.txt");
            
         }
 
         [TestMethod]
-        public void TestCreateImageOfBlockFive() // test block size of 5
+        public void TestCreateImageOfBlockFive() 
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
 
-            FloorTile[,] arr = image1.createArray();
+            image1.createArray();
             Bitmap b = image1.toImage();
             b.Save("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.bmp");
         }
 
         [TestMethod]
-        public void TestCreateImageOfBlockOne() // test block size of 1
+        public void TestCreateImageOfBlockOne() 
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 1);
 
-            FloorTile[,] arr = image1.createArray();
-            Bitmap b = image1.toImage();
-            b.Save("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block1.bmp");
+            image1.createArray();
+            Bitmap test_image = image1.toImage();
+            test_image.Save("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block1.bmp");
+        }
+
+        [TestMethod]
+        public void TestConnectBlockFive() 
+        {
+            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"),5);
+
+            image1.createArray();
+            int width = image1.getXTileNum();
+            int height = image1.getYTileNum();
+            System.Diagnostics.Debug.WriteLine("Height " + height + " Width " + width);
+            FloorTile tile = image1.getTile(2, 3);
+            Dictionary<FloorTile, List<FloorTile>> list = image1.Connect();
+            FloorTile n1,n2,n3,n4;
+            System.Diagnostics.Debug.WriteLine("");
+            //  List<FloorTile> neighbour = list.
+            List<FloorTile> neighbour = list[tile];
+            if (neighbour.Count > 3)
+            {
+                n1 = neighbour[0];
+                n2 = neighbour[1];
+                n3 = neighbour[2];
+                n4 = neighbour[3];
+                System.Diagnostics.Debug.WriteLine("1st \t" + n1.Position.X + "\t" + n1.Position.Y + "\t" + n1.Iswalkable());
+                System.Diagnostics.Debug.WriteLine("2nd \t" + n2.Position.X + "\t" + n2.Position.Y + "\t" + n2.Iswalkable());
+                System.Diagnostics.Debug.WriteLine("3rd \t" + n3.Position.X + "\t" + n3.Position.Y + "\t" + n3.Iswalkable());
+                System.Diagnostics.Debug.WriteLine("4th \t" + n4.Position.X + "\t" + n4.Position.Y + "\t" + n4.Iswalkable());
+         
+            }
+            else if (neighbour.Count == 3)
+            {
+                n1 = neighbour[0];
+                n2 = neighbour[1];
+                n3 = neighbour[2];
+                System.Diagnostics.Debug.WriteLine("1st \t" + n1.Position.X + "\t" + n1.Position.Y + "\t" + n1.Iswalkable());
+                System.Diagnostics.Debug.WriteLine("2nd \t" + n2.Position.X + "\t" + n2.Position.Y + "\t" + n2.Iswalkable());
+                System.Diagnostics.Debug.WriteLine("3rd \t" + n3.Position.X + "\t" + n3.Position.Y + "\t" + n3.Iswalkable());
+               
+            }
+            else if (neighbour.Count == 2)
+            {
+                n1 = neighbour[0];
+                n2 = neighbour[1];
+                System.Diagnostics.Debug.WriteLine("1st \t" + n1.Position.X + "\t" + n1.Position.Y + "\t" + n1.Iswalkable());
+                System.Diagnostics.Debug.WriteLine("2nd \t" + n2.Position.X + "\t" + n2.Position.Y + "\t" + n2.Iswalkable());
+               
+            }
+            else if (neighbour.Count == 1)
+            {
+                n1 = neighbour[0];
+                System.Diagnostics.Debug.WriteLine("1st \t" + n1.Position.X + "\t" + n1.Position.Y + "\t" + n1.Iswalkable());
+               
+            }
+            else
+                System.Diagnostics.Debug.WriteLine("No Walkable Neighbours");
+          
+
+        }
+        
+        [TestMethod]
+        public void TestGetTile() // test block size of 1
+        {
+            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
+
+            image1.createArray();
+            FloorTile tile = image1.getTile(10,12);
+            System.Diagnostics.Debug.WriteLine(tile.Position.X);
+            System.Diagnostics.Debug.WriteLine(tile.Position.Y);
+            System.Diagnostics.Debug.WriteLine(tile.Iswalkable());
+            Assert.IsTrue((tile.ToString().Equals("1")), "Incorret Tile Returned!");
+                
         }
      
         [TestMethod]
@@ -117,8 +188,8 @@ namespace FloorPlanTest
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
 
-            FloorTile[,] arr = image1.createArray();
-            image1.printArray(arr, "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt");
+            image1.createArray();
+            image1.printArray("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt");
             int filebyte1;
             int filebyte2;
             // fs1 contains the newly created array file while fs2 contains the standard to check against for this block size 5

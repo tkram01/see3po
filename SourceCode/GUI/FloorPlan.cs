@@ -16,6 +16,7 @@ namespace See3PO
     {
         private Bitmap m_myImage;
         private double m_pixelsperfoot;
+        private FloorTile[,] m_floorPlanArray;
         private int m_height;
         private int m_width;
 
@@ -25,7 +26,7 @@ namespace See3PO
             this.m_pixelsperfoot = pixelsPerFoot;
         }
 
-        public FloorTile[,] createArray()
+        public void createArray()
         {
             //height and width of the original image file
             int image_width = m_myImage.Width;
@@ -35,25 +36,24 @@ namespace See3PO
             m_height = (int)(image_height / this.m_pixelsperfoot);
             m_width = (int)(image_width / this.m_pixelsperfoot);
 
-            FloorTile[,] m_floorPlanArray = new FloorTile[m_height,m_width];
+            m_floorPlanArray = new FloorTile[m_height, m_width];
 
             // height and width of the array representation of the new array to be created
             // each cell represent the walkable or non-walkable block defined earlier
             for (int row = 0; row < m_height; row++)
             {
-               for (int column = 0; column < m_width; column++)
+                for (int column = 0; column < m_width; column++)
                 {
-                   if(getWalkableValue(column, row)== 0)
-                       m_floorPlanArray[row,column]= new FloorTile(column, row, true);
-                   else
-                       m_floorPlanArray[row, column] = new FloorTile(column, row, false);
+                    if (getWalkableValue(column, row) == 0)
+                        m_floorPlanArray[row, column] = new FloorTile(column, row, true,this);
+                    else
+                        m_floorPlanArray[row, column] = new FloorTile(column, row, false,this);
                 }
             }
-            return m_floorPlanArray;
         }
 
         // returns the walkability value 0-99
-        public int getWalkableValue(int X, int Y) 
+        public int getWalkableValue(int X, int Y)
         {
             //any color darker than gray is non walkable
             Color pixelColor;
@@ -86,34 +86,71 @@ namespace See3PO
         }
 
         // prints the 2D array generated in a file.
-        public void printArray(FloorTile[,] arr, String path)
+        public void printArray(String path)
         {
             // for now need to modify the location here manually
 
             using (TextWriter tw = new StreamWriter(path))
             {
-                for (int row = 0; row < arr.GetLength(0); row++)
+                for (int row = 0; row < m_floorPlanArray.GetLength(0); row++)
                 {
-                    for (int col = 0; col < arr.GetLength(1); col++)
+                    for (int col = 0; col < m_floorPlanArray.GetLength(1); col++)
                     {
-                        tw.Write(arr[row, col]);
+                        tw.Write(m_floorPlanArray[row, col]);
                     }
                     tw.WriteLine();
                 }
             }
         }
-
-        public Bitmap toImage() {
-            Bitmap b = new Bitmap(m_width, m_height);
-            FloorTile[,] arr = createArray();
-            for (int row = 0; row < m_height; row++) 
+// create bitmap from a given array.
+        public Bitmap toImage()
+        {
+            Bitmap image = new Bitmap(m_width, m_height);
+            FloorTile[,] arr = m_floorPlanArray;
+            for (int row = 0; row < m_height; row++)
             {
-                for (int column = 0; column < m_width; column++) 
-                { 
-                  b.SetPixel(column, row, arr[row,column].toPixel());
+                for (int column = 0; column < m_width; column++)
+                {
+                    image.SetPixel(column, row, arr[row, column].toPixel());
                 }
             }
-            return b;
+            return image;
         }
+
+        public int getXTileNum()
+        {
+            return m_width;
+        }
+
+        public int getYTileNum()
+        {
+            return m_height;
+        }
+
+
+        public Dictionary<FloorTile, List<FloorTile>> Connect()
+        {
+            Dictionary<FloorTile, List<FloorTile>> neighbourList = new Dictionary<FloorTile, List<FloorTile>>(); 
+            
+            for (int row = 0; row < m_height; row++)
+            {
+                for (int column = 0; column < m_width; column++)
+                {
+                    FloorTile tile = getTile(column, row);
+                    List<FloorTile> neighbours = tile.WalkableNeighbors();
+                    neighbourList.Add(tile, neighbours);
+                }
+            }
+            return neighbourList;
+        }
+
+        public FloorTile getTile(int x, int y)
+        {
+            if ((x < 0) || (y < 0) || (x >= m_floorPlanArray.GetLength(1)) || (y >= m_floorPlanArray.GetLength(0)))
+                return null;
+            else
+                return m_floorPlanArray[y, x];
+        }
+
     }
 }

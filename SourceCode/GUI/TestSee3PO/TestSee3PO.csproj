@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="FloorPlanTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QGPathFinderTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />

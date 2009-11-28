@@ -103,10 +103,11 @@ namespace TestSee3PO
         {
             Image myimage = new Bitmap("../../testImage.jpg"); // TODO: Initialize to an appropriate value
             FloorPlan target = new FloorPlan(myimage); // TODO: Initialize to an appropriate value
-            Dictionary<FloorTile, List<FloorTile>> expected = new Dictionary<FloorTile,List<FloorTile>>(); // TODO: Initialize to an appropriate value
-            Dictionary<FloorTile, List<FloorTile>> actual;
+            //Dictionary<FloorTile, List<FloorTile>> expected = new Dictionary<FloorTile,List<FloorTile>>(); // TODO: Initialize to an appropriate value
+           // Dictionary<FloorTile, List<FloorTile>> actual;
 
-            actual = target.Connect();
+           // actual = 
+            target.Connect();
             Assert.AreEqual(0, 0);
             
         }

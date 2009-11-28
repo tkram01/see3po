@@ -67,55 +67,55 @@ namespace FloorPlanTest
         [TestMethod]
         public void TestBlockSizefive() // test block size of 5
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
 
             image1.createArray();
-            image1.printArray("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt");
+            image1.printArray("../../testImage_block5.txt");
             
         }
 
         [TestMethod]
         public void TestBlockSizefour() // test block size of 4
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 4);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 4);
 
             image1.createArray();
-            image1.printArray( "C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block4.txt");
+            image1.printArray( "../../testImage_block4.txt");
            
         }
         [TestMethod]
         public void TestBlockSizesix() // test block size of 4
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 6);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 6);
             image1.createArray();
-            image1.printArray("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block6.txt");
+            image1.printArray("../../testImage_block6.txt");
            
         }
 
         [TestMethod]
         public void TestCreateImageOfBlockFive() 
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
 
             image1.createArray();
             Bitmap b = image1.toImage();
-            b.Save("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.bmp");
+            b.Save("../../testImage_block5.bmp");
         }
 
         [TestMethod]
         public void TestCreateImageOfBlockOne() 
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 1);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 1);
 
             image1.createArray();
             Bitmap test_image = image1.toImage();
-            test_image.Save("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block1.bmp");
+            test_image.Save("../../testImage_block1.bmp");
         }
 
         [TestMethod]
         public void TestConnectBlockFive() 
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"),5);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
 
             image1.createArray();
             int width = image1.getXTileNum();
@@ -172,7 +172,7 @@ namespace FloorPlanTest
         [TestMethod]
         public void TestGetTile() // test block size of 1
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
 
             image1.createArray();
             FloorTile tile = image1.getTile(10,12);
@@ -186,16 +186,16 @@ namespace FloorPlanTest
         [TestMethod]
         public void CompareFileTestBlockSizeone() // test block size of 4
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("C:\\Users\\Debarati\\Desktop\\CS682\\project\\floorplan.jpg"), 5);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
 
             image1.createArray();
-            image1.printArray("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt");
+            image1.printArray("../../testImagecomp_block5.txt");
             int filebyte1;
             int filebyte2;
             // fs1 contains the newly created array file while fs2 contains the standard to check against for this block size 5
-           
-            FileStream fs1 = new FileStream("C:\\Users\\Debarati\\Desktop\\CS682\\project\\test_block5.txt",FileMode.Open);
-            FileStream fs2 = new FileStream("C:\\Users\\Debarati\\Desktop\\CS682\\project\\created.txt", FileMode.Open);
+
+            FileStream fs1 = new FileStream("../../testImagecomp_block5.txt", FileMode.Open);
+            FileStream fs2 = new FileStream("../../created.txt", FileMode.Open);
             if (fs1.Length != fs2.Length)
             {
                 fs1.Close();

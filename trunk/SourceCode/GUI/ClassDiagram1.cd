@@ -3,27 +3,27 @@
   <Class Name="See3PO.FloorPlan">
     <Position X="0.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAgAAEhAAAAAAAAAAAAABKAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAjAAAAgAAEhAAAAAIAAAAAAABKAAAAAAAEAAAI=</HashCode>
       <FileName>FloorPlan.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.FloorTile">
-    <Position X="4.5" Y="0.5" Width="2.25" />
+    <Position X="4" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAEAIAAAAAAQAAAEAAAAAAABAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAAAkAEAIAAAAAgAAAAEAAAAAAAJAAAA=</HashCode>
       <FileName>FloorTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.MainForm" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="2.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AY5GAAAlAiJBCGBAAEDQkXBCBIQAgAAJAEoCgAAJAAk=</HashCode>
+      <HashCode>AYoEBACFAyABCsCFAFCRgaHSUIAA5QAJDAAAsAHIQhk=</HashCode>
       <FileName>MainForm.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="See3PO.MoveCommand">
-    <Position X="7.25" Y="0.5" Width="3" />
+    <Position X="6.5" Y="0.5" Width="3" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -40,7 +40,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.Position">
-    <Position X="0.5" Y="5.25" Width="2.25" />
+    <Position X="0.5" Y="5.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Position.cs</FileName>
@@ -54,21 +54,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.RobotSprite">
-    <Position X="6.25" Y="3.75" Width="3" />
+    <Position X="6.25" Y="4" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAACAAAAIIAAAEAQBAAAAAIAEAABAAAA=</HashCode>
       <FileName>RobotSprite.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.Status">
-    <Position X="3" Y="3.5" Width="3" />
+    <Position X="3" Y="4" Width="3" />
     <TypeIdentifier>
       <HashCode>AAEBAAAAACQAgAAAAEACIAAAAEAQAAAAEAAAAAAAAAA=</HashCode>
       <FileName>Status.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.Voodoo">
-    <Position X="0.5" Y="3.25" Width="2" />
+    <Position X="0.5" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Voodoo.cs</FileName>
@@ -87,14 +87,15 @@
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.QGPathFinder">
-    <Position X="4.25" Y="8.5" Width="2.5" />
+    <Position X="7" Y="7.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>QGPathFinder.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="See3PO.PathFinder">
-    <Position X="4.25" Y="7.25" Width="2.5" />
+    <Position X="4.25" Y="7.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PathFinder.cs</FileName>

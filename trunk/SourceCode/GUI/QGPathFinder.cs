@@ -19,9 +19,9 @@ namespace See3PO
 
 
             // Add some vertices to the graph
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < fp.getXTileNum(); i++)
             {
-                for (int j = 0; j < 1; j++)
+                for (int j = 0; j < fp.getYTileNum(); j++)
                 {
                     if (fp.getWalkableValue(i, j) == 0)
                     {
@@ -29,6 +29,8 @@ namespace See3PO
                     }
                 }
             }
+
+
             graph.AddVertex("A");
             graph.AddVertex("B");
             graph.AddVertex("C");
@@ -149,5 +151,8 @@ namespace See3PO
             
             return null;
         }
+
+
+
     }
 }

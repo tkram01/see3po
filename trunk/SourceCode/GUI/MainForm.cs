@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Threading;
 using Timer = System.Threading.Timer;
 
-using Nexus3Input;
+//using Nexus3Input;
 using RobotCommands;
 using RobotHost;
 
@@ -28,7 +28,7 @@ namespace See3PO
         Status m_status;
 
 		CRobotHost m_host;
-		CWebcam m_camera;
+		//CWebcam m_camera;
 
 		Timer m_driveTimer;
         System.Threading.Timer m_drawTimer;

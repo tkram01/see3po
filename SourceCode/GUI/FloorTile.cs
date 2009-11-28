@@ -8,10 +8,12 @@ namespace See3PO
 {
     public class FloorTile
     {
-        bool m_walkable;
+        private bool m_walkable;
         readonly private Point m_location;
         private FloorPlan m_floorPlan;
         private bool m_endPoint;
+        private List<FloorTile> m_neighbours;
+
         public FloorTile()
         {
         }
@@ -55,22 +57,27 @@ namespace See3PO
             set { m_endPoint = value; }
         }
 
-        public List<FloorTile> WalkableNeighbors()
+        public List<FloorTile> getNeighbours()
         {
-           List<FloorTile> neighbours = new List<FloorTile>();
+            return   m_neighbours;
+        }
+
+        public void ResetWalkableNeighbors()
+        {
+          m_neighbours = new List<FloorTile>();
            FloorTile tile1 = m_floorPlan.getTile(this.m_location.X - 1, this.m_location.Y);
            if ((tile1 != null)&&(tile1.Iswalkable()))
-                neighbours.Add(tile1);
+               m_neighbours.Add(tile1);
            tile1 = m_floorPlan.getTile(this.m_location.X + 1, this.m_location.Y);
            if ((tile1 != null) && (tile1.Iswalkable()))
-               neighbours.Add(tile1);
+               m_neighbours.Add(tile1);
            tile1= m_floorPlan.getTile(this.m_location.X , this.m_location.Y-1);
            if ((tile1 != null) && (tile1.Iswalkable()))
-               neighbours.Add(tile1);
+               m_neighbours.Add(tile1);
            tile1= m_floorPlan.getTile(this.m_location.X, this.m_location.Y+1);
            if ((tile1 != null) && (tile1.Iswalkable()))
-               neighbours.Add(tile1);
-            return neighbours;
+               m_neighbours.Add(tile1);
+         
         }
     }
 }

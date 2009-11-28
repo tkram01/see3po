@@ -135,20 +135,18 @@ namespace See3PO
         }
 
 
-        public Dictionary<FloorTile, List<FloorTile>> Connect()
+        public void Connect()
         {
-            Dictionary<FloorTile, List<FloorTile>> neighbourList = new Dictionary<FloorTile, List<FloorTile>>(); 
-            
+           
             for (int row = 0; row < m_height; row++)
             {
                 for (int column = 0; column < m_width; column++)
                 {
                     FloorTile tile = getTile(column, row);
-                    List<FloorTile> neighbours = tile.WalkableNeighbors();
-                    neighbourList.Add(tile, neighbours);
+                    tile.ResetWalkableNeighbors();
                 }
             }
-            return neighbourList;
+         
         }
 
         public FloorTile getTile(int x, int y)

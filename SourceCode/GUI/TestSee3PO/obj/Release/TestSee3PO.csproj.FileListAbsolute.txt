@@ -1,0 +1,14 @@
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\TestSee3PO.dll
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\TestSee3PO.pdb
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\Nexus3Input.dll
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\QuickGraph.dll
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\RobotCommands.dll
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\RobotHost.dll
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\See3PO.exe
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\See3PO.pdb
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\RobotHost.pdb
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\Nexus3Input.pdb
+D:\see3po\SourceCode\GUI\TestSee3PO\bin\Release\RobotCommands.pdb
+D:\see3po\SourceCode\GUI\TestSee3PO\obj\Release\ResolveAssemblyReference.cache
+D:\see3po\SourceCode\GUI\TestSee3PO\obj\Release\TestSee3PO.dll
+D:\see3po\SourceCode\GUI\TestSee3PO\obj\Release\TestSee3PO.pdb

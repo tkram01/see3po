@@ -115,18 +115,16 @@ namespace FloorPlanTest
         [TestMethod]
         public void TestConnectBlockFive() 
         {
-            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"));
 
-            image1.createArray();
             int width = image1.getXTileNum();
             int height = image1.getYTileNum();
             System.Diagnostics.Debug.WriteLine("Height " + height + " Width " + width);
-            FloorTile tile = image1.getTile(2, 3);
-            Dictionary<FloorTile, List<FloorTile>> list = image1.Connect();
+            FloorTile tile = image1.getTile(2, 4);
+            image1.Connect();
             FloorTile n1,n2,n3,n4;
             System.Diagnostics.Debug.WriteLine("");
-            //  List<FloorTile> neighbour = list.
-            List<FloorTile> neighbour = list[tile];
+            List<FloorTile> neighbour = tile.getNeighbours();
             if (neighbour.Count > 3)
             {
                 n1 = neighbour[0];

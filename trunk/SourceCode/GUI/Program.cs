@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace See3PO
 {
@@ -13,7 +14,13 @@ namespace See3PO
 		[STAThread]
 		static void Main()
 		{
-            
+            //Image myimage = new Bitmap("testImage.jpg"); // TODO: Initialize to an appropriate value
+            //FloorPlan fp = new FloorPlan(myimage); ; // TODO: Initialize to an appropriate value
+            //QGPathFinder target = new QGPathFinder(fp); // TODO: Initialize to an appropriate value
+
+            //List<FloorTile> expected = null; // TODO: Initialize to an appropriate value
+            //List<FloorTile> actual;
+            //actual = target.getPath();
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);

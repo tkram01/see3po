@@ -12,11 +12,20 @@ namespace See3PO
 {
     class QGPathFinder : PathFinder
     {
-        public List<FloorTile> getPath(FloorPlan fp)
-        {
-            AdjacencyGraph<string, Edge<string>> graph = new AdjacencyGraph<string, Edge<string>>(true);
-            Dictionary<Edge<string>, double> edgeCost = new Dictionary<Edge<string>, double>(graph.EdgeCount);
+        AdjacencyGraph<string, Edge<string>> graph; 
+        Dictionary<Edge<string>, double> edgeCost;
+        FloorPlan fp;
 
+        public QGPathFinder(FloorPlan fp)
+        {
+            graph = new AdjacencyGraph<string, Edge<string>>(true);
+            edgeCost = new Dictionary<Edge<string>, double>(graph.EdgeCount);
+            this.fp = fp;
+
+        }
+
+        public List<FloorTile> getPath()
+        {
 
             // Add some vertices to the graph
             for (int i = 0; i < fp.getXTileNum(); i++)
@@ -25,11 +34,12 @@ namespace See3PO
                 {
                     if (fp.getWalkableValue(i, j) == 0)
                     {
-                        graph.AddVertex("");
+                        graph.AddVertex(i & "_" & j);
                     }
                 }
             }
 
+            Console.WriteLine("ddd");
 
             graph.AddVertex("A");
             graph.AddVertex("B");
@@ -41,6 +51,8 @@ namespace See3PO
             graph.AddVertex("H");
             graph.AddVertex("I");
             graph.AddVertex("J");
+
+
 
             // Create the edges
             Edge<string> a_b = new Edge<string>("A", "B");
@@ -151,7 +163,6 @@ namespace See3PO
             
             return null;
         }
-
 
 
     }

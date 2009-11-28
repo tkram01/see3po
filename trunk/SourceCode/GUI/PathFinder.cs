@@ -9,6 +9,6 @@ namespace See3PO
 {
     interface PathFinder
     {
-        List<FloorTile> getPath(FloorPlan fp);
+        List<FloorTile> getPath();
     }
 }

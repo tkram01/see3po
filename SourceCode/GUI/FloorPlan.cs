@@ -31,6 +31,7 @@ namespace See3PO
             this.m_myImage = new Bitmap(myimage);
             this.m_pixelsperfoot = 5;
             createArray();
+            Connect();
         }
 
         public void createArray()

@@ -25,6 +25,7 @@ namespace See3PO
             m_walkable = walkable;
             m_endPoint = false;
             m_floorPlan = floorPlan;
+            m_neighbours = new List<FloorTile>();
         }
 
         public override String ToString()
@@ -64,7 +65,7 @@ namespace See3PO
 
         public void ResetWalkableNeighbors()
         {
-          m_neighbours = new List<FloorTile>();
+          
            FloorTile tile1 = m_floorPlan.getTile(this.m_location.X - 1, this.m_location.Y);
            if ((tile1 != null)&&(tile1.Iswalkable()))
                m_neighbours.Add(tile1);

@@ -20,10 +20,10 @@
   * FloorPlanProcessing
   * GUI
 
-  *Tests Completed by this meeting: 
-  [PathFinding][LocalBrainEmulator] [Testing SendPath]
-  [FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan]  
-  [CORE] [Testing Recieve Tests]    
+  || Tests Completed by this meeting || Status ||
+  ||[PathFinding][LocalBrainEmulator] [Testing SendPath] || || 
+  ||[FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan] || || 
+  ||[CORE] [Testing Recieve Tests] || ||
 
 ===Discussion:===	
   

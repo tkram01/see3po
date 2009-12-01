@@ -1,0 +1,32 @@
+#summary BossMeeting3
+#labels Meeting
+=Meeting with Tyler=
+	* Date: 11/08/2009
+	* Time: 5:30 PM
+	* Location: S-3-135 
+	* Meeting called by:	Tyler
+	* Type of meeting:	Progress
+	* Facilitator:	Frank/Tyler	
+	* Note taker:	
+	* Attendees: 
+	* Absent: 
+
+==Minutes==
+
+
+===Agenda item:===	
+  * Tyler will view our progress - Specifically regarding the December 15th GUI deliverable.
+  * Pathfinding
+  * FloorPlanProcessing
+  * GUI
+
+  *Tests Completed by this meeting: 
+  [PathFinding][LocalBrainEmulator] [Testing SendPath]
+  [FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan]  
+  [CORE] [Testing Recieve Tests]    
+
+===Discussion:===	
+  
+===Conclusions:	===
+  
+===Other Information===

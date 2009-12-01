@@ -192,110 +192,6 @@ namespace See3PO
                 m_host.StartListening();
         }
 
-        //private void drivePanel_MouseMove(object sender, MouseEventArgs e)
-        //{
-
-        //    leftSpeed = 0;
-        //    rightSpeed = 0;
-
-        //    if(e.Button == MouseButtons.Left)
-        //    {
-        //        mouseX = Clamp(e.X, 0, 300);
-        //        mouseY = Clamp(e.Y, 0, 300);
-        //        ComputeSpeeds();
-        //    }
-
-        //    DrawDrivePanel();
-        //}
-
-        //private void drivePanel_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    mouseX = Clamp(e.X, 0, 300);
-        //    mouseY = Clamp(e.Y, 0, 300);
-        //    ComputeSpeeds();
-        //}
-
-        //private void drivePanel_MouseUp(object sender, MouseEventArgs e)
-        //{
-        //    mouseX = 150;
-        //    mouseY = 150;
-        //    leftSpeed = 0;
-        //    rightSpeed = 0;
-        //}
-
-        //private void ComputeSpeeds()
-        //{
-        //    double x = mouseX - 150;
-        //    double y = 150 - mouseY;
-
-        //    double theta = Math.Acos(y/Length(x, y));//Math.Abs(Math.Atan2(y/Length(x, y), x/Length(x, y)) - Math.Atan2(1, 0));
-        //    double speed = Length(x, y)/212 * 1000;
-
-        //    if(x < 0)
-        //    {
-        //        if(y > 0 || theta > Math.PI*0.75)
-        //            leftSpeed = (short)(speed * Math.Sign(y));
-        //        else
-        //            leftSpeed = (short)(-Math.Sin((theta - Math.PI*0.625) * 4) * speed);
-
-        //        if(theta < Math.PI * 0.25)
-        //        {
-        //            theta *= 2;
-        //            rightSpeed = (short)(Math.Cos(theta) * speed);
-        //        }
-        //        else if(theta < Math.PI * 0.75)
-        //        {
-        //            theta -= Math.PI * 0.5;
-        //            theta *= 2;
-        //            rightSpeed = (short)(Math.Cos(theta) * -speed);
-        //        }
-        //        else
-        //        {
-        //            theta -= Math.PI;
-        //            theta *= 2;
-        //            rightSpeed = (short)(Math.Cos(theta) * -speed);
-        //        }
-        //    }
-        //    else if(x > 0)
-        //    {
-        //        if(y > 0 || theta > Math.PI*0.75)
-        //            rightSpeed = (short)(speed * Math.Sign(y));
-        //        else
-        //            rightSpeed = (short)(-Math.Sin((theta - Math.PI*0.625) * 4) * speed);
-
-        //        if(theta < Math.PI * 0.25)
-        //        {
-        //            theta *= 2;
-        //            leftSpeed = (short)(Math.Cos(theta) * speed);
-        //        }
-        //        else if(theta < Math.PI * 0.75)
-        //        {
-        //            theta -= Math.PI * 0.5;
-        //            theta *= 2;
-        //            leftSpeed = (short)(Math.Cos(theta) * -speed);
-        //        }
-        //        else
-        //        {
-        //            theta -= Math.PI;
-        //            theta *= 2;
-        //            leftSpeed = (short)(Math.Cos(theta) * -speed);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        leftSpeed = rightSpeed = (short)(speed * Math.Sign(y));
-        //    }
-        //}
-
-        private int Clamp(int value, int min, int max)
-        {
-            if (value < min)
-                return min;
-            else if (value > max)
-                return max;
-            return value;
-        }
-
         public void DrawFloor()
         {
             try
@@ -355,7 +251,7 @@ namespace See3PO
                 trailSprite.move(moves[0], moves[1]);
                 currentPoint = new Point(trailSprite.position.location.X, trailSprite.position.location.Y);
                 s.DrawLine(new Pen(Color.Blue, 2), oldPoint, currentPoint);
-                //s.DrawImage(spot, trailSprite.position.location);
+
             }
             return trail;
         }

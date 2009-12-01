@@ -2,11 +2,11 @@
 
 = Prerequisites =
  # Code is written in C#, and requires Microsoft Visual Studio to compile
- # The code requires [.Net Framework 3.5 http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&displaylang=en] to run
+ # The code requires .Net Framework 3.5 http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&displaylang=en to run
  # The Host PC must be wireless networking and its IP address must be known.
  
 == Host PC Interface==
-   # Download all [latest code http://code.google.com/p/see3po/source/browse/trunk#trunk/SourceCode/GUI] from Google Code
+   # Download all latest code from Google Code: http://code.google.com/p/see3po/source/browse/trunk#trunk/SourceCode/GUI 
    # Check that all files are labeled with the release number
    # Open See3PO.sln in Visual Studio
    # Compile See3PO

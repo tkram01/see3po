@@ -58,7 +58,7 @@
 || [PathFinding][LocalBrainEmulator] [Testing SendPath]   || 12/08/2009	|| 				|| [Nick] [Frank]||						||
 || [FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan] 	|| 12/8/2009	|| 	||  [Nick] [Debarati] ||			||
 || [CORE] [Testing Recieve Tests]               || 12/08/2009	|| 				|| [Nick] [Frank] [Debarati]||			||
-|| Boss Meeting - Comments on Host Interface Progress || 12/8/2009|| 			|| All 			||						||
+|| [BossMeeting4]- Comments on Host Interface Progress || 12/8/2009|| 			|| All 			||						||
 || *GUI Release 1* Deliverable 					|| 12/15/2009	|| 				||  [Nick] [Debarati] [Frank] ||		||
 
 ===January 2010===

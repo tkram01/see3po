@@ -18,12 +18,15 @@ namespace See3PO
     
 	public partial class MainForm : Form, IRobotParent
 	{
-        enum fpState { NONE, IMAGE, SCALE, FLOORPLAN, DESTINATION };
-        fpState m_fpState;
+        public enum fpState { NONE, IMAGE, SCALE, FLOORPLAN, DESTINATION };
+        public fpState m_fpState;
 
 		delegate void DGuiCallVoid();
 		delegate void DGuiCallString(string str);
 		delegate void DGuiCallBuffer(byte[] buffer);
+        delegate void DDrawFloor();
+        DDrawFloor m_DrawFloorDelegate;
+        
 
         Status m_status;
 
@@ -31,8 +34,8 @@ namespace See3PO
 		CWebcam m_camera;
 
 		Timer m_driveTimer;
-        System.Threading.Timer m_drawTimer;
-        System.Threading.TimerCallback cb;
+        Timer m_drawScaleTimer;
+        TimerCallback cb;
 
         Bitmap m_floorPlanImage;
         Bitmap m_fpBuffer;
@@ -46,8 +49,10 @@ namespace See3PO
         Point m_center;
         Point m_destLoc;
         Point m_voidpoint = new Point(-999, -999);
-        Point m_scaleStart;
-        Point m_scaleEnd;
+        
+        Point m_pixelsperfootStart;
+        Point m_pixelsperfootEnd;
+        public double m_pixelsperfoot;
 
         short m_leftSpeed = 0;
         short m_rightSpeed = 0;
@@ -66,15 +71,16 @@ namespace See3PO
             m_center = new Point(floorPlanPanel.Width / 2, floorPlanPanel.Height / 2);
             m_destImage = Image.FromFile("destImage.png");
             m_destLoc = m_voidpoint;
-
+            
             m_robotImage = Image.FromFile("Sprite3.png");
             m_robotStart = null;
             m_robotSprite = null;
             m_status = null;
             m_fg = Graphics.FromHwnd(floorPlanPanel.Handle);
             livePanel.BackgroundImage = Image.FromFile("SampleRobotView.jpg");
-            cb = new System.Threading.TimerCallback(DrawFloor);
-            m_drawTimer = new Timer(cb, null, 0, 100);
+            m_pixelsperfoot = 1.0;
+            m_DrawFloorDelegate = new DDrawFloor(DrawFloor);
+            cb = new TimerCallback(DrawScale);
 
             m_fpState = fpState.NONE;
 
@@ -290,7 +296,7 @@ namespace See3PO
             return value;
         }
 
-        private void DrawFloor(object state)
+        public void DrawFloor()
         {
             try
             {
@@ -303,12 +309,12 @@ namespace See3PO
                         break;
                     case fpState.IMAGE:
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        bg.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.Red)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        bg.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.Yellow)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         break;
                     case fpState.SCALE:
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        bg.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.Red)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        bg.DrawLine(new Pen(Color.Blue), (PointF)m_scaleStart,  floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
+                        bg.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.Orange)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        bg.DrawLine(new Pen(Color.Blue), (PointF)m_pixelsperfootStart, floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
                         PostMessage("Actual " + System.Windows.Forms.Control.MousePosition);
                         PostMessage("Translated " + floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
                         break;
@@ -354,6 +360,16 @@ namespace See3PO
             return trail;
         }
 
+        private void DrawScale(object State) 
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new DDrawFloor(DrawFloor), null);
+                return;
+            }
+        }
+
+
         private void Drive(object state)
         {
             if (m_host.IsConnected)
@@ -378,13 +394,25 @@ namespace See3PO
                     switch (m_fpState)
                     {
                         case fpState.IMAGE:
-                            m_scaleStart = e.Location;
+                            m_pixelsperfootStart = e.Location;
                             m_fpState = fpState.SCALE;
-                            //DrawFloor(null);
+                            m_drawScaleTimer = new Timer(cb, null, 0, 100);
                             break;
                         case fpState.SCALE:
-                            m_scaleEnd = e.Location;
-                            m_fpState = fpState.FLOORPLAN;
+                            m_drawScaleTimer.Dispose();
+                            m_pixelsperfootEnd = e.Location;
+                            double scaleLength = Length(m_pixelsperfootStart.X - m_pixelsperfootEnd.X, m_pixelsperfootStart.Y - m_pixelsperfootEnd.Y);
+                            using (ScaleForm sf = new ScaleForm(scaleLength, scaleLength * m_pixelsperfoot, this))
+                            {
+                                sf.ShowDialog();
+                                // read properties from form once it's closed
+                                m_pixelsperfoot = sf.m_scale;
+                                
+                                m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
+                            }
+
+                            //m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
+                            //m_fpState = fpState.FLOORPLAN;
                             break;
                         case fpState.FLOORPLAN:
                         case fpState.DESTINATION:

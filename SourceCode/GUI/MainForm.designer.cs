@@ -268,7 +268,7 @@ namespace See3PO
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.addToolStripMenuItem.Text = "Set Scale";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.Click_Import);
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.Click_SetScale);
             // 
             // MainForm
             // 

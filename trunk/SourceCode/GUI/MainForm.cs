@@ -18,7 +18,7 @@ namespace See3PO
     
 	public partial class MainForm : Form, IRobotParent
 	{
-        public enum fpState { NONE, IMAGE, SCALE, FLOORPLAN, DESTINATION };
+        public enum fpState { NONE, IMAGE, DRAWSCALE, FLOORPLAN, DESTINATION };
         public fpState m_fpState;
 
 		delegate void DGuiCallVoid();
@@ -64,7 +64,6 @@ namespace See3PO
             m_host = new CRobotHost(this);
 
             //m_camera = new CWebcam(livePanel, null, false);
-
             //m_camera.Initialize();
             //m_camera.SetReady();
 
@@ -201,13 +200,13 @@ namespace See3PO
                 switch (m_fpState)
                 {
                     case fpState.NONE:
-                        bg.FillRectangle(new SolidBrush(Color.White), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        bg.FillRectangle(new SolidBrush(Color.FromArgb(255, Color.White)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         break;
                     case fpState.IMAGE:
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         bg.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.Yellow)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         break;
-                    case fpState.SCALE:
+                    case fpState.DRAWSCALE:
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         bg.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.Orange)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         bg.DrawLine(new Pen(Color.Blue), (PointF)m_pixelsperfootStart, floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
@@ -251,7 +250,6 @@ namespace See3PO
                 trailSprite.move(moves[0], moves[1]);
                 currentPoint = new Point(trailSprite.position.location.X, trailSprite.position.location.Y);
                 s.DrawLine(new Pen(Color.Blue, 2), oldPoint, currentPoint);
-
             }
             return trail;
         }
@@ -291,10 +289,10 @@ namespace See3PO
                     {
                         case fpState.IMAGE:
                             m_pixelsperfootStart = e.Location;
-                            m_fpState = fpState.SCALE;
+                            m_fpState = fpState.DRAWSCALE;
                             m_drawScaleTimer = new Timer(cb, null, 0, 100);
                             break;
-                        case fpState.SCALE:
+                        case fpState.DRAWSCALE:
                             m_drawScaleTimer.Dispose();
                             m_pixelsperfootEnd = e.Location;
                             double scaleLength = Length(m_pixelsperfootStart.X - m_pixelsperfootEnd.X, m_pixelsperfootStart.Y - m_pixelsperfootEnd.Y);
@@ -305,10 +303,9 @@ namespace See3PO
                                 m_pixelsperfoot = sf.m_scale;
                                 
                                 m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
+                                m_fpState = fpState.FLOORPLAN;
+                                this.Show();
                             }
-
-                            //m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
-                            //m_fpState = fpState.FLOORPLAN;
                             break;
                         case fpState.FLOORPLAN:
                         case fpState.DESTINATION:
@@ -324,13 +321,20 @@ namespace See3PO
                 default:
                     break;
             }
-
         }
 
         private void Click_SetScale(object sender, EventArgs e)
         {
-            PostMessage("Please Click two points on the map whose distance is known");
             m_fpState = fpState.IMAGE;
+            using (ScaleForm sf = new ScaleForm(m_pixelsperfoot, 1, this))
+            {
+                sf.ShowDialog();
+                // read properties from form once it's closed
+                m_pixelsperfoot = sf.m_scale;
+                
+                m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
+                m_fpState = fpState.FLOORPLAN;
+            }
         }
 
         private void Click_Import(object sender, EventArgs e)
@@ -346,7 +350,7 @@ namespace See3PO
             m_robotStart = new Position(new Point(274, 132), 90);
             m_robotSprite = new RobotSprite(m_robotImage, m_robotStart);
             m_fpState = fpState.IMAGE;
-            //DrawFloor(null);
+            DrawFloor();
         }
 		
         private double Length(double x, double y)
@@ -361,14 +365,14 @@ namespace See3PO
 
         private void Paint_FloorPlanPanel(object sender, PaintEventArgs e)
         {
-            //DrawFloor(null);
+            DrawFloor();
         }
 
         private void SetDestination(object sender, MouseEventArgs e)
         {
             m_destLoc = new Point(e.X, e.Y);
             m_fpState = fpState.DESTINATION;
-            //DrawFloor(null);
+            DrawFloor();
         }
 
         private int[] TranslateMove(MoveCommand cmd)

@@ -30,8 +30,8 @@
         {
             this.pixelBox = new System.Windows.Forms.MaskedTextBox();
             this.feetBox = new System.Windows.Forms.MaskedTextBox();
-            this.AcceptButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.Accept_Button = new System.Windows.Forms.Button();
+            this.Cancel_Button = new System.Windows.Forms.Button();
             this.DrawButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,27 +58,27 @@
             this.feetBox.Validated += new System.EventHandler(this.feet_edit);
             this.feetBox.TextChanged += new System.EventHandler(this.feet_edit);
             // 
-            // AcceptButton
+            // Accept_Button
             // 
-            this.AcceptButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.AcceptButton.Location = new System.Drawing.Point(12, 105);
-            this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(75, 23);
-            this.AcceptButton.TabIndex = 2;
-            this.AcceptButton.Text = "Accept";
-            this.AcceptButton.UseVisualStyleBackColor = true;
-            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
+            this.Accept_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Accept_Button.Location = new System.Drawing.Point(12, 105);
+            this.Accept_Button.Name = "Accept_Button";
+            this.Accept_Button.Size = new System.Drawing.Size(75, 23);
+            this.Accept_Button.TabIndex = 2;
+            this.Accept_Button.Text = "Accept";
+            this.Accept_Button.UseVisualStyleBackColor = true;
+            this.Accept_Button.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
-            // CancelButton
+            // Cancel_Button
             // 
-            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelButton.Location = new System.Drawing.Point(105, 105);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelButton.TabIndex = 3;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Cancel_Button.Location = new System.Drawing.Point(105, 105);
+            this.Cancel_Button.Name = "Cancel_Button";
+            this.Cancel_Button.Size = new System.Drawing.Size(75, 23);
+            this.Cancel_Button.TabIndex = 3;
+            this.Cancel_Button.Text = "Cancel";
+            this.Cancel_Button.UseVisualStyleBackColor = true;
+            this.Cancel_Button.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // DrawButton
             // 
@@ -137,10 +137,10 @@
             // 
             // ScaleForm
             // 
-            this.AcceptButton = this.AcceptButton;
+            this.AcceptButton = this.Accept_Button;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.CancelButton;
+            this.CancelButton = this.Cancel_Button;
             this.ClientSize = new System.Drawing.Size(186, 140);
             this.Controls.Add(this.scaleBox);
             this.Controls.Add(this.scaleText);
@@ -148,8 +148,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DrawButton);
-            this.Controls.Add(this.CancelButton);
-            this.Controls.Add(this.AcceptButton);
+            this.Controls.Add(this.Cancel_Button);
+            this.Controls.Add(this.Accept_Button);
             this.Controls.Add(this.feetBox);
             this.Controls.Add(this.pixelBox);
             this.Name = "ScaleForm";
@@ -164,8 +164,8 @@
 
         private System.Windows.Forms.MaskedTextBox pixelBox;
         private System.Windows.Forms.MaskedTextBox feetBox;
-        private System.Windows.Forms.Button AcceptButton;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button Accept_Button;
+        private System.Windows.Forms.Button Cancel_Button;
         private System.Windows.Forms.Button DrawButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -24,6 +24,8 @@ namespace See3PO
         {
             this.m_myImage = new Bitmap(myimage);
             this.m_pixelsperfoot = pixelsPerFoot;
+            createArray();
+            Connect();
         }
 
         public FloorPlan(Image myimage)

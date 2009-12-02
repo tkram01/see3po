@@ -18,7 +18,7 @@ namespace See3PO
     
 	public partial class MainForm : Form, IRobotParent
 	{
-        public enum fpState { NONE, IMAGE, DRAWSCALE, FLOORPLAN, DESTINATION };
+        public enum fpState { NONE, IMAGE, DRAWSCALE, ROBOT, FLOORPLAN, DESTINATION };
         public fpState m_fpState;
 
 		delegate void DGuiCallVoid();
@@ -197,34 +197,48 @@ namespace See3PO
             {
                 Bitmap buffer = new Bitmap(floorPlanPanel.Width, floorPlanPanel.Height);
                 Graphics bg = Graphics.FromImage(buffer);
+                SolidBrush overlay = new SolidBrush(Color.FromArgb(0, Color.White));
+                String instructions = "";
+
                 switch (m_fpState)
                 {
                     case fpState.NONE:
-                        bg.FillRectangle(new SolidBrush(Color.FromArgb(255, Color.White)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        instructions = "Please Load or Import a Floor Plan";
                         break;
                     case fpState.IMAGE:
+                        instructions = "Click the floor plan to draw a scale";
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        bg.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.Yellow)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        overlay = new SolidBrush(Color.FromArgb(50, Color.Green));
                         break;
                     case fpState.DRAWSCALE:
+                        instructions = "Click again to draw a known measurement";
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        bg.FillRectangle(new SolidBrush(Color.FromArgb(30, Color.Orange)), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        overlay = new SolidBrush(Color.FromArgb(50, Color.LawnGreen));
                         bg.DrawLine(new Pen(Color.Blue), (PointF)m_pixelsperfootStart, floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
-                        PostMessage("Actual " + System.Windows.Forms.Control.MousePosition);
-                        PostMessage("Translated " + floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
+                        break;
+                    case fpState.ROBOT:
+                        bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        instructions = "Click the floor plan to set the robot's current location";
+                        overlay = new SolidBrush(Color.FromArgb(50, Color.DarkGreen));
                         break;
                     case fpState.FLOORPLAN:
+                        instructions = "Click the floor plan to set the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         if (m_robotSprite != null)
-                            bg.DrawImage(m_robotSprite.image, m_robotSprite.position.location);
+                            bg.DrawImage(m_robotSprite.image, CorrectForImageSize(m_robotSprite.position.location, m_robotSprite.image));
                         break;
                     case fpState.DESTINATION:
+                        instructions = "Click the floor plan to change the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         if (m_robotSprite != null)
-                            bg.DrawImage(m_robotSprite.image, m_robotSprite.position.location);
-                        bg.DrawImage(m_destImage, m_destLoc);
+                            bg.DrawImage(m_robotSprite.image, CorrectForImageSize(m_robotSprite.position.location, m_robotSprite.image));
+                        bg.DrawImage(m_destImage, CorrectForImageSize(m_destLoc, m_destImage));
                         break;
                 }
+                bg.FillRectangle(overlay, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                bg.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit; 
+                bg.DrawString(instructions, new Font("Times New Roman", 16), new SolidBrush(Color.White), new Point(4, 6));
+                bg.DrawString(instructions, new Font("Times New Roman", 16), new SolidBrush(Color.Blue), new Point(5, 5));
                 m_fg.DrawImage(buffer, 0, 0);
 
             }
@@ -299,13 +313,15 @@ namespace See3PO
                             using (ScaleForm sf = new ScaleForm(scaleLength, scaleLength * m_pixelsperfoot, this))
                             {
                                 sf.ShowDialog();
-                                // read properties from form once it's closed
                                 m_pixelsperfoot = sf.m_scale;
-                                
                                 m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
-                                m_fpState = fpState.FLOORPLAN;
                                 this.Show();
                             }
+                            m_fpState = fpState.FLOORPLAN;
+                            DrawFloor();
+                            break;
+                        case fpState.ROBOT:
+                            PlaceRobot(sender, e);
                             break;
                         case fpState.FLOORPLAN:
                         case fpState.DESTINATION:
@@ -329,12 +345,12 @@ namespace See3PO
             using (ScaleForm sf = new ScaleForm(m_pixelsperfoot, 1, this))
             {
                 sf.ShowDialog();
-                // read properties from form once it's closed
                 m_pixelsperfoot = sf.m_scale;
-                
                 m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
                 m_fpState = fpState.FLOORPLAN;
             }
+            m_fpState = fpState.FLOORPLAN;
+            DrawFloor();
         }
 
         private void Click_Import(object sender, EventArgs e)
@@ -375,6 +391,13 @@ namespace See3PO
             DrawFloor();
         }
 
+        private void PlaceRobot(object sender, MouseEventArgs e)
+        {
+            m_robotSprite.position = new Position(new Point(e.X, e.Y), 0);
+            m_fpState = fpState.FLOORPLAN;
+            DrawFloor();
+        }
+
         private int[] TranslateMove(MoveCommand cmd)
         {
             int[] speeds = new int[2];
@@ -396,6 +419,24 @@ namespace See3PO
 
             return speeds;
         }
+
+        private Point CorrectForImageSize(Point original, Image image) 
+        {
+            return new Point(original.X - (image.Width / 4), original.Y - (image.Height / 4));
+        }
+
+        private void Click_PlaceRobot(object sender, EventArgs e)
+        {
+            m_fpState = fpState.ROBOT;
+            DrawFloor();
+        }
+
+        private void Click_SetDestination(object sender, EventArgs e)
+        {
+            m_fpState = fpState.FLOORPLAN;
+            DrawFloor();
+        }
+
 
 	}
 }

@@ -42,6 +42,8 @@ namespace See3PO
             this.connectMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.floorPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.placeRobotToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.setDestinationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.livePanel = new System.Windows.Forms.Panel();
             this.messageBox = new System.Windows.Forms.TextBox();
             this.floorPlanPanel = new System.Windows.Forms.Panel();
@@ -53,6 +55,8 @@ namespace See3PO
             this.saveFloorPlanToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.importFloorPlanImageToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.placeRobotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -152,7 +156,9 @@ namespace See3PO
             // floorPlanToolStripMenuItem
             // 
             this.floorPlanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setScaleToolStripMenuItem});
+            this.setScaleToolStripMenuItem,
+            this.placeRobotToolStripMenuItem1,
+            this.setDestinationToolStripMenuItem1});
             this.floorPlanToolStripMenuItem.Name = "floorPlanToolStripMenuItem";
             this.floorPlanToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.floorPlanToolStripMenuItem.Text = "FloorPlan";
@@ -160,9 +166,23 @@ namespace See3PO
             // setScaleToolStripMenuItem
             // 
             this.setScaleToolStripMenuItem.Name = "setScaleToolStripMenuItem";
-            this.setScaleToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.setScaleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.setScaleToolStripMenuItem.Text = "Set Scale";
             this.setScaleToolStripMenuItem.Click += new System.EventHandler(this.Click_SetScale);
+            // 
+            // placeRobotToolStripMenuItem1
+            // 
+            this.placeRobotToolStripMenuItem1.Name = "placeRobotToolStripMenuItem1";
+            this.placeRobotToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.placeRobotToolStripMenuItem1.Text = "Place Robot";
+            this.placeRobotToolStripMenuItem1.Click += new System.EventHandler(this.Click_PlaceRobot);
+            // 
+            // setDestinationToolStripMenuItem1
+            // 
+            this.setDestinationToolStripMenuItem1.Name = "setDestinationToolStripMenuItem1";
+            this.setDestinationToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.setDestinationToolStripMenuItem1.Text = "Set Destination";
+            this.setDestinationToolStripMenuItem1.Click += new System.EventHandler(this.Click_SetDestination);
             // 
             // livePanel
             // 
@@ -240,9 +260,11 @@ namespace See3PO
             this.loadFloorPlanToolStripMenuItem1,
             this.saveFloorPlanToolStripMenuItem1,
             this.importFloorPlanImageToolStripMenuItem1,
-            this.addToolStripMenuItem});
+            this.addToolStripMenuItem,
+            this.placeRobotToolStripMenuItem,
+            this.setDestinationToolStripMenuItem});
             this.floorPlanContext.Name = "contextMenuStrip1";
-            this.floorPlanContext.Size = new System.Drawing.Size(203, 92);
+            this.floorPlanContext.Size = new System.Drawing.Size(203, 136);
             // 
             // loadFloorPlanToolStripMenuItem1
             // 
@@ -269,6 +291,20 @@ namespace See3PO
             this.addToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.addToolStripMenuItem.Text = "Set Scale";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.Click_SetScale);
+            // 
+            // placeRobotToolStripMenuItem
+            // 
+            this.placeRobotToolStripMenuItem.Name = "placeRobotToolStripMenuItem";
+            this.placeRobotToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.placeRobotToolStripMenuItem.Text = "Place Robot";
+            this.placeRobotToolStripMenuItem.Click += new System.EventHandler(this.Click_PlaceRobot);
+            // 
+            // setDestinationToolStripMenuItem
+            // 
+            this.setDestinationToolStripMenuItem.Name = "setDestinationToolStripMenuItem";
+            this.setDestinationToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.setDestinationToolStripMenuItem.Text = "Set Destination";
+            this.setDestinationToolStripMenuItem.Click += new System.EventHandler(this.Click_SetDestination);
             // 
             // MainForm
             // 
@@ -326,6 +362,10 @@ namespace See3PO
         private System.Windows.Forms.ToolStripMenuItem loadFloorPlanToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem saveFloorPlanToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem importFloorPlanImageToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem placeRobotToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem setDestinationToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem placeRobotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setDestinationToolStripMenuItem;
 
 	}
 }

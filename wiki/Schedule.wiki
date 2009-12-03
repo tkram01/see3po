@@ -12,6 +12,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || [CORE] [Testing Recieve Tests]               || 12/08/2009	|| 				|| [Nick] [Frank] [Debarati]||			||
 || [BossMeeting4]- Comments on Host Interface Progress || 12/8/2009|| 			|| All 			||						||
 || *GUI Release 1* Deliverable 					|| 12/15/2009	|| 				||  [Nick] [Debarati] [Frank] ||		||
+|| *RequirementsSpec* Completed || 12/15/2009	|| 				||  All ||		||
 
 ===January 2010===
 || *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||

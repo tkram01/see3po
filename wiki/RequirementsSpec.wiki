@@ -19,7 +19,7 @@ Software Requirements Specifications (SRS)
   # SPECIFIC REQUIREMENTS<br>
     # External Interface Requirements<br>
       # User Interfaces [Frank]<br>
-      # Hardware Interfaces [Hao][Jacky]<br>
+      # Hardware Interfaces [Hao] [Jacky]<br>
       # Software Interfaces [Frank]<br>
       # Communications Protocols [Hao] [Jacky]<br>
   # Software Product Features<br>

@@ -6,6 +6,8 @@
 
 Your schedule doesn't seem to show a plan for what you're planning to deliver as a requirements specification document on the 15th of this month. I do see the GUI release scheduled. That may be sufficient for Tyler, but I need more.
 
+----
+
 == November 18 ==
 
 Nice job on the vc presentation. I thought it followed the guidelines best of all the three. Please post the slides on the wiki, on the right page.

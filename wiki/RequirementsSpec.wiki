@@ -1,5 +1,6 @@
-#summary One-sentence summary of this page.
+#summary Our Requirements Specification
 #labels Featured,Phase-Requirements
+using guidelines described [here http://en.wikipedia.org/wiki/Software_Requirements_Specification]
 
 Software Requirements Specifications (SRS)
 

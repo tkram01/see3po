@@ -13,10 +13,13 @@
 See3PO is a path finding robot, which can find the shortest path to reach its destination from its current location and reach there with minimum human intervention.
  
 == 1.2 Purpose ==
-This is a research project. The main purpose of this project is to make a robot find the shortest path between its current location and destination in a given floor plan. The robot should also be capable of updating its current route at regular interval, in order to take care of any possible hindrance in it's path, that could have come to existence since the last time it calculated its route. And finally it should then reach the destination.
+This is a research project. The main purpose of this project is to make a robot find the shortest path, between its current location and destination, in a given floor plan. The robot should also be capable of updating its current route at a regular interval, in order to take care of any possible hindrance in it's path, that could have come to existence since the last time it calculated its route. And finally it should then reach the destination.
 
 == 1.3 Scope  ==
+ * Assumptions: Algorithm to be provided by MERL is delivered on time.
+ * Deliverables: GUI, Floor plan processing program, Path finding program..........
 
+ When provided with a given floor plan in acceptable image format, the robot will be able to get its current location on the same, using the algorithm provided by MERL. It will then pass that location information to appropriate programs to compute the shortest path to the destination. It then will move along the computed path towards it's destination. However, the computation of the route is not an one time event, this will continue to be executed at a regular interval, in order to rule out any possible hindrance on the route that could cause the robot to not to reach its destination and if such problems come into existence since the last time the path was calculated, the robot will then re-evaluate the route and follow the newly calculated route.
 
 == 1.4 Reference ==
 
@@ -26,4 +29,5 @@ This is a research project. The main purpose of this project is to make a robot 
 _This section needs to be populated each time we use new abbreviations while working on SRS._
 || *Terms*|| *Meaning* ||
 || SRS || System Requirement Specification||
+|| MERL|| Mitsubishi Electric Research Laboratories||
   

@@ -1,0 +1,29 @@
+#summary One-sentence summary of this page.
+
+= 1. Introduction =
+
+== Contents ==
+   [Introduction# 1.1 Product Overview] <br/>
+   [Introduction# 1.2 Purpose] <br/>
+   [Introduction# 1.3 Scope] <br/>
+   [Introduction# 1.4 Reference] <br/>
+   [Introduction# 1.5 Definition and Abbreviation] <br/>
+
+== 1.1 Product Overview ==
+See3PO is a path finding robot, which can find the shortest path to reach its destination from its current location and reach there with minimum human intervention.
+ 
+== 1.2 Purpose ==
+This is a research project. The main purpose of this project is to make a robot find the shortest path between its current location and destination in a given floor plan. The robot should also be capable of updating its current route at regular interval, in order to take care of any possible hindrance in it's path, that could have come to existence since the last time it calculated its route. And finally it should then reach the destination.
+
+== 1.3 Scope  ==
+
+
+== 1.4 Reference ==
+
+ # [SystemArchitecture]<br/>
+ # [UseCases]<br/>
+== 1.5 Definition and Abbreviation ==
+_This section needs to be populated each time we use new abbreviations while working on SRS._
+|| *Terms*|| *Meaning* ||
+|| SRS || System Requirement Specification||
+  

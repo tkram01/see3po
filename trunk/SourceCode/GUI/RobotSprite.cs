@@ -8,28 +8,44 @@ namespace See3PO
 {
     class RobotSprite
     {
-        private const int HEIGHT = 20;
-        private const int WIDTH = 20;
 
         private const double degToRads = Math.PI / 180;
 
-        private Image c_originalImage;
-        private Image c_image;
-        public Image image { get { return c_image; } }
+        private Image m_originalImage;
+        private Image m_resizedImage;
+        private Image m_image;
+        public Image image { get { return m_image; } }
 
-        private Position c_position;
+        private int m_pixelsPerFoot;
+        public int pixelsPerFoot
+        {
+            get { return m_pixelsPerFoot; }
+            set 
+            {
+                m_pixelsPerFoot = value;
+                m_resizedImage = new Bitmap(m_originalImage, new Size(m_pixelsPerFoot, m_pixelsPerFoot));
+                m_image = rotateSprite();
+            }
+        }
+
+        private Position m_position;
         public Position position 
         {
-            get { return c_position; }
-            set { c_position = value; }
+            get { return m_position; }
+            set { m_position = value; }
         }
 
-        public RobotSprite(Image sprite, Position position) {
-            c_position = position;
-            c_image = new Bitmap(sprite);
-            c_originalImage = new Bitmap(sprite);
-
+        public RobotSprite(Image sprite, double pixelsPerFoot, Position position)
+        {
+            m_pixelsPerFoot = (int)(pixelsPerFoot + 0.5);
+            m_position = position;
+            
+            m_originalImage = new Bitmap(sprite);
+            m_resizedImage = new Bitmap(sprite, new Size(m_pixelsPerFoot, m_pixelsPerFoot));
+            m_image = new Bitmap(m_resizedImage);
         }
+
+
 
         public void move(int leftSpeed, int rightSpeed) {
 
@@ -40,33 +56,33 @@ namespace See3PO
             int distance = (int)((leftSpeed + rightSpeed) * 2.5);
             if (distance != 0)
             {
-                int yDist = -(int)(distance * Math.Sin((float)c_position.facing * degToRads));
-                int xDist = (int)(distance * Math.Cos((float)c_position.facing * degToRads));
+                int yDist = -(int)(distance * Math.Sin((float)m_position.facing * degToRads));
+                int xDist = (int)(distance * Math.Cos((float)m_position.facing * degToRads));
 
-                c_position.location.Y += yDist;
-                c_position.location.X += xDist;
+                m_position.location.Y += yDist;
+                m_position.location.X += xDist;
             }
         }
 
         private void changeFacing(int change) {
-            c_position.facing = c_position.facing + change;
-             c_image = rotateSprite();
+            m_position.facing = m_position.facing + change;
+            m_image = rotateSprite();
         }
 
         private Bitmap rotateSprite()
         {
             //create a new empty bitmap to hold rotated image
-            Bitmap returnBitmap = new Bitmap(WIDTH, HEIGHT);
+            Bitmap returnBitmap = new Bitmap(m_resizedImage.Width, m_resizedImage.Height);
             //make a graphics object from the empty bitmap
             Graphics g = Graphics.FromImage(returnBitmap);
             //move rotation point to center of image
-            g.TranslateTransform((float)WIDTH / 2, (float)HEIGHT / 2);
+            g.TranslateTransform((float)m_resizedImage.Width / 2, (float)m_resizedImage.Height / 2);
             //rotate
-            g.RotateTransform(-c_position.facing);
+            g.RotateTransform(-m_position.facing);
             //move image back
-            g.TranslateTransform(-(float)WIDTH / 2, -(float)HEIGHT / 2);
+            g.TranslateTransform(-(float)m_resizedImage.Width / 2, -(float)m_resizedImage.Height / 2);
             //draw passed in image onto graphics object
-            g.DrawImage(c_originalImage, new Point(0, 0));
+            g.DrawImage(m_resizedImage, new Point(0, 0));
             return returnBitmap;
         }
 

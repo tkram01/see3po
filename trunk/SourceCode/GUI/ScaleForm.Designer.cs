@@ -36,8 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.scaleText = new System.Windows.Forms.Label();
-            this.scaleBox = new System.Windows.Forms.MaskedTextBox();
+            this.scaleBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // pixelBox
@@ -117,23 +116,14 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "equal";
             // 
-            // scaleText
-            // 
-            this.scaleText.AutoSize = true;
-            this.scaleText.Location = new System.Drawing.Point(92, 83);
-            this.scaleText.Name = "scaleText";
-            this.scaleText.Size = new System.Drawing.Size(51, 13);
-            this.scaleText.TabIndex = 9;
-            this.scaleText.Text = "feet/pixel";
-            // 
             // scaleBox
             // 
             this.scaleBox.BackColor = System.Drawing.SystemColors.Control;
             this.scaleBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.scaleBox.Location = new System.Drawing.Point(12, 82);
+            this.scaleBox.Location = new System.Drawing.Point(12, 79);
             this.scaleBox.Name = "scaleBox";
-            this.scaleBox.Size = new System.Drawing.Size(75, 13);
-            this.scaleBox.TabIndex = 10;
+            this.scaleBox.Size = new System.Drawing.Size(162, 13);
+            this.scaleBox.TabIndex = 8;
             // 
             // ScaleForm
             // 
@@ -143,7 +133,6 @@
             this.CancelButton = this.Cancel_Button;
             this.ClientSize = new System.Drawing.Size(186, 140);
             this.Controls.Add(this.scaleBox);
-            this.Controls.Add(this.scaleText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -170,7 +159,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label scaleText;
-        private System.Windows.Forms.MaskedTextBox scaleBox;
+        private System.Windows.Forms.TextBox scaleBox;
     }
 }

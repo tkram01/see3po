@@ -35,7 +35,7 @@ namespace See3PO
         {
             double.TryParse(pixelBox.Text, out m_pixels);
             m_scale = m_pixels / m_feet;
-            scaleBox.Text = m_scale + m_scale == 1 ? " pixel/foot" : " pixels/foot";
+            scaleBox.Text = "" +  m_scale + " pixels/foot";
 
         }
 
@@ -43,7 +43,7 @@ namespace See3PO
         {
             double.TryParse(feetBox.Text, out m_feet);
             m_scale = m_pixels / m_feet;
-            scaleBox.Text = m_scale + m_scale == 1 ? " pixel/foot" : " pixels/foot";
+            scaleBox.Text = "" + m_scale + " pixels/foot";
         }
 
         private void DrawButton_click(object sender, EventArgs e)
@@ -60,13 +60,12 @@ namespace See3PO
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
             double.TryParse(pixelBox.Text, out m_pixels);
             double.TryParse(feetBox.Text, out m_feet);
             m_scale = m_pixels / m_feet;
             m_mainform.m_pixelsperfoot = m_scale;
         }
-
 
 
 

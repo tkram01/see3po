@@ -29,26 +29,26 @@ namespace See3PO
         
 
         Status m_status;
+        PathFinder m_pathFinder;
 
 		CRobotHost m_host;
 		CWebcam m_camera;
 
 		Timer m_driveTimer;
         Timer m_drawScaleTimer;
-        TimerCallback cb;
+        TimerCallback m_callback;
 
         Bitmap m_floorPlanImage;
-        Bitmap m_fpBuffer;
-        Image m_destImage;
-        Image m_robotImage;
-        RobotSprite m_robotSprite;
-        Position m_robotStart;
-
         Graphics m_fg;
 
         Point m_center;
+
+        Image m_robotImage;
+        RobotSprite m_robotSprite;
+        Position m_robotLoc;
+
+        Image m_destImage;
         Point m_destLoc;
-        Point m_voidpoint = new Point(-999, -999);
         
         Point m_pixelsperfootStart;
         Point m_pixelsperfootEnd;
@@ -62,25 +62,22 @@ namespace See3PO
             InitializeComponent();
 
             m_host = new CRobotHost(this);
-
+            m_destImage = Image.FromFile("Images\\destImage.png");
+            m_robotImage = Image.FromFile("Images\\RobotSprite.png");
+            // Temporary
+            livePanel.BackgroundImage = Image.FromFile("Images\\SampleRobotView.jpg"); 
             //m_camera = new CWebcam(livePanel, null, false);
             //m_camera.Initialize();
             //m_camera.SetReady();
 
             m_center = new Point(floorPlanPanel.Width / 2, floorPlanPanel.Height / 2);
-            m_destImage = Image.FromFile("destImage.png");
-            m_destLoc = m_voidpoint;
-            
-            m_robotImage = Image.FromFile("Sprite3.png");
-            m_robotStart = null;
-            m_robotSprite = null;
-            m_status = null;
+            m_robotLoc = new Position(m_center, 0); // eventually, call Tyler's program
+
             m_fg = Graphics.FromHwnd(floorPlanPanel.Handle);
-            livePanel.BackgroundImage = Image.FromFile("SampleRobotView.jpg");
+            
             m_pixelsperfoot = 1.0;
             m_DrawFloorDelegate = new DDrawFloor(DrawFloor);
-            cb = new TimerCallback(DrawScale);
-
+            m_callback = new TimerCallback(DrawScale);
             m_fpState = fpState.NONE;
 
         }
@@ -252,7 +249,7 @@ namespace See3PO
             Bitmap spot = new Bitmap(6, 6);
             Graphics s = Graphics.FromImage(spot);
             s.DrawEllipse(new Pen(Color.Blue), new Rectangle(new Point(0, 0), new Size(3, 3)));
-            RobotSprite trailSprite = new RobotSprite(spot, m_robotSprite.position);
+            RobotSprite trailSprite = new RobotSprite(spot, m_pixelsperfoot,  m_robotSprite.position);
 
             Bitmap trail = new Bitmap(floorPlanPanel.Width, floorPlanPanel.Height);
             s = Graphics.FromImage(trail);
@@ -304,21 +301,13 @@ namespace See3PO
                         case fpState.IMAGE:
                             m_pixelsperfootStart = e.Location;
                             m_fpState = fpState.DRAWSCALE;
-                            m_drawScaleTimer = new Timer(cb, null, 0, 100);
+                            m_drawScaleTimer = new Timer(m_callback, null, 0, 100);
                             break;
                         case fpState.DRAWSCALE:
                             m_drawScaleTimer.Dispose();
                             m_pixelsperfootEnd = e.Location;
                             double scaleLength = Length(m_pixelsperfootStart.X - m_pixelsperfootEnd.X, m_pixelsperfootStart.Y - m_pixelsperfootEnd.Y);
-                            using (ScaleForm sf = new ScaleForm(scaleLength, scaleLength * m_pixelsperfoot, this))
-                            {
-                                sf.ShowDialog();
-                                m_pixelsperfoot = sf.m_scale;
-                                m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
-                                this.Show();
-                            }
-                            m_fpState = fpState.FLOORPLAN;
-                            DrawFloor();
+                            setScale(scaleLength);
                             break;
                         case fpState.ROBOT:
                             PlaceRobot(sender, e);
@@ -341,14 +330,20 @@ namespace See3PO
 
         private void Click_SetScale(object sender, EventArgs e)
         {
+            setScale(10.0);
+        }
+
+        private void setScale(double scaleLength)
+        {
             m_fpState = fpState.IMAGE;
-            using (ScaleForm sf = new ScaleForm(m_pixelsperfoot, 1, this))
+            using (ScaleForm sf = new ScaleForm(scaleLength, scaleLength * m_pixelsperfoot, this))
             {
                 sf.ShowDialog();
                 m_pixelsperfoot = sf.m_scale;
                 m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
                 m_fpState = fpState.FLOORPLAN;
             }
+            m_robotSprite.pixelsPerFoot = (int)m_pixelsperfoot;
             m_fpState = fpState.FLOORPLAN;
             DrawFloor();
         }
@@ -363,8 +358,7 @@ namespace See3PO
             }
             catch (Exception) { }
             m_status = new Status(m_floorPlanImage, 3);
-            m_robotStart = new Position(new Point(274, 132), 90);
-            m_robotSprite = new RobotSprite(m_robotImage, m_robotStart);
+            m_robotSprite = new RobotSprite(m_robotImage, m_pixelsperfoot, m_robotLoc);
             m_fpState = fpState.IMAGE;
             DrawFloor();
         }
@@ -387,6 +381,8 @@ namespace See3PO
         private void SetDestination(object sender, MouseEventArgs e)
         {
             m_destLoc = new Point(e.X, e.Y);
+            //m_status.floorPlan.setDestination(m_destLoc);
+            
             m_fpState = fpState.DESTINATION;
             DrawFloor();
         }
@@ -394,6 +390,7 @@ namespace See3PO
         private void PlaceRobot(object sender, MouseEventArgs e)
         {
             m_robotSprite.position = new Position(new Point(e.X, e.Y), 0);
+            //m_status.floorPlan.setRobotPosition(m_robotSprite.position);
             m_fpState = fpState.FLOORPLAN;
             DrawFloor();
         }

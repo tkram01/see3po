@@ -4,7 +4,7 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
 
 ==Software Requirements Specifications (SRS) - Version 0.1==
 
-  # INTRODUCTION [Nick] [Debarati]<br>
+  # [INTRODUCTION] [Nick] [Debarati]<br>
     # Product Overview <br>
     # Purpose <br>
     # Scope<br>

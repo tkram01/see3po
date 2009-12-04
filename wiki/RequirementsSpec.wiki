@@ -2,7 +2,7 @@
 #labels Featured,Phase-Requirements
 using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirements_Specification wikipedia]
 
-Software Requirements Specifications (SRS)
+Software Requirements Specifications (SRS) - Version 0.1
 
   # INTRODUCTION [Nick] [Debarati]<br>
     # Product Overview <br>
@@ -34,3 +34,6 @@ Software Requirements Specifications (SRS)
       # Portability<br>
       # Performance<br>
   # ADDITIONAL MATERIALS <br>
+  # Revision History
+|| *Revision Date* || *Description Date* || *Document Version* || *Author* ||
+|| 12/02/2009|| Created outline for draft verion of SRS || 0.1|| [Frank]||

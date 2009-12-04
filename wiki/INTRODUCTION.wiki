@@ -20,7 +20,7 @@ This is a research project. The main purpose of this project is to make a robot 
 
 == 1.4 Reference ==
 
- # [SystemArchitecture]<br/>
+ # [SystemArchitecture System Architecture]<br/>
  # [UseCases]<br/>
 == 1.5 Definition and Abbreviation ==
 _This section needs to be populated each time we use new abbreviations while working on SRS._

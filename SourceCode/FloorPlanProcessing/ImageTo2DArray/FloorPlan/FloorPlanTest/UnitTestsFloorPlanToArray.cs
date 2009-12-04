@@ -68,8 +68,6 @@ namespace FloorPlanTest
         public void TestBlockSizefive() // test block size of 5
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
-
-            image1.createArray();
             image1.printArray("../../testImage_block5.txt");
             
         }
@@ -78,8 +76,6 @@ namespace FloorPlanTest
         public void TestBlockSizefour() // test block size of 4
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 4);
-
-            image1.createArray();
             image1.printArray( "../../testImage_block4.txt");
            
         }
@@ -87,7 +83,6 @@ namespace FloorPlanTest
         public void TestBlockSizesix() // test block size of 4
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 6);
-            image1.createArray();
             image1.printArray("../../testImage_block6.txt");
            
         }
@@ -96,8 +91,6 @@ namespace FloorPlanTest
         public void TestCreateImageOfBlockFive() 
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
-
-            image1.createArray();
             Bitmap b = image1.toImage();
             b.Save("../../testImage_block5.bmp");
         }
@@ -106,8 +99,6 @@ namespace FloorPlanTest
         public void TestCreateImageOfBlockOne() 
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 1);
-
-            image1.createArray();
             Bitmap test_image = image1.toImage();
             test_image.Save("../../testImage_block1.bmp");
         }
@@ -121,7 +112,6 @@ namespace FloorPlanTest
             int height = image1.getYTileNum();
             System.Diagnostics.Debug.WriteLine("Height " + height + " Width " + width);
             FloorTile tile = image1.getTile(2, 4);
-            image1.Connect();
             FloorTile n1,n2,n3,n4;
             System.Diagnostics.Debug.WriteLine("");
             List<FloorTile> neighbour = tile.getNeighbours();
@@ -171,8 +161,6 @@ namespace FloorPlanTest
         public void TestGetTile() // test block size of 1
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
-
-            image1.createArray();
             FloorTile tile = image1.getTile(10,12);
             System.Diagnostics.Debug.WriteLine(tile.Position.X);
             System.Diagnostics.Debug.WriteLine(tile.Position.Y);
@@ -185,8 +173,6 @@ namespace FloorPlanTest
         public void CompareFileTestBlockSizeone() // test block size of 4
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
-
-            image1.createArray();
             image1.printArray("../../testImagecomp_block5.txt");
             int filebyte1;
             int filebyte2;

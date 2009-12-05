@@ -51,3 +51,4 @@ D:\see3po\SourceCode\GUI\obj\Debug\ResolveAssemblyReference.cache
 D:\see3po\SourceCode\GUI\obj\Debug\See3PO.MainForm.resources
 D:\see3po\SourceCode\GUI\obj\Debug\See3PO.Properties.Resources.resources
 D:\see3po\SourceCode\GUI\obj\Debug\See3PO.csproj.GenerateResource.Cache
+C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\obj\Debug\See3PO.ScaleForm.resources

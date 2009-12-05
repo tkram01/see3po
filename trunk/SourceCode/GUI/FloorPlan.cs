@@ -19,6 +19,8 @@ namespace See3PO
         private FloorTile[,] m_floorPlanArray;
         private int m_height;
         private int m_width;
+        private FloorTile m_start_tile;
+        private FloorTile m_target_tile;
 
         public FloorPlan(Image myimage, double pixelsPerFoot)
         {
@@ -158,6 +160,43 @@ namespace See3PO
                 return null;
             else
                 return m_floorPlanArray[y, x];
+        }
+
+        public Boolean setStartTile(int x, int y)
+        {
+            FloorTile start_tile;
+            start_tile = getTile(x,y);
+            if (m_start_tile != null)
+                m_start_tile.SetStart(false);
+            else
+            {
+
+                if (start_tile.Iswalkable())
+                {
+                    m_start_tile = start_tile;
+                    m_start_tile.SetStart(true);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public Boolean setTargetTile(int x, int y)
+        {
+            FloorTile target_tile;
+            if (m_target_tile != null)
+                m_target_tile.SetTarget(false);
+            else
+            {
+                target_tile = getTile(x, y);
+                if (target_tile.Iswalkable())
+                {
+                    m_target_tile = target_tile;
+                    m_target_tile.SetTarget(true);
+                    return true;
+                }
+            }
+            return false;
         }
 
     }

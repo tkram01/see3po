@@ -168,7 +168,62 @@ namespace FloorPlanTest
             Assert.IsTrue((tile.ToString().Equals("1")), "Incorret Tile Returned!");
                 
         }
-     
+
+        [TestMethod]
+        public void TestStartTileUnwalkable() // test block size of 5
+        {
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
+            bool result = image1.setStartTile(3,6);
+            FloorTile tile = image1.getTile(3, 6);
+            bool t_res = tile.IsStart();
+            bool t_res2 = tile.IsTarget();
+            Assert.AreEqual(false, result);
+            System.Diagnostics.Debug.WriteLine("Start:" + t_res);
+            System.Diagnostics.Debug.WriteLine("Target:" + t_res2);
+           
+        }
+        [TestMethod]
+        public void TestStartTilewalkable() // test block size of 5
+        {
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
+            bool result = image1.setStartTile(3, 4);
+            FloorTile tile = image1.getTile(3, 4);
+            bool t_res = tile.IsStart();
+            bool t_res2 = tile.IsTarget();
+            Assert.AreEqual(true, result);
+            System.Diagnostics.Debug.WriteLine("Start:" + t_res);
+            System.Diagnostics.Debug.WriteLine("Target:" + t_res2);
+
+        }
+        [TestMethod]
+        public void TestTargetTileUnwalkable() // test block size of 5
+        {
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
+            bool result = image1.setTargetTile(7, 6);
+            FloorTile tile = image1.getTile(7, 6);
+            bool t_res = tile.IsStart();
+            bool t_res2 = tile.IsTarget();
+            Assert.AreEqual(false, result);
+            System.Diagnostics.Debug.WriteLine("Start:" + t_res);
+            System.Diagnostics.Debug.WriteLine("Target:" + t_res2);
+
+
+        }
+
+        [TestMethod]
+        public void TestTargetTileWalkable() // test block size of 5
+        {
+            FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
+            bool result = image1.setTargetTile(4, 4);
+            FloorTile tile = image1.getTile(4, 4);
+            bool t_res = tile.IsStart();
+            bool t_res2 = tile.IsTarget();
+            Assert.AreEqual(true, result);
+            System.Diagnostics.Debug.WriteLine("Start:" + t_res);
+            System.Diagnostics.Debug.WriteLine("Target:" + t_res2);
+
+        }
+
         [TestMethod]
         public void CompareFileTestBlockSizeone() // test block size of 4
         {
@@ -200,4 +255,5 @@ namespace FloorPlanTest
             fs2.Close();
         }
     }
+    
 }

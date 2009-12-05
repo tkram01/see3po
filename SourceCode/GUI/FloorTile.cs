@@ -13,11 +13,21 @@ namespace See3PO
         private FloorPlan m_floorPlan;
         private bool m_endPoint;
         private List<FloorTile> m_neighbours;
+        private bool m_start;
+        private bool m_target;
 
         public FloorTile()
         {
         }
 
+        public void SetStart(bool start)
+        {
+            m_start = start;
+        }
+        public void SetTarget(bool target)
+        {
+            m_target = target;
+        }
         public FloorTile(int x, int y, bool walkable,FloorPlan floorPlan)
         {
             m_location.X = x;
@@ -26,6 +36,8 @@ namespace See3PO
             m_endPoint = false;
             m_floorPlan = floorPlan;
             m_neighbours = new List<FloorTile>();
+            m_start = false;
+            m_target = false;
         }
 
         public override String ToString()
@@ -52,6 +64,14 @@ namespace See3PO
             return m_walkable;
         }
 
+        public bool IsStart()
+        {
+            return m_start;
+        }
+        public bool IsTarget()
+        {
+            return m_target;
+        }
         public bool endPoint
         {
             get { return m_endPoint; }

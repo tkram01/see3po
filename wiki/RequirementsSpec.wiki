@@ -23,7 +23,7 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.3_Software_Interfaces Software Interface] <br/>
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.4_Communications_Protocols Communications Protocols] <br/>
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2_Software_Product_Features Sofware Product Features] <br/>
-	# [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2.1_Graphical_User_Interfaces GUI] <br/>
+    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2.1_Graphical_User_Interfaces GUI] <br/>
     # Pathfinding [Nick]<br>
     # Floor Plan Processing [Debarati]<br>
    # Software System Attributes [DBD]<br>

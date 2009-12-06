@@ -75,5 +75,5 @@ _This section needs to be populated each time we use new abbreviations while wor
  * Robot has interface for controlling its movement therefore it can be tested without receiving command from host. 
 
 == 3.1.4 Communications Protocols ==
- Please refers to [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communications Protocol Document]
+ Please refers to [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communications Protocol Document].
   

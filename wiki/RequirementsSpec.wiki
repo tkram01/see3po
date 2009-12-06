@@ -16,14 +16,14 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
    # User Characteristics<br>
    # General Constraints<br>
    # Assumptions and Dependencies<br>
-  # SPECIFIC REQUIREMENTS<br>
-   # External Interface Requirements<br>
-    [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.1_User_Interfaces 2.1.1 User Interface] <br/>
-    [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.2_Hardware_Interfaces 2.1.2 Hardware Interface] <br/>
-    [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.3_Software_Interfaces 2.1.3 Software Interface] <br/>
-    [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.4_Communications_Protocols 2.1.4 Communications Protocols] <br/>
-   # Software Product Features<br>
-    # GUI [Frank]<br>
+  # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1._Specific_Requirements SPECIFIC REQUIREMENTS]<br/>
+   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1_External_Interface_Requirements External Interface Requirements] <br/>
+    [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.1_User_Interfaces 3.1.1 User Interface] <br/>
+    [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.2_Hardware_Interfaces 3.1.2 Hardware Interface] <br/>
+    [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.3_Software_Interfaces 3.1.3 Software Interface] <br/>
+    [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.4_Communications_Protocols 3.1.4 Communications Protocols] <br/>
+   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2_Software_Product_Features Sofware Product Features] <br/>
+	[http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2.1_Graphical_User_Interfaces 3.2.1 GUI] <br/>
     # Pathfinding [Nick]<br>
     # Floor Plan Processing [Debarati]<br>
    # Software System Attributes [DBD]<br>
@@ -70,14 +70,16 @@ _This section needs to be populated each time we use new abbreviations while wor
 || Host PC || A Desktop PC used to interact wirelessly to the robot ||
 || See3PO || The Pathfinding Robot ||
 
-== 2.1.1 User Interfaces ==
+= 1. SPECIFIC REQUIREMENTS =<br>
+== 3.1 External Interface Requirements ==<br>
+=== 3.1.1 User Interfaces ===
  * The user will be the operator of the See3PO robot. 
  * From the Host PC interface, the user will control connections to the robot and have the ability to delegate tasks to the robot. 
  * From the Robot interface, the user can change settings such as the IP address of the Host pc. 
-== 3.1.1 Hardware Interfaces ==
+=== 3.1.1 Hardware Interfaces ===
  * Use wireless network (WiFi) over TCP/IP to communicate between host and robot. 
  
-== 3.1.2 Hardware Interfaces ==
+=== 3.1.2 Hardware Interfaces ===
  * Use wireless network (WiFi) over TCP/IP to communicate between host and robot. 
  * Host acts as server and robot acts as client while establishing connection.
  * Robot is able to connect or disconnect from host through interface.
@@ -85,10 +87,34 @@ _This section needs to be populated each time we use new abbreviations while wor
  * Use serial port with cable over RS-232 to communicate between robot and control unit.
  * Robot has interface for controlling its movement therefore it can be tested without receiving command from host. 
 
-== 3.1.4 Communications Protocols ==
- Please refers to [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communications Protocol Document].
-  
-== 3.1.3 Hardware Interfaces ==
+=== 3.1.3 Hardware Interfaces ===
  * The Operating System must be Windows, and has been tested on Windows XP, Windows Vista and Windows 7. 
  * Host PC’s must have the most current version of .Net Framework. 
+ 
+=== 3.1.4 Communications Protocols ===
+ Please refers to [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communications Protocol Document].
   
+== 3.2 Software Product Features ==<br>
+=== 3.2.1 Graphical User Interface === 
+ The primary GUI will reside on the Host PC and handle the following tasks:
+  * Connection to the Robot
+  * Floor Plan Loading:
+   * From Image
+   * From Saved Floor Plan files
+  * Automated and Manual placement of Robot within the floorplan
+  * Selection of Robot Destination
+ The GUI will have three main components
+  * A Live View panel will show a video feed from the robot.
+  * A text output window will display connection information and other messages
+  * A Floorplan window will handle the following input:
+   * Setting floor plan scale by drawing a scale line and inputing the distance drawn
+   * Manually setting the Robot's current position
+   * Selecting the desired destination.
+   It will also display the following output: 
+   * A simplified image of the floorplan
+    * One pixel equals one square step.
+    * Color will indicate walkablility.
+   * The Robot's current position will be indicated by a red arrow.
+   * The current path will be indicated by a series of blue lines.   
+   * The destination will be indicated by a blue "X"
+ 

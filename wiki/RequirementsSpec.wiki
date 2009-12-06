@@ -11,33 +11,35 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
    [http://code.google.com/p/see3po/wiki/RequirementsSpec#1.4_Reference 1.4 Reference] <br/>
    [http://code.google.com/p/see3po/wiki/RequirementsSpec#1.5_Definition_and_Abbreviation 1.5 Definition and Abbreviation] <br/>
   # OVERALL DESCRIPTION<br>
-    # Product Perspective<br>
-    # Product Functions<br>
-    # User Characteristics<br>
-    # General Constraints<br>
-    # Assumptions and Dependencies<br>
+   # Product Perspective<br>
+   # Product Functions<br>
+   # User Characteristics<br>
+   # General Constraints<br>
+   # Assumptions and Dependencies<br>
   # SPECIFIC REQUIREMENTS<br>
-    # External Interface Requirements<br>
-      # User Interfaces [Frank]<br>
-      # Hardware Interfaces [Hao] [Jacky]<br>
-      # Software Interfaces [Frank]<br>
-      # Communications Protocols [Hao] [Jacky]<br>
+   # External Interface Requirements<br>
+     [http://code.google.com/p/see3po/wiki/RequirementsSpec2.1.1_User_Interfaces 2.1.1 User Interface] <br/>
+     [http://code.google.com/p/see3po/wiki/RequirementsSpec2.1.2_Hardware_Interfaces 2.1.2 Hardware Interface] <br/>
+     [http://code.google.com/p/see3po/wiki/RequirementsSpec2.1.3_Software_Interfaces 2.1.3 Software Interface] <br/>
+     [http://code.google.com/p/see3po/wiki/RequirementsSpec2.1.4_Communications_Protocols 2.1.4 Communications Protocols] <br/>
   # Software Product Features<br>
-      # GUI [Frank]<br>
-      # Pathfinding [Nick]<br>
-      # Floor Plan Processing [Debarati]<br>
+   # GUI [Frank]<br>
+   # Pathfinding [Nick]<br>
+   # Floor Plan Processing [Debarati]<br>
   # Software System Attributes [DBD]<br>
-      # Reliability<br>
-      # Availability<br>
-      # Security<br>
-      # Maintainability<br>
-      # Portability<br>
-      # Performance<br>
+   # Reliability<br>
+   # Availability<br>
+   # Security<br>
+   # Maintainability<br>
+   # Portability<br>
+   # Performance<br>
   # ADDITIONAL MATERIALS <br>
   # Revision History
 || *Revision Date* || *Description Date* || *Document Version* || *Author* ||
 || 12/02/2009|| Created outline for draft verion of SRS || 0.1|| [Frank]||
 || 12/04/2009|| Added Introduction|| 0.2|| [Debarati]||
+|| 12/05/2009|| Added Added Hardware/Communications Requirements|| 0.3 || [Jacky]||
+|| 12/06/2009|| Added User Interface Requirements|| 0.4 || [Frank]||
 
 
 
@@ -65,7 +67,16 @@ _This section needs to be populated each time we use new abbreviations while wor
 || *Terms*|| *Meaning* ||
 || SRS || System Requirement Specification||
 || MERL|| Mitsubishi Electric Research Laboratories||
+|| Host PC || A Desktop PC used to interact wirelessly to the robot ||
+|| See3PO || The Pathfinding Robot ||
 
+== 2.1.1 User Interfaces ==
+ * The user will be the operator of the See3PO robot. 
+ * From the Host PC interface, the user will control connections to the robot and have the ability to delegate tasks to the robot. 
+ * From the Robot interface, the user can change settings such as the IP address of the Host pc. 
+== 3.1.1 Hardware Interfaces ==
+ * Use wireless network (WiFi) over TCP/IP to communicate between host and robot. 
+ 
 == 3.1.2 Hardware Interfaces ==
  * Use wireless network (WiFi) over TCP/IP to communicate between host and robot. 
  * Host acts as server and robot acts as client while establishing connection.
@@ -76,4 +87,8 @@ _This section needs to be populated each time we use new abbreviations while wor
 
 == 3.1.4 Communications Protocols ==
  Please refers to [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communications Protocol Document].
+  
+== 3.1.3 Hardware Interfaces ==
+ * The Operating System must be Windows, and has been tested on Windows XP, Windows Vista and Windows 7. 
+ * Host PC’s must have the most current version of .Net Framework. 
   

@@ -66,7 +66,7 @@ _This section needs to be populated each time we use new abbreviations while wor
 || SRS || System Requirement Specification||
 || MERL|| Mitsubishi Electric Research Laboratories||
 
-== 3.2 Hardware Interfaces ==
+== 3.1.2 Hardware Interfaces ==
  * Use wireless network (WiFi) over TCP/IP to communicate between host and robot. 
  * Host acts as server and robot acts as client while establishing connection.
  * Robot is able to connect or disconnect from host through interface.
@@ -74,6 +74,6 @@ _This section needs to be populated each time we use new abbreviations while wor
  * Use serial port with cable over RS-232 to communicate between robot and control unit.
  * Robot has interface for controlling its movement therefore it can be tested without receiving command from host. 
 
-== 3.4 Communications Protocols ==
+== 3.1.4 Communications Protocols ==
  Please refers to [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communications Protocol Document]
   

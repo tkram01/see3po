@@ -2,7 +2,7 @@
 #labels Featured,Phase-Requirements
 using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirements_Specification wikipedia]
 
-==Software Requirements Specifications (SRS) - Version 0.2==
+==Software Requirements Specifications (SRS) - Version 0.5==
 
   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1._Introduction INTRODUCTION] --- [Nick],[Debarati]<br/>
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1.1_Product_Overview Product Overview] <br/>
@@ -24,9 +24,9 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.4_Communications_Protocols Communications Protocols] <br/>
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2_Software_Product_Features Sofware Product Features] <br/>
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2.1_Graphical_User_Interface GUI] <br/>
+    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2.2_Floor_Plan_Processing Floor Plan Processing]<br>
     # Pathfinding [Nick]<br>
-    # Floor Plan Processing [Debarati]<br>
-   # Software System Attributes [DBD]<br>
+  # Software System Attributes [DBD]<br>
     # Reliability<br>
     # Availability<br>
     # Security<br>
@@ -40,6 +40,7 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
 || 12/04/2009|| Added Introduction|| 0.2|| [Debarati]||
 || 12/05/2009|| Added Added Hardware/Communications Requirements|| 0.3 || [Jacky]||
 || 12/06/2009|| Added User Interface Requirements|| 0.4 || [Frank]||
+|| 12/07/2009|| Added section 3.2.2 Floor Plan Processing || 0.5 || [Debarati]||
 
 ----
 <br/><br/>
@@ -78,9 +79,7 @@ _This section needs to be populated each time we use new abbreviations while wor
  * The user will be the operator of the See3PO robot. 
  * From the Host PC interface, the user will control connections to the robot and have the ability to delegate tasks to the robot. 
  * From the Robot interface, the user can change settings such as the IP address of the Host pc. 
-=== 3.1.1 Hardware Interfaces ===
- * Use wireless network (WiFi) over TCP/IP to communicate between host and robot. 
- 
+
 === 3.1.2 Hardware Interfaces ===
  * Use wireless network (WiFi) over TCP/IP to communicate between host and robot. 
  * Host acts as server and robot acts as client while establishing connection.
@@ -121,4 +120,19 @@ _This section needs to be populated each time we use new abbreviations while wor
    * The Robot's current position will be indicated by a red arrow.
    * The current path will be indicated by a series of blue lines.   
    * The destination will be indicated by a blue "X"
+
+
+=== 3.2.2 Floor Plan Processing === 
+ Floor plan processing consists of two components:
+  * Floor Plan
+  * Floor Tile
  
+ Floor Plan takes an image of an actual floor plan, (currently supporting both .bmp and .jpg format) and it converts the same to an array of floor tile objects. This creation of floor tile array works in the following way:
+
+  * The dimension of each tile is set as the scale selected in GUI.
+  * Each tile that has RGB component darker than that of the color gray will be treated as un-walkable, else it will be walkable.
+
+Floor plan has another functionality that connects each tile in the it with the four neighboring walkable tiles of it(top, bottom, right and left). If any of the neighboring tile is un-walkable, it is not added to this list and the program continues with the next neighbor of the original tile if any or else with the next tile in the array of floor tiles. This walkable neighboring tiles information is kept in the floor tile part. Other than this floor plan also works with GUI in setting the start and target tile in it.
+
+
+Floor tile as the name suggests corresponds to the tile object for a floor plan, it has a location in X-Y co-ordinate system for the floor plan. It could be either walkable or un-walkable, as mentioned earlier. Also it keeps a list of neighbors of itself as mentioned before.

@@ -70,7 +70,7 @@ _This section needs to be populated each time we use new abbreviations while wor
 || See3PO || The Pathfinding Robot ||
 
 <br/><br/>
-= 3. SPECIFIC REQUIREMENTS =
+= 3. Specific Requirements =
 <br/>
 == 3.1 External Interface Requirements == 
 <br/>

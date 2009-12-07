@@ -16,7 +16,7 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
    # User Characteristics<br>
    # General Constraints<br>
    # Assumptions and Dependencies<br>
-  # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1._Specific_Requirements SPECIFIC REQUIREMENTS]<br/>
+  # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3._Specific_Requirements SPECIFIC REQUIREMENTS]<br/>
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1_External_Interface_Requirements External Interface Requirements] <br/>
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.1_User_Interfaces User Interface] <br/>
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.2_Hardware_Interfaces Hardware Interface] <br/>

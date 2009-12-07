@@ -45,7 +45,6 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
 
 = 1. Introduction =
 
-
 == 1.1 Product Overview ==
 See3PO is a path finding robot, which can find the shortest path to reach its destination from its current location and reach there with minimum human intervention.
  
@@ -70,8 +69,12 @@ _This section needs to be populated each time we use new abbreviations while wor
 || Host PC || A Desktop PC used to interact wirelessly to the robot ||
 || See3PO || The Pathfinding Robot ||
 
+
+
 = 3. SPECIFIC REQUIREMENTS =
+
 == 3.1 External Interface Requirements == 
+
 === 3.1.1 User Interfaces ===
  * The user will be the operator of the See3PO robot. 
  * From the Host PC interface, the user will control connections to the robot and have the ability to delegate tasks to the robot. 
@@ -92,9 +95,11 @@ _This section needs to be populated each time we use new abbreviations while wor
  * Host PC’s must have the most current version of .Net Framework. 
  
 === 3.1.4 Communications Protocols ===
- Please refers to [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communications Protocol Document].
+ Please refer to [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc Communications Protocol Document].
+
   
-== 3.2 Software Product Features ==<br>
+== 3.2 Software Product Features ==
+
 === 3.2.1 Graphical User Interface === 
  The primary GUI will reside on the Host PC and handle the following tasks:
   * Connection to the Robot

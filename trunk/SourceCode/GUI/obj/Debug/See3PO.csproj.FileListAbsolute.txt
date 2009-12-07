@@ -1,6 +1,3 @@
-D:\Documents\School\CS682\GUI\bin\Debug\RobotHost.pdb
-D:\Documents\School\CS682\GUI\bin\Debug\Nexus3Input.pdb
-D:\Documents\School\CS682\GUI\bin\Debug\RobotCommands.pdb
 D:\Documents\School\CS682\GUI\obj\Debug\ResolveAssemblyReference.cache
 D:\Documents\School\CS682\GUI\obj\Debug\See3PO.MainForm.resources
 D:\Documents\School\CS682\GUI\obj\Debug\See3PO.csproj.GenerateResource.Cache
@@ -52,3 +49,5 @@ D:\see3po\SourceCode\GUI\obj\Debug\See3PO.MainForm.resources
 D:\see3po\SourceCode\GUI\obj\Debug\See3PO.Properties.Resources.resources
 D:\see3po\SourceCode\GUI\obj\Debug\See3PO.csproj.GenerateResource.Cache
 C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\obj\Debug\See3PO.ScaleForm.resources
+D:\Documents\School\CS682\GUI\bin\Debug\QuickGraph.dll
+D:\Documents\School\CS682\GUI\obj\Debug\See3PO.ScaleForm.resources

@@ -9,7 +9,7 @@ namespace See3PO
     public class Position
     {
         public Point location;
-        private int _facing;
+        private int _facing;  // 0 = East, 90 = North, 180 = West, 270 = South
         public int facing 
         { 
             get {return _facing;}

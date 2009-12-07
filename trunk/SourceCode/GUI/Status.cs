@@ -13,14 +13,14 @@ namespace See3PO
 
         private Stack<Image> m_Images;
         private FloorPlan m_FloorPlan;
-        private Queue<MoveCommand> m_Moves;
+        private List<MoveCommand> m_Moves;
         private Position m_Position;
 
         public Status(Image floorPlan, double scale){
             m_FloorPlan = new FloorPlan(floorPlan, scale);
-            m_Moves = new Queue<MoveCommand>();
+            m_Moves = new List<MoveCommand>();
             m_Images = new Stack<Image>(IMG_CAP);
-            m_Moves = new Queue<MoveCommand>();
+            m_Moves = new List<MoveCommand>();
         }
 
 
@@ -34,13 +34,7 @@ namespace See3PO
             m_Images = new Stack<Image>(IMG_CAP);
         }
 
-        public MoveCommand nextMove
-        {
-            get { return m_Moves.Dequeue(); }
-            set { m_Moves.Enqueue(value); }
-        }
-
-        public Queue<MoveCommand> path
+        public List<MoveCommand> path
         {
             get { return m_Moves; }
             set { m_Moves = value; }

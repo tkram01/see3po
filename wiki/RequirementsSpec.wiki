@@ -70,8 +70,8 @@ _This section needs to be populated each time we use new abbreviations while wor
 || Host PC || A Desktop PC used to interact wirelessly to the robot ||
 || See3PO || The Pathfinding Robot ||
 
-= 1. SPECIFIC REQUIREMENTS =<br>
-== 3.1 External Interface Requirements ==<br>
+= 1. SPECIFIC REQUIREMENTS =
+== 3.1 External Interface Requirements == 
 === 3.1.1 User Interfaces ===
  * The user will be the operator of the See3PO robot. 
  * From the Host PC interface, the user will control connections to the robot and have the ability to delegate tasks to the robot. 

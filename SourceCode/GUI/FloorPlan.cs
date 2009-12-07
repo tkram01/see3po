@@ -114,7 +114,7 @@ namespace See3PO
                 }
             }
         }
-// create bitmap from a given array.
+        // create bitmap from a given array.
         public Bitmap toImage()
         {
             Bitmap image = new Bitmap(m_width, m_height);
@@ -168,7 +168,7 @@ namespace See3PO
             start_tile = getTile(x,y);
             if (m_start_tile != null)
                 m_start_tile.SetStart(false);
-            else
+            
             {
 
                 if (start_tile.Iswalkable())
@@ -186,7 +186,7 @@ namespace See3PO
             FloorTile target_tile;
             if (m_target_tile != null)
                 m_target_tile.SetTarget(false);
-            else
+            
             {
                 target_tile = getTile(x, y);
                 if (target_tile.Iswalkable())

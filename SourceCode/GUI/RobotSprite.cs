@@ -22,7 +22,7 @@ namespace See3PO
             get { return m_pixelsPerFoot; }
             set 
             {
-                m_pixelsPerFoot = value;
+                m_pixelsPerFoot = toPixels(value);
                 m_resizedImage = new Bitmap(m_originalImage, new Size(m_pixelsPerFoot, m_pixelsPerFoot));
                 m_image = rotateSprite();
             }
@@ -37,7 +37,7 @@ namespace See3PO
 
         public RobotSprite(Image sprite, double pixelsPerFoot, Position position)
         {
-            m_pixelsPerFoot = (int)(pixelsPerFoot + 0.5);
+            m_pixelsPerFoot = toPixels(pixelsPerFoot);
             m_position = position;
             
             m_originalImage = new Bitmap(sprite);
@@ -87,6 +87,12 @@ namespace See3PO
         }
 
 
+        private int toPixels(double x) {
+            if (x < 1)
+                return 1;
+            else
+                return (int)(x + 0.5);
+        }
 
 
 

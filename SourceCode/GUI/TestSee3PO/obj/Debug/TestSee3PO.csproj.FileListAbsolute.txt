@@ -12,3 +12,12 @@ C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\TestSee3PO\bin\Debug\Ro
 C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\TestSee3PO\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\TestSee3PO\obj\Debug\TestSee3PO.dll
 C:\Users\Debarati\Documents\my SVN - Main\SourceCode\GUI\TestSee3PO\obj\Debug\TestSee3PO.pdb
+D:\Documents\School\CS682\GUI\TestSee3PO\bin\Debug\TestSee3PO.dll
+D:\Documents\School\CS682\GUI\TestSee3PO\bin\Debug\TestSee3PO.pdb
+D:\Documents\School\CS682\GUI\TestSee3PO\bin\Debug\Nexus3Input.dll
+D:\Documents\School\CS682\GUI\TestSee3PO\bin\Debug\QuickGraph.dll
+D:\Documents\School\CS682\GUI\TestSee3PO\bin\Debug\See3PO.exe
+D:\Documents\School\CS682\GUI\TestSee3PO\bin\Debug\See3PO.pdb
+D:\Documents\School\CS682\GUI\TestSee3PO\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\CS682\GUI\TestSee3PO\obj\Debug\TestSee3PO.dll
+D:\Documents\School\CS682\GUI\TestSee3PO\obj\Debug\TestSee3PO.pdb

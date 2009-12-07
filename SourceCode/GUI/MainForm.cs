@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using Timer = System.Threading.Timer;
+using System.Drawing.Drawing2D;
 
 using Nexus3Input;
 using RobotCommands;
@@ -19,6 +20,8 @@ namespace See3PO
 	public partial class MainForm : Form, IRobotParent
 	{
         public enum fpState { NONE, IMAGE, DRAWSCALE, ROBOT, FLOORPLAN, DESTINATION };
+        enum direction { north, east, south, west };
+
         public fpState m_fpState;
 
 		delegate void DGuiCallVoid();
@@ -29,7 +32,6 @@ namespace See3PO
         
 
         Status m_status;
-        PathFinder m_pathFinder;
 
 		CRobotHost m_host;
 		CWebcam m_camera;
@@ -45,7 +47,6 @@ namespace See3PO
 
         Image m_robotImage;
         RobotSprite m_robotSprite;
-        Position m_robotLoc;
 
         Image m_destImage;
         Point m_destLoc;
@@ -56,6 +57,9 @@ namespace See3PO
 
         short m_leftSpeed = 0;
         short m_rightSpeed = 0;
+
+        double m_ratioX;
+        double m_ratioY;
 
         public MainForm()
         {
@@ -71,7 +75,7 @@ namespace See3PO
             //m_camera.SetReady();
 
             m_center = new Point(floorPlanPanel.Width / 2, floorPlanPanel.Height / 2);
-            m_robotLoc = new Position(m_center, 0); // eventually, call Tyler's program
+            
 
             m_fg = Graphics.FromHwnd(floorPlanPanel.Handle);
             
@@ -79,6 +83,8 @@ namespace See3PO
             m_DrawFloorDelegate = new DDrawFloor(DrawFloor);
             m_callback = new TimerCallback(DrawScale);
             m_fpState = fpState.NONE;
+
+
 
         }
 
@@ -210,26 +216,27 @@ namespace See3PO
                     case fpState.DRAWSCALE:
                         instructions = "Click again to draw a known measurement";
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        overlay = new SolidBrush(Color.FromArgb(50, Color.LawnGreen));
+                        overlay = new SolidBrush(Color.FromArgb(50, Color.Green));
                         bg.DrawLine(new Pen(Color.Blue), (PointF)m_pixelsperfootStart, floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
                         break;
                     case fpState.ROBOT:
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         instructions = "Click the floor plan to set the robot's current location";
-                        overlay = new SolidBrush(Color.FromArgb(50, Color.DarkGreen));
+                        overlay = new SolidBrush(Color.FromArgb(50, Color.Red));
                         break;
                     case fpState.FLOORPLAN:
                         instructions = "Click the floor plan to set the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        if (m_robotSprite != null)
-                            bg.DrawImage(m_robotSprite.image, CorrectForImageSize(m_robotSprite.position.location, m_robotSprite.image));
+                        //if (m_robotSprite != null)
+                        //    bg.DrawImage(m_robotSprite.image, CorrectForImageSize(m_robotSprite.position.location, m_robotSprite.image));
                         break;
                     case fpState.DESTINATION:
                         instructions = "Click the floor plan to change the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        if (m_robotSprite != null)
-                            bg.DrawImage(m_robotSprite.image, CorrectForImageSize(m_robotSprite.position.location, m_robotSprite.image));
-                        bg.DrawImage(m_destImage, CorrectForImageSize(m_destLoc, m_destImage));
+                        //if (m_robotSprite != null)
+                        //    bg.DrawImage(m_robotSprite.image, CorrectForImageSize(m_robotSprite.position.location, m_robotSprite.image));
+                        //bg.DrawImage(m_destImage, CorrectForImageSize(m_destLoc, m_destImage));
+                        bg.DrawImage(DrawMoves(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         break;
                 }
                 bg.FillRectangle(overlay, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
@@ -242,28 +249,7 @@ namespace See3PO
             catch (InvalidOperationException e) { PostMessage(e.ToString()); };
         }
 
-        private Image DrawMoves()
-        {
-            Point currentPoint = new Point(m_robotSprite.position.location.X, m_robotSprite.position.location.Y);
-            Point oldPoint;
-            Bitmap spot = new Bitmap(6, 6);
-            Graphics s = Graphics.FromImage(spot);
-            s.DrawEllipse(new Pen(Color.Blue), new Rectangle(new Point(0, 0), new Size(3, 3)));
-            RobotSprite trailSprite = new RobotSprite(spot, m_pixelsperfoot,  m_robotSprite.position);
 
-            Bitmap trail = new Bitmap(floorPlanPanel.Width, floorPlanPanel.Height);
-            s = Graphics.FromImage(trail);
-
-            foreach (MoveCommand cmd in m_status.path)
-            {
-                oldPoint = currentPoint;
-                int[] moves = TranslateMove(cmd);
-                trailSprite.move(moves[0], moves[1]);
-                currentPoint = new Point(trailSprite.position.location.X, trailSprite.position.location.Y);
-                s.DrawLine(new Pen(Color.Blue, 2), oldPoint, currentPoint);
-            }
-            return trail;
-        }
 
         private void DrawScale(object State) 
         {
@@ -273,7 +259,6 @@ namespace See3PO
                 return;
             }
         }
-
 
         private void Drive(object state)
         {
@@ -295,45 +280,44 @@ namespace See3PO
         {
             switch (e.Button)
             {
-                case MouseButtons.Left:
-                    switch (m_fpState)
-                    {
-                        case fpState.IMAGE:
-                            m_pixelsperfootStart = e.Location;
-                            m_fpState = fpState.DRAWSCALE;
-                            m_drawScaleTimer = new Timer(m_callback, null, 0, 100);
-                            break;
-                        case fpState.DRAWSCALE:
-                            m_drawScaleTimer.Dispose();
-                            m_pixelsperfootEnd = e.Location;
-                            double scaleLength = Length(m_pixelsperfootStart.X - m_pixelsperfootEnd.X, m_pixelsperfootStart.Y - m_pixelsperfootEnd.Y);
-                            setScale(scaleLength);
-                            break;
-                        case fpState.ROBOT:
-                            PlaceRobot(sender, e);
-                            break;
-                        case fpState.FLOORPLAN:
-                        case fpState.DESTINATION:
-                            SetDestination(sender, e);
-                            break;
-                    }
+            case MouseButtons.Left:
+                switch (m_fpState)
+                {
+                case fpState.IMAGE:
+                    m_pixelsperfootStart = e.Location;
+                    m_fpState = fpState.DRAWSCALE;
+                    m_drawScaleTimer = new Timer(m_callback, null, 0, 100);
                     break;
-                case MouseButtons.Right:
-                    floorPlanContext.Show(System.Windows.Forms.Control.MousePosition);
+                case fpState.DRAWSCALE:
+                    m_pixelsperfootEnd = e.Location;
+                    double scaleLength = Length(m_pixelsperfootStart.X - m_pixelsperfootEnd.X, m_pixelsperfootStart.Y - m_pixelsperfootEnd.Y);
+                    SetScale(scaleLength);
                     break;
-                case MouseButtons.Middle:
+                case fpState.ROBOT:
+                    PlaceRobot(sender, e);
                     break;
-                default:
+                case fpState.FLOORPLAN:
+                case fpState.DESTINATION:
+                    SetDestination(sender, e);
                     break;
+                }
+                break;
+            case MouseButtons.Right:
+                floorPlanContext.Show(System.Windows.Forms.Control.MousePosition);
+                break;
+            case MouseButtons.Middle:
+                break;
+            default:
+                break;
             }
         }
 
         private void Click_SetScale(object sender, EventArgs e)
         {
-            setScale(10.0);
+            SetScale(10.0);
         }
 
-        private void setScale(double scaleLength)
+        private void SetScale(double scaleLength)
         {
             m_fpState = fpState.IMAGE;
             using (ScaleForm sf = new ScaleForm(scaleLength, scaleLength * m_pixelsperfoot, this))
@@ -341,9 +325,16 @@ namespace See3PO
                 sf.ShowDialog();
                 m_pixelsperfoot = sf.m_scale;
                 m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
+                int x = m_status.floorPlan.getXTileNum();
+                m_ratioX = (double)(m_status.floorPlan.getXTileNum()) / (double)(floorPlanPanel.Width);
+                m_ratioY = (double)m_status.floorPlan.getYTileNum() / (double)floorPlanPanel.Height;
                 m_fpState = fpState.FLOORPLAN;
             }
-            m_robotSprite.pixelsPerFoot = (int)m_pixelsperfoot;
+            if (m_drawScaleTimer != null)
+            {
+                m_drawScaleTimer.Dispose();
+            }
+            
             m_fpState = fpState.FLOORPLAN;
             DrawFloor();
         }
@@ -357,9 +348,9 @@ namespace See3PO
                 m_floorPlanImage = new Bitmap(Image.FromFile(importImageDialog.FileName));
             }
             catch (Exception) { }
-            m_status = new Status(m_floorPlanImage, 3);
-            m_robotSprite = new RobotSprite(m_robotImage, m_pixelsperfoot, m_robotLoc);
+            //m_status = new Status(m_floorPlanImage, 3);
             m_fpState = fpState.IMAGE;
+            SetScale(10);
             DrawFloor();
         }
 		
@@ -381,16 +372,20 @@ namespace See3PO
         private void SetDestination(object sender, MouseEventArgs e)
         {
             m_destLoc = new Point(e.X, e.Y);
-            //m_status.floorPlan.setDestination(m_destLoc);
-            
+            m_status.floorPlan.setTargetTile((int)(e.X * m_ratioX), (int)(e.Y * m_ratioY));
+            m_status.position = getPosition();
+            PathFinder path = new QGPathFinder(m_status.floorPlan);
+            m_status.path = testPath();  //path.getPath();
             m_fpState = fpState.DESTINATION;
             DrawFloor();
         }
 
         private void PlaceRobot(object sender, MouseEventArgs e)
         {
-            m_robotSprite.position = new Position(new Point(e.X, e.Y), 0);
-            //m_status.floorPlan.setRobotPosition(m_robotSprite.position);
+            m_robotSprite = new RobotSprite(m_robotImage, (int)m_pixelsperfoot, new Position(new Point(e.X, e.Y), 0));
+
+            m_status.floorPlan.setStartTile(PanelToFloorPlan(e.Location).X, PanelToFloorPlan(e.Location).Y);
+            m_status.position = new Position(PanelToFloorPlan(e.Location), 0);   //fix the facing
             m_fpState = fpState.FLOORPLAN;
             DrawFloor();
         }
@@ -434,6 +429,80 @@ namespace See3PO
             DrawFloor();
         }
 
+        private Image DrawMoves()
+        {
+            Bitmap trail = new Bitmap(floorPlanPanel.Width, floorPlanPanel.Height);
+            Graphics s = Graphics.FromImage(trail);
+            Point lineStart = new Point(FloorPlanToPanel(m_status.position.location).X, FloorPlanToPanel(m_status.position.location).Y);
+            Point lineEnd = new Point(lineStart.X, lineStart.Y);
+
+            Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South
+            if (m_status.position.facing > 315 || m_status.position.facing <= 45)
+                currentDir[0] = new Point(1, 0);
+            else if (m_status.position.facing > 45 && m_status.position.facing <= 135)
+                currentDir[0] = new Point(0, -1);
+            else if (m_status.position.facing > 135 && m_status.position.facing <= 225)
+                currentDir[0] = new Point(-1, 0);
+            else if (m_status.position.facing > 225 && m_status.position.facing <= 315)
+                currentDir[0] = new Point(0, 1);
+
+            // Rotation Matrices
+            Matrix CW = new Matrix(0, 1, -1, 0, 0, 0);
+            Matrix CCW = new Matrix(0, -1, 1, 0, 0, 0);
+
+            foreach (MoveCommand cmd in m_status.path)
+            {
+                switch (cmd.direction)
+                {
+                case MoveCommand.Direction.Forward:
+                    Point move = new Point((int)((double)(currentDir[0].X * cmd.distance) / m_ratioX), (int)((double)(currentDir[0].Y * cmd.distance) / m_ratioY));
+                    lineEnd.Offset(move);
+                    break;
+                case MoveCommand.Direction.CCW:
+                    s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
+                    lineStart = new Point(lineEnd.X, lineEnd.Y);
+                    CCW.TransformPoints(currentDir);
+                    break;
+                case MoveCommand.Direction.CW:
+                    s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
+                    lineStart = new Point(lineEnd.X, lineEnd.Y);
+                    CW.TransformPoints(currentDir);
+                    break;
+                }  
+            }
+            return trail;
+        }
+
+        private Position getPosition() 
+        {
+            if (m_status.position == null)
+                m_status.position = new Position(m_center, 0); // eventually, call Tyler's program
+
+            return m_status.position;
+        }
+
+        private List<MoveCommand> testPath() {
+            List<MoveCommand> path = new List<MoveCommand>();
+            path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.CCW, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.CCW, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.CW, 10));
+            return path;
+        }
+
+
+        private Point PanelToFloorPlan(Point panelPoint)
+        {
+            return new Point((int)(panelPoint.X * m_ratioX), (int)(panelPoint.Y * m_ratioY));
+        }
+
+        private Point FloorPlanToPanel(Point fpPoint) 
+        {
+            return new Point((int)(fpPoint.X / m_ratioX), (int)(fpPoint.Y / m_ratioY));
+        }
 
 	}
 }

@@ -49,6 +49,10 @@ namespace See3PO
         }
 
         public Color toPixel() {
+            if (m_start)
+                return Color.Red;
+            if (m_target)
+                return Color.Blue;
             if (m_walkable)
                 return Color.White;
             else 

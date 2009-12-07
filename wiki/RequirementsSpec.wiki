@@ -123,16 +123,16 @@ _This section needs to be populated each time we use new abbreviations while wor
 
 
 === 3.2.2 Floor Plan Processing === 
- Floor plan processing consists of two components:
+Floor plan processing consists of two components:
   * Floor Plan
   * Floor Tile
  
- Floor Plan takes an image of an actual floor plan, (currently supporting both .bmp and .jpg format) and it converts the same to an array of floor tile objects. This creation of floor tile array works in the following way:
+Floor Plan takes an image of an actual floor plan, (currently supporting both .bmp and .jpg format) and it converts the same to an array of floor tile objects. This creation of floor tile array works in the following way:
 
   * The dimension of each tile is set as the scale selected in GUI.
   * Each tile that has RGB component darker than that of the color gray will be treated as un-walkable, else it will be walkable.
 
-Floor plan has another functionality that connects each tile in the it with the four neighboring walkable tiles of it(top, bottom, right and left). If any of the neighboring tile is un-walkable, it is not added to this list and the program continues with the next neighbor of the original tile if any or else with the next tile in the array of floor tiles. This walkable neighboring tiles information is kept in the floor tile part. Other than this floor plan also works with GUI in setting the start and target tile in it.
+Floor plan has another functionality that connects each tile in the it, with the four neighboring walkable tiles of the same(top, bottom, right and left). If any of the neighboring tile is un-walkable, it is not added to this list and the program continues with the next neighbor of the original tile, if any, or else with the next tile in the array of floor tiles. This walkable neighboring tiles information is kept in the floor tile object itself. Other than this floor plan also works with GUI in setting the start and target tile in it.
 
 
-Floor tile as the name suggests corresponds to the tile object for a floor plan, it has a location in X-Y co-ordinate system for the floor plan. It could be either walkable or un-walkable, as mentioned earlier. Also it keeps a list of neighbors of itself as mentioned before.
+Floor tile, as the name suggests, corresponds to the tile object for a floor plan. It has a location in X-Y co-ordinate system for the floor plan, with (0,0) being the location for the first tile of a floor plan. A tile could be either walkable or un-walkable, as mentioned earlier. Also it keeps a list of neighbors of itself as mentioned before.

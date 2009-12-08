@@ -166,8 +166,8 @@ For more details please look into [http://code.google.com/p/see3po/wiki/FloorPla
 
 === 3.2.3 Path Finding === 
 
-* Requirement: Develop a simple path planning algorithm to generate a near optimal path between a two locations.
-* Diliverable: Ability to automatically generate a near-optimal path for the robot to follow.
+  * Requirement: Develop a simple path planning algorithm to generate a near optimal path between two locations.
+  * Diliverable: Ability to automatically generate a near-optimal path for the robot to follow. To adapt other path finding algorithms for further, we define an interface PathFinder. The implementation of the interface is in a concrete class QGPathFinder, which serves as an *adapter* (see Adapter Design Pattern). The class GQPathFinder transfers FloorPlan and FloorTile into a graph structure and returns a near optimal path between the starting and target point as List<FloorTile>.  
 
 
 For more details please look into [http://code.google.com/p/see3po/wiki/PathFinding Path Finding Document].

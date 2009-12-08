@@ -42,6 +42,7 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
 || 12/06/2009|| Added User Interface Requirements|| 0.4 || [Frank]||
 || 12/07/2009|| Added section 3.2.2 Floor Plan Processing || 0.5 || [Debarati]||
 || 12/07/2009|| Added Sections 2.1, 2.2. 2.4 (some skipped)|| 0.6 || [Frank]||
+|| 12/08/2009|| Added Sections 3.2.3 Path Finding || 0.7 || [Nick]||
 
 ----
 <br/><br/>

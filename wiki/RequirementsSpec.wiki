@@ -10,12 +10,12 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1.3_Scope Scope] <br/>
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1.4_Reference Reference] <br/>
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1.5_Definition_and_Abbreviation Definition and Abbreviation] <br/>
-  # OVERALL DESCRIPTION<br>
-   # Product Perspective<br>
-   # Product Functions<br>
-   # User Characteristics<br>
-   # General Constraints<br>
-   # Assumptions and Dependencies<br>
+  # [http://code.google.com/p/see3po/wiki/RequirementsSpec#2._Overall_Description OVERALL DESCRIPTION]<br>
+   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#2.1_Product_Perspective Product Perspective]<br>
+   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#2.2_Product_Functions Product Functions]<br>
+   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#2.3_User_Characteristics User Characteristics]<br>
+   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#2.3_General_Constraints General Constraints]<br>
+   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#2.4_Assumptions_and_Dependencies Assumptions and Dependencies]<br>
   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3._Specific_Requirements SPECIFIC REQUIREMENTS]<br/>
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1_External_Interface_Requirements External Interface Requirements] <br/>
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.1.1_User_Interfaces User Interface] <br/>
@@ -69,6 +69,29 @@ _This section needs to be populated each time we use new abbreviations while wor
 || MERL|| Mitsubishi Electric Research Laboratories||
 || Host PC || A Desktop PC used to interact wirelessly to the robot ||
 || See3PO || The Pathfinding Robot ||
+
+<br/><br/>
+= 2. Overall Description =
+<br/>
+== 2.1 Product Perspective == 
+See3PO will autonomously navigate its environment. Using only visual tools and a floorplan, <br/>
+the robot will walk to any reachable locations as directed by the user.
+<br/>
+== 2.2 Product Functions ==
+The User will be able to direct the robot to a desired location within its environment.<br/>
+The robot will use the WhereAmI software to keep up-to-date information about its current position.<br/>
+Pathfinder will find the optimal route to the target location from the current position.<br/>
+The Host PC will direct the robot, step by step, to the target, testing accuracy along the way 
+<br/>
+== 2.3 User Characteristics ==
+ 
+<br/>
+== 2.4 General Constraints == 
+ * Wireless Communication may limit the range and accuracy of See3PO's movement. 
+ * Current plans include known, indoor locatios with accessible floorplans. 
+ * Some preparation may be necessary for WhereAmI to accurately work in a given environment. 
+<br/>
+== 2.5 Assumptions and Dependencies == 
 
 <br/><br/>
 = 3. Specific Requirements =

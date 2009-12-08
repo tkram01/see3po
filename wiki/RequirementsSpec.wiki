@@ -171,7 +171,7 @@ For more details please look into [http://code.google.com/p/see3po/wiki/FloorPla
   * Design:
     * *Strategy Disign Patterh*: we define an interface to adapt other path finding algorithms for further usages
     * *Adapter Design Pattern*: The implementation of the interface is in a concrete class QGPathFinder, which serves as an *adapter*. The class GQPathFinder transfers FloorPlan and FloorTile into a graph structure and returns a near optimal path between the starting and target point as a list of FloorTile.
-    * We used a C# graph library QuickGraph since we have established works using C#.  
+    * We used a C# graph library *QuickGraph* since we have established works using C#.  
 
 
 For more details please look into [http://code.google.com/p/see3po/wiki/PathFinding Path Finding Document].

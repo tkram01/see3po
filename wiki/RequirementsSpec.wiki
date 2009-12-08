@@ -2,7 +2,7 @@
 #labels Featured,Phase-Requirements
 using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirements_Specification wikipedia]
 
-==Software Requirements Specifications (SRS) - Version 0.5==
+==Software Requirements Specifications (SRS) - Version 0.6==
 
   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1._Introduction INTRODUCTION]<br/>
    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#1.1_Product_Overview Product Overview] <br/>

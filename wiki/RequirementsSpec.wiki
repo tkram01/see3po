@@ -166,4 +166,8 @@ For more details please look into [http://code.google.com/p/see3po/wiki/FloorPla
 
 === 3.2.3 Path Finding === 
 
+* Requirement: Develop a simple path planning algorithm to generate a near optimal path between a two locations.
+* Diliverable: Ability to automatically generate a near-optimal path for the robot to follow.
+
+
 For more details please look into [http://code.google.com/p/see3po/wiki/PathFinding Path Finding Document].

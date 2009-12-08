@@ -228,14 +228,14 @@ namespace See3PO
                         instructions = "Click the floor plan to set the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         //if (m_robotSprite != null)
-                        //    bg.DrawImage(m_robotSprite.image, CorrectForImageSize(m_robotSprite.position.location, m_robotSprite.image));
+                        //    bg.DrawImage(m_robotSprite.image, CenterPointOnImage(m_robotSprite.position.location, m_robotSprite.image));
                         break;
                     case fpState.DESTINATION:
                         instructions = "Click the floor plan to change the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         //if (m_robotSprite != null)
-                        //    bg.DrawImage(m_robotSprite.image, CorrectForImageSize(m_robotSprite.position.location, m_robotSprite.image));
-                        //bg.DrawImage(m_destImage, CorrectForImageSize(m_destLoc, m_destImage));
+                        //    bg.DrawImage(m_robotSprite.image, CenterPointOnImage(m_robotSprite.position.location, m_robotSprite.image));
+                        //bg.DrawImage(m_destImage, CenterPointOnImage(m_destLoc, m_destImage));
                         bg.DrawImage(DrawMoves(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         break;
                 }
@@ -320,7 +320,7 @@ namespace See3PO
         private void SetScale(double scaleLength)
         {
             m_fpState = fpState.IMAGE;
-            using (ScaleForm sf = new ScaleForm(scaleLength, scaleLength * m_pixelsperfoot, this))
+            using (ScaleForm sf = new ScaleForm(scaleLength, scaleLength / m_pixelsperfoot, this))
             {
                 sf.ShowDialog();
                 m_pixelsperfoot = sf.m_scale;
@@ -412,7 +412,7 @@ namespace See3PO
             return speeds;
         }
 
-        private Point CorrectForImageSize(Point original, Image image) 
+        private Point CenterPointOnImage(Point original, Image image) 
         {
             return new Point(original.X - (image.Width / 4), original.Y - (image.Height / 4));
         }
@@ -476,7 +476,8 @@ namespace See3PO
         private Position getPosition() 
         {
             if (m_status.position == null)
-                m_status.position = new Position(m_center, 0); // eventually, call Tyler's program
+            m_status.position = new Position(PanelToFloorPlan(m_center), 0); // eventually, call Tyler's program
+            m_status.floorPlan.setStartTile(m_status.position.location.X, m_status.position.location.Y);
 
             return m_status.position;
         }

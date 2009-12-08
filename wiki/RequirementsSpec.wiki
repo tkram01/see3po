@@ -162,4 +162,4 @@ Floor plan has another functionality that connects each tile in the it, with the
 
 Floor tile, as the name suggests, corresponds to the tile object for a floor plan. It has a location in X-Y co-ordinate system for the floor plan, with (0,0) being the location for the first tile of a floor plan. A tile could be either walkable or un-walkable, as mentioned earlier. Also it keeps a list of neighbors of itself as mentioned before.
 
-For more details please look into [http://code.google.com/p/see3po/wiki/FloorPlanProcessing Floor Plan Document]
+For more details please look into [http://code.google.com/p/see3po/wiki/FloorPlanProcessing Floor Plan Document].

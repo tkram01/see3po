@@ -22,3 +22,17 @@ D:\Documents\School\CS682\GUI\TestSee3PO\obj\Debug\ResolveAssemblyReference.cach
 D:\Documents\School\CS682\GUI\TestSee3PO\obj\Debug\TestSee3PO.dll
 D:\Documents\School\CS682\GUI\TestSee3PO\obj\Debug\TestSee3PO.pdb
 D:\Documents\School\CS682\GUI\TestSee3PO\bin\Debug\Nexus3Input.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\TestSee3PO.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\TestSee3PO.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\Nexus3Input.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\QuickGraph.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\RobotCommands.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\RobotHost.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\See3PO.exe
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\See3PO.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\RobotHost.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\Nexus3Input.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\RobotCommands.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\obj\Debug\ResolveAssemblyReference.cache
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\obj\Debug\TestSee3PO.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\obj\Debug\TestSee3PO.pdb

@@ -3,21 +3,21 @@
   <Class Name="See3PO.FloorPlan">
     <Position X="0.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAjAAAAgAAEhAAAAAIAAAAAAABKAAAAAAAEAAAI=</HashCode>
+      <HashCode>AAAAAAjAAAAgAAEhQgAgAIAAAAAAAJKEAAAAAAEAAAY=</HashCode>
       <FileName>FloorPlan.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.FloorTile">
     <Position X="4" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAkAEAIAAAAAgAAAAEAAAAAAAJAAAA=</HashCode>
+      <HashCode>AAAAAQCAAAAAAACkAEAIACAAAgAAAQEAAAICgAJAAAI=</HashCode>
       <FileName>FloorTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.MainForm" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="2.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AYoEBACFAyABCsCFAFCRgaHSUIAA5QAJDAAAsAHIQhk=</HashCode>
+      <HashCode>gaoEZAiGByABCMiFAFSZgaLSUIAA5QIJCQAAtoFAQhk=</HashCode>
       <FileName>MainForm.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -56,19 +56,19 @@
   <Class Name="See3PO.RobotSprite">
     <Position X="6.25" Y="4" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAACAAAAIIAAAEAQBAAAAAIAEAABAAAA=</HashCode>
+      <HashCode>gAAoAhgAACAAAACgAAAAIAAAEAABAAAAAAAEAAAAAAA=</HashCode>
       <FileName>RobotSprite.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.Status">
     <Position X="3" Y="4" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAEBAAAAACQAgAAAAEACIAAAAEAQAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAEBAAAAACQAAAAAAEACIAAAAEAQAAAAEAAAAAAAAAA=</HashCode>
       <FileName>Status.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="See3PO.Voodoo">
-    <Position X="0.5" Y="4" Width="2" />
+    <Position X="4.25" Y="8.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Voodoo.cs</FileName>
@@ -89,7 +89,7 @@
   <Class Name="See3PO.QGPathFinder">
     <Position X="7" Y="7.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAACAAAAAAAAAAAEAQAAAIACQAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>QGPathFinder.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

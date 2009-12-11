@@ -24,8 +24,26 @@ namespace See3PO
             graph = new AdjacencyGraph<string, Edge<string>>(true);
             edgeCost = new Dictionary<Edge<string>, double>(graph.EdgeCount);
             this.fp = fp;
-            startPoint = "";
-            targetPoint = "";
+            if (this.fp.getStartTile() != null)
+            {
+                
+                startPoint = this.fp.getStartTile().Position.X + "_" + this.fp.getStartTile().Position.Y;
+                Console.WriteLine(startPoint);
+            }
+            else
+            {
+                startPoint = "4_4";
+                
+            }
+            if (this.fp.getTargetTile() != null)
+            {
+                targetPoint = this.fp.getTargetTile().Position.X + "_" + this.fp.getTargetTile().Position.Y;
+            }
+            else
+            {
+                targetPoint = "4_6";
+            }
+            
         }
 
         public List<FloorTile> getPath()
@@ -163,8 +181,7 @@ namespace See3PO
             //edgeCost.Add(i_j, 7);
             //edgeCost.Add(j_f, 8);
 
-            String startPoint = "2_2";
-            String targetPoint = "5_8";
+
 
             //startPoint = txtStartPoint.Text;
             //targetPoint = txtTargetPoint.Text;
@@ -200,7 +217,7 @@ namespace See3PO
                 {
                     if (outEdges[i].Length > 0)
                     {
-                        //Console.WriteLine(outEdges[i]);
+                        Console.WriteLine(outEdges[i]);
                         string[] outPoint = Regex.Split(outEdges[i], "->");
                         //start points
                         retval.Add(getTileByIndex(fp, outPoint[0]));

@@ -16,6 +16,9 @@ namespace See3PO
 		{
             //Image myimage = new Bitmap("testImage.jpg"); // TODO: Initialize to an appropriate value
             //FloorPlan fp = new FloorPlan(myimage); ; // TODO: Initialize to an appropriate value
+            //fp.setStartTile(3, 3);
+            //fp.setTargetTile(5, 5);
+
             //QGPathFinder target = new QGPathFinder(fp); // TODO: Initialize to an appropriate value
 
             //List<FloorTile> expected = null; // TODO: Initialize to an appropriate value

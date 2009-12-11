@@ -199,5 +199,14 @@ namespace See3PO
             return false;
         }
 
+        public FloorTile getStartTile()
+        {
+            return m_start_tile;
+        }
+
+        public FloorTile getTargetTile()
+        {
+            return m_target_tile;
+        }
     }
 }

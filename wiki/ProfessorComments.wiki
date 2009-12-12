@@ -6,6 +6,8 @@
 
 I am impressed by the progress on the requirements specification. I hope you find that work worth doing - that is, I hope it results in a better project running more smoothly, not just a delay in the real work.
 
+----
+
 == December 2 ==
 
 Your schedule doesn't seem to show a plan for what you're planning to deliver as a requirements specification document on the 15th of this month. I do see the GUI release scheduled. That may be sufficient for Tyler, but I need more.

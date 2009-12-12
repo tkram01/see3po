@@ -2,6 +2,13 @@
 #labels Featured,Phase-Support
 = Comments and questions from the Professor =
 
+
+== December 12 ==
+
+It's hard for me to believe that in all the development and testing you've done you've found only seven bugs worth entering as Issues.
+
+----
+
 == December 7 ==
 
 I am impressed by the progress on the requirements specification. I hope you find that work worth doing - that is, I hope it results in a better project running more smoothly, not just a delay in the real work.

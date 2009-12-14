@@ -39,10 +39,10 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
 = 1. Introduction =
 <br/>
 == 1.1 Product Overview ==
-See3PO is a path finding robot, which can find the shortest path to reach its destination from its current location and reach there with minimum human intervention.
+ See3PO is a path finding robot, which can find the shortest path to reach its destination from its current location and reach there with minimum human intervention.
 <br/>
 == 1.2 Purpose ==
-This is a research project. The main purpose of this project is to make a robot find the shortest path, between its current location and destination, in a given floor plan. The robot should also be capable of updating its current route at a regular interval, in order to take care of any possible hindrance in it's path, that could have come to existence since the last time it calculated its route. And finally it should then reach the destination.
+ This is a research project. The main purpose of this project is to make a robot find the shortest path, between its current location and destination, in a given floor plan. The robot should also be capable of updating its current route at a regular interval, in order to take care of any possible hindrance in it's path, that could have come to existence since the last time it calculated its route. And finally it should then reach the destination.
 <br/>
 == 1.3 Scope  ==
  * Assumptions: Algorithm to be provided by MERL is delivered on time.

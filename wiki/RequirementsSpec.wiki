@@ -190,3 +190,4 @@ For more details please look into [http://code.google.com/p/see3po/wiki/PathFind
 || 12/07/2009|| Added section 3.2.2 Floor Plan Processing || 0.5 || [Debarati]||
 || 12/07/2009|| Added Sections 2.1, 2.2. 2.4 (some skipped)|| 0.6 || [Frank]||
 || 12/08/2009|| Added Sections 3.2.3 Path Finding || 0.7 || [Nick]||
+|| 12/14/2009|| Added Section 3.3 Software System Attributes || 0.8 || [Frank]||

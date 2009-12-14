@@ -77,7 +77,7 @@ Pathfinder will find the optimal route to the target location from the current p
 The Host PC will direct the robot, step by step, to the target, testing accuracy along the way 
 <br/>
 == 2.3 User Characteristics ==
- 
+ The user should require no training.
 <br/>
 == 2.4 General Constraints == 
  * Wireless Communication may limit the range and accuracy of See3PO's movement. 
@@ -85,7 +85,10 @@ The Host PC will direct the robot, step by step, to the target, testing accuracy
  * Some preparation may be necessary for WhereAmI to accurately work in a given environment. 
 <br/>
 == 2.5 Assumptions and Dependencies == 
-
+It is assumed that the entire area to be covered by the robot will have the following properties: 
+  * Consistent wireless reception
+  * Smooth, dry, level flooring
+  * A relatively consistent floor plan
 <br/><br/>
 = 3. Specific Requirements =
 <br/>

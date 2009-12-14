@@ -67,14 +67,14 @@ _This section needs to be populated each time we use new abbreviations while wor
 = 2. Overall Description =
 <br/>
 == 2.1 Product Perspective == 
-See3PO will autonomously navigate its environment. Using only visual tools and a floorplan, <br/>
-the robot will walk to any reachable locations as directed by the user.
+ See3PO will autonomously navigate its environment. Using only visual tools and a floorplan, <br/>
+ the robot will walk to any reachable locations as directed by the user.
 <br/>
 == 2.2 Product Functions ==
-The User will be able to direct the robot to a desired location within its environment.<br/>
-The robot will use the WhereAmI software to keep up-to-date information about its current position.<br/>
-Pathfinder will find the optimal route to the target location from the current position.<br/>
-The Host PC will direct the robot, step by step, to the target, testing accuracy along the way 
+ The User will be able to direct the robot to a desired location within its environment.<br/>
+ The robot will use the WhereAmI software to keep up-to-date information about its current position.<br/>
+ Pathfinder will find the optimal route to the target location from the current position.<br/>
+ The Host PC will direct the robot, step by step, to the target, testing accuracy along the way 
 <br/>
 == 2.3 User Characteristics ==
  The user should require no training.
@@ -86,9 +86,9 @@ The Host PC will direct the robot, step by step, to the target, testing accuracy
 <br/>
 == 2.5 Assumptions and Dependencies == 
 It is assumed that the entire area to be covered by the robot will have the following properties: 
-  * Consistent wireless reception
-  * Smooth, dry, level flooring
-  * A relatively consistent floor plan
+ * Consistent wireless reception
+ * Smooth, dry, level flooring
+ * A relatively consistent floor plan
 <br/><br/>
 = 3. Specific Requirements =
 <br/>
@@ -142,21 +142,21 @@ It is assumed that the entire area to be covered by the robot will have the foll
 
 
 === 3.2.2 Floor Plan Processing === 
-Floor plan processing consists of two components:
+ Floor plan processing consists of two components:
   * Floor Plan
   * Floor Tile
  
-Floor Plan takes an image of an actual floor plan, (currently supporting both .bmp and .jpg format) and it converts the same to an array of floor tile objects. This creation of floor tile array works in the following way:
+ Floor Plan takes an image of an actual floor plan, (currently supporting both .bmp and .jpg format) and it converts the same to an array of floor tile objects. This creation of floor tile array works in the following way:
 
   * The dimension of each tile is set as the scale selected in GUI.
   * Each tile that has RGB component darker than that of the color gray will be treated as un-walkable, else it will be walkable.
 
-Floor plan has another functionality that connects each tile in the it, with the four neighboring walkable tiles of the same(top, bottom, right and left). If any of the neighboring tile is un-walkable, it is not added to this list and the program continues with the next neighbor of the original tile, if any, or else with the next tile in the array of floor tiles. This walkable neighboring tiles information is kept in the floor tile object itself. Other than this floor plan also works with GUI in setting the start and target tile in it.
+ Floor plan has another functionality that connects each tile in the it, with the four neighboring walkable tiles of the same(top, bottom, right and left). If any of the neighboring tile is un-walkable, it is not added to this list and the program continues with the next neighbor of the original tile, if any, or else with the next tile in the array of floor tiles. This walkable neighboring tiles information is kept in the floor tile object itself. Other than this floor plan also works with GUI in setting the start and target tile in it.
 
 
-Floor tile, as the name suggests, corresponds to the tile object for a floor plan. It has a location in X-Y co-ordinate system for the floor plan, with (0,0) being the location for the first tile of a floor plan. A tile could be either walkable or un-walkable, as mentioned earlier. Also it keeps a list of neighbors of itself as mentioned before.
+ Floor tile, as the name suggests, corresponds to the tile object for a floor plan. It has a location in X-Y co-ordinate system for the floor plan, with (0,0) being the location for the first tile of a floor plan. A tile could be either walkable or un-walkable, as mentioned earlier. Also it keeps a list of neighbors of itself as mentioned before.
 
-For more details please look into [http://code.google.com/p/see3po/wiki/FloorPlanProcessing Floor Plan Document].
+ For more details please look into [http://code.google.com/p/see3po/wiki/FloorPlanProcessing Floor Plan Document].
 
 === 3.2.3 Path Finding === 
 

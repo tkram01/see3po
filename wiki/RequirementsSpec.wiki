@@ -26,24 +26,14 @@ using guidelines described on [http://en.wikipedia.org/wiki/Software_Requirement
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2.1_Graphical_User_Interface GUI] <br/>
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2.2_Floor_Plan_Processing Floor Plan Processing]<br/>
     # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.2.3_Path_Finding Path Finding]<br/>
-   # Software System Attributes [DBD]<br>
-    # Reliability<br>
-    # Availability<br>
-    # Security<br>
-    # Maintainability<br>
-    # Portability<br>
-    # Performance<br>
-  # ADDITIONAL MATERIALS <br>
-  # Revision History
-|| *Revision Date* || *Description Date* || *Document Version* || *Author* ||
-|| 12/02/2009|| Created outline for draft verion of SRS || 0.1|| [Frank]||
-|| 12/04/2009|| Added Introduction|| 0.2|| [Debarati]||
-|| 12/05/2009|| Added Added Hardware/Communications Requirements|| 0.3 || [Jacky]||
-|| 12/06/2009|| Added User Interface Requirements|| 0.4 || [Frank]||
-|| 12/07/2009|| Added section 3.2.2 Floor Plan Processing || 0.5 || [Debarati]||
-|| 12/07/2009|| Added Sections 2.1, 2.2. 2.4 (some skipped)|| 0.6 || [Frank]||
-|| 12/08/2009|| Added Sections 3.2.3 Path Finding || 0.7 || [Nick]||
-
+   # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.3_Software_System_Attributes Sofware Product Features] <br/>
+    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.3.1_Reliability Reliability]<br>
+    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.3.2_Availability Availability]<br>
+    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.3.3_Security Security]<br>
+    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.3.4_Maintainability Maintainability]<br>
+    # [http://code.google.com/p/see3po/wiki/RequirementsSpec#3.3.5_Performance Performance]<br>
+  # [http://code.google.com/p/see3po/wiki/RequirementsSpec#4_Revision_History Revision History] <br/>
+  
 ----
 <br/><br/>
 = 1. Introduction =
@@ -176,3 +166,27 @@ For more details please look into [http://code.google.com/p/see3po/wiki/FloorPla
 
 
 For more details please look into [http://code.google.com/p/see3po/wiki/PathFinding Path Finding Document].
+
+== 3.3 Software System Attributes ==
+=== 3.3.1 Reliability ===
+  * It is extremely that the robot act correctly in the case of a lost connection. To accomplis this, the robot will recieve discrete commands. If the robot has not recieved a next command before completion of its current move, it will stop. 
+  * To ensure that moves are accurate, between each move, the robot will acquire its current position and compare this to an expected value. If the values don't match, the path will be recalculated. 
+  * Because the robot will deal with discrete directions (for, as of this writing), a readjustment algorithm will be used to bring the robot to true, in the case of a misalignment. 
+=== 3.3.2 Availability ===
+  This software will be made free for download from [http://code.google.com/p/see3po/downloads/list the wiki download page]
+=== 3.3.3 Security ===
+  Because the robot is searching for a specific host by IP, it would be difficult to hijack the robot with another PC. 
+=== 3.3.4 Maintainability ===
+  All source code except for WhereAmI will be publicly avaiable at [http://code.google.com/p/see3po/ the See3PO Google Code site]
+=== 3.3.5 Performance ===
+  Performance will be weighed against reliability. By reducing the calls to WhereAmI and the Pathfinder, performance is expected to increase, while reliability decreases. We intend to find a balance of the two. 
+
+= 4 Revision History =  
+|| *Revision Date* || *Description Date* || *Document Version* || *Author* ||
+|| 12/02/2009|| Created outline for draft verion of SRS || 0.1|| [Frank]||
+|| 12/04/2009|| Added Introduction|| 0.2|| [Debarati]||
+|| 12/05/2009|| Added Added Hardware/Communications Requirements|| 0.3 || [Jacky]||
+|| 12/06/2009|| Added User Interface Requirements|| 0.4 || [Frank]||
+|| 12/07/2009|| Added section 3.2.2 Floor Plan Processing || 0.5 || [Debarati]||
+|| 12/07/2009|| Added Sections 2.1, 2.2. 2.4 (some skipped)|| 0.6 || [Frank]||
+|| 12/08/2009|| Added Sections 3.2.3 Path Finding || 0.7 || [Nick]||

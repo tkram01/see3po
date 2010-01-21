@@ -17,5 +17,17 @@ namespace See3PO
             this.direction = direction;
             this.distance = distance;
         }
+
+        public String toString() 
+        {
+            //String dir;
+            //switch (direction)
+            //{
+            //    case Forward: 
+            //}
+
+            return direction + " " + distance;
+
+        }
     }
 }

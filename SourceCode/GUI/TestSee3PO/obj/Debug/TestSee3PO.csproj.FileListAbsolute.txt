@@ -36,3 +36,15 @@ F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\bin\Debug\RobotCommands.
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\obj\Debug\ResolveAssemblyReference.cache
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\obj\Debug\TestSee3PO.dll
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\GUI\TestSee3PO\obj\Debug\TestSee3PO.pdb
+L:\GUI\TestSee3PO\bin\Debug\TestSee3PO.dll
+L:\GUI\TestSee3PO\bin\Debug\TestSee3PO.pdb
+L:\GUI\TestSee3PO\bin\Debug\Nexus3Input.dll
+L:\GUI\TestSee3PO\bin\Debug\QuickGraph.dll
+L:\GUI\TestSee3PO\bin\Debug\See3PO.exe
+L:\GUI\TestSee3PO\bin\Debug\See3PO.pdb
+L:\GUI\TestSee3PO\bin\Debug\RobotHost.pdb
+L:\GUI\TestSee3PO\bin\Debug\Nexus3Input.pdb
+L:\GUI\TestSee3PO\bin\Debug\RobotCommands.pdb
+L:\GUI\TestSee3PO\obj\Debug\ResolveAssemblyReference.cache
+L:\GUI\TestSee3PO\obj\Debug\TestSee3PO.dll
+L:\GUI\TestSee3PO\obj\Debug\TestSee3PO.pdb

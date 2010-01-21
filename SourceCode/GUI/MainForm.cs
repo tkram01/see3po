@@ -28,8 +28,13 @@ namespace See3PO
 		delegate void DGuiCallString(string str);
 		delegate void DGuiCallBuffer(byte[] buffer);
         delegate void DDrawFloor();
-        DDrawFloor m_DrawFloorDelegate;
         
+
+        DDrawFloor t_DrawFloorDelegate;
+        Timer t_DrawScaleTimer;
+        ThreadStart t_SendPath;
+        Thread t_SendPathThread;
+
 
         Status m_status;
 
@@ -37,9 +42,11 @@ namespace See3PO
 		CWebcam m_camera;
 
 		Timer m_driveTimer;
-        Timer m_drawScaleTimer;
-        TimerCallback m_callback;
+        
+        
 
+        TimerCallback m_callback;
+        
         Bitmap m_floorPlanImage;
         Graphics m_fg;
 
@@ -80,11 +87,12 @@ namespace See3PO
             m_fg = Graphics.FromHwnd(floorPlanPanel.Handle);
             
             m_pixelsperfoot = 1.0;
-            m_DrawFloorDelegate = new DDrawFloor(DrawFloor);
+            
             m_callback = new TimerCallback(DrawScale);
             m_fpState = fpState.NONE;
 
-
+            t_DrawFloorDelegate = new DDrawFloor(DrawFloor);
+            
 
         }
 
@@ -159,7 +167,7 @@ namespace See3PO
                 connectionStatus += "Robot Status: Connected";
 				connectMenuItem.Text = "Disconnect";
 
-                m_driveTimer = new Timer(Drive, null, 1000, 500);
+                //m_driveTimer = new Timer(Drive, null, 1000, 500);
 
 				m_host.Send((char)CRemoteBrainMessage.SERVO + "#16 P1500 #17 P1500 #18 P1500 #19 P1500 #20 P 1500\r", true);
 			}
@@ -260,15 +268,54 @@ namespace See3PO
             }
         }
 
-        private void Drive(object state)
+        private void SendPath() 
         {
+
             if (m_host.IsConnected)
             {
-                byte leftLow = (byte)m_leftSpeed;
-                byte leftHigh = (byte)(m_leftSpeed >> 8);
 
-                byte rightLow = (byte)m_rightSpeed;
-                byte rightHigh = (byte)(m_rightSpeed >> 8);
+                List<MoveCommand> moves = m_status.path;//(List<MoveCommand>)state;
+                foreach(MoveCommand move in moves){
+                    byte [] wheelSpeeds = GetSpeeds(move);
+                    Drive(wheelSpeeds);
+                    PostMessage(move.toString());
+                    Thread.Sleep(move.distance);
+                }
+            }
+        }
+
+        private byte[] GetSpeeds(MoveCommand move)
+        {
+            byte[] speeds = new byte[2];
+            switch (move.direction)
+            {
+                case MoveCommand.Direction.Forward:
+                    speeds[0] = speeds[1] = 1;
+                    break;
+                case MoveCommand.Direction.CCW:
+                    speeds[0] = 254;
+                    speeds[1] = 1;
+                    break;
+                case MoveCommand.Direction.CW:
+                    speeds[0] = 1;
+                    speeds[1] = 254;
+                    break;
+            }
+            return speeds;
+        }
+
+        private void Drive(byte[] speeds)
+        {
+            byte leftSpeed = speeds[0]; // left
+            byte rightSpeed = speeds[1]; // right
+
+            if (m_host.IsConnected)
+            {
+                byte leftLow = (byte)leftSpeed;
+                byte leftHigh = (byte)(leftSpeed >> 8);
+
+                byte rightLow = (byte)rightSpeed;
+                byte rightHigh = (byte)(rightSpeed >> 8);
 
                 String msg = "\n\r speeds: " + m_leftSpeed + " " + m_rightSpeed;
                 PostMessage(msg);
@@ -286,7 +333,7 @@ namespace See3PO
                 case fpState.IMAGE:
                     m_pixelsperfootStart = e.Location;
                     m_fpState = fpState.DRAWSCALE;
-                    m_drawScaleTimer = new Timer(m_callback, null, 0, 100);
+                    t_DrawScaleTimer = new Timer(m_callback, null, 0, 100);
                     break;
                 case fpState.DRAWSCALE:
                     m_pixelsperfootEnd = e.Location;
@@ -330,9 +377,9 @@ namespace See3PO
                 m_ratioY = (double)m_status.floorPlan.getYTileNum() / (double)floorPlanPanel.Height;
                 m_fpState = fpState.FLOORPLAN;
             }
-            if (m_drawScaleTimer != null)
+            if (t_DrawScaleTimer != null)
             {
-                m_drawScaleTimer.Dispose();
+                t_DrawScaleTimer.Dispose();
             }
             
             m_fpState = fpState.FLOORPLAN;
@@ -378,6 +425,7 @@ namespace See3PO
             m_status.path = testPath();  //path.getPath();
             m_fpState = fpState.DESTINATION;
             DrawFloor();
+
         }
 
         private void PlaceRobot(object sender, MouseEventArgs e)
@@ -390,27 +438,27 @@ namespace See3PO
             DrawFloor();
         }
 
-        private int[] TranslateMove(MoveCommand cmd)
-        {
-            int[] speeds = new int[2];
+        //private int[] TranslateMove(MoveCommand cmd)
+        //{
+        //    int[] speeds = new int[2];
 
-            if (cmd.direction == MoveCommand.Direction.Forward)
-            {
-                speeds[0] = speeds[1] = cmd.distance;
-            }
-            if (cmd.direction == MoveCommand.Direction.CW)
-            {
-                speeds[1] = cmd.distance;
-                speeds[0] = -speeds[1];
-            }
-            if (cmd.direction == MoveCommand.Direction.CCW)
-            {
-                speeds[1] = -cmd.distance;
-                speeds[0] = -speeds[1];
-            }
+        //    if (cmd.direction == MoveCommand.Direction.Forward)
+        //    {
+        //        speeds[0] = speeds[1] = cmd.distance;
+        //    }
+        //    if (cmd.direction == MoveCommand.Direction.CW)
+        //    {
+        //        speeds[1] = cmd.distance;
+        //        speeds[0] = -speeds[1];
+        //    }
+        //    if (cmd.direction == MoveCommand.Direction.CCW)
+        //    {
+        //        speeds[1] = -cmd.distance;
+        //        speeds[0] = -speeds[1];
+        //    }
 
-            return speeds;
-        }
+        //    return speeds;
+        //}
 
         private Point CenterPointOnImage(Point original, Image image) 
         {
@@ -505,5 +553,14 @@ namespace See3PO
             return new Point((int)(fpPoint.X / m_ratioX), (int)(fpPoint.Y / m_ratioY));
         }
 
+        private void goMenuItem_Click(object sender, EventArgs e)
+        {
+            if (m_fpState == fpState.DESTINATION)
+            {
+                t_SendPath = new ThreadStart(SendPath);
+                t_SendPathThread = new Thread(t_SendPath);
+                t_SendPathThread.Start();
+            }
+        }
 	}
 }

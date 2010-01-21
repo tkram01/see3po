@@ -44,6 +44,8 @@ namespace See3PO
             this.setScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeRobotToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.setDestinationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.driveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.livePanel = new System.Windows.Forms.Panel();
             this.messageBox = new System.Windows.Forms.TextBox();
             this.floorPlanPanel = new System.Windows.Forms.Panel();
@@ -89,7 +91,8 @@ namespace See3PO
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
             this.connectionMenu,
-            this.floorPlanToolStripMenuItem});
+            this.floorPlanToolStripMenuItem,
+            this.driveToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1028, 24);
@@ -183,6 +186,21 @@ namespace See3PO
             this.setDestinationToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.setDestinationToolStripMenuItem1.Text = "Set Destination";
             this.setDestinationToolStripMenuItem1.Click += new System.EventHandler(this.Click_SetDestination);
+            // 
+            // driveToolStripMenuItem
+            // 
+            this.driveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.goMenuItem});
+            this.driveToolStripMenuItem.Name = "driveToolStripMenuItem";
+            this.driveToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.driveToolStripMenuItem.Text = "Drive";
+            // 
+            // goMenuItem
+            // 
+            this.goMenuItem.Name = "goMenuItem";
+            this.goMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.goMenuItem.Text = "Go";
+            this.goMenuItem.Click += new System.EventHandler(this.goMenuItem_Click);
             // 
             // livePanel
             // 
@@ -366,6 +384,8 @@ namespace See3PO
         private System.Windows.Forms.ToolStripMenuItem setDestinationToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem placeRobotToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setDestinationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem driveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goMenuItem;
 
 	}
 }

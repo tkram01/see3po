@@ -29,9 +29,9 @@ namespace See3PO
 		delegate void DGuiCallBuffer(byte[] buffer);
         delegate void DDrawFloor();
         
-
         DDrawFloor t_DrawFloorDelegate;
         Timer t_DrawScaleTimer;
+
         ThreadStart t_SendPath;
         Thread t_SendPathThread;
 
@@ -44,7 +44,6 @@ namespace See3PO
 		Timer m_driveTimer;
         
         
-
         TimerCallback m_callback;
         
         Bitmap m_floorPlanImage;
@@ -76,14 +75,13 @@ namespace See3PO
             m_destImage = Image.FromFile("Images\\destImage.png");
             m_robotImage = Image.FromFile("Images\\RobotSprite.png");
             // Temporary
-            livePanel.BackgroundImage = Image.FromFile("Images\\SampleRobotView.jpg"); 
-            //m_camera = new CWebcam(livePanel, null, false);
-            //m_camera.Initialize();
-            //m_camera.SetReady();
+            //livePanel.BackgroundImage = Image.FromFile("Images\\SampleRobotView.jpg"); 
+            m_camera = new CWebcam(livePanel, null, false);
+            m_camera.Initialize();
+            m_camera.SetReady();
 
             m_center = new Point(floorPlanPanel.Width / 2, floorPlanPanel.Height / 2);
             
-
             m_fg = Graphics.FromHwnd(floorPlanPanel.Handle);
             
             m_pixelsperfoot = 1.0;
@@ -165,10 +163,7 @@ namespace See3PO
 			else if(m_host.IsConnected)
 			{
                 connectionStatus += "Robot Status: Connected";
-				connectMenuItem.Text = "Disconnect";
-
-                //m_driveTimer = new Timer(Drive, null, 1000, 500);
-
+                connectMenuItem.Text = "Disconnect";
 				m_host.Send((char)CRemoteBrainMessage.SERVO + "#16 P1500 #17 P1500 #18 P1500 #19 P1500 #20 P 1500\r", true);
 			}
 			else
@@ -187,10 +182,6 @@ namespace See3PO
 		}
 
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            m_host.Send(new byte[] { 0x01, 0x10, 0x00, byte.Parse((string)((Button)sender).Tag), 0x00, 0x00, 0x00, 0xEF }, true);
-        }
 
         private void ConnectMenuItem_Click(object sender, EventArgs e)
         {
@@ -216,28 +207,33 @@ namespace See3PO
                     case fpState.NONE:
                         instructions = "Please Load or Import a Floor Plan";
                         break;
+
                     case fpState.IMAGE:
                         instructions = "Click the floor plan to draw a scale";
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         overlay = new SolidBrush(Color.FromArgb(50, Color.Green));
                         break;
+
                     case fpState.DRAWSCALE:
                         instructions = "Click again to draw a known measurement";
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         overlay = new SolidBrush(Color.FromArgb(50, Color.Green));
                         bg.DrawLine(new Pen(Color.Blue), (PointF)m_pixelsperfootStart, floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
                         break;
+
                     case fpState.ROBOT:
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         instructions = "Click the floor plan to set the robot's current location";
                         overlay = new SolidBrush(Color.FromArgb(50, Color.Red));
                         break;
+
                     case fpState.FLOORPLAN:
                         instructions = "Click the floor plan to set the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         //if (m_robotSprite != null)
                         //    bg.DrawImage(m_robotSprite.image, CenterPointOnImage(m_robotSprite.position.location, m_robotSprite.image));
                         break;
+
                     case fpState.DESTINATION:
                         instructions = "Click the floor plan to change the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
@@ -257,8 +253,6 @@ namespace See3PO
             catch (InvalidOperationException e) { PostMessage(e.ToString()); };
         }
 
-
-
         private void DrawScale(object State) 
         {
             if (InvokeRequired)
@@ -270,16 +264,15 @@ namespace See3PO
 
         private void SendPath() 
         {
-
             if (m_host.IsConnected)
             {
 
                 List<MoveCommand> moves = m_status.path;//(List<MoveCommand>)state;
                 foreach(MoveCommand move in moves){
                     byte [] wheelSpeeds = GetSpeeds(move);
-                    Drive(wheelSpeeds);
+                    Drive(wheelSpeeds, (short)move.distance);
                     PostMessage(move.toString());
-                    Thread.Sleep(move.distance);
+                    Thread.Sleep(move.distance * 500);
                 }
             }
         }
@@ -304,7 +297,7 @@ namespace See3PO
             return speeds;
         }
 
-        private void Drive(byte[] speeds)
+        private void Drive(byte[] speeds, short duration )
         {
             byte leftSpeed = speeds[0]; // left
             byte rightSpeed = speeds[1]; // right
@@ -317,9 +310,13 @@ namespace See3PO
                 byte rightLow = (byte)rightSpeed;
                 byte rightHigh = (byte)(rightSpeed >> 8);
 
+                byte durationLow = (byte)(duration & 0xFF);
+                byte durationHigh = (byte)((duration >> 8) & 0xFF);
+
                 String msg = "\n\r speeds: " + m_leftSpeed + " " + m_rightSpeed;
                 PostMessage(msg);
-                m_host.Send(new byte[] { 0x01, 0x10, 0x11, leftHigh, leftLow, rightHigh, rightLow, 0xEF }, true);
+
+                m_host.Send(new byte[] {0x01, 0x10 , 0x11, leftHigh, leftLow, rightHigh, rightLow, 0xEF, (byte)(duration & 0xFF), (byte)((duration >> 8) & 0xFF)}, true);
             }
         }
 
@@ -541,7 +538,6 @@ namespace See3PO
             path.Add(new MoveCommand(MoveCommand.Direction.CW, 10));
             return path;
         }
-
 
         private Point PanelToFloorPlan(Point panelPoint)
         {

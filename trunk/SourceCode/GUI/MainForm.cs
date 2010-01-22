@@ -19,6 +19,9 @@ namespace See3PO
     
 	public partial class MainForm : Form, IRobotParent
 	{
+        public const int FORWARD_SPEED = 5;
+        public const int TURN_SPEED = 5;
+
         public enum fpState { NONE, IMAGE, DRAWSCALE, ROBOT, FLOORPLAN, DESTINATION };
         enum direction { north, east, south, west };
 
@@ -269,54 +272,53 @@ namespace See3PO
 
                 List<MoveCommand> moves = m_status.path;//(List<MoveCommand>)state;
                 foreach(MoveCommand move in moves){
-                    byte [] wheelSpeeds = GetSpeeds(move);
-                    Drive(wheelSpeeds, (short)move.distance);
+                    int[] speeds = GetSpeeds(move);
+                    Drive(speeds, (short)move.distance);
                     PostMessage(move.toString());
                     Thread.Sleep(move.distance * 500);
                 }
             }
         }
 
-        private byte[] GetSpeeds(MoveCommand move)
+        private int[] GetSpeeds(MoveCommand move)
         {
-            byte[] speeds = new byte[2];
+            int[] speeds = new int[2];
             switch (move.direction)
             {
                 case MoveCommand.Direction.Forward:
-                    speeds[0] = speeds[1] = 1;
+                    speeds[0] = speeds[1] = FORWARD_SPEED;
                     break;
+
                 case MoveCommand.Direction.CCW:
-                    speeds[0] = 254;
-                    speeds[1] = 1;
+                    speeds[0] = -TURN_SPEED;
+                    speeds[1] = TURN_SPEED;
                     break;
+
                 case MoveCommand.Direction.CW:
-                    speeds[0] = 1;
-                    speeds[1] = 254;
+                    speeds[0] = TURN_SPEED;
+                    speeds[1] = -TURN_SPEED;
                     break;
             }
             return speeds;
         }
 
-        private void Drive(byte[] speeds, short duration )
+        private void Drive(int[] speeds, short duration )
         {
-            byte leftSpeed = speeds[0]; // left
-            byte rightSpeed = speeds[1]; // right
+            int leftSpeed = speeds[0]; // left
+            int rightSpeed = speeds[1]; // right
 
             if (m_host.IsConnected)
             {
-                byte leftLow = (byte)leftSpeed;
-                byte leftHigh = (byte)(leftSpeed >> 8);
+                byte[] leftSpeeds = intToBytes(leftSpeed);
 
-                byte rightLow = (byte)rightSpeed;
-                byte rightHigh = (byte)(rightSpeed >> 8);
+                byte[] rightSpeeds = intToBytes(rightSpeed);
 
-                byte durationLow = (byte)(duration & 0xFF);
-                byte durationHigh = (byte)((duration >> 8) & 0xFF);
-
-                String msg = "\n\r speeds: " + m_leftSpeed + " " + m_rightSpeed;
+                byte[] durations = intToBytes(duration);
+                
+                String msg = "\n\r speeds: " + leftSpeed + " " + rightSpeed;
                 PostMessage(msg);
 
-                m_host.Send(new byte[] {0x01, 0x10 , 0x11, leftHigh, leftLow, rightHigh, rightLow, 0xEF, (byte)(duration & 0xFF), (byte)((duration >> 8) & 0xFF)}, true);
+                m_host.Send(new byte[] {0x01, 0x10 , 0x11, leftSpeeds[0], leftSpeeds[1], rightSpeeds[0], rightSpeeds[1], 0xEF, durations[0], durations[1] }, true);
             }
         }
 
@@ -332,25 +334,32 @@ namespace See3PO
                     m_fpState = fpState.DRAWSCALE;
                     t_DrawScaleTimer = new Timer(m_callback, null, 0, 100);
                     break;
+
                 case fpState.DRAWSCALE:
                     m_pixelsperfootEnd = e.Location;
                     double scaleLength = Length(m_pixelsperfootStart.X - m_pixelsperfootEnd.X, m_pixelsperfootStart.Y - m_pixelsperfootEnd.Y);
                     SetScale(scaleLength);
                     break;
+
                 case fpState.ROBOT:
                     PlaceRobot(sender, e);
                     break;
+
                 case fpState.FLOORPLAN:
                 case fpState.DESTINATION:
                     SetDestination(sender, e);
                     break;
+
                 }
                 break;
+
             case MouseButtons.Right:
                 floorPlanContext.Show(System.Windows.Forms.Control.MousePosition);
                 break;
+
             case MouseButtons.Middle:
                 break;
+
             default:
                 break;
             }
@@ -398,11 +407,7 @@ namespace See3PO
             DrawFloor();
         }
 		
-        private double Length(double x, double y)
-        {
-            return Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
-        }
-
+        
         private void Load_MainForm(object sender, EventArgs e)
         {
 
@@ -521,7 +526,8 @@ namespace See3PO
         private Position getPosition() 
         {
             if (m_status.position == null)
-            m_status.position = new Position(PanelToFloorPlan(m_center), 0); // eventually, call Tyler's program
+                m_status.position = new Position(PanelToFloorPlan(m_center), 0); // eventually, call Tyler's program
+
             m_status.floorPlan.setStartTile(m_status.position.location.X, m_status.position.location.Y);
 
             return m_status.position;
@@ -530,12 +536,12 @@ namespace See3PO
         private List<MoveCommand> testPath() {
             List<MoveCommand> path = new List<MoveCommand>();
             path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-            path.Add(new MoveCommand(MoveCommand.Direction.CCW, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.CCW, 18));
             path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
             path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-            path.Add(new MoveCommand(MoveCommand.Direction.CCW, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.CCW, 18));
             path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-            path.Add(new MoveCommand(MoveCommand.Direction.CW, 10));
+            path.Add(new MoveCommand(MoveCommand.Direction.CW, 18));
             return path;
         }
 
@@ -558,5 +564,23 @@ namespace See3PO
                 t_SendPathThread.Start();
             }
         }
+
+        private byte[] intToBytes(int source)
+        {
+            byte[] bytes = new byte[2];
+
+            bytes[1] = (byte)(source & 0xFF); //low
+            bytes[0] = (byte)((source >> 8) & 0xFF); //high
+
+            return bytes;
+        }
+
+        private double Length(double x, double y)
+        {
+            return Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
+        }
+
+
+
 	}
 }

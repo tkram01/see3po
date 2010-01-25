@@ -161,11 +161,7 @@ namespace LocalBrain
 			PostMessage(msg);
 
 			if(motors.IsConnected)
-			{
-				//byte[] newbuffer = new byte[buffer.Length-1];
-				//for(int i = 1; i < buffer.Length; i++)
-				//	newbuffer[i-1] = buffer[i];
-                
+			{               
                 if (buffer.Length >= MOTOR_PACKET_SIZE)
                 {
                     byte[] newbuffer = new byte[MOTOR_PACKET_SIZE - 1];

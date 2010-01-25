@@ -17,6 +17,7 @@ namespace RobotCommands
 		public const byte PING = 0x00;
 		public const byte PONG = 0x01;
 		public const byte DISCONNECT = 0x02;
+        
 	}
 
 	public class CRemoteBrainMessage

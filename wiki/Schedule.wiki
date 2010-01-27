@@ -11,11 +11,11 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 
 ===March===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| *[LiveDemo1 Live Demo 1]*                 || 05/21/09     ||              ||              ||				        ||
+|| *[LiveDemo1 Live Demo 1]*                 || 03/01/2010     ||              ||              ||				        ||
 
 ===April===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| *Live Demo 2*                 || 05/21/09     ||              ||              ||				        ||
+|| *[LiveDemo2 Live Demo 2]*                 || 04/01/2010     ||              ||              ||				        ||
 
 ===May===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||

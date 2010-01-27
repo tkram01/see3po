@@ -1,0 +1,12 @@
+#summary Live Demo 1
+
+= Introduction =
+
+The first live demo will display FloorPlanProcessing, PathFinding and Host-Remote coordination.
+
+
+= Details =
+
+The robot will begin in the hallway outside of M-1-620 and navigate to the desk in M-1-620. 
+
+The robot will get its location by manual input, rather than the Locator program. 

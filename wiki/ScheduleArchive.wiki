@@ -50,3 +50,18 @@
 || [PathFinding][LocalBrainEmulator] [Testing SendPath]   || 11/31/2009	|| Rescheduled	|| [Nick] [Frank]||						||
 || [FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan] 	|| 11/31/2009	|| Rescheduled	||  [Nick] [Debarati] ||||
 || [CORE] [Testing Recieve Tests]               || 11/31/2009	|| Rescheduled	|| [Nick] [Frank] [Debarati]||			||
+
+===December===
+|| *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
+|| [Build] wiki page first draft up				|| 12/01/2009	|| Completed	|| [Frank][Jacky] || 12/01/09 			||
+|| [PathFinding][LocalBrainEmulator] [Testing SendPath]   || 12/08/2009	|| 				|| [Nick] [Frank]||						||
+|| [FloorPlanProcessing] [PathFinding] [Testing SendFloorPlan] 	|| 12/8/2009	|| 	||  [Nick] [Debarati] ||			||
+|| [CORE] [Testing Recieve Tests]               || 12/08/2009	|| 				|| [Nick] [Frank] [Debarati]||			||
+|| [BossMeeting4]- Comments on Host Interface Progress || 12/8/2009|| 			|| All 			||						||
+|| *GUI Release 1* Deliverable 					|| 12/15/2009	|| 				||  [Nick] [Debarati] [Frank] ||		||
+|| *RequirementsSpec* Completed || 12/15/2009	|| 				||  All ||		||
+
+===January 2010===
+|| *Task*										|| *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
+|| *[PathFinding] Complete*                     || 01/01/2010	|| 				|| [Debarati] [Nick] [Frank] ||		    ||
+|| *Robot takes incremental commands, drives straight*|| 01/01/2010	|| 				|| [Jacky] [Hao] ||					||

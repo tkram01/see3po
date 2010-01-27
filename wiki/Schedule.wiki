@@ -18,7 +18,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 
 ===March===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| *[LiveDemo1 Live Demo 1]*                 || 03/01/2010     ||              ||              ||			||
+|| *[LiveDemo1 Live Demo 1]*                 || 03/02/2010     ||              ||              ||			||
 
 ===April===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||

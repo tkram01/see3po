@@ -8,13 +8,13 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 ===February===
 || *Task*							 || *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
 || *WinCE driver deadline*           || 02/01/2010	|| 				|| [Jacky] [Hao] ||					    ||
+|| Protocol Document           || 02/01/2010	|| 				|| [Jacky] [Hao] ||					    ||
 || Protocol Document updated to reflect motor commands || 02/10/2010	|| 				|| [Frank] ||					    ||
 || Pathfinder returns Move Commands || 02/10/2010	|| 				|| [Nick] ||					    ||
+|| FloorPlan serializable           || 02/15/2010	|| 				|| [Debarati] ||					    ||
 || Host and RemoteBrain comply with Protocol Document || 02/15/2010	|| 				|| [Frank] ||					    ||
 || Message Handshake Protocol || 02/20/2010	|| 				|| [Frank] ||					    ||
 || Manual Locator Completed || 02/20/2010	|| 				|| [Frank][Nick] ||					    ||
-|| FloorPlan serializable           || 02/15/2010	|| 				|| [Debarati] ||					    ||
-|| Protocol Document           || 02/01/2010	|| 				|| [Jacky] [Hao] ||					    ||
 
 ===March===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||

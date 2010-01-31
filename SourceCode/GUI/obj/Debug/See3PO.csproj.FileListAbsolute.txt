@@ -78,3 +78,5 @@ L:\GUI\bin\Debug\QuickGraph.dll
 L:\GUI\bin\Debug\RobotHost.pdb
 L:\GUI\bin\Debug\Nexus3Input.pdb
 L:\GUI\bin\Debug\RobotCommands.pdb
+D:\Documents\School\CS682\Host\obj\Debug\See3PO.exe
+D:\Documents\School\CS682\Host\obj\Debug\See3PO.pdb

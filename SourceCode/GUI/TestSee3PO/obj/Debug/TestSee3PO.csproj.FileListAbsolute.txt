@@ -47,3 +47,16 @@ L:\GUI\TestSee3PO\bin\Debug\RobotCommands.pdb
 L:\GUI\TestSee3PO\obj\Debug\ResolveAssemblyReference.cache
 L:\GUI\TestSee3PO\obj\Debug\TestSee3PO.dll
 L:\GUI\TestSee3PO\obj\Debug\TestSee3PO.pdb
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\TestSee3PO.dll
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\TestSee3PO.pdb
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\Nexus3Input.dll
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\QuickGraph.dll
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\See3PO.exe
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\See3PO.pdb
+D:\Documents\School\CS682\Host\TestSee3PO\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\CS682\Host\TestSee3PO\obj\Debug\TestSee3PO.dll
+D:\Documents\School\CS682\Host\TestSee3PO\obj\Debug\TestSee3PO.pdb
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\RobotCommands.dll
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\RobotHost.dll
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\RobotHost.pdb
+D:\Documents\School\CS682\Host\TestSee3PO\bin\Debug\RobotCommands.pdb

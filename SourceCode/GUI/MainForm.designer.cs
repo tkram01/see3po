@@ -59,6 +59,7 @@ namespace See3PO
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeRobotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -74,9 +75,9 @@ namespace See3PO
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 563);
+            this.statusStrip.Location = new System.Drawing.Point(0, 640);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1028, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1084, 22);
             this.statusStrip.TabIndex = 23;
             this.statusStrip.Text = "statusStrip";
             // 
@@ -95,7 +96,7 @@ namespace See3PO
             this.driveToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1028, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1084, 24);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "mainMenu";
             // 
@@ -190,7 +191,8 @@ namespace See3PO
             // driveToolStripMenuItem
             // 
             this.driveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.goMenuItem});
+            this.goMenuItem,
+            this.manualToolStripMenuItem});
             this.driveToolStripMenuItem.Name = "driveToolStripMenuItem";
             this.driveToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.driveToolStripMenuItem.Text = "Drive";
@@ -207,7 +209,7 @@ namespace See3PO
             this.livePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.livePanel.Location = new System.Drawing.Point(0, 0);
             this.livePanel.Name = "livePanel";
-            this.livePanel.Size = new System.Drawing.Size(342, 308);
+            this.livePanel.Size = new System.Drawing.Size(360, 352);
             this.livePanel.TabIndex = 25;
             // 
             // messageBox
@@ -218,7 +220,7 @@ namespace See3PO
             this.messageBox.Multiline = true;
             this.messageBox.Name = "messageBox";
             this.messageBox.ReadOnly = true;
-            this.messageBox.Size = new System.Drawing.Size(342, 227);
+            this.messageBox.Size = new System.Drawing.Size(360, 260);
             this.messageBox.TabIndex = 58;
             // 
             // floorPlanPanel
@@ -226,7 +228,7 @@ namespace See3PO
             this.floorPlanPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.floorPlanPanel.Location = new System.Drawing.Point(0, 0);
             this.floorPlanPanel.Name = "floorPlanPanel";
-            this.floorPlanPanel.Size = new System.Drawing.Size(682, 539);
+            this.floorPlanPanel.Size = new System.Drawing.Size(720, 616);
             this.floorPlanPanel.TabIndex = 65;
             this.floorPlanPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Paint_FloorPlanPanel);
             this.floorPlanPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.SetDestination);
@@ -250,8 +252,8 @@ namespace See3PO
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.floorPlanPanel);
-            this.splitContainer1.Size = new System.Drawing.Size(1028, 539);
-            this.splitContainer1.SplitterDistance = 342;
+            this.splitContainer1.Size = new System.Drawing.Size(1084, 616);
+            this.splitContainer1.SplitterDistance = 360;
             this.splitContainer1.TabIndex = 66;
             // 
             // splitContainer2
@@ -268,8 +270,8 @@ namespace See3PO
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.messageBox);
-            this.splitContainer2.Size = new System.Drawing.Size(342, 539);
-            this.splitContainer2.SplitterDistance = 308;
+            this.splitContainer2.Size = new System.Drawing.Size(360, 616);
+            this.splitContainer2.SplitterDistance = 352;
             this.splitContainer2.TabIndex = 0;
             // 
             // floorPlanContext
@@ -324,11 +326,17 @@ namespace See3PO
             this.setDestinationToolStripMenuItem.Text = "Set Destination";
             this.setDestinationToolStripMenuItem.Click += new System.EventHandler(this.Click_SetDestination);
             // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 585);
+            this.ClientSize = new System.Drawing.Size(1084, 662);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
@@ -386,6 +394,7 @@ namespace See3PO
         private System.Windows.Forms.ToolStripMenuItem setDestinationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem driveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
 
 	}
 }

@@ -72,9 +72,9 @@ namespace TestSee3PO
         public void getPathTest()
         {
             Image myimage = new Bitmap("../../testImage.jpg"); // TODO: Initialize to an appropriate value
-            FloorPlan fp = new FloorPlan(myimage); ; // TODO: Initialize to an appropriate value
-
-            QGPathFinder target = new QGPathFinder(fp); // TODO: Initialize to an appropriate value
+            //FloorPlan fp = new FloorPlan(myimage); // TODO: Initialize to an appropriate value
+            Status status = new Status(myimage, 2.0); // TODO: Initialize to an appropriate value
+            QGPathFinder target = new QGPathFinder(status, null); // TODO: Initialize to an appropriate value
    
             List<FloorTile> expected = null; // TODO: Initialize to an appropriate value
             List<FloorTile> actual;

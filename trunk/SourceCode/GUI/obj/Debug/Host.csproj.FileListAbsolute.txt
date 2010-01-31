@@ -1,0 +1,15 @@
+D:\Documents\School\CS682\Host\obj\Debug\See3PO.exe
+D:\Documents\School\CS682\Host\obj\Debug\See3PO.pdb
+D:\Documents\School\CS682\Host\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\CS682\Host\obj\Debug\See3PO.MainForm.resources
+D:\Documents\School\CS682\Host\obj\Debug\See3PO.Path.resources
+D:\Documents\School\CS682\Host\obj\Debug\See3PO.Properties.Resources.resources
+D:\Documents\School\CS682\Host\obj\Debug\See3PO.ScaleForm.resources
+D:\Documents\School\CS682\Host\obj\Debug\Host.csproj.GenerateResource.Cache
+D:\Documents\School\CS682\Host\bin\Debug\See3PO.exe
+D:\Documents\School\CS682\Host\bin\Debug\See3PO.pdb
+D:\Documents\School\CS682\Host\bin\Debug\QuickGraph.dll
+D:\Documents\School\CS682\Host\bin\Debug\RobotCommands.dll
+D:\Documents\School\CS682\Host\bin\Debug\RobotHost.dll
+D:\Documents\School\CS682\Host\bin\Debug\RobotHost.pdb
+D:\Documents\School\CS682\Host\bin\Debug\RobotCommands.pdb

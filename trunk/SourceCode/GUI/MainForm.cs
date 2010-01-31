@@ -58,7 +58,6 @@ namespace See3PO
         RobotSprite m_robotSprite;
 
         Image m_destImage;
-        Point m_destLoc;
         
         Point m_pixelsperfootStart;
         Point m_pixelsperfootEnd;
@@ -243,7 +242,10 @@ namespace See3PO
                         //if (m_robotSprite != null)
                         //    bg.DrawImage(m_robotSprite.image, CenterPointOnImage(m_robotSprite.position.location, m_robotSprite.image));
                         //bg.DrawImage(m_destImage, CenterPointOnImage(m_destLoc, m_destImage));
-                        bg.DrawImage(DrawMoves(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        if (m_status.path != null)
+                            bg.DrawImage(DrawMoves(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        else
+                            instructions = "unwalkable destination";
                         break;
                 }
                 bg.FillRectangle(overlay, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
@@ -270,13 +272,13 @@ namespace See3PO
             if (m_host.IsConnected)
             {
 
-                List<MoveCommand> moves = m_status.path;//(List<MoveCommand>)state;
-                foreach(MoveCommand move in moves){
-                    int[] speeds = GetSpeeds(move);
-                    Drive(speeds, (short)move.distance);
-                    PostMessage(move.toString());
-                    Thread.Sleep(move.distance * 500);
-                }
+                //List<FloorTile> moves = m_status.path;//(List<MoveCommand>)state;
+                //foreach(FloorTile move in moves){
+                //    int[] speeds = GetSpeeds(move);
+                //    Drive(speeds, (short)move.distance);
+                //    PostMessage(move.toString());
+                //    Thread.Sleep(move.distance * 500);
+                //}
             }
         }
 
@@ -347,7 +349,10 @@ namespace See3PO
 
                 case fpState.FLOORPLAN:
                 case fpState.DESTINATION:
-                    SetDestination(sender, e);
+                    if (m_status != null)
+                    {
+                        SetDestination(sender, e);
+                    }
                     break;
 
                 }
@@ -420,14 +425,15 @@ namespace See3PO
 
         private void SetDestination(object sender, MouseEventArgs e)
         {
-            m_destLoc = new Point(e.X, e.Y);
-            m_status.floorPlan.setTargetTile((int)(e.X * m_ratioX), (int)(e.Y * m_ratioY));
             m_status.position = getPosition();
-            PathFinder path = new QGPathFinder(m_status.floorPlan);
-            m_status.path = testPath();  //path.getPath();
+            PostMessage(m_status.endPoint.ToString());
+            m_status.endPoint = PanelToFloorPlan(new Point(e.X, e.Y));
+            //m_status.floorPlan.setTargetTile((int)(e.X * m_ratioX), (int)(e.Y * m_ratioY));
+            
+            PathFinder path = new QGPathFinder(m_status, this);
+            m_status.path = path.getPath();
             m_fpState = fpState.DESTINATION;
             DrawFloor();
-
         }
 
         private void PlaceRobot(object sender, MouseEventArgs e)
@@ -482,44 +488,56 @@ namespace See3PO
         private Image DrawMoves()
         {
             Bitmap trail = new Bitmap(floorPlanPanel.Width, floorPlanPanel.Height);
+
             Graphics s = Graphics.FromImage(trail);
+
             Point lineStart = new Point(FloorPlanToPanel(m_status.position.location).X, FloorPlanToPanel(m_status.position.location).Y);
+            
             Point lineEnd = new Point(lineStart.X, lineStart.Y);
 
-            Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South
-            if (m_status.position.facing > 315 || m_status.position.facing <= 45)
-                currentDir[0] = new Point(1, 0);
-            else if (m_status.position.facing > 45 && m_status.position.facing <= 135)
-                currentDir[0] = new Point(0, -1);
-            else if (m_status.position.facing > 135 && m_status.position.facing <= 225)
-                currentDir[0] = new Point(-1, 0);
-            else if (m_status.position.facing > 225 && m_status.position.facing <= 315)
-                currentDir[0] = new Point(0, 1);
+            foreach (FloorTile tile in m_status.path) {
 
-            // Rotation Matrices
-            Matrix CW = new Matrix(0, 1, -1, 0, 0, 0);
-            Matrix CCW = new Matrix(0, -1, 1, 0, 0, 0);
+                lineStart = lineEnd;
 
-            foreach (MoveCommand cmd in m_status.path)
-            {
-                switch (cmd.direction)
-                {
-                case MoveCommand.Direction.Forward:
-                    Point move = new Point((int)((double)(currentDir[0].X * cmd.distance) / m_ratioX), (int)((double)(currentDir[0].Y * cmd.distance) / m_ratioY));
-                    lineEnd.Offset(move);
-                    break;
-                case MoveCommand.Direction.CCW:
-                    s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
-                    lineStart = new Point(lineEnd.X, lineEnd.Y);
-                    CCW.TransformPoints(currentDir);
-                    break;
-                case MoveCommand.Direction.CW:
-                    s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
-                    lineStart = new Point(lineEnd.X, lineEnd.Y);
-                    CW.TransformPoints(currentDir);
-                    break;
-                }  
+                lineEnd = FloorPlanToPanel(tile.Position);
+
+                s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
             }
+
+            //Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South
+            //if (m_status.position.facing > 315 || m_status.position.facing <= 45)
+            //    currentDir[0] = new Point(1, 0);
+            //else if (m_status.position.facing > 45 && m_status.position.facing <= 135)
+            //    currentDir[0] = new Point(0, -1);
+            //else if (m_status.position.facing > 135 && m_status.position.facing <= 225)
+            //    currentDir[0] = new Point(-1, 0);
+            //else if (m_status.position.facing > 225 && m_status.position.facing <= 315)
+            //    currentDir[0] = new Point(0, 1);
+
+            //// Rotation Matrices
+            //Matrix CW = new Matrix(0, 1, -1, 0, 0, 0);
+            //Matrix CCW = new Matrix(0, -1, 1, 0, 0, 0);
+
+            //foreach (FloorTile cmd in m_status.path)
+            //{
+            //    switch (cmd.direction)
+            //    {
+            //    case MoveCommand.Direction.Forward:
+            //        Point move = new Point((int)((double)(currentDir[0].X * cmd.distance) / m_ratioX), (int)((double)(currentDir[0].Y * cmd.distance) / m_ratioY));
+            //        lineEnd.Offset(move);
+            //        break;
+            //    case MoveCommand.Direction.CCW:
+            //        s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
+            //        lineStart = new Point(lineEnd.X, lineEnd.Y);
+            //        CCW.TransformPoints(currentDir);
+            //        break;
+            //    case MoveCommand.Direction.CW:
+            //        s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
+            //        lineStart = new Point(lineEnd.X, lineEnd.Y);
+            //        CW.TransformPoints(currentDir);
+            //        break;
+            //    }  
+            //}
             return trail;
         }
 
@@ -528,22 +546,22 @@ namespace See3PO
             if (m_status.position == null)
                 m_status.position = new Position(PanelToFloorPlan(m_center), 0); // eventually, call Tyler's program
 
-            m_status.floorPlan.setStartTile(m_status.position.location.X, m_status.position.location.Y);
+            //m_status.floorPlan.setStartTile(m_status.position.location.X, m_status.position.location.Y);
 
             return m_status.position;
         }
 
-        private List<MoveCommand> testPath() {
-            List<MoveCommand> path = new List<MoveCommand>();
-            path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-            path.Add(new MoveCommand(MoveCommand.Direction.CCW, 18));
-            path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-            path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-            path.Add(new MoveCommand(MoveCommand.Direction.CCW, 18));
-            path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-            path.Add(new MoveCommand(MoveCommand.Direction.CW, 18));
-            return path;
-        }
+        //private List<MoveCommand> testPath() {
+        //    List<MoveCommand> path = new List<MoveCommand>();
+        //    path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
+        //    path.Add(new MoveCommand(MoveCommand.Direction.CCW, 18));
+        //    path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
+        //    path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
+        //    path.Add(new MoveCommand(MoveCommand.Direction.CCW, 18));
+        //    path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
+        //    path.Add(new MoveCommand(MoveCommand.Direction.CW, 18));
+        //    return path;
+        //}
 
         private Point PanelToFloorPlan(Point panelPoint)
         {

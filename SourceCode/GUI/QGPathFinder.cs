@@ -93,7 +93,7 @@ namespace See3PO
                                 neighbors[k].Position.X + "_" + neighbors[k].Position.Y);
                             edges.Add(myedge);
                             graph.AddEdge(myedge);
-                            edgeCost.Add(myedge, 1);
+                            edgeCost.Add(myedge, 7 - fp.getTile(i, j).openness(5));
                         }
                     }
                 }
@@ -178,7 +178,9 @@ namespace See3PO
                 return null;
             }
 
-            return retval;
+
+
+            return condenseList(retval);
         }
 
         public static FloorTile getTileByIndex(FloorPlan fp, string index)
@@ -192,13 +194,34 @@ namespace See3PO
 
         public List<FloorTile> condenseList(List<FloorTile> path)
         {
-            Boolean vertical = true;
+            List<FloorTile> condensedList = new List<FloorTile>();
 
-            foreach (FloorTile tile in path)
+            FloorTile lastTile = path[0];
+
+
+            condensedList.Add(path[0]);
+
+            for (int i = 1; i < path.Count; i++)
             {
-               
+                if (path[i].Position.Y == lastTile.Position.Y) // moving vertically
+                {
+                    while (i < path.Count && path[i].Position.Y == lastTile.Position.Y && i < path.Count - 1) // walk until the next turn
+                    {
+                        i++;
+                    }
+                }
+                else                                           // moving horizontally
+                {
+                    while (i < path.Count && path[i].Position.X == lastTile.Position.X) // walk until the next turn
+                    {
+                        i++;
+                    }
+                }
+                lastTile = path[i - 1];
+                condensedList.Add(path[i - 1]); // add the turning point to the new list;
             }
-        }
 
+            return condensedList;
+        }
     }
 }

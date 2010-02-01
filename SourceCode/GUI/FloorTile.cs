@@ -104,5 +104,20 @@ namespace See3PO
                m_neighbours.Add(tile1);
          
         }
+
+        public double openness(int step) 
+        {
+            double prox = m_neighbours.Count;
+
+            if (step > 0)
+                return prox;
+
+            foreach (FloorTile neighbor in m_neighbours) 
+            {
+                prox += (0.75 * neighbor.openness(step - 1));
+            }
+
+            return prox;
+        }
     }
 }

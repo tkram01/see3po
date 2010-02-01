@@ -55,7 +55,6 @@ namespace See3PO
         Point m_center;
 
         Image m_robotImage;
-        RobotSprite m_robotSprite;
 
         Image m_destImage;
         
@@ -75,7 +74,6 @@ namespace See3PO
 
             m_host = new CRobotHost(this);
             m_destImage = Image.FromFile("Images\\destImage.png");
-            m_robotImage = Image.FromFile("Images\\RobotSprite.png");
             // Temporary
             //livePanel.BackgroundImage = Image.FromFile("Images\\SampleRobotView.jpg"); 
             m_camera = new CWebcam(livePanel, null, false);
@@ -86,7 +84,7 @@ namespace See3PO
             
             m_fg = Graphics.FromHwnd(floorPlanPanel.Handle);
             
-            m_pixelsperfoot = 1.0;
+            m_pixelsperfoot = 2.0;
             
             m_callback = new TimerCallback(DrawScale);
             m_fpState = fpState.NONE;
@@ -213,35 +211,30 @@ namespace See3PO
                     case fpState.IMAGE:
                         instructions = "Click the floor plan to draw a scale";
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        overlay = new SolidBrush(Color.FromArgb(50, Color.Green));
+                        overlay = new SolidBrush(Color.FromArgb(10, Color.Green));
                         break;
 
                     case fpState.DRAWSCALE:
                         instructions = "Click again to draw a known measurement";
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        overlay = new SolidBrush(Color.FromArgb(50, Color.Green));
+                        overlay = new SolidBrush(Color.FromArgb(10, Color.Green));
                         bg.DrawLine(new Pen(Color.Blue), (PointF)m_pixelsperfootStart, floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
                         break;
 
                     case fpState.ROBOT:
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         instructions = "Click the floor plan to set the robot's current location";
-                        overlay = new SolidBrush(Color.FromArgb(50, Color.Red));
+                        overlay = new SolidBrush(Color.FromArgb(10, Color.Red));
                         break;
 
                     case fpState.FLOORPLAN:
                         instructions = "Click the floor plan to set the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        //if (m_robotSprite != null)
-                        //    bg.DrawImage(m_robotSprite.image, CenterPointOnImage(m_robotSprite.position.location, m_robotSprite.image));
                         break;
 
                     case fpState.DESTINATION:
                         instructions = "Click the floor plan to change the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        //if (m_robotSprite != null)
-                        //    bg.DrawImage(m_robotSprite.image, CenterPointOnImage(m_robotSprite.position.location, m_robotSprite.image));
-                        //bg.DrawImage(m_destImage, CenterPointOnImage(m_destLoc, m_destImage));
                         if (m_status.path != null)
                             bg.DrawImage(DrawMoves(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         else
@@ -383,7 +376,6 @@ namespace See3PO
                 sf.ShowDialog();
                 m_pixelsperfoot = sf.m_scale;
                 m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
-                int x = m_status.floorPlan.getXTileNum();
                 m_ratioX = (double)(m_status.floorPlan.getXTileNum()) / (double)(floorPlanPanel.Width);
                 m_ratioY = (double)m_status.floorPlan.getYTileNum() / (double)floorPlanPanel.Height;
                 m_fpState = fpState.FLOORPLAN;
@@ -438,35 +430,11 @@ namespace See3PO
 
         private void PlaceRobot(object sender, MouseEventArgs e)
         {
-            m_robotSprite = new RobotSprite(m_robotImage, (int)m_pixelsperfoot, new Position(new Point(e.X, e.Y), 0));
-
             m_status.floorPlan.setStartTile(PanelToFloorPlan(e.Location).X, PanelToFloorPlan(e.Location).Y);
             m_status.position = new Position(PanelToFloorPlan(e.Location), 0);   //fix the facing
             m_fpState = fpState.FLOORPLAN;
             DrawFloor();
         }
-
-        //private int[] TranslateMove(MoveCommand cmd)
-        //{
-        //    int[] speeds = new int[2];
-
-        //    if (cmd.direction == MoveCommand.Direction.Forward)
-        //    {
-        //        speeds[0] = speeds[1] = cmd.distance;
-        //    }
-        //    if (cmd.direction == MoveCommand.Direction.CW)
-        //    {
-        //        speeds[1] = cmd.distance;
-        //        speeds[0] = -speeds[1];
-        //    }
-        //    if (cmd.direction == MoveCommand.Direction.CCW)
-        //    {
-        //        speeds[1] = -cmd.distance;
-        //        speeds[0] = -speeds[1];
-        //    }
-
-        //    return speeds;
-        //}
 
         private Point CenterPointOnImage(Point original, Image image) 
         {

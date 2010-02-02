@@ -40,16 +40,17 @@ namespace See3PO
 
 
         Status m_status;
+        PathFinder m_pathfinder;
 
 		CRobotHost m_host;
 		CWebcam m_camera;
 
 		Timer m_driveTimer;
         
-        
         TimerCallback m_callback;
         
         Bitmap m_floorPlanImage;
+
         Graphics m_fg;
 
         Point m_center;
@@ -376,6 +377,7 @@ namespace See3PO
                 sf.ShowDialog();
                 m_pixelsperfoot = sf.m_scale;
                 m_status = new Status(m_floorPlanImage, m_pixelsperfoot);
+                m_pathfinder = new QGPathFinder(m_status, this); 
                 m_ratioX = (double)(m_status.floorPlan.getXTileNum()) / (double)(floorPlanPanel.Width);
                 m_ratioY = (double)m_status.floorPlan.getYTileNum() / (double)floorPlanPanel.Height;
                 m_fpState = fpState.FLOORPLAN;
@@ -422,8 +424,8 @@ namespace See3PO
             m_status.endPoint = PanelToFloorPlan(new Point(e.X, e.Y));
             //m_status.floorPlan.setTargetTile((int)(e.X * m_ratioX), (int)(e.Y * m_ratioY));
             
-            PathFinder path = new QGPathFinder(m_status, this);
-            m_status.path = path.getPath();
+            //PathFinder path = new QGPathFinder(m_status, this);
+            m_status.path = m_pathfinder.getPath();
             m_fpState = fpState.DESTINATION;
             DrawFloor();
         }

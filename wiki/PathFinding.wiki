@@ -36,9 +36,9 @@ Search strategies includes *uninformed search* (such as breadth-first search, de
 = To-Do List and Schedule =
 
 || *Task* || *Status* || *Due Date* || *Complete* ||
-|| Established codes evaluation || In processing || 11/07/2009 || ||
-|| Algorithms evaluation || In processing || 11/14/2009 || ||
-|| Implementation || || || ||
+|| Established codes evaluation || Completed || 11/07/2009 || ||
+|| Algorithms evaluation || Completed || 11/14/2009 || ||
+|| Implementation || Completed || || ||
 
 
 

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "See3PO", "See3PO.csproj", "{B5E5580C-6251-4DC7-9F81-8516B95D1989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloorPlanTest", "..\FloorPlanProcessing\ImageTo2DArray\FloorPlan\FloorPlanTest\FloorPlanTest.csproj", "{F642B270-D3BE-4B86-838A-DD60A4446F5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0602136-CCAA-431B-9934-F5344AE9975F}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		See3PO.vsmdi = See3PO.vsmdi
+		See3PO1.vsmdi = See3PO1.vsmdi
+		See3PO2.vsmdi = See3PO2.vsmdi
+		See3PO3.vsmdi = See3PO3.vsmdi
+		See3PO4.vsmdi = See3PO4.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSee3PO", "TestSee3PO\TestSee3PO.csproj", "{A457BE44-8C13-42FB-93FB-7EA85E355797}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = See3PO4.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5E5580C-6251-4DC7-9F81-8516B95D1989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E5580C-6251-4DC7-9F81-8516B95D1989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E5580C-6251-4DC7-9F81-8516B95D1989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E5580C-6251-4DC7-9F81-8516B95D1989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F642B270-D3BE-4B86-838A-DD60A4446F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F642B270-D3BE-4B86-838A-DD60A4446F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F642B270-D3BE-4B86-838A-DD60A4446F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F642B270-D3BE-4B86-838A-DD60A4446F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A457BE44-8C13-42FB-93FB-7EA85E355797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A457BE44-8C13-42FB-93FB-7EA85E355797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A457BE44-8C13-42FB-93FB-7EA85E355797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A457BE44-8C13-42FB-93FB-7EA85E355797}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

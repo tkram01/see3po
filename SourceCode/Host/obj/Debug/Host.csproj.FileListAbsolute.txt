@@ -13,3 +13,13 @@ D:\Documents\School\CS682\Host\bin\Debug\RobotCommands.dll
 D:\Documents\School\CS682\Host\bin\Debug\RobotHost.dll
 D:\Documents\School\CS682\Host\bin\Debug\RobotHost.pdb
 D:\Documents\School\CS682\Host\bin\Debug\RobotCommands.pdb
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\See3PO.exe
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\See3PO.pdb
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\bin\Debug\See3PO.exe
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\bin\Debug\See3PO.pdb
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\bin\Debug\QuickGraph.dll
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\See3PO.MainForm.resources
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\See3PO.Properties.Resources.resources
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\See3PO.ScaleForm.resources
+C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\Host.csproj.GenerateResource.Cache

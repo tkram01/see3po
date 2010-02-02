@@ -5,16 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host.csproj", "{B5E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloorPlanTest", "..\FloorPlanProcessing\ImageTo2DArray\FloorPlan\FloorPlanTest\FloorPlanTest.csproj", "{F642B270-D3BE-4B86-838A-DD60A4446F5F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0602136-CCAA-431B-9934-F5344AE9975F}"
-	ProjectSection(SolutionItems) = preProject
-		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
-		See3PO.vsmdi = See3PO.vsmdi
-		See3PO1.vsmdi = See3PO1.vsmdi
-		See3PO2.vsmdi = See3PO2.vsmdi
-		See3PO3.vsmdi = See3PO3.vsmdi
-		See3PO4.vsmdi = See3PO4.vsmdi
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSee3PO", "TestSee3PO\TestSee3PO.csproj", "{A457BE44-8C13-42FB-93FB-7EA85E355797}"
 EndProject
 Global

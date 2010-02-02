@@ -16,6 +16,7 @@ The first live demo will display FloorPlanProcessing, PathFinding and Host-Remot
   If we can deliver this on first sprint, we can then prove that the floor plan and path finding program are working correctly. It also proves that we are able to totally control the robot movement through the program automatically. Finally, it will put us in a good position to accept Tyler's program and immediately begin integrating it. 
   
 === Necessary Steps === 
+==== Software ====
   * Integration of path-finding program and robot movement  ([Nick] / 10 hours)
   * Define data structure to store floor plan to files. Import and export ([Debarati] / 5 hours)
   * Handling exceptions in path-finding such as the chosen points are not 
@@ -24,6 +25,17 @@ The first live demo will display FloorPlanProcessing, PathFinding and Host-Remot
   * Enhance GUI to enable manual Location  ([Frank] / 10 hours)
   * Robot-side programming (LocalBrain): a robot could take a sequence of commands (turns or forward)( [Nick] [Hao] [Jacky] / 30 Hours)
   * Figure out solutions on hardwares: PCMCIA card dravers ([Hao] [Jacky] / 20 Hours)
+  * WhereAmI Locator must be completed when this sprint is over (MERL / ?) 
+
+==== Hardware ====
+  * Due to the lack of driver, we need to confirm Tyler to use another type of camera. 
+  * Test the robot speed and write some code to make the robot to move forward in discrete increments and turn in increments of 90 degrees, 180 degrees, 270 degree. 
+  * Combine the software and hardware to test the robot movement. 
+  * If we still have much more time, we need to think about the command buffer, which method will make it much more effieient.(The buffer in the host or in the local, how to quote the command query to void of losing the command and so on)
+
+==== Other ====
+  * FloorPlan - an accurately measured floorplan will be needed.
+
   
 === Testing ===
   * Floor Plan Processing: several testing classes are available to test the functions. Someone not on out team could understand the usages of functions from comments and ReadMe and carry out the expected return values.
@@ -40,7 +52,7 @@ Responsibilities:
 Schedule
   * Jan28 - Feb 4: Floor Plan / Path Finding Done.
   * Feb 4 - Feb 11 Be able to have sequence of commands
-  * Feb 11 - Feb 18 Testing on Robot / Robot programs
+  * Feb 11 - Feb 18 Testing on Robot / Robot programs, Robot Incremental Movements
   * Feb 18 - Feb 25 Integrate GUI, Path, and Robot
   * Feb 25 - Mar 2 Robot could walk by assigning a sequence of 
   move commands. 

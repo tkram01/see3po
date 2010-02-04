@@ -2,6 +2,13 @@
 #labels Featured,Phase-Support
 = Comments and questions from the Professor =
 
+== February 4 ==
+
+Good start on first sprint.
+
+I noticed several spelling errors on that page when you presented it in class Tuesday. I fixed them for you, since I didn't want to distract you from useful work in the sprint. They're not hard to see when editing since the google code wiki editor highlights them. So please try to catch them yourself from now on as you enter information.
+
+----
 
 == December 12 ==
 

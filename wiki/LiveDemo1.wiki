@@ -7,10 +7,10 @@ The first live demo will display FloorPlanProcessing, PathFinding and Host-Remot
 
 == Details ==
 === Goals ===
-  * starting point & desination: Location nearby M-1-620 (demo room)
+  * starting point & destination: Location nearby M-1-620 (demo room)
   * Locations are assigned automatically via GUI. Users need to click the floor plan in GUI.
   * Robot is moving in 4 directions along tiles.
-  * A "Location" feature might be procided manually.
+  * A "Location" feature might be provided manually.
 
 === Why this milestone? ===
   If we can deliver this on first sprint, we can then prove that the floor plan and path finding program are working correctly. It also proves that we are able to totally control the robot movement through the program automatically. Finally, it will put us in a good position to accept Tyler's program and immediately begin integrating it. 
@@ -21,17 +21,17 @@ The first live demo will display FloorPlanProcessing, PathFinding and Host-Remot
   * Define data structure to store floor plan to files. Import and export ([Debarati] / 5 hours)
   * Handling exceptions in path-finding such as the chosen points are not 
   available / path is not available.([Nick] [Frank] / 10 hours)
-  * Esitmate / Reduce processing time of path-finding ([Frank] [Nick] / 10 hours)
+  * Estimate / Reduce processing time of path-finding ([Frank] [Nick] / 10 hours)
   * Enhance GUI to enable manual Location  ([Frank] / 10 hours)
   * Robot-side programming (LocalBrain): a robot could take a sequence of commands (turns or forward)( [Nick] [Hao] [Jacky] / 30 Hours)
-  * Figure out solutions on hardwares: PCMCIA card dravers ([Hao] [Jacky] / 20 Hours)
+  * Figure out solutions for hardware: PCMCIA card drivers ([Hao] [Jacky] / 20 Hours)
   * WhereAmI Locator must be completed when this sprint is over (MERL / ?) 
 
 ==== Hardware ====
   * Due to the lack of driver, we need to confirm Tyler to use another type of camera. 
   * Test the robot speed and write some code to make the robot to move forward in discrete increments and turn in increments of 90 degrees, 180 degrees, 270 degree. 
   * Combine the software and hardware to test the robot movement. 
-  * If we still have much more time, we need to think about the command buffer, which method will make it much more effieient.(The buffer in the host or in the local, how to quote the command query to void of losing the command and so on)
+  * If we still have much more time, we need to think about the command buffer, which method will make it much more efficient.(The buffer in the host or in the local, how to quote the command query to void of losing the command and so on)
 
 ==== Other ====
   * FloorPlan - an accurately measured floorplan will be needed.

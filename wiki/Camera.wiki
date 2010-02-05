@@ -7,6 +7,7 @@
 || Current Camera with Win XP Embedded  || Win XP Embedded must be supported by our computer <br> Win XP Camera Driver<br> Win XP Firewire Driver || || <font color = Red> Resolved </font> <br> Win XP is not supported by our computer<br> || <a href = "http://groups.google.com/group/see3po/browse_thread/thread/1b8b7c6f4bb47bc2"> discussion</a> ||
 || New USB Camera || Minimum Resolution: <br> Minimum Frame Rate: || Only USB 1.1 is supported by the Embedded PC <br> Least attractive option to Tyler || <font color = Orange>Not Resolved</font>|| ||
 || Replace Embedded PC with a Netbook|| Expansion Slot for Firewire support <br> A Serial Port <br> Physical connection to the robot || || <font color = Orange>Not Resolved</font><br> || <a href = "http://groups.google.com/group/see3po/browse_thread/thread/50f1e3def3161ad5#"> discussion</a>||
+|| Add one Firewire port || Make sure camera works on current Firewire || Need to send the computer back to manufacture || <font color = Orange>Not Resolved</font>|| ||
 
 
  

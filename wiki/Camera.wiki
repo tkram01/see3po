@@ -9,7 +9,9 @@
 || Replace Embedded PC with a Netbook|| Expansion Slot for Firewire support <br> A Serial Port <br> Physical connection to the robot || || <font color = Orange>Not Resolved</font><br> || <a href = "http://groups.google.com/group/see3po/browse_thread/thread/50f1e3def3161ad5#"> discussion</a>||
 || Add one Firewire port || Make sure camera works on current Firewire || Need to send the computer back to manufacture || <font color = Orange>Not Resolved</font>|| ||
 
- * Article 106: Imaging Products camera compatability with Windows CE .NET. **
+
+== Current camera manufacture Knowledge Base ==  
+ * Article 106: Imaging Products camera compatability with Windows CE .NET. 
 SUMMARY:
 Windows CE .NET is a generalized embedded operating system for devices such as handhelds, thin clients, logic controllers, and advanced consumer electronics. This article briefly describes the compatability of PGR Imaging Products with this operating system.
 APPLICABLE PRODUCTS :

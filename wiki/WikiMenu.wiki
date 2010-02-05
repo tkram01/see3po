@@ -16,6 +16,7 @@
   ** [PathFinding Path Finding] 
   ** Hardware
      *** [HWQuestions Questions]
+     *** [Camera] 
  * Group Member
   ** [Frank]
   ** [Nick]

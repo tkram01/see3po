@@ -1,0 +1,44 @@
+#summary See3PO's camera
+
+
+= Camera Options =
+
+=== Current Camera with Win CE === 
+====Requirements==== 
+Win CE Firewire Driver 
+Win CE Camera Driver
+====Resolution==== 
+<font color = Orange>Not Resolved</font><br>
+<a href = "http://groups.google.com/group/see3po/browse_thread/thread/d9f5e5ccae1f449e#"> discussion </a>
+
+=== Current Camera with Win XP Embedded === 
+====Requirements==== 
+Win XP Embedded must be supported by our computer
+Win XP Camera Driver
+Win XP Firewire Driver
+====Resolution==== 
+<font color = Red>Resolved</font>: Win XP is not supported by our computer<br>
+<a href = "http://groups.google.com/group/see3po/browse_thread/thread/1b8b7c6f4bb47bc2"> discussion</a>
+
+=== New Camera === 
+====Requirements==== 
+Minimum Resolution:
+Minimum Frame Rate:
+====Problems==== 
+Only USB 1.1 is supported by the Embedded PC
+Least attractive option to Tyler
+====Resolutions====
+<font color = Orange>Not Resolved</font>
+
+=== Replace Embedded PC with a Netbook === 
+====Requirements==== 
+Expansion Slot for Firewire support
+A Serial Port
+Physical connection to the robot
+====Problems==== 
+
+====Resolutions====
+<font color = Orange>Not Resolved</font><br>
+<a href = "http://groups.google.com/group/see3po/browse_thread/thread/50f1e3def3161ad5#"> discussion</a>
+
+ 

@@ -9,5 +9,26 @@
 || Replace Embedded PC with a Netbook|| Expansion Slot for Firewire support <br> A Serial Port <br> Physical connection to the robot || || <font color = Orange>Not Resolved</font><br> || <a href = "http://groups.google.com/group/see3po/browse_thread/thread/50f1e3def3161ad5#"> discussion</a>||
 || Add one Firewire port || Make sure camera works on current Firewire || Need to send the computer back to manufacture || <font color = Orange>Not Resolved</font>|| ||
 
+ * Article 106: Imaging Products camera compatability with Windows CE .NET. **
+SUMMARY:
+Windows CE .NET is a generalized embedded operating system for devices such as handhelds, thin clients, logic controllers, and advanced consumer electronics. This article briefly describes the compatability of PGR Imaging Products with this operating system.
+APPLICABLE PRODUCTS :
+Dragonfly (NANC) •  Scorpion •  Firefly2 (NANC) •  Flea (NANC) • 
+ANSWER:
+Windows CE .NET is a generalized embedded operating system for devices such as handhelds, thin clients, logic controllers, and advanced consumer electronics.
+
+Although Point Grey Research does not support our products for use on this operating system, some customers have successfully used the Dragonfly on a Windows CE .NET 4.1 platform.
+
+One specific customer installed Windows CE .NET on a Pentium III clone PC/104 single-board computer (SBC), which supplies power to the Dragonfly.
+
+Using a hi-res (1024x768) Dragonfly, the customer changed the 1394 DCAM driver that comes with the operating system using Platform Builder. No additional information on the specific changes made is available.
+
+Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be added so that Plug and Play can recognize the camera; the registry keys are as follows:
+
+[HKEY_LOCAL_MACHINE\WDMDrivers\{7EA55E5C-F3A5-4ec2-AE0A-F9B7203C13F5}\0002]
+"MatchingDeviceId"="1394\\A02D&102"
+"Dll"="1394dcam.DLL"
+"FriendlyName"="Dragonfly Digital Camera 1.0.0.20"
+
 
  

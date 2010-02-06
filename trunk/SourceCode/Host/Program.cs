@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace See3PO
+namespace Host
 {
 	static class Program
 	{

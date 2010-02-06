@@ -1,4 +1,4 @@
-﻿namespace See3PO
+﻿namespace Host
 {
     partial class ScaleForm
     {

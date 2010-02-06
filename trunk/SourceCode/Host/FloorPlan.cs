@@ -10,7 +10,7 @@ using System.Collections.Generic;
  * value of m_pixelsperfoot for 
  * the array to be generated */
 
-namespace See3PO
+namespace Host
 {
     public class FloorPlan
     {

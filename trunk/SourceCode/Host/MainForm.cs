@@ -14,7 +14,7 @@ using Nexus3Input;
 using RobotCommands;
 using RobotHost;
 
-namespace See3PO
+namespace Host
 {
     
 	public partial class MainForm : Form, IRobotParent
@@ -22,7 +22,7 @@ namespace See3PO
         public const int FORWARD_SPEED = 5;
         public const int TURN_SPEED = 5;
 
-        public enum fpState { NONE, IMAGE, DRAWSCALE, ROBOT, FLOORPLAN, DESTINATION };
+        public enum fpState { NONE, IMAGE, DRAWSCALE, SETROBOT, SETDEST, HAVEPATH };
         enum direction { north, east, south, west };
 
         public fpState m_fpState;
@@ -40,6 +40,11 @@ namespace See3PO
 
 
         Status m_status;
+        public Status status {
+            get { 
+                return m_status; 
+            }
+        }
         PathFinder m_pathfinder;
 
 		CRobotHost m_host;
@@ -54,7 +59,13 @@ namespace See3PO
         Graphics m_fg;
 
         Point m_center;
-
+        Point m_highlight;
+        bool m_highlighted;
+        bool highlighted 
+        {
+            set { m_highlighted = value; }    
+        }
+        
         Image m_robotImage;
 
         Image m_destImage;
@@ -74,9 +85,9 @@ namespace See3PO
             InitializeComponent();
 
             m_host = new CRobotHost(this);
+
             m_destImage = Image.FromFile("Images\\destImage.png");
-            // Temporary
-            //livePanel.BackgroundImage = Image.FromFile("Images\\SampleRobotView.jpg"); 
+
             m_camera = new CWebcam(livePanel, null, false);
             m_camera.Initialize();
             m_camera.SetReady();
@@ -182,8 +193,6 @@ namespace See3PO
 			statusLabel.Text = connectionStatus;
 		}
 
-
-
         private void ConnectMenuItem_Click(object sender, EventArgs e)
         {
             if (m_host.IsListening)
@@ -222,18 +231,18 @@ namespace See3PO
                         bg.DrawLine(new Pen(Color.Blue), (PointF)m_pixelsperfootStart, floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
                         break;
 
-                    case fpState.ROBOT:
+                    case fpState.SETROBOT:
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         instructions = "Click the floor plan to set the robot's current location";
                         overlay = new SolidBrush(Color.FromArgb(10, Color.Red));
                         break;
 
-                    case fpState.FLOORPLAN:
+                    case fpState.SETDEST:
                         instructions = "Click the floor plan to set the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         break;
 
-                    case fpState.DESTINATION:
+                    case fpState.HAVEPATH:
                         instructions = "Click the floor plan to change the destination";
                         bg.DrawImage(m_status.floorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         if (m_status.path != null)
@@ -337,12 +346,12 @@ namespace See3PO
                     SetScale(scaleLength);
                     break;
 
-                case fpState.ROBOT:
+                case fpState.SETROBOT:
                     PlaceRobot(sender, e);
                     break;
 
-                case fpState.FLOORPLAN:
-                case fpState.DESTINATION:
+                case fpState.SETDEST:
+                case fpState.HAVEPATH:
                     if (m_status != null)
                     {
                         SetDestination(sender, e);
@@ -380,14 +389,14 @@ namespace See3PO
                 m_pathfinder = new QGPathFinder(m_status, this); 
                 m_ratioX = (double)(m_status.floorPlan.getXTileNum()) / (double)(floorPlanPanel.Width);
                 m_ratioY = (double)m_status.floorPlan.getYTileNum() / (double)floorPlanPanel.Height;
-                m_fpState = fpState.FLOORPLAN;
+                m_fpState = fpState.SETDEST;
             }
             if (t_DrawScaleTimer != null)
             {
                 t_DrawScaleTimer.Dispose();
             }
             
-            m_fpState = fpState.FLOORPLAN;
+            m_fpState = fpState.SETDEST;
             DrawFloor();
         }
 
@@ -420,21 +429,30 @@ namespace See3PO
         private void SetDestination(object sender, MouseEventArgs e)
         {
             m_status.position = getPosition();
+
             PostMessage(m_status.endPoint.ToString());
+
             m_status.endPoint = PanelToFloorPlan(new Point(e.X, e.Y));
-            //m_status.floorPlan.setTargetTile((int)(e.X * m_ratioX), (int)(e.Y * m_ratioY));
-            
-            //PathFinder path = new QGPathFinder(m_status, this);
+
             m_status.path = m_pathfinder.getPath();
-            m_fpState = fpState.DESTINATION;
+
+            m_fpState = fpState.HAVEPATH;
+
             DrawFloor();
         }
 
         private void PlaceRobot(object sender, MouseEventArgs e)
         {
-            m_status.floorPlan.setStartTile(PanelToFloorPlan(e.Location).X, PanelToFloorPlan(e.Location).Y);
-            m_status.position = new Position(PanelToFloorPlan(e.Location), 0);   //fix the facing
-            m_fpState = fpState.FLOORPLAN;
+            MoveRobot(PanelToFloorPlan(e.Location), m_status.position.facing); //fix the facing
+        }
+
+        public void MoveRobot(Point loc, int facing)
+        {
+            m_status.position = new Position(loc.X, loc.Y, facing);  
+            if (m_status.path != null)
+                m_fpState = fpState.HAVEPATH;
+            else
+                m_fpState = fpState.SETDEST;
             DrawFloor();
         }
 
@@ -443,15 +461,22 @@ namespace See3PO
             return new Point(original.X - (image.Width / 4), original.Y - (image.Height / 4));
         }
 
+        private Point CenterPoint(Point original, int size)
+        {
+            return new Point(original.X - (size/2), original.Y - (size/2));
+        }
+
         private void Click_PlaceRobot(object sender, EventArgs e)
         {
-            m_fpState = fpState.ROBOT;
-            DrawFloor();
+                m_fpState = fpState.SETROBOT;
+
+                DrawFloor();
         }
 
         private void Click_SetDestination(object sender, EventArgs e)
         {
-            m_fpState = fpState.FLOORPLAN;
+            m_fpState = fpState.SETDEST;
+
             DrawFloor();
         }
 
@@ -473,6 +498,9 @@ namespace See3PO
 
                 s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
             }
+
+            if (m_highlighted)
+                s.DrawEllipse(new Pen(new SolidBrush(Color.BlueViolet), 2), new Rectangle(CenterPoint(m_highlight, 4), new Size(3,3)));
 
             //Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South
             //if (m_status.position.facing > 315 || m_status.position.facing <= 45)
@@ -521,18 +549,6 @@ namespace See3PO
             return m_status.position;
         }
 
-        //private List<MoveCommand> testPath() {
-        //    List<MoveCommand> path = new List<MoveCommand>();
-        //    path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-        //    path.Add(new MoveCommand(MoveCommand.Direction.CCW, 18));
-        //    path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-        //    path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-        //    path.Add(new MoveCommand(MoveCommand.Direction.CCW, 18));
-        //    path.Add(new MoveCommand(MoveCommand.Direction.Forward, 10));
-        //    path.Add(new MoveCommand(MoveCommand.Direction.CW, 18));
-        //    return path;
-        //}
-
         private Point PanelToFloorPlan(Point panelPoint)
         {
             return new Point((int)(panelPoint.X * m_ratioX), (int)(panelPoint.Y * m_ratioY));
@@ -545,10 +561,12 @@ namespace See3PO
 
         private void goMenuItem_Click(object sender, EventArgs e)
         {
-            if (m_fpState == fpState.DESTINATION)
+            if (m_fpState == fpState.HAVEPATH)
             {
                 t_SendPath = new ThreadStart(SendPath);
+
                 t_SendPathThread = new Thread(t_SendPath);
+
                 t_SendPathThread.Start();
             }
         }
@@ -568,7 +586,21 @@ namespace See3PO
             return Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
         }
 
+        private void Click_ShowPath(object sender, EventArgs e)
+        {
+            PathForm pathform = new PathForm(this);
 
+            pathform.Show();
+        }
 
+        
+        public void highlightPoint(Point point)
+        {
+            m_highlighted = true;
+
+            m_highlight = FloorPlanToPanel(point);
+
+            DrawFloor();
+        }
 	}
 }

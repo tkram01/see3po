@@ -1,10 +1,7 @@
 D:\Documents\School\CS682\Host\obj\Debug\See3PO.exe
 D:\Documents\School\CS682\Host\obj\Debug\See3PO.pdb
 D:\Documents\School\CS682\Host\obj\Debug\ResolveAssemblyReference.cache
-D:\Documents\School\CS682\Host\obj\Debug\See3PO.MainForm.resources
-D:\Documents\School\CS682\Host\obj\Debug\See3PO.Path.resources
 D:\Documents\School\CS682\Host\obj\Debug\See3PO.Properties.Resources.resources
-D:\Documents\School\CS682\Host\obj\Debug\See3PO.ScaleForm.resources
 D:\Documents\School\CS682\Host\obj\Debug\Host.csproj.GenerateResource.Cache
 D:\Documents\School\CS682\Host\bin\Debug\See3PO.exe
 D:\Documents\School\CS682\Host\bin\Debug\See3PO.pdb
@@ -23,3 +20,6 @@ C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\See3PO.
 C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\See3PO.Properties.Resources.resources
 C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\See3PO.ScaleForm.resources
 C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\Host.csproj.GenerateResource.Cache
+D:\Documents\School\CS682\Host\obj\Debug\Host.MainForm.resources
+D:\Documents\School\CS682\Host\obj\Debug\Host.ScaleForm.resources
+D:\Documents\School\CS682\Host\obj\Debug\Host.PathForm.resources

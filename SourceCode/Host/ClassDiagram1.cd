@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="See3PO.FloorPlan">
+  <Class Name="Host.FloorPlan">
     <Position X="0.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAjAAAAgAAEhQgAgAIAAAAAAAJKEAAAAAAEAAAY=</HashCode>
       <FileName>FloorPlan.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.FloorTile">
+  <Class Name="Host.FloorTile">
     <Position X="4" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAQCAAAAAAACkAEAIACAAAgAAAQEAAAICgAJAAAI=</HashCode>
       <FileName>FloorTile.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.MainForm" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="Host.MainForm" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="2.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gaoEZAiGByABCMiFAFSZgaLSUIAA5QIJCQAAtoFAQhk=</HashCode>
@@ -22,13 +22,13 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="See3PO.MoveCommand">
+  <Class Name="Host.MoveCommand">
     <Position X="6.5" Y="0.5" Width="3" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Enum Name="See3PO.MoveCommand.Direction">
+      <Enum Name="Host.MoveCommand.Direction">
         <TypeIdentifier>
           <NewMemberFileName>MoveCommand.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -39,54 +39,54 @@
       <FileName>MoveCommand.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.Position">
+  <Class Name="Host.Position">
     <Position X="0.5" Y="5.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>Position.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.Program" Collapsed="true">
+  <Class Name="Host.Program" Collapsed="true">
     <Position X="2.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.RobotSprite">
+  <Class Name="Host.RobotSprite">
     <Position X="6.25" Y="4" Width="3" />
     <TypeIdentifier>
       <HashCode>gAAoAhgAACAAAACgAAAAIAAAEAABAAAAAAAEAAAAAAA=</HashCode>
       <FileName>RobotSprite.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.Status">
+  <Class Name="Host.Status">
     <Position X="3" Y="4" Width="3" />
     <TypeIdentifier>
       <HashCode>AAEBAAAAACQAAAAAAEACIAAAAEAQAAAAEAAAAAAAAAA=</HashCode>
       <FileName>Status.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.Voodoo">
+  <Class Name="Host.Voodoo">
     <Position X="4.25" Y="8.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Voodoo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.Properties.Resources" Collapsed="true">
+  <Class Name="Host.Properties.Resources" Collapsed="true">
     <Position X="0.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.Properties.Settings" Collapsed="true">
+  <Class Name="Host.Properties.Settings" Collapsed="true">
     <Position X="0.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="See3PO.QGPathFinder">
+  <Class Name="Host.QGPathFinder">
     <Position X="7" Y="7.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAEAQAAAIACQAAAAAAABAAAAAAAAA=</HashCode>
@@ -94,7 +94,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="See3PO.PathFinder">
+  <Interface Name="Host.PathFinder">
     <Position X="4.25" Y="7.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>

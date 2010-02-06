@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace See3PO.Properties {
+namespace Host.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

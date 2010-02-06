@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace See3PO
+namespace Host
 {
     public class FloorTile
     {
@@ -42,10 +42,12 @@ namespace See3PO
 
         public override String ToString()
         {
-            if (this.m_walkable)
-                return "0";
-            else
-                return "1";
+            return m_location.ToString();
+
+            //if (this.m_walkable)
+            //    return "0";
+            //else
+            //    return "1";
         }
 
         public Color toPixel() {
@@ -120,4 +122,5 @@ namespace See3PO
             return prox;
         }
     }
+
 }

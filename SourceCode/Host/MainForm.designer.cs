@@ -1,4 +1,4 @@
-namespace See3PO
+namespace Host
 {
 	partial class MainForm
 	{
@@ -46,6 +46,7 @@ namespace See3PO
             this.setDestinationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.driveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.livePanel = new System.Windows.Forms.Panel();
             this.messageBox = new System.Windows.Forms.TextBox();
             this.floorPlanPanel = new System.Windows.Forms.Panel();
@@ -59,7 +60,7 @@ namespace See3PO
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeRobotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -192,6 +193,7 @@ namespace See3PO
             // 
             this.driveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.goMenuItem,
+            this.showPathToolStripMenuItem,
             this.manualToolStripMenuItem});
             this.driveToolStripMenuItem.Name = "driveToolStripMenuItem";
             this.driveToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
@@ -203,6 +205,12 @@ namespace See3PO
             this.goMenuItem.Size = new System.Drawing.Size(152, 22);
             this.goMenuItem.Text = "Go";
             this.goMenuItem.Click += new System.EventHandler(this.goMenuItem_Click);
+            // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
             // 
             // livePanel
             // 
@@ -326,11 +334,12 @@ namespace See3PO
             this.setDestinationToolStripMenuItem.Text = "Set Destination";
             this.setDestinationToolStripMenuItem.Click += new System.EventHandler(this.Click_SetDestination);
             // 
-            // manualToolStripMenuItem
+            // showPathToolStripMenuItem
             // 
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.manualToolStripMenuItem.Text = "Manual";
+            this.showPathToolStripMenuItem.Name = "showPathToolStripMenuItem";
+            this.showPathToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showPathToolStripMenuItem.Text = "Show Path";
+            this.showPathToolStripMenuItem.Click += new System.EventHandler(this.Click_ShowPath);
             // 
             // MainForm
             // 
@@ -395,6 +404,7 @@ namespace See3PO
         private System.Windows.Forms.ToolStripMenuItem driveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showPathToolStripMenuItem;
 
 	}
 }

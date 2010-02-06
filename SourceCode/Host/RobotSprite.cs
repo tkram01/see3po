@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace See3PO
+namespace Host
 {
     class RobotSprite
     {

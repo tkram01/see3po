@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using See3PO;
 using QuickGraph.Algorithms;
 using QuickGraph;
 using QuickGraph.Algorithms.ShortestPath;
 using QuickGraph.Algorithms.Observers;
 using System.Text.RegularExpressions;
 
-namespace See3PO
+namespace Host
 {
-    class QGPathFinder : PathFinder
+    public class QGPathFinder : PathFinder
     {
         AdjacencyGraph<string, Edge<string>> graph; 
         Dictionary<Edge<string>, double> edgeCost;

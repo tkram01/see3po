@@ -5,7 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace See3PO
+namespace Host
 {
     public class Status
     {
@@ -22,6 +22,7 @@ namespace See3PO
             m_Moves = new List<FloorTile>();
             m_Images = new Stack<Image>(IMG_CAP);
             m_Moves = new List<FloorTile>();
+            m_Position = new Position(new Point(0, 0), 0);
         }
 
         public Image nextImage
@@ -43,13 +44,21 @@ namespace See3PO
         public Position position
         {
             get { return m_Position; }
-            set { m_Position = value; }
+            set 
+            {
+                m_Position = value;
+                m_FloorPlan.setStartTile(position.location.X, position.location.Y);
+            }
         }
 
         public Point endPoint
         {
             get { return m_EndPoint; }
-            set { m_EndPoint = value; }
+            set 
+            { 
+                m_EndPoint = value;
+                m_FloorPlan.setTargetTile(endPoint.X, endPoint.Y);
+            }
         }
 
         public FloorPlan floorPlan {

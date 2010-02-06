@@ -1,9 +1,9 @@
-﻿using See3PO;
+﻿using Host;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace TestSee3PO
+namespace TestHost
 {
     
     

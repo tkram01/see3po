@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host.csproj", "{B5E5580C-6251-4DC7-9F81-8516B95D1989}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHost", "TestSee3PO\TestHost.csproj", "{A457BE44-8C13-42FB-93FB-7EA85E355797}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHost", "TestHost\TestHost.csproj", "{A457BE44-8C13-42FB-93FB-7EA85E355797}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -21,6 +21,7 @@ namespace LocalBrain
 		private CServosController servos;
 		private CMotorsController motors;
         private const int MOTOR_PACKET_SIZE = 8;
+        private const short FIX_SPEED = 350; 
         short rightSpeed;
         short leftSpeed;
 
@@ -221,9 +222,10 @@ namespace LocalBrain
 		}
 
 
-        private void driveButton_Click(object sender, EventArgs e)
+        protected void driveButton_Click(object sender, EventArgs e)
         {
-            short speed = (short)speedBar.Value;
+            //short speed = (short)speedBar.Value;
+            short speed = FIX_SPEED;
             byte command = byte.Parse((string)((Button)sender).Tag);
             
 
@@ -289,20 +291,31 @@ namespace LocalBrain
             motors.Send(new byte[] { 0x10, 0x11, 0, 0, 0, 0, 0xEF });
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click_1(object sender, EventArgs e)
         {
-            //IPaddr.Text = IPaddr.Text.Insert(IPaddr.Text.Length + 1, ((Button)sender).Text);
-            IPaddr.Text = IPaddr.Text + ((Button)sender).Text;
+            driveButton_Click(turnLeftButton, e);
+            movementtimer.Interval = Int32.Parse( T_left90.Text);
+            movementtimer.Enabled = true;
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void movementtimer_Tick(object sender, EventArgs e)
         {
-            IPaddr.Text = "";
+            movementtimer.Enabled = false;
+            driveButton_Click(stopButton, e);
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            IPaddr.Text = IPaddr.Text.Substring(0,IPaddr.Text.Length-1);
+            driveButton_Click(forwardButton, e);
+            movementtimer.Interval = Int32.Parse(T_block .Text);
+            movementtimer.Enabled = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            driveButton_Click(turnRightButton, e);
+            movementtimer.Interval = Int32.Parse(T_right90.Text);
+            movementtimer.Enabled = true;
         }
 
    	}

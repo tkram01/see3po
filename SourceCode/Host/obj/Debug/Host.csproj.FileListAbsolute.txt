@@ -1,10 +1,5 @@
-D:\Documents\School\CS682\Host\obj\Debug\See3PO.exe
-D:\Documents\School\CS682\Host\obj\Debug\See3PO.pdb
 D:\Documents\School\CS682\Host\obj\Debug\ResolveAssemblyReference.cache
-D:\Documents\School\CS682\Host\obj\Debug\See3PO.Properties.Resources.resources
 D:\Documents\School\CS682\Host\obj\Debug\Host.csproj.GenerateResource.Cache
-D:\Documents\School\CS682\Host\bin\Debug\See3PO.exe
-D:\Documents\School\CS682\Host\bin\Debug\See3PO.pdb
 D:\Documents\School\CS682\Host\bin\Debug\QuickGraph.dll
 D:\Documents\School\CS682\Host\bin\Debug\RobotCommands.dll
 D:\Documents\School\CS682\Host\bin\Debug\RobotHost.dll
@@ -23,3 +18,8 @@ C:\Documents and Settings\frank\My Documents\School\CS682\Host\obj\Debug\Host.cs
 D:\Documents\School\CS682\Host\obj\Debug\Host.MainForm.resources
 D:\Documents\School\CS682\Host\obj\Debug\Host.ScaleForm.resources
 D:\Documents\School\CS682\Host\obj\Debug\Host.PathForm.resources
+D:\Documents\School\CS682\Host\bin\Debug\Host.exe
+D:\Documents\School\CS682\Host\bin\Debug\Host.pdb
+D:\Documents\School\CS682\Host\obj\Debug\Host.Properties.Resources.resources
+D:\Documents\School\CS682\Host\obj\Debug\Host.exe
+D:\Documents\School\CS682\Host\obj\Debug\Host.pdb

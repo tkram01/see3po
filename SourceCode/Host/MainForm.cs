@@ -22,8 +22,8 @@ namespace Host
         public const int FORWARD_SPEED = 5;
         public const int TURN_SPEED = 5;
 
+
         public enum fpState { NONE, IMAGE, DRAWSCALE, SETROBOT, SETDEST, HAVEPATH };
-        enum direction { north, east, south, west };
 
         public fpState m_fpState;
 
@@ -601,6 +601,38 @@ namespace Host
             m_highlight = FloorPlanToPanel(point);
 
             DrawFloor();
+        }
+
+        public List<FloorTile> condenseList(List<FloorTile> path)
+        {
+            List<FloorTile> condensedList = new List<FloorTile>();
+
+            FloorTile lastTile = path[0];
+
+
+            condensedList.Add(path[0]);
+
+            for (int i = 1; i < path.Count; i++)
+            {
+                if (path[i].Position.Y == lastTile.Position.Y) // moving vertically
+                {
+                    while (i < path.Count && path[i].Position.Y == lastTile.Position.Y && i < path.Count - 1) // walk until the next turn
+                    {
+                        i++;
+                    }
+                }
+                else                                           // moving horizontally
+                {
+                    while (i < path.Count && path[i].Position.X == lastTile.Position.X) // walk until the next turn
+                    {
+                        i++;
+                    }
+                }
+                lastTile = path[i - 1];
+                condensedList.Add(path[i - 1]); // add the turning point to the new list;
+            }
+
+            return condensedList;
         }
 	}
 }

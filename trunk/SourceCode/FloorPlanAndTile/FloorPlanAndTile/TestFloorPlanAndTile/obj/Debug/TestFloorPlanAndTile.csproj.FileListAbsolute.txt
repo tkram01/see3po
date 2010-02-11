@@ -5,3 +5,10 @@ C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\bin\Debu
 C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\bin\Debug\FloorPlanAndTile.pdb
 C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\obj\Debug\TestFloorPlanAndTile.dll
 C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\obj\Debug\TestFloorPlanAndTile.pdb
+C:\Robot Project\SourceCode\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\bin\Debug\TestFloorPlanAndTile.dll
+C:\Robot Project\SourceCode\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\bin\Debug\TestFloorPlanAndTile.pdb
+C:\Robot Project\SourceCode\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\bin\Debug\FloorPlanAndTile.dll
+C:\Robot Project\SourceCode\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\bin\Debug\FloorPlanAndTile.pdb
+C:\Robot Project\SourceCode\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\obj\Debug\ResolveAssemblyReference.cache
+C:\Robot Project\SourceCode\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\obj\Debug\TestFloorPlanAndTile.dll
+C:\Robot Project\SourceCode\FloorPlanAndTile\FloorPlanAndTile\TestFloorPlanAndTile\obj\Debug\TestFloorPlanAndTile.pdb

@@ -1,0 +1,5 @@
+C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\bin\Debug\FloorPlanAndTile.dll
+C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\bin\Debug\FloorPlanAndTile.pdb
+C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\obj\Debug\ResolveAssemblyReference.cache
+C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\obj\Debug\FloorPlanAndTile.dll
+C:\Robot Project\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\obj\Debug\FloorPlanAndTile.pdb

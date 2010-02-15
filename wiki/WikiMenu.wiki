@@ -14,6 +14,7 @@
   ** [LocalBrainEmulator Emulator]
   ** [FloorPlanProcessing Floor Plan Processing] 
   ** [PathFinding Path Finding] 
+  ** [Guidelines Guidelines] 
   ** Hardware
      *** [HWQuestions Questions]
      *** [Camera] 

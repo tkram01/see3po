@@ -1,0 +1,7 @@
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\obj\Debug\ResolveAssemblyReference.cache
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\bin\Debug\PathFinding.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\bin\Debug\PathFinding.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\bin\Debug\FloorPlanAndTile.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\bin\Debug\QuickGraph.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\obj\Debug\PathFinding.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\obj\Debug\PathFinding.pdb

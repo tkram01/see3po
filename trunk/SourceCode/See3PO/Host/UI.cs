@@ -21,7 +21,5 @@ namespace See3PO
         /// </summary>
         /// <param name="status">the connection status</param>
         void PostConnection(String status);
-
-        Locator getDefaultLocator();
     }
 }

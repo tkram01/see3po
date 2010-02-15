@@ -25,12 +25,11 @@ namespace See3PO
         /// <param name="ui">The user interface for this Host</param>
         public Host(UI ui)
         {
-            m_UI = ui;
-            m_Locator = m_UI.getDefaultLocator();
+            m_UI = ui;                                  // The user interface
 
-            m_RobotHost = new CRobotHost(this);
+            m_RobotHost = new CRobotHost(this);         // The CRobotHost that will handle communication
 
-            m_pixelsperfoot = 2.0;
+            m_pixelsperfoot = 2.0;                      // This is the floorplan scale, and we may not need it
         }
 
 //************************************************************************************************
@@ -112,7 +111,7 @@ namespace See3PO
         /// <returns></returns>
         public bool isConnected()
         {
-            return m_RobotHost.IsConnected();
+            return m_RobotHost.IsConnected;
         }
 
         /// <summary>
@@ -315,8 +314,8 @@ namespace See3PO
         /// </summary>
         public Locator Locator
         {
-            get { return Locator; }
-            set { Locator = value; }
+            get { return m_Locator; }
+            set { m_Locator = value; }
         }
 
         /// <summary>

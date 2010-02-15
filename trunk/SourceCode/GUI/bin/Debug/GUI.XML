@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GUI</name>
+    </assembly>
+    <members>
+        <member name="T:GUI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GUI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GUI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:GUI.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:GUI.MainForm.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:GUI.MainForm.highlightPoint(System.Drawing.Point)">
+            <summary>
+            Selects a point to highlight and sets the flag to true.
+            Used by the manual pathfinder
+            </summary>
+            <param name="point"></param>
+        </member>
+        <member name="M:GUI.MainForm.OnClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Disconnects the host from the robot before closing
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GUI.MainForm.PostConnection(System.String)">
+            <summary>
+            Posts connection status to the screen
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:GUI.MainForm.PostMessage(System.String)">
+            <summary>
+            Posts any message to the screen
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:GUI.MainForm.Click_ConnectMenuItem(System.Object,System.EventArgs)">
+            <summary>
+            Result of clicking the "Connect" menu item - connect the host to the robot
+            </summary>
+            <param name="sender">not used</param>
+            <param name="e">not used</param>
+        </member>
+        <member name="M:GUI.MainForm.Click_FloorPlan(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Result of clicking the FloorPlanPanel - does different things depending on fpState and the button clicked
+            </summary>
+            <param name="e">mouse position</param>
+        </member>
+        <member name="M:GUI.MainForm.Click_GoMenuItem(System.Object,System.EventArgs)">
+            <summary>
+            Result of clicking the "GO" button - Sends the Robot moving 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GUI.MainForm.Click_Import(System.Object,System.EventArgs)">
+            <summary>
+            Result of clicking the "Import" Menu item - prompts the user to load a floor plan 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GUI.MainForm.Click_PlaceRobot(System.Object,System.EventArgs)">
+            <summary>
+            Result of clicking the "Place Robot" menu option
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GUI.MainForm.Click_SetScale(System.Object,System.EventArgs)">
+            <summary>
+            Result of clicking the "Set Scale" menu option
+            </summary>
+        </member>
+        <member name="M:GUI.MainForm.Click_ShowPath(System.Object,System.EventArgs)">
+            <summary>
+            Result of clicking the "Show Path" menu option
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GUI.MainForm.DrawFloor">
+            <summary>
+            Draws the floorPlan, path and locations to the FloorPlanPanel
+            </summary>
+        </member>
+        <member name="M:GUI.MainForm.DrawPath">
+            <summary>
+            This Draws the Path whenever an update occurs.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GUI.MainForm.DrawScale(System.Object)">
+            <summary>
+            Runs in a loop which redraws the background to allow the user to draw a scale line
+            </summary>
+            <param name="State">not used</param>
+        </member>
+        <member name="M:GUI.MainForm.Load_MainForm(System.Object,System.EventArgs)">
+            <summary>
+            Not used
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GUI.MainForm.Paint_FloorPlanPanel(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Draws the floor plan, not directly used
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GUI.MainForm.PlaceRobot(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Move's the robot's current position by mouse event
+            </summary>
+            <param name="sender"></param>
+            <param name="e">mouse location on the FloorPlanPanel</param>
+        </member>
+        <member name="M:GUI.MainForm.PlaceRobot(System.Drawing.Point,System.Int32)">
+            <summary>
+            Move's the robot's position
+            </summary>
+            <param name="loc">Location on the floorplanpanel</param>
+            <param name="facing"></param>
+        </member>
+        <member name="M:GUI.MainForm.SetDestination(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Set's the robot's destination
+            </summary>
+        </member>
+        <member name="M:GUI.MainForm.SetScale(System.Double)">
+            <summary>
+            Sets the scale and creates a new floorplan in m_host, ending the DrawScale loop
+            </summary>
+            <param name="scaleLength">the length of the line drawn</param>
+        </member>
+        <member name="M:GUI.MainForm.CenterPointOnImage(System.Drawing.Point,System.Drawing.Image)">
+            <summary>
+            Centers an image around a point (by moving it up and to the left)
+            </summary>
+            <param name="original">original point</param>
+            <param name="size">the image</param>
+            <returns>new location of the upper left corner of the image</returns>
+        </member>
+        <member name="M:GUI.MainForm.CenterPoint(System.Drawing.Point,System.Int32)">
+            <summary>
+            Centers a shape around a point (by moving it up and to the left)
+            </summary>
+            <param name="original">original point</param>
+            <param name="size">the size of the shape</param>
+            <returns>new location fo the upper left corner of the shape</returns>
+        </member>
+        <member name="M:GUI.MainForm.FloorPlanToPanel(System.Drawing.Point)">
+            <summary>
+            Converts A point in FloorPlan Coordinates to FloorPlanPanel Coordinates, 
+            in case they're different sizes
+            </summary>
+            <param name="fpPoint">Point, in Floor Plan Coords</param>
+            <returns>Point, in FloorPlanPanel Coords</returns>
+        </member>
+        <member name="M:GUI.MainForm.IntToBytes(System.Int32)">
+            <summary>
+            Converts an iteger to a byte array
+            </summary>
+            <param name="source">original int</param>
+            <returns>two bytes holding that int</returns>
+        </member>
+        <member name="M:GUI.MainForm.Length(System.Double,System.Double)">
+            <summary>
+            Gets the hypoteneus from the sides
+            </summary>
+            <param name="x">one side</param>
+            <param name="y">the other side!</param>
+            <returns>the Hypoteneus</returns>
+        </member>
+        <member name="F:GUI.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GUI.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GUI.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:GUI.MainForm.Highlight">
+            <summary>
+            Highlights a point on the map
+            </summary>
+        </member>
+        <member name="P:GUI.MainForm.isHighlighted">
+            <summary>
+            true if there is a point to highlight
+            </summary>
+        </member>
+        <member name="P:GUI.MainForm.Status">
+            <summary>
+            the Host's status
+            </summary>
+        </member>
+        <member name="P:GUI.MainForm.FPState">
+            <summary>
+            The FPState object, holding the current state of the floor plan
+            </summary>
+        </member>
+        <member name="P:GUI.MainForm.FPScale">
+            <summary>
+            The scale of the Floor Plan, pixels to feet
+            </summary>
+        </member>
+        <member name="P:GUI.MainForm.Host">
+            <summary>
+            The Host
+            </summary>
+        </member>
+        <member name="F:GUI.ScaleForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GUI.ScaleForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GUI.ScaleForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:GUI.PathForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GUI.PathForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GUI.PathForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

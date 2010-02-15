@@ -1,0 +1,14 @@
+D:\Documents\School\CS682\GUI\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.MainForm.resources
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.PathForm.resources
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.ScaleForm.resources
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\Documents\School\CS682\GUI\bin\Debug\GUI.exe
+D:\Documents\School\CS682\GUI\bin\Debug\GUI.pdb
+D:\Documents\School\CS682\GUI\bin\Debug\FloorPlanAndTile.dll
+D:\Documents\School\CS682\GUI\bin\Debug\Nexus3Input.dll
+D:\Documents\School\CS682\GUI\bin\Debug\RobotHost.dll
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.exe
+D:\Documents\School\CS682\GUI\obj\Debug\GUI.pdb
+D:\Documents\School\CS682\GUI\bin\Debug\GUI.XML

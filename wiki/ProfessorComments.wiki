@@ -4,6 +4,14 @@
 
 == February 11 ==
 
+*Still* holding my breath waiting for camera problem resolution. I see no indication of progress.
+
+I like the new developer guidelines. Now you need to flesh them out and follow them. In particular, if you're going to require UML diagrams (a good idea) then they need to be posted on the wiki.
+
+----
+
+== February 11 ==
+
 Holding my breath waiting for camera problem resolution. Rooting for netbook. (If I believed in twitter this entry would be short enough.)
 
 ----

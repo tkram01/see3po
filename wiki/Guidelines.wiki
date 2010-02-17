@@ -35,5 +35,8 @@ To integrate everybody's code, we need some guidelines to follow.
 == Code Style & Naming ==
 
   * Namespace: See3PO
+  * Class name: 
   * Variable name:
   * Function name:
+  * Testing Class name: 
+  * Testing Function name:

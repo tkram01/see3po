@@ -5,7 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace FloorPlanAndTile
+namespace See3PO
 {
     [Serializable]
     public class FloorTile

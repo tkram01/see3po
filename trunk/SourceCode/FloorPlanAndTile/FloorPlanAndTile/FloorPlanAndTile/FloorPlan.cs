@@ -11,7 +11,7 @@ using System.Runtime.Serialization;
  * value of m_pixelsperfoot for 
  * the array to be generated */
 
-namespace FloorPlanAndTile
+namespace See3PO
 {
     [Serializable]
     public class FloorPlan

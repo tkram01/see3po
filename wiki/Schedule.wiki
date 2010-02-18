@@ -7,7 +7,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 
 ===February===
 || *Task*							 || *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
-|| FloorPlan serializable            || 02/15/2010	|| 				|| [Debarati]   ||					    ||
+|| FloorPlan serializable            || 02/15/2010	|| Completed				|| [Debarati]   || 02/11/2010					    ||
 || Host and RemoteBrain comply with Protocol Document || 02/15/2010	|| 				|| [Nick] ||			||
 || [BossMeeting5 Boss Meeting 5]     || 02/18/2010  ||              || Everyone     ||                      ||
 || Manual Locator Completed          || 02/20/2010	|| 				|| [Frank]      ||					    ||

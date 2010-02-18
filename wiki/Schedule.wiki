@@ -7,18 +7,14 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 
 ===February===
 || *Task*							 || *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
-|| *WinCE driver deadline*           || 02/01/2010	|| 				|| [Jacky] [Hao] ||					    ||
-|| Protocol Document           || 02/01/2010	|| 				|| [Jacky] [Hao] ||					    ||
-|| Protocol Document updated to reflect motor commands || 02/10/2010	|| 				|| [Frank] ||					    ||
-|| Pathfinder returns Move Commands || 02/10/2010	|| 				|| [Nick] ||					    ||
-|| FloorPlan serializable           || 02/15/2010	|| 				|| [Debarati] ||					    ||
-|| Host and RemoteBrain comply with Protocol Document || 02/15/2010	|| 				|| [Frank] ||					    ||
-|| Message Handshake Protocol || 02/20/2010	|| 				|| [Frank] ||					    ||
-|| Manual Locator Completed || 02/20/2010	|| 				|| [Frank][Nick] ||					    ||
+|| FloorPlan serializable            || 02/15/2010	|| 				|| [Debarati]   ||					    ||
+|| Host and RemoteBrain comply with Protocol Document || 02/15/2010	|| 				|| [Nick] ||			||
+|| [BossMeeting4 Boss Meeting 4]     || 02/18/2010  ||              || Everyone     ||                      ||
+|| Manual Locator Completed          || 02/20/2010	|| 				|| [Frank]      ||					    ||
 
 ===March===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| *[LiveDemo1 Live Demo 1]*                 || 03/02/2010     ||              ||              ||			||
+|| *[LiveDemo1 Live Demo 1]*         || 03/02/2010   ||              ||              ||						||
 
 ===April===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||

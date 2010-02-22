@@ -301,7 +301,11 @@ namespace LocalBrain
         private void movementtimer_Tick(object sender, EventArgs e)
         {
             movementtimer.Enabled = false;
-            driveButton_Click(stopButton, e);
+            stopButton_Click(stopButton, e);
+            System.Threading.Thread.Sleep(50);
+            stopButton_Click(stopButton, e);
+            System.Threading.Thread.Sleep(50);
+            stopButton_Click(stopButton, e);
         }
 
         private void button8_Click(object sender, EventArgs e)

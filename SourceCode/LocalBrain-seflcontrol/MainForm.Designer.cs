@@ -328,7 +328,7 @@ namespace LocalBrain
             this.T_left90.Name = "T_left90";
             this.T_left90.Size = new System.Drawing.Size(54, 23);
             this.T_left90.TabIndex = 99;
-            this.T_left90.Text = "1000";
+            this.T_left90.Text = "600";
             // 
             // T_block
             // 
@@ -336,7 +336,7 @@ namespace LocalBrain
             this.T_block.Name = "T_block";
             this.T_block.Size = new System.Drawing.Size(54, 23);
             this.T_block.TabIndex = 101;
-            this.T_block.Text = "1000";
+            this.T_block.Text = "600";
             // 
             // button8
             // 
@@ -353,7 +353,7 @@ namespace LocalBrain
             this.T_right90.Name = "T_right90";
             this.T_right90.Size = new System.Drawing.Size(54, 23);
             this.T_right90.TabIndex = 103;
-            this.T_right90.Text = "1000";
+            this.T_right90.Text = "500";
             // 
             // button9
             // 

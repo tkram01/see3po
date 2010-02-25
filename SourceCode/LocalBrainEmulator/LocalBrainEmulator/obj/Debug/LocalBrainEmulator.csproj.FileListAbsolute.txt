@@ -19,3 +19,15 @@ D:\Documents\School\CS682\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalB
 D:\Documents\School\CS682\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.csproj.GenerateResource.Cache
 C:\Documents and Settings\frank\My Documents\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.exe
 C:\Documents and Settings\frank\My Documents\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.pdb
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.exe
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.pdb
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\bin\Debug\LocalBrainEmulator.exe
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\bin\Debug\LocalBrainEmulator.pdb
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\bin\Debug\RobotCommands.pdb
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.MainForm.resources
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.Properties.Resources.resources
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.csproj.GenerateResource.Cache
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\bin\Debug\RobotCommands.dll
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\bin\Debug\RobotHost.dll
+D:\Documents\School\see3po\LocalBrainEmulator\LocalBrainEmulator\bin\Debug\RobotHost.pdb

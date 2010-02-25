@@ -27,8 +27,11 @@ namespace See3PO
             m_FloorPlan = new FloorPlan(floorplan, scale);
 
             m_Moves = new List<FloorTile>();
+
             m_Images = null;
+
             m_Moves = new List<FloorTile>();
+
             m_Position = new Position(new Point(0, 0), 0);
         }
 

@@ -38,17 +38,17 @@ namespace LocalBrainEmulator
         {
             InitializeComponent();
 
-            buffer = new Bitmap(livePanel.Width, livePanel.Height);
-            fg = Graphics.FromHwnd(livePanel.Handle);
-            bg = Graphics.FromImage(buffer);
+            //buffer = new Bitmap(livePanel.Width, livePanel.Height);
+            //fg = Graphics.FromHwnd(livePanel.Handle);
+            //bg = Graphics.FromImage(buffer);
 
-            floorPlan = new Bitmap("testFloor.jpg");
-            livePanel.BackgroundImage = floorPlan;
-            Image spriteImage = new Bitmap("sprite3.png");
-            sprite = new RobotSprite(new Bitmap(spriteImage, HEIGHT, WIDTH), new Point(livePanel.Width/2, livePanel.Height/2));
+            //floorPlan = new Bitmap("testFloor.jpg");
+            //livePanel.BackgroundImage = floorPlan;
+            //Image spriteImage = new Bitmap("sprite3.png");
+            //sprite = new RobotSprite(new Bitmap(spriteImage, HEIGHT, WIDTH), new Point(livePanel.Width/2, livePanel.Height/2));
 
-            drawToBuffer();
-            drawFromBuffer();
+            //drawToBuffer();
+            //drawFromBuffer();
 
             //livePanel.draw
             t_moveCallback = new TimerCallback(MoveSprite);
@@ -180,7 +180,7 @@ namespace LocalBrainEmulator
             moveSpeeds[0] = BytesToInt(buffer[3], buffer[4]);
             moveSpeeds[1] = BytesToInt(buffer[5], buffer[6]);
 
-            int duration = BytesToInt(buffer[8], buffer[9]);
+            int duration = BytesToInt(buffer[7], buffer[8]);
 
             string msg = "Motors Message Received: ";
 
@@ -191,7 +191,7 @@ namespace LocalBrainEmulator
             PostMessage( "\n\r speeds: " + moveSpeeds[0] + " " + moveSpeeds[1]);
             PostMessage( "\n\r duration: " + duration);
             
-            t_MoveTimer = new Timer(t_moveCallback, moveSpeeds, 0, 500);
+            //t_MoveTimer = new Timer(t_moveCallback, moveSpeeds, 0, 500);
             //t_MoveTimer.Dispose();
         }
 

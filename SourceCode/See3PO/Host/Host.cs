@@ -13,6 +13,7 @@ using RobotHost;
 using FloorPlanAndTile;
 using FloorTile = FloorPlanAndTile.FloorTile;
 using FloorPlan = FloorPlanAndTile.FloorPlan;
+using System.Drawing.Drawing2D;
 
 namespace See3PO
 {
@@ -67,11 +68,21 @@ namespace See3PO
         /// </summary>
         public void Drive() 
         {
-            if (Status.Path != null) {
-                while (Status.Path.Count > 0) 
-                { 
-                    
+            Queue<MoveCommand> path = ConvertPath();
+            while (path.Count != 0) 
+            {
+                
+
+                MoveCommand nextMove = path.Dequeue();
+                if (nextMove.direction == MoveCommand.Direction.Forward)
+                {
+                    Status.Position.location = Status.Path[0].Position;
+                    Status.Path.RemoveAt(0);
                 }
+                int[] moves = ConvertMove(nextMove);
+                SendMove(moves);
+                Thread.Sleep(nextMove.duration);
+                m_UI.updateUI();
             }
         }
 
@@ -148,25 +159,7 @@ namespace See3PO
         }
 
         /// <summary>
-        /// Send a path to the robot
-        /// </summary>
-        public void SendPath()
-        {
-            if (m_RobotHost.IsConnected)
-            {
-
-                //List<FloorTile> moves = m_status.path;//(List<MoveCommand>)state;
-                //foreach(FloorTile move in moves){
-                //    int[] speeds = GetSpeeds(move);
-                //    Drive(speeds, (short)move.distance);
-                //    PostMessage(move.toString());
-                //    Thread.Sleep(move.distance * 500);
-                //}
-            }
-        }
-
-        /// <summary>
-        /// Updates and returns the current position
+        /// Updates and returns the current Position
         /// </summary>
         /// <returns>the position</returns>
         public Position UpdatePosition()
@@ -237,41 +230,126 @@ namespace See3PO
 //       Private Methods
 //************************************************************************************************
 
-
-        private Queue<MoveCommand> convertPath() 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private Queue<MoveCommand> ConvertPath() 
         {
             Queue<MoveCommand> newPath = new Queue<MoveCommand>();
-            if (Status.Path != null) 
-            { 
-                while ( Status.Path.Count > 0)
-                    
-            }
-                
 
+            if (Status.Path != null && Status.Path.Count > 0) 
+            {
+                //Point[] currentDir = facingToVector(Status.Position.facing); 
+                Point facing = facingToVector(Status.Position.facing);  // We'll use this to figure out the current facing and use it as a vector
+
+                Point previous = new Point(Status.Path[0].Position.X, Status.Path[0].Position.Y);
+
+                previous.Offset(facing);// Make a fake previous point for later calculations. 
+
+                int forwardDist = 0;                                    // If we have multiple forwards, it will combine them to one move 
+
+                for (int i = 0; i < Status.Path.Count -1; i++)          // we go to the second to last point, the last move will take us from 2nd-to-last to the last point. 
+                {
+
+                    Point current = Status.Path[i].Position;            // Robot's current point
+
+                    Point next = Status.Path[i + 1].Position;               // Robot's next point, necessary for deciding if we need to turn. 
+
+                    Point lastDisplacement = new Point(current.X - previous.X, current.Y - previous.Y);// what direction are we currently facing?
+
+                    Point nextDisplacement = new Point(next.X - current.X, next.Y - current.Y); // What direction and how far are we going
+
+                    if (lastDisplacement.X == nextDisplacement.X || lastDisplacement.Y == nextDisplacement.Y) // not turning 
+                    {
+                        forwardDist += nextDisplacement.X + nextDisplacement.Y; // One of these will be zero, and we're just looking for the magnitude. 
+                    }
+                    else                                                // if we are turning
+                    {
+                        MoveCommand.Direction turnDirection = DirChange(lastDisplacement, nextDisplacement);
+                        newPath.Enqueue(new MoveCommand(turnDirection, 90)); // Enqueue your turn first
+
+                        forwardDist = forwardDist += nextDisplacement.X + nextDisplacement.Y; // One of these will be zero, and we're just looking for the magnitude. 
+                        
+                        newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist)); // Then enqueue your forward
+
+                        forwardDist = 0;                                // reset forward 
+                    }
+
+                    previous = current;                                 // Increment the previous point 
+                }
+            }
+
+            return newPath;
         }
 
+        /// <summary>
+        /// Figures out the direction change between two points
+        /// </summary>
+        /// <param name="PC">The change in coordinates between the previous point and the current point</param>
+        /// <param name="CN">The change in coordinates between the current point and the next point</param>
+        /// <returns>A move command: Clockwise or Counterclockwise</returns>
+        private MoveCommand.Direction DirChange(Point PC, Point CN)     // PC = previous to current, CN = current to next)
+        {
+            Matrix CW = new Matrix(0, 1, -1, 0, 0, 0);                  // rotation matrices
+
+            Point [] CWarray = {PC};                                    // The matrix methods take point arrays
+
+            CW.TransformPoints(CWarray);                                // Perform a clockwise transform on the point
+
+            if (Math.Sign(CWarray[0].X) == Math.Sign(CN.X) && Math.Sign(CWarray[0].Y) == Math.Sign(CN.Y))
+                return MoveCommand.Direction.CW;                        // If the turn is CW, then the signs should be the same (magnitude may not)
+
+            return MoveCommand.Direction.CCW;                           // otherwise, we turned CCW
+        }
+
+        /// <summary>
+        /// Converts an integer from the Position.facing field to a point for use in vectors
+        /// </summary>
+        /// <param name="facing"></param>
+        /// <returns></returns>
+        private Point facingToVector(int facing){
+            Point currentDir;     // get starting facing : 0 = East, 90 = North, 180 = West, 270 = South
+            if (facing > 315 || facing <= 45)       // East
+                currentDir= new Point(1, 0);
+
+            else if (facing > 45 && facing <= 135)  // North
+                currentDir = new Point(0, -1);
+
+            else if (facing > 135 && facing <= 225) // West
+                currentDir = new Point(-1, 0);
+
+            else                                    // South
+                currentDir = new Point(0, 1);
+
+            return currentDir;
+        }
+    
         /// <summary>
         /// Converts a MoveCommand objec to a corresponding int array of wheel speeds
         /// </summary>
         /// <param name="move">the move to convert</param>
-        /// <returns>an int array holding the left and right wheel speeds</returns>
-        private int[] GetSpeeds(MoveCommand move)
+        /// <returns>an int array holding the left[0] and right[1] wheel speeds and the time[2]</returns>
+        private int[] ConvertMove(MoveCommand move)
         {
-            int[] speeds = new int[2];
+            int[] speeds = new int[3];
             switch (move.direction)
             {
                 case MoveCommand.Direction.Forward:
                     speeds[0] = speeds[1] = FORWARD_SPEED;
+                    speeds[2] = move.duration;
                     break;
 
                 case MoveCommand.Direction.CCW:
                     speeds[0] = -TURN_SPEED;
                     speeds[1] = TURN_SPEED;
+                    speeds[2] = TURN_CCW_SECONDS;
                     break;
 
                 case MoveCommand.Direction.CW:
                     speeds[0] = TURN_SPEED;
                     speeds[1] = -TURN_SPEED;
+                    speeds[2] = TURN_CW_SECONDS;
                     break;
             }
             return speeds;
@@ -282,10 +360,11 @@ namespace See3PO
         /// </summary>
         /// <param name="speeds">An int[2] array holding the left and right wheel speeds</param>
         /// <param name="duration">seconds to travel before stopping</param>
-        private void SendMove(int[] speeds, short duration)
+        private void SendMove(int[] move)
         {
-            int leftSpeed = speeds[0]; // left
-            int rightSpeed = speeds[1]; // right
+            int leftSpeed = move[0]; // left
+            int rightSpeed = move[1]; // right
+            int duration = move[2];
 
             if (m_RobotHost.IsConnected)
             {
@@ -305,8 +384,10 @@ namespace See3PO
 //************************************************************************************************
 //       Private Attributes
 //************************************************************************************************
-        private const int FORWARD_SPEED = 5;        // Forward Wheel Speed Default
-        private const int TURN_SPEED = 5;           // Turning Wheel Speed Default
+        private const int FORWARD_SPEED = 350;        // Forward Wheel Speed Default
+        private const int TURN_SPEED = 350;           // Turning Wheel Speed Default
+        private const int TURN_CW_SECONDS = 550;  // Turning durations in ms
+        private const int TURN_CCW_SECONDS = 600;
 
         private UI m_UI;                            // The User Interface
 
@@ -353,7 +434,7 @@ namespace See3PO
         }
 
         /// <summary>
-        /// The Robot's current position
+        /// The Robot's current Position
         /// </summary>
         public Position Position
         {
@@ -373,37 +454,3 @@ namespace See3PO
     }
 }
 
-//Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South
-//if (m_host.Status.position.facing > 315 || m_host.Status.position.facing <= 45)
-//    currentDir[0] = new Point(1, 0);
-//else if (m_host.Status.position.facing > 45 && m_host.Status.position.facing <= 135)
-//    currentDir[0] = new Point(0, -1);
-//else if (m_host.Status.position.facing > 135 && m_host.Status.position.facing <= 225)
-//    currentDir[0] = new Point(-1, 0);
-//else if (m_host.Status.position.facing > 225 && m_host.Status.position.facing <= 315)
-//    currentDir[0] = new Point(0, 1);
-
-//// Rotation Matrices
-//Matrix CW = new Matrix(0, 1, -1, 0, 0, 0);
-//Matrix CCW = new Matrix(0, -1, 1, 0, 0, 0);
-
-//foreach (FloorTile cmd in m_host.Status.path)
-//{
-//    switch (cmd.direction)
-//    {
-//    case MoveCommand.Direction.Forward:
-//        Point move = new Point((int)((double)(currentDir[0].X * cmd.distance) / m_ratioX), (int)((double)(currentDir[0].Y * cmd.distance) / m_ratioY));
-//        lineEnd.Offset(move);
-//        break;
-//    case MoveCommand.Direction.CCW:
-//        s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
-//        lineStart = new Point(lineEnd.X, lineEnd.Y);
-//        CCW.TransformPoints(currentDir);
-//        break;
-//    case MoveCommand.Direction.CW:
-//        s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
-//        lineStart = new Point(lineEnd.X, lineEnd.Y);
-//        CW.TransformPoints(currentDir);
-//        break;
-//    }  
-//}

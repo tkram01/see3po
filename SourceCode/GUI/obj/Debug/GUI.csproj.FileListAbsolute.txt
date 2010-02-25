@@ -26,3 +26,22 @@ C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.PathForm.r
 C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.ScaleForm.resources
 C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\Documents\School\see3po\GUI\bin\Debug\GUI.XML
+D:\Documents\School\see3po\GUI\obj\Debug\GUI.exe
+D:\Documents\School\see3po\GUI\obj\Debug\GUI.pdb
+D:\Documents\School\see3po\GUI\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\see3po\GUI\obj\Debug\GUI.MainForm.resources
+D:\Documents\School\see3po\GUI\obj\Debug\GUI.PathForm.resources
+D:\Documents\School\see3po\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Documents\School\see3po\GUI\obj\Debug\GUI.ScaleForm.resources
+D:\Documents\School\see3po\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\Documents\School\see3po\GUI\bin\Debug\GUI.exe
+D:\Documents\School\see3po\GUI\bin\Debug\GUI.pdb
+D:\Documents\School\see3po\GUI\bin\Debug\FloorPlanAndTile.dll
+D:\Documents\School\see3po\GUI\bin\Debug\Nexus3Input.dll
+D:\Documents\School\see3po\GUI\bin\Debug\RobotCommands.dll
+D:\Documents\School\see3po\GUI\bin\Debug\RobotHost.dll
+D:\Documents\School\see3po\GUI\bin\Debug\See3PO.dll
+D:\Documents\School\see3po\GUI\bin\Debug\RobotHost.pdb
+D:\Documents\School\see3po\GUI\bin\Debug\RobotCommands.pdb
+D:\Documents\School\see3po\GUI\bin\Debug\See3PO.pdb

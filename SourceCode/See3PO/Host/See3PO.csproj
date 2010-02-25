@@ -45,11 +45,11 @@
     </Reference>
     <Reference Include="RobotCommands, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\School\CS682\Host\bin\Debug\RobotCommands.dll</HintPath>
+      <HintPath>..\..\RobotHost\bin\Debug\RobotCommands.dll</HintPath>
     </Reference>
     <Reference Include="RobotHost, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\School\CS682\Host\bin\Debug\RobotHost.dll</HintPath>
+      <HintPath>..\..\RobotHost\bin\Debug\RobotHost.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

@@ -12,3 +12,17 @@ D:\Documents\School\CS682\GUI\bin\Debug\RobotHost.dll
 D:\Documents\School\CS682\GUI\obj\Debug\GUI.exe
 D:\Documents\School\CS682\GUI\obj\Debug\GUI.pdb
 D:\Documents\School\CS682\GUI\bin\Debug\GUI.XML
+C:\Documents and Settings\frank\My Documents\see3po\GUI\bin\Debug\GUI.XML
+C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.exe
+C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.pdb
+C:\Documents and Settings\frank\My Documents\see3po\GUI\bin\Debug\GUI.exe
+C:\Documents and Settings\frank\My Documents\see3po\GUI\bin\Debug\GUI.pdb
+C:\Documents and Settings\frank\My Documents\see3po\GUI\bin\Debug\FloorPlanAndTile.dll
+C:\Documents and Settings\frank\My Documents\see3po\GUI\bin\Debug\Nexus3Input.dll
+C:\Documents and Settings\frank\My Documents\see3po\GUI\bin\Debug\RobotHost.dll
+C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.MainForm.resources
+C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.PathForm.resources
+C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.ScaleForm.resources
+C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache

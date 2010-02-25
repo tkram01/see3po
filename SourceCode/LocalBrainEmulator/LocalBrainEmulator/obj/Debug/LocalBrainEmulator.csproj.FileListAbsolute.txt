@@ -17,3 +17,5 @@ D:\Documents\School\CS682\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\Resolv
 D:\Documents\School\CS682\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.MainForm.resources
 D:\Documents\School\CS682\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.Properties.Resources.resources
 D:\Documents\School\CS682\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.csproj.GenerateResource.Cache
+C:\Documents and Settings\frank\My Documents\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.exe
+C:\Documents and Settings\frank\My Documents\see3po\LocalBrainEmulator\LocalBrainEmulator\obj\Debug\LocalBrainEmulator.pdb

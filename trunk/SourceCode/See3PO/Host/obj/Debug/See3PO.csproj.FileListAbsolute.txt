@@ -10,3 +10,12 @@ D:\Documents\School\CS682\See3PO\Host\obj\Debug\See3PO.dll
 D:\Documents\School\CS682\See3PO\Host\obj\Debug\See3PO.pdb
 C:\Documents and Settings\frank\My Documents\see3po\See3PO\Host\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\frank\My Documents\see3po\See3PO\Host\obj\Debug\See3PO.dll
+D:\Documents\School\see3po\See3PO\Host\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\see3po\See3PO\Host\obj\Debug\See3PO.dll
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\See3PO.dll
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\See3PO.pdb
+D:\Documents\School\see3po\See3PO\Host\obj\Debug\See3PO.pdb
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\RobotCommands.dll
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\RobotHost.dll
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\RobotHost.pdb
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\RobotCommands.pdb

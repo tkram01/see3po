@@ -51,7 +51,6 @@ namespace GUI
 
             FloorTile lastTile = path[0];
 
-
             condensedList.Add(path[0]);
 
             for (int i = 1; i < path.Count; i++)
@@ -91,8 +90,5 @@ namespace GUI
         {
             m_parent.Host.Locator = null;                       // Before closing, set the Locator to null (maybe set to a default later)
         }
-
-
-
     }
 }

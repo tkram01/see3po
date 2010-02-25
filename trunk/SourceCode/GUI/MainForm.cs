@@ -85,9 +85,15 @@ namespace GUI
         /// Posts any message to the screen
         /// </summary>
         /// <param name="msg"></param>
-        public void PostMessage(String msg)
+        public void PostMessage(string message)
         {
-            messageBox.Text += msg + "\r\n";
+            if (InvokeRequired)
+            {
+                Invoke(new DGuiCallString(PostMessage), message);
+                return;
+            }
+
+            messageBox.Text = message + "\r\n" + messageBox.Text;
         }
 
 //************************************************************************************************
@@ -163,7 +169,7 @@ namespace GUI
         {
             if (m_host.Status != null && m_host.Status.Path != null)
             {
-                m_host.SendPath();
+                m_host.Drive();
             }
         }
 
@@ -229,6 +235,13 @@ namespace GUI
             pathform.Show();
         }
 
+        /// <summary>
+        /// Updates the UI - called from the host
+        /// </summary>
+        public void updateUI()
+        {
+            DrawFloor();
+        }
 
 
 
@@ -518,6 +531,8 @@ namespace GUI
         private fpState m_fpState;                  // The Current fpState
 
         private Bitmap m_floorPlanImage;            // The original image of the floorplan
+
+        delegate void DGuiCallString(string str);
 
         delegate void DDrawFloor();                 // Delegate for the DrawFloor thread
         private DDrawFloor t_DrawFloorDelegate;

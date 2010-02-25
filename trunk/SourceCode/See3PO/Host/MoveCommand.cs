@@ -10,12 +10,12 @@ namespace See3PO
         public enum Direction {Forward, CW, CCW}
 
         public Direction direction;
-        public int distance;
+        public int duration;
 
-        public MoveCommand(Direction direction, int distance) 
+        public MoveCommand(Direction direction, int duration) 
         {
             this.direction = direction;
-            this.distance = distance;
+            this.duration = duration;
         }
 
         public String toString() 
@@ -26,7 +26,7 @@ namespace See3PO
             //    case Forward: 
             //}
 
-            return direction + " " + distance;
+            return direction + " " + duration;
 
         }
     }

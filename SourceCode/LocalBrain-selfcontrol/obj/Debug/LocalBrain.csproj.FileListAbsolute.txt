@@ -16,3 +16,13 @@ E:\cs682\see3PO\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.Propertie
 E:\cs682\see3PO\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.csproj.GenerateResource.Cache
 E:\cs682\see3PO\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.exe
 E:\cs682\see3PO\SourceCode\LocalBrain-seflcontrol\obj\Debug\LocalBrain.pdb
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\obj\Debug\ResolveAssemblyReference.cache
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\obj\Debug\LocalBrain.MainForm.resources
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\obj\Debug\LocalBrain.Properties.Resources.resources
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\obj\Debug\LocalBrain.csproj.GenerateResource.Cache
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\bin\Debug\LocalBrain.exe
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\bin\Debug\LocalBrain.pdb
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\bin\Debug\RobotCommands.dll
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\bin\Debug\RobotCommands.pdb
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\obj\Debug\LocalBrain.exe
+C:\see3po\trunk\SourceCode\LocalBrain-selfcontrol\obj\Debug\LocalBrain.pdb

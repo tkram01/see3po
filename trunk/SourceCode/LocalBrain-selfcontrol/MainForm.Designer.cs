@@ -63,6 +63,7 @@ namespace LocalBrain
             this.T_right90 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
             this.movementtimer = new System.Windows.Forms.Timer();
+            this.drivingtimer = new System.Windows.Forms.Timer();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -368,6 +369,10 @@ namespace LocalBrain
             // 
             this.movementtimer.Tick += new System.EventHandler(this.movementtimer_Tick);
             // 
+            // drivingtimer
+            // 
+            this.drivingtimer.Tick += new System.EventHandler(this.drivingtimer_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -443,6 +448,7 @@ namespace LocalBrain
         private System.Windows.Forms.TextBox T_right90;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Timer movementtimer;
+        private System.Windows.Forms.Timer drivingtimer;
 	}
 }
 

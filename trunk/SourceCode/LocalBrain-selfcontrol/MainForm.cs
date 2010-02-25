@@ -20,8 +20,14 @@ namespace LocalBrain
 		private CRobotClient client;
 		private CServosController servos;
 		private CMotorsController motors;
+        private const byte EOT = 0xEF;
+        private const byte MOTOR_CMD = 0x10;
+        private const byte DRIVING_CMD = 0x11;
+        private const byte SOUND_CMD = 0x00;
+        private const int SERVER_CMD_SIZE = 10;
         private const int MOTOR_PACKET_SIZE = 8;
-        private const short FIX_SPEED = 350; 
+        private const short FIX_SPEED = 350;
+        private const string server_IP = "192.168.2.166";
         short rightSpeed;
         short leftSpeed;
 
@@ -162,14 +168,33 @@ namespace LocalBrain
 			PostMessage(msg);
 
 			if(motors.IsConnected)
-			{               
-                if (buffer.Length >= MOTOR_PACKET_SIZE)
+			{
+                if (buffer.Length >= SERVER_CMD_SIZE)
                 {
                     byte[] newbuffer = new byte[MOTOR_PACKET_SIZE - 1];
-                    for (int i = 1; i < MOTOR_PACKET_SIZE; i++)
+                    for (int i = 1; i < MOTOR_PACKET_SIZE -1; i++)
                         newbuffer[i - 1] = buffer[i];
-
+                    buffer[MOTOR_PACKET_SIZE - 1] = EOT; // end byte
+                    // disable last driving if new driving cmd recieved
+                    if (newbuffer[1] == DRIVING_CMD)
+                        drivingtimer.Enabled = false; // disable last driving
+                    // send same motor command 3 times due to the hardware issue
                     motors.Send(newbuffer);
+                    System.Threading.Thread.Sleep(50);
+                    motors.Send(newbuffer);
+                    System.Threading.Thread.Sleep(50);
+                    motors.Send(newbuffer);
+                    if (newbuffer[1] == DRIVING_CMD)
+                    {
+                        // obtain driving time from command buffer, which are the last 2 bytes before the end byte
+                        ushort duration = BitConverter.ToUInt16(buffer, SERVER_CMD_SIZE - 3); // driving time (ms)
+                        if (duration > 0)
+                        {
+                            // reset driving time
+                            drivingtimer.Interval = duration;
+                            drivingtimer.Enabled = true;
+                        }
+                    }
                 }
 			}
 		}
@@ -191,8 +216,8 @@ namespace LocalBrain
                 }
                 catch
                 {
-                    PostMessage("Host IP error!! Use 192.168.2.166");
-                    IPstr ="192.168.2.166";
+                    PostMessage("Host IP error!! Will use " + server_IP);
+                    IPstr = server_IP;
                     address = IPAddress.Parse(IPstr);
                 }
                 PostMessage("Connecting to " + IPstr);
@@ -231,42 +256,42 @@ namespace LocalBrain
 
             switch (command)
             {
-                case 0x01:
+                case 0x01: // forward
                     rightSpeed = speed;
                     leftSpeed = speed;
                     break;
 
-                case 0x02:
+                case 0x02: // forward left
                     rightSpeed = 0;
                     leftSpeed = speed;
                     break;
 
-                case 0x03:
+                case 0x03: // forward right
                     rightSpeed = speed;
                     leftSpeed = 0;
                     break;
 
-                case 0x04:
+                case 0x04: // left
                     rightSpeed = (short)-speed;
                     leftSpeed = speed;
                     break;
 
-                case 0x05:
+                case 0x05: // right
                     rightSpeed = speed;
                     leftSpeed = (short)-speed;
                     break;
 
-                case 0x06:
+                case 0x06: // backward
                     rightSpeed = (short)-speed;
                     leftSpeed = (short)-speed;
                     break;
 
-                case 0x07:
+                case 0x07: // backward left
                     rightSpeed = 0;
                     leftSpeed = (short)-speed;
                     break;
 
-                case 0x08:
+                case 0x08: // backward right
                     rightSpeed = (short)-speed;
                     leftSpeed = 0;
                     break;
@@ -275,20 +300,20 @@ namespace LocalBrain
             byte leftHigh = (byte)(leftSpeed >> 8);
             byte rightLow = (byte)rightSpeed;
             byte rightHigh = (byte)(rightSpeed >> 8);
-            motors.Send(new byte[] { 0x10, 0x11, leftHigh, leftLow, rightHigh, rightLow, 0xEF });
+            motors.Send(new byte[] { MOTOR_CMD, DRIVING_CMD , leftHigh, leftLow, rightHigh, rightLow, EOT });
         }
 
        
         private void button1_Click_1(object sender, EventArgs e)
         {
-            motors.Send(new byte[] { 0x10, 0x00, byte.Parse((string)((Button)sender).Tag), 0x00, 0x00, 0x00, 0xEF } );
+            motors.Send(new byte[] { MOTOR_CMD, SOUND_CMD, byte.Parse((string)((Button)sender).Tag), 0x00, 0x00, 0x00, EOT });
         }
 
         private void stopButton_Click(object sender, EventArgs e)
         {
             //rightSpeed = 0;
             //leftSpeed = 0;
-            motors.Send(new byte[] { 0x10, 0x11, 0, 0, 0, 0, 0xEF });
+            motors.Send(new byte[] { MOTOR_CMD, DRIVING_CMD, 0, 0, 0, 0, EOT });
         }
 
         private void button7_Click_1(object sender, EventArgs e)
@@ -301,6 +326,7 @@ namespace LocalBrain
         private void movementtimer_Tick(object sender, EventArgs e)
         {
             movementtimer.Enabled = false;
+            // send same stop motor command 3 times due to the hardware issue
             stopButton_Click(stopButton, e);
             System.Threading.Thread.Sleep(50);
             stopButton_Click(stopButton, e);
@@ -320,6 +346,17 @@ namespace LocalBrain
             driveButton_Click(turnRightButton, e);
             movementtimer.Interval = Int32.Parse(T_right90.Text);
             movementtimer.Enabled = true;
+        }
+
+        private void drivingtimer_Tick(object sender, EventArgs e)
+        {
+            drivingtimer.Enabled = false;
+            // send same stop motor command 3 times due to the hardware issue
+            stopButton_Click(stopButton, e);
+            System.Threading.Thread.Sleep(50);
+            stopButton_Click(stopButton, e);
+            System.Threading.Thread.Sleep(50);
+            stopButton_Click(stopButton, e);
         }
 
    	}

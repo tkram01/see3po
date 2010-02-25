@@ -41,7 +41,7 @@
             // 
             // statusBar
             // 
-            this.statusBar.Location = new System.Drawing.Point(0, 639);
+            this.statusBar.Location = new System.Drawing.Point(0, 563);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(527, 22);
             this.statusBar.TabIndex = 4;
@@ -50,7 +50,7 @@
             // 
             this.messageBox.BackColor = System.Drawing.Color.White;
             this.messageBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.messageBox.Location = new System.Drawing.Point(0, 539);
+            this.messageBox.Location = new System.Drawing.Point(0, 463);
             this.messageBox.Multiline = true;
             this.messageBox.Name = "messageBox";
             this.messageBox.ReadOnly = true;
@@ -73,13 +73,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitMenuItem);
             // 
@@ -88,13 +88,13 @@
             this.connectionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectToRemoteBrainToolStripMenuItem});
             this.connectionsToolStripMenuItem.Name = "connectionsToolStripMenuItem";
-            this.connectionsToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.connectionsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.connectionsToolStripMenuItem.Text = "Connections";
             // 
             // connectToRemoteBrainToolStripMenuItem
             // 
             this.connectToRemoteBrainToolStripMenuItem.Name = "connectToRemoteBrainToolStripMenuItem";
-            this.connectToRemoteBrainToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.connectToRemoteBrainToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.connectToRemoteBrainToolStripMenuItem.Text = "Connect to Remote Brain";
             this.connectToRemoteBrainToolStripMenuItem.Click += new System.EventHandler(this.remoteConnectMenuItem_Click);
             // 
@@ -102,14 +102,14 @@
             // 
             this.livePanel.Location = new System.Drawing.Point(12, 27);
             this.livePanel.Name = "livePanel";
-            this.livePanel.Size = new System.Drawing.Size(500, 500);
+            this.livePanel.Size = new System.Drawing.Size(503, 430);
             this.livePanel.TabIndex = 27;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 661);
+            this.ClientSize = new System.Drawing.Size(527, 585);
             this.Controls.Add(this.livePanel);
             this.Controls.Add(this.messageBox);
             this.Controls.Add(this.statusBar);

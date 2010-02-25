@@ -63,6 +63,19 @@ namespace See3PO
         }
 
         /// <summary>
+        /// Sends each move in the path to the robot
+        /// </summary>
+        public void Drive() 
+        {
+            if (Status.Path != null) {
+                while (Status.Path.Count > 0) 
+                { 
+                    
+                }
+            }
+        }
+
+        /// <summary>
         /// Handles sending of system messages to the robot
         /// </summary>
         /// <param name="buffer">message to send, in a byte array</param>
@@ -224,29 +237,17 @@ namespace See3PO
 //       Private Methods
 //************************************************************************************************
 
-        /// <summary>
-        /// Sends one drive command to the robot
-        /// </summary>
-        /// <param name="speeds">An int[2] array holding the left and right wheel speeds</param>
-        /// <param name="duration">seconds to travel before stopping</param>
-        private void Drive(int[] speeds, short duration)
+
+        private Queue<MoveCommand> convertPath() 
         {
-            int leftSpeed = speeds[0]; // left
-            int rightSpeed = speeds[1]; // right
-
-            if (m_RobotHost.IsConnected)
-            {
-                byte[] leftSpeeds = IntToBytes(leftSpeed);
-
-                byte[] rightSpeeds = IntToBytes(rightSpeed);
-
-                byte[] durations = IntToBytes(duration);
-
-                String msg = "\n\r speeds: " + leftSpeed + " " + rightSpeed;
-                PostMessage(msg);
-
-                m_RobotHost.Send(new byte[] { 0x01, 0x10, 0x11, leftSpeeds[0], leftSpeeds[1], rightSpeeds[0], rightSpeeds[1], 0xEF, durations[0], durations[1] }, true);
+            Queue<MoveCommand> newPath = new Queue<MoveCommand>();
+            if (Status.Path != null) 
+            { 
+                while ( Status.Path.Count > 0)
+                    
             }
+                
+
         }
 
         /// <summary>
@@ -274,6 +275,31 @@ namespace See3PO
                     break;
             }
             return speeds;
+        }
+
+        /// <summary>
+        /// Sends one drive command to the robot
+        /// </summary>
+        /// <param name="speeds">An int[2] array holding the left and right wheel speeds</param>
+        /// <param name="duration">seconds to travel before stopping</param>
+        private void SendMove(int[] speeds, short duration)
+        {
+            int leftSpeed = speeds[0]; // left
+            int rightSpeed = speeds[1]; // right
+
+            if (m_RobotHost.IsConnected)
+            {
+                byte[] leftSpeeds = IntToBytes(leftSpeed);
+
+                byte[] rightSpeeds = IntToBytes(rightSpeed);
+
+                byte[] durations = IntToBytes(duration);
+
+                String msg = "\n\r speeds: " + leftSpeed + " " + rightSpeed;
+                PostMessage(msg);
+
+                m_RobotHost.Send(new byte[] { 0x01, 0x10, 0x11, leftSpeeds[0], leftSpeeds[1], rightSpeeds[0], rightSpeeds[1], durations[0], durations[1], 0xEF }, true);
+            }
         }
  
 //************************************************************************************************
@@ -346,3 +372,38 @@ namespace See3PO
             
     }
 }
+
+//Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South
+//if (m_host.Status.position.facing > 315 || m_host.Status.position.facing <= 45)
+//    currentDir[0] = new Point(1, 0);
+//else if (m_host.Status.position.facing > 45 && m_host.Status.position.facing <= 135)
+//    currentDir[0] = new Point(0, -1);
+//else if (m_host.Status.position.facing > 135 && m_host.Status.position.facing <= 225)
+//    currentDir[0] = new Point(-1, 0);
+//else if (m_host.Status.position.facing > 225 && m_host.Status.position.facing <= 315)
+//    currentDir[0] = new Point(0, 1);
+
+//// Rotation Matrices
+//Matrix CW = new Matrix(0, 1, -1, 0, 0, 0);
+//Matrix CCW = new Matrix(0, -1, 1, 0, 0, 0);
+
+//foreach (FloorTile cmd in m_host.Status.path)
+//{
+//    switch (cmd.direction)
+//    {
+//    case MoveCommand.Direction.Forward:
+//        Point move = new Point((int)((double)(currentDir[0].X * cmd.distance) / m_ratioX), (int)((double)(currentDir[0].Y * cmd.distance) / m_ratioY));
+//        lineEnd.Offset(move);
+//        break;
+//    case MoveCommand.Direction.CCW:
+//        s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
+//        lineStart = new Point(lineEnd.X, lineEnd.Y);
+//        CCW.TransformPoints(currentDir);
+//        break;
+//    case MoveCommand.Direction.CW:
+//        s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd);
+//        lineStart = new Point(lineEnd.X, lineEnd.Y);
+//        CW.TransformPoints(currentDir);
+//        break;
+//    }  
+//}

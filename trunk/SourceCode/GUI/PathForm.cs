@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using FloorTile = FloorPlanAndTile.FloorTile;
+using FloorTile = See3PO.FloorTile;
 using Position = See3PO.Position;
 using Locator = See3PO.Locator;
 

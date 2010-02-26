@@ -7,9 +7,9 @@ using QuickGraph;
 using QuickGraph.Algorithms.ShortestPath;
 using QuickGraph.Algorithms.Observers;
 using System.Text.RegularExpressions;
-using FloorPlanAndTile;
-using FloorTile = FloorPlanAndTile.FloorTile;
-using FloorPlan = FloorPlanAndTile.FloorPlan;
+using See3PO;
+using FloorTile = See3PO.FloorTile;
+using FloorPlan = See3PO.FloorPlan;
 
 namespace See3PO
 {

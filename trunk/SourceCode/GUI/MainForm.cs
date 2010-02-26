@@ -12,7 +12,7 @@ using System.Drawing.Drawing2D;
 using See3PO;
 using Nexus3Input;
 using Timer = System.Threading.Timer;
-using FloorTile = FloorPlanAndTile.FloorTile;
+using FloorTile = See3PO.FloorTile;
 
 
 namespace GUI

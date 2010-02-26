@@ -10,9 +10,9 @@ using System.Drawing;
 using Nexus3Input;
 using RobotCommands;
 using RobotHost;
-using FloorPlanAndTile;
-using FloorTile = FloorPlanAndTile.FloorTile;
-using FloorPlan = FloorPlanAndTile.FloorPlan;
+using See3PO;
+using FloorTile = See3PO.FloorTile;
+using FloorPlan = See3PO.FloorPlan;
 using System.Drawing.Drawing2D;
 
 namespace See3PO
@@ -69,21 +69,28 @@ namespace See3PO
         public void Drive() 
         {
             Queue<MoveCommand> path = ConvertPath();
+
             while (path.Count != 0) 
             {
-                
-
                 MoveCommand nextMove = path.Dequeue();
+
                 if (nextMove.direction == MoveCommand.Direction.Forward)
                 {
-                    Status.Position.location = Status.Path[0].Position;
+                    Status.Position = new Position(Status.Path[0].Position, Status.Position.facing);
+
                     Status.Path.RemoveAt(0);
                 }
-                int[] moves = ConvertMove(nextMove);
-                SendMove(moves);
+
+                SendMove(ConvertMove(nextMove));
+
                 Thread.Sleep(nextMove.duration);
+
                 m_UI.updateUI();
             }
+
+            Status.Position = new Position(Status.Path[Status.Path.Count -1 ].Position, Status.Position.facing);
+
+            m_UI.updateUI();
         }
 
         /// <summary>
@@ -254,7 +261,7 @@ namespace See3PO
 
                     Point current = Status.Path[i].Position;            // Robot's current point
 
-                    Point next = Status.Path[i + 1].Position;               // Robot's next point, necessary for deciding if we need to turn. 
+                    Point next = Status.Path[i + 1].Position;           // Robot's next point, necessary for deciding if we need to turn. 
 
                     Point lastDisplacement = new Point(current.X - previous.X, current.Y - previous.Y);// what direction are we currently facing?
 
@@ -262,14 +269,14 @@ namespace See3PO
 
                     if (lastDisplacement.X == nextDisplacement.X || lastDisplacement.Y == nextDisplacement.Y) // not turning 
                     {
-                        forwardDist += nextDisplacement.X + nextDisplacement.Y; // One of these will be zero, and we're just looking for the magnitude. 
+                        forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
                     }
                     else                                                // if we are turning
                     {
                         MoveCommand.Direction turnDirection = DirChange(lastDisplacement, nextDisplacement);
                         newPath.Enqueue(new MoveCommand(turnDirection, 90)); // Enqueue your turn first
 
-                        forwardDist = forwardDist += nextDisplacement.X + nextDisplacement.Y; // One of these will be zero, and we're just looking for the magnitude. 
+                        forwardDist = forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
                         
                         newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist)); // Then enqueue your forward
 
@@ -337,7 +344,7 @@ namespace See3PO
             {
                 case MoveCommand.Direction.Forward:
                     speeds[0] = speeds[1] = FORWARD_SPEED;
-                    speeds[2] = move.duration;
+                    speeds[2] = move.duration * 1000;
                     break;
 
                 case MoveCommand.Direction.CCW:

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
-using FloorPlanAndTile;
+using See3PO;
 
 namespace See3PO
 {
     interface PathFinder
     {
-        List<FloorPlanAndTile.FloorTile> getPath();
+        List<See3PO.FloorTile> getPath();
     }
 }

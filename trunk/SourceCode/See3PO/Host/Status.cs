@@ -5,9 +5,9 @@ using System.Text;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-using FloorPlanAndTile;
-using FloorTile = FloorPlanAndTile.FloorTile;
-using FloorPlan = FloorPlanAndTile.FloorPlan;
+using See3PO;
+using FloorTile = See3PO.FloorTile;
+using FloorPlan = See3PO.FloorPlan;
 
 namespace See3PO
 {

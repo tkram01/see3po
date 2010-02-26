@@ -19,3 +19,5 @@ D:\Documents\School\see3po\See3PO\Host\bin\Debug\RobotCommands.dll
 D:\Documents\School\see3po\See3PO\Host\bin\Debug\RobotHost.dll
 D:\Documents\School\see3po\See3PO\Host\bin\Debug\RobotHost.pdb
 D:\Documents\School\see3po\See3PO\Host\bin\Debug\RobotCommands.pdb
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\FloorPlanAndTile.dll
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\FloorPlanAndTile.pdb

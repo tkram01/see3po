@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="FloorPlanAndTile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\School\CS682\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\bin\Release\FloorPlanAndTile.dll</HintPath>
+      <HintPath>..\..\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\bin\Debug\FloorPlanAndTile.dll</HintPath>
     </Reference>
     <Reference Include="Nexus3Input, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -76,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QGPathFinder.cs" />
     <Compile Include="Status.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

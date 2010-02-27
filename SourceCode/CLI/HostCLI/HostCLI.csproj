@@ -31,17 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Nexus3Input, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FloorPlanAndTile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\School\CS682\ViLAN Explorer\bin\Debug\Nexus3Input.dll</HintPath>
+      <HintPath>..\..\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\bin\Debug\FloorPlanAndTile.dll</HintPath>
     </Reference>
     <Reference Include="RobotCommands, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\School\CS682\ViLAN Explorer\bin\Debug\RobotCommands.dll</HintPath>
+      <HintPath>..\..\RobotHost\bin\Debug\RobotCommands.dll</HintPath>
     </Reference>
     <Reference Include="RobotHost, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\School\CS682\ViLAN Explorer\bin\Debug\RobotHost.dll</HintPath>
+      <HintPath>..\..\RobotHost\bin\Debug\RobotHost.dll</HintPath>
+    </Reference>
+    <Reference Include="See3PO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\See3PO\Host\bin\Debug\See3PO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

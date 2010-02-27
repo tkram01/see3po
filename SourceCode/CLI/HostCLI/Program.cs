@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HostCLI
 {
-    class Program
+    class Program : See3PO.UI
     {
 
 

@@ -258,7 +258,6 @@ namespace See3PO
 
                 for (int i = 0; i < Status.Path.Count -1; i++)          // we go to the second to last point, the last move will take us from 2nd-to-last to the last point. 
                 {
-
                     Point current = Status.Path[i].Position;            // Robot's current point
 
                     Point next = Status.Path[i + 1].Position;           // Robot's next point, necessary for deciding if we need to turn. 
@@ -274,11 +273,12 @@ namespace See3PO
                     else                                                // if we are turning
                     {
                         MoveCommand.Direction turnDirection = DirChange(lastDisplacement, nextDisplacement);
-                        newPath.Enqueue(new MoveCommand(turnDirection, 90)); // Enqueue your turn first
+
+                        newPath.Enqueue(new MoveCommand(turnDirection, turnDirection == MoveCommand.Direction.CW ? TURN_CW_MS : TURN_CCW_MS)); // Enqueue your turn first
 
                         forwardDist = forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
                         
-                        newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist)); // Then enqueue your forward
+                        newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
 
                         forwardDist = 0;                                // reset forward 
                     }
@@ -344,19 +344,19 @@ namespace See3PO
             {
                 case MoveCommand.Direction.Forward:
                     speeds[0] = speeds[1] = FORWARD_SPEED;
-                    speeds[2] = move.duration * 1000;
+                    speeds[2] = move.duration;
                     break;
 
                 case MoveCommand.Direction.CCW:
                     speeds[0] = -TURN_SPEED;
                     speeds[1] = TURN_SPEED;
-                    speeds[2] = TURN_CCW_SECONDS;
+                    speeds[2] = move.duration;
                     break;
 
                 case MoveCommand.Direction.CW:
                     speeds[0] = TURN_SPEED;
                     speeds[1] = -TURN_SPEED;
-                    speeds[2] = TURN_CW_SECONDS;
+                    speeds[2] = move.duration;
                     break;
             }
             return speeds;
@@ -391,10 +391,11 @@ namespace See3PO
 //************************************************************************************************
 //       Private Attributes
 //************************************************************************************************
-        private const int FORWARD_SPEED = 350;        // Forward Wheel Speed Default
-        private const int TURN_SPEED = 350;           // Turning Wheel Speed Default
-        private const int TURN_CW_SECONDS = 550;  // Turning durations in ms
-        private const int TURN_CCW_SECONDS = 600;
+        private const int FORWARD_SPEED = 350;      // Forward Wheel Speed Default
+        private const int FORWARD_MS = 750;    // Turning durations in ms
+        private const int TURN_SPEED = 350;         // Turning Wheel Speed Default
+        private const int TURN_CW_MS = 550;    // Turning durations in ms
+        private const int TURN_CCW_MS = 600;
 
         private UI m_UI;                            // The User Interface
 

@@ -11,3 +11,4 @@ D:\Documents\Visual Studio 2008\Projects\HostCLI\HostCLI\obj\Debug\HostCLI.exe
 D:\Documents\Visual Studio 2008\Projects\HostCLI\HostCLI\obj\Debug\HostCLI.pdb
 D:\Documents\School\see3po\CLI\HostCLI\obj\Debug\HostCLI.exe
 D:\Documents\School\see3po\CLI\HostCLI\obj\Debug\HostCLI.pdb
+D:\Documents\School\see3po\CLI\HostCLI\obj\Debug\ResolveAssemblyReference.cache

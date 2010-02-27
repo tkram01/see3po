@@ -12,7 +12,7 @@ namespace HostCLI
     using System.Threading;
     using Timer = System.Threading.Timer;
 
-    using Nexus3Input;
+    using See3PO;
     using RobotCommands;
     using RobotHost;
 

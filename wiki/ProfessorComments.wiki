@@ -8,7 +8,9 @@
 
 I like the new developer guidelines. Now you need to flesh them out and follow them. In particular, if you're going to require UML diagrams (a good idea) then they need to be posted on the wiki.
 
-----
+_Reply from the team:_
+
+
 
 == February 11 ==
 

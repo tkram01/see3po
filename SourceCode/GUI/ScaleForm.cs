@@ -47,7 +47,7 @@ namespace GUI
 
         private void Click_DrawButton(object sender, EventArgs e)
         {
-            m_mainform.FPState = MainForm.fpState.IMAGE;
+            m_mainform.FPState = MainForm.fpState.NOSCALE;
             m_mainform.DrawFloor();
             this.Close();
         }
@@ -64,6 +64,7 @@ namespace GUI
             double.TryParse(feetBox.Text, out m_feet);
             m_scale = m_pixels / m_feet;
             m_mainform.FPScale = m_scale;
+            m_mainform.FPState = MainForm.fpState.SETDEST;
         }
 
 

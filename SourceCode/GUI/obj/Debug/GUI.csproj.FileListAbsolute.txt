@@ -46,3 +46,4 @@ D:\Documents\School\see3po\GUI\bin\Debug\RobotCommands.pdb
 D:\Documents\School\see3po\GUI\bin\Debug\See3PO.pdb
 D:\Documents\School\see3po\GUI\bin\Debug\FloorPlanAndTile.pdb
 D:\Documents\School\see3po\GUI\bin\Debug\GUI.XML
+D:\Documents\School\see3po\GUI\obj\Debug\GUI.FacingForm.resources

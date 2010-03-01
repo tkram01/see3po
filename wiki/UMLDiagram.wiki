@@ -4,7 +4,7 @@
 
 The UML diagrams are used to represent the design and to help team members to understand the works of each other.
 
-The diagram is drawn by VisualParadiam community version.
+The diagram is drawn by VisualParadiam[http://www.visual-paradigm.com/product/vpuml/] community version.
 The file is located at SVN/Documents/robot.vpp
 
 = Class Diagram =

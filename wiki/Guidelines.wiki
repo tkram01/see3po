@@ -11,7 +11,7 @@ To integrate everybody's code, we need some guidelines to follow.
 
 == Design and Implememtation ==
 
-  * UML Diagram: All implementation should follow class diagram that all team member agree. If there is any changes necessary, we should have a meeting to discuss it and evaluate the influence.
+  * [UMLDiagram UML Diagram]: All implementation should follow class diagram that all team member agree. If there is any changes necessary, we should have a meeting to discuss it and evaluate the influence.
   * Try to avoid accessing the class properties directly. Provide a public get method.
 
 == Code Organization ==

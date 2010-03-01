@@ -10,7 +10,9 @@ I like the new developer guidelines. Now you need to flesh them out and follow t
 
 _Reply from the team:_
 
+UML diagrams are on. See [UMLDiagram UML diagrams]
 
+----
 
 == February 11 ==
 

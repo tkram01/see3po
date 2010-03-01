@@ -27,28 +27,34 @@ namespace See3PO
 
         public QGPathFinder(FloorPlan floorPlan)
         {
-            
+            this.messages += "- Checking Floor Plan...\n";
             graph = new AdjacencyGraph<string, Edge<string>>(true);
             edgeCost = new Dictionary<Edge<string>, double>(graph.EdgeCount);
             this.fp = floorPlan;
 
             if (this.fp.getStartTile() != null)
             {
+                this.messages += "    Start Point is OK...\n";
                 startPoint = this.fp.getStartTile().Position.X + "_" + this.fp.getStartTile().Position.Y;
             }
             else
             {
+                this.messages += "    Start Point is not valid...\n";
                 startPoint = "4_4";
             }
 
             if (this.fp.getTargetTile() != null)
             {
+                this.messages += "    Target Point is OK...\n";
                 targetPoint = this.fp.getTargetTile().Position.X + "_" + this.fp.getTargetTile().Position.Y;
             }
             else
             {
+                this.messages += "    Target Point is not valid...\n";
                 targetPoint = "4_6";
             }
+
+
 
             //
             buildGraph();
@@ -56,6 +62,8 @@ namespace See3PO
 
         public AdjacencyGraph<string, Edge<string>> buildGraph()
         {
+            this.messages += "- Building Graph...\n";
+
             // Add some vertices to the graph
             for (int i = 0; i < fp.getXTileNum(); i++)
             {
@@ -73,20 +81,20 @@ namespace See3PO
                     }
                 }
             }
+            this.messages += "    There are " + graph.VertexCount + " vertices.\n";
 
             edges = new List<Edge<string>>();
             neighbors = new List<FloorTile>();
 
             for (int i = 0; i < fp.getXTileNum(); i++)
             {
-                for (int j = i; j < fp.getYTileNum(); j++)
+                for (int j = 0; j < fp.getYTileNum(); j++)
                 {
                     if (fp.getWalkableValue(i, j) == 0)
                     {
 
                         neighbors = fp.getTile(i, j).getNeighbours();
 
-                        //m_parent.PostMessage(neighbors.Count);
                         for (int k = 0; k < neighbors.Count; k++)
                         {
                             Edge<string> myedge = new Edge<string>(
@@ -94,11 +102,14 @@ namespace See3PO
                                 neighbors[k].Position.X + "_" + neighbors[k].Position.Y);
                             edges.Add(myedge);
                             graph.AddEdge(myedge);
-                            edgeCost.Add(myedge, 7 - fp.getTile(i, j).openness(5));
+                            //this.messages += "    edges: " + fp.getTile(i, j).Position.X + "_" + fp.getTile(i, j).Position.Y + "->" + neighbors[k].Position.X + "_" + neighbors[k].Position.Y + "\n";
+                            edgeCost.Add(myedge, 1);
                         }
                     }
                 }
             }
+
+            this.messages += "    There are " + graph.EdgeCount + " edges.\n";
 
             return graph;
         
@@ -106,7 +117,7 @@ namespace See3PO
 
         public List<FloorTile> getPath()
         {
-
+            this.messages += "- Start Get Path\n";
             //startPoint = txtStartPoint.Text;
             //targetPoint = txtTargetPoint.Text;
 
@@ -122,6 +133,8 @@ namespace See3PO
 
             // Run the algorithm with A set to be the source
             dijkstra.Compute(startPoint);
+            this.messages += "    Start Point: " + startPoint + ".\n";
+            this.messages += "    Target Point: " + targetPoint + ".\n";
 
             String outString = "";
 
@@ -152,7 +165,6 @@ namespace See3PO
             }
 
             this.messages += retval.Count.ToString()+ "\n";;
-            this.messages += outString+ "\n";;
 
             if(retval.Count == 1 && retval[0].Equals(getTileByIndex(fp, targetPoint))){
                 this.messages += "Can't find path. Start or end point is not walkable or no available walkable tiles" + "\n"; ;
@@ -174,37 +186,6 @@ namespace See3PO
                 System.Convert.ToInt32(outPoint1[1]));
         }
 
-        public List<FloorTile> condenseList(List<FloorTile> path)
-        {
-            List<FloorTile> condensedList = new List<FloorTile>();
-
-            FloorTile lastTile = path[0];
-
-
-            condensedList.Add(path[0]);
-
-            for (int i = 1; i < path.Count; i++)
-            {
-                if (path[i].Position.Y == lastTile.Position.Y) // moving vertically
-                {
-                    while (i < path.Count && path[i].Position.Y == lastTile.Position.Y && i < path.Count - 1) // walk until the next turn
-                    {
-                        i++;
-                    }
-                }
-                else                                           // moving horizontally
-                {
-                    while (i < path.Count && path[i].Position.X == lastTile.Position.X) // walk until the next turn
-                    {
-                        i++;
-                    }
-                }
-                lastTile = path[i - 1];
-                condensedList.Add(path[i - 1]); // add the turning point to the new list;
-            }
-
-            return condensedList;
-        }
 
         public String GetMessages()
         {

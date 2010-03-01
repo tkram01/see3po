@@ -7,3 +7,5 @@ F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\bin\Debug\P
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\ResolveAssemblyReference.cache
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\PathFindingTest.dll
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\PathFindingTest.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\WindowsFormsApplication1.Form1.resources
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\PathFindingTest.csproj.GenerateResource.Cache

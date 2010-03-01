@@ -1,10 +1,16 @@
-#summary One-sentence summary of this page.
+#summary UML Diagrams.
 
 = Introduction =
 
-Add your content here.
+The UML diagrams are used to represent the design and to help team members to understand the works of each other.
 
+The diagram is drawn by VisualParadiam community version.
+The file is located at SVN/Documents/robot.vpp
 
-= Details =
+= Class Diagram =
 
 [http://see3po.googlegroups.com/web/See3PO_ClassDiagram.jpg]
+
+= Sequence Diagram =
+
+[http://see3po.googlegroups.com/web/See3PO_SequenceDiagram.jpg]

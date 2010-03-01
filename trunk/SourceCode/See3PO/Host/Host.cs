@@ -375,11 +375,11 @@ namespace See3PO
 
             if (m_RobotHost.IsConnected)
             {
-                byte[] leftSpeeds = IntToBytes(leftSpeed);
+                byte[] leftSpeeds = IntToBytes(leftSpeed);  // split the first 16 bits of the int into two 8-bit bytes
 
-                byte[] rightSpeeds = IntToBytes(rightSpeed);
+                byte[] rightSpeeds = IntToBytes(rightSpeed);// now for the right weel
 
-                byte[] durations = IntToBytes(duration);
+                byte[] durations = IntToBytes(duration);        
 
                 String msg = "\n\r speeds: " + leftSpeed + " " + rightSpeed;
                 PostMessage(msg);
@@ -392,9 +392,9 @@ namespace See3PO
 //       Private Attributes
 //************************************************************************************************
         private const int FORWARD_SPEED = 350;      // Forward Wheel Speed Default
-        private const int FORWARD_MS = 750;    // Turning durations in ms
+        private const int FORWARD_MS = 750;         // forward durations in ms
         private const int TURN_SPEED = 350;         // Turning Wheel Speed Default
-        private const int TURN_CW_MS = 550;    // Turning durations in ms
+        private const int TURN_CW_MS = 550;         // Turning durations in ms
         private const int TURN_CCW_MS = 600;
 
         private UI m_UI;                            // The User Interface

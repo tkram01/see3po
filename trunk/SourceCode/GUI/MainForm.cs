@@ -40,7 +40,7 @@ namespace GUI
             m_callback = new TimerCallback(DrawScale);                          // I have no idea why we do this, but 
             t_DrawFloorDelegate = new DDrawFloor(DrawFloor);                    //it's necessary for the drawscale thread
                                 
-            m_fpState = fpState.NONE;                                           // Set the fpState to none, since nothing has been done
+            m_fpState = fpState.START;                                           // Set the fpState to none, since nothing has been done
         }
 
 //************************************************************************************************
@@ -59,6 +59,13 @@ namespace GUI
             m_highlight = FloorPlanToPanel(point);
 
             DrawFloor();
+        }
+
+        public void DrawScale() 
+        {
+            m_fpState = fpState.NOSCALE;
+            DrawFloor();
+
         }
 
         /// <summary>
@@ -121,20 +128,39 @@ namespace GUI
                 case MouseButtons.Left:                                         // If we're dealing with a normal click
                     switch (m_fpState)
                     {
-                        case fpState.IMAGE:                                     // We've loaded the image, so this is to set the scale
+                        case fpState.NOSCALE:                                     // We've loaded the image, so this is to set the scale
                             m_scaleStart = e.Location;                          // Set the starting point then go into DrawScale mode
                             m_fpState = fpState.DRAWSCALE;
-                            t_DrawScaleTimer = new Timer(m_callback, null, 0, 100);
+                            t_DrawTimer = new Timer(m_callback, null, 0, 100);
                             break;
 
                         case fpState.DRAWSCALE:                                 // We're currently drawing the scale, so this is the endpoint
                             m_scaleEnd = e.Location;                            // Set the endpoint and then call SetScale method
                             double scaleLength = Length(m_scaleStart.X - m_scaleEnd.X, m_scaleStart.Y - m_scaleEnd.Y);
+                            if (t_DrawTimer != null)
+                            {
+                                t_DrawTimer.Dispose();                                     // If there's a drawscale timer running, kill it
+                            }
                             SetScale(scaleLength);
                             break;
 
                         case fpState.SETROBOT:                                  // We're setting the rotob's position
                             PlaceRobot(sender, e);
+                            new FacingForm(this).Show();
+                            //m_fpState = fpState.SETFACING;
+                            //t_DrawTimer = new Timer(m_callback, null, 0, 100);
+                            break;
+                        case fpState.SETFACING:                                 // Once we plae the robot, we need to set its current facing direction
+                            m_fpState = fpState.SETDEST;
+                            Point panelPosition = (FloorPlanToPanel(m_host.Status.Position.location));
+                            Point mousePosition = e.Location;
+                            m_host.Status.Position.facing = SlopeToFacing(panelPosition, mousePosition);
+
+                            if (t_DrawTimer != null)
+                            {
+                                t_DrawTimer.Dispose();                                     // If there's a drawscale timer running, kill it
+                            }
+                            DrawFloor();
                             break;
 
                         case fpState.SETDEST:                                   // If we have a destination or path
@@ -189,7 +215,7 @@ namespace GUI
             }
             catch (Exception) { }
 
-            m_fpState = fpState.IMAGE;                                                          // The state changes to reflecft our new image
+            m_fpState = fpState.NOSCALE;                                                          // The state changes to reflecft our new image
 
             SetScale(10);                                                                       // Call set scale automatically - we can remove this
 
@@ -268,11 +294,11 @@ namespace GUI
 
                 switch (m_fpState)
                 {
-                    case fpState.NONE:                                                          // No floorplan even exists - don't draw anything
+                    case fpState.START:                                                          // No floorplan even exists - don't draw anything
                         instructions = "Load or Import a Floor Plan";
                         break;
 
-                    case fpState.IMAGE:                                                         // The image has been loaded, but not converted
+                    case fpState.NOSCALE:                                                         // The image has been loaded, but not converted
                         instructions = "Click on the Floor or Select \"Draw Scale\" from the tools menu";
                         bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         overlay = new SolidBrush(Color.FromArgb(10, Color.Green));
@@ -290,6 +316,18 @@ namespace GUI
                         bg.DrawImage(m_host.Status.FloorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         instructions = "Click the floor plan to set the robot's current location";
                         overlay = new SolidBrush(Color.FromArgb(10, Color.Red));
+                        break;
+
+                    case fpState.SETFACING:
+                        instructions = "Draw your line to indicate facing: Current FAcing ";
+                        bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        overlay = new SolidBrush(Color.FromArgb(10, Color.Green));
+                        Point panelPosition = (FloorPlanToPanel(m_host.Status.Position.location));
+                        Point mousePosition = floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition);
+                        bg.DrawEllipse(new Pen(new SolidBrush(Color.Red)), panelPosition.X, panelPosition.Y, 1, 1);
+                        bg.DrawLine(new Pen(Color.Blue), (PointF)panelPosition,
+                            floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition));
+                        instructions = "CurrentFacing: " + SlopeToFacing(panelPosition, mousePosition);
                         break;
 
                     case fpState.SETDEST:
@@ -435,19 +473,17 @@ namespace GUI
             {
                 sf.ShowDialog();                                                // Show the ScaleForm
 
-                m_scale = sf.m_scale;                                           // When we return, get the scale from the form
+                if (m_fpState == fpState.SETDEST)
+                {
+                    m_scale = sf.m_scale;                                           // When we return, get the scale from the form
 
-                m_host.CreateFloorPlan(m_floorPlanImage, m_scale);              // Create a new floorplan
+                    m_host.CreateFloorPlan(m_floorPlanImage, m_scale);              // Create a new floorplan
 
-                m_ratioX = (double)(m_host.Status.FloorPlan.getXTileNum()) / (double)(floorPlanPanel.Width); // figure out the ratio of the size of
-                m_ratioY = (double)m_host.Status.FloorPlan.getYTileNum() / (double)floorPlanPanel.Height; // the floorplan to the panel
-
-                m_fpState = fpState.SETDEST;                                    // Set the state to SetDest so that we can choose 
-            }                                                                   // a destination
-            if (t_DrawScaleTimer != null)
-            {
-                t_DrawScaleTimer.Dispose();                                     // If there's a drawscale timer running, kill it
-            }
+                    m_ratioX = (double)(m_host.Status.FloorPlan.getXTileNum()) / (double)(floorPlanPanel.Width); // figure out the ratio of the size of
+                    m_ratioY = (double)m_host.Status.FloorPlan.getYTileNum() / (double)floorPlanPanel.Height; // the floorplan to the panel
+                }
+                
+            }                                                                 
 
             DrawFloor();                                                        // Draw the floor
         }
@@ -517,14 +553,29 @@ namespace GUI
         {
             return Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
         }
-        
 
+        private int SlopeToFacing(PointF start, PointF end) 
+        {
+            int facing = start.Y > end.Y ? 0 : 180;
+
+
+            try
+            {
+
+               int angle = (int)(Math.Atan2((double)(end.X - start.Y), (double)(start.X - end.X)) * (180.0d / Math.PI));
+
+               facing += start.Y > end.Y ? 180 - angle : angle; ;
+            }
+            catch (DivideByZeroException) { }
+
+            return facing;
+        }
 
         //************************************************************************************************
         //       attributes
         //************************************************************************************************
         public enum fpState                        // Various States that the FloorPlan could be in
-        { NONE, IMAGE, DRAWSCALE, SETROBOT, SETDEST, HAVEPATH }; // Used for drawing the floorplan
+        { START, NOSCALE, DRAWSCALE, SETROBOT, SETFACING, SETDEST, HAVEPATH }; // Used for drawing the floorplan
 
         private See3PO.Host m_host;                  // The Host program 
 
@@ -537,7 +588,7 @@ namespace GUI
         delegate void DDrawFloor();                 // Delegate for the DrawFloor thread
         private DDrawFloor t_DrawFloorDelegate;
 
-        private Timer t_DrawScaleTimer;             // A timer for drawing the line when setting scale
+        private Timer t_DrawTimer;             // A timer for drawing the line when setting scale
         private TimerCallback m_callback;           // The TimerCallBack for drawing the line for setting the scale
 
         private Graphics m_fg;                      // graphics object for drawing the floorplan

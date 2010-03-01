@@ -15,6 +15,7 @@
   ** [FloorPlanProcessing Floor Plan Processing] 
   ** [PathFinding Path Finding] 
   ** [Guidelines Guidelines] 
+     *** [UMLDiagrams UML Diagrams]
   ** Hardware
      *** [HWQuestions Questions]
      *** [Camera] 

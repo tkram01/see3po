@@ -93,12 +93,12 @@ namespace PathFindingTest
         {
             TextWriter tw = new StreamWriter("../../getPathResult.txt");
 
-            Image myimage = new Bitmap("../../testImage.jpg");
-            FloorPlan floorPlan = new FloorPlan(myimage, 5); // TODO: Initialize to an appropriate value
-            int StartX = 8;
-            int StartY = 8;
-            int TargetX = 50;
-            int TargetY = 20;
+            Image myimage = new Bitmap("../../floorplan.bmp");
+            FloorPlan floorPlan = new FloorPlan(myimage, 3); // TODO: Initialize to an appropriate value
+            int StartX = 58;
+            int StartY = 32;
+            int TargetX = 71;
+            int TargetY = 32;
             floorPlan.setStartTile(StartX, StartY);
             floorPlan.setTargetTile(TargetX, TargetY);
 

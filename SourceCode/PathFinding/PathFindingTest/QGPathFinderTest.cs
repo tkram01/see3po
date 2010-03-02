@@ -125,7 +125,7 @@ namespace PathFindingTest
             tw.WriteLine(qgpf.GetMessages());
             tw.Close();
 
-            visualizeFloorPlan(floorPlan, StartX, StartY, TargetX, TargetY);
+            //visualizeFloorPlan(floorPlan, StartX, StartY, TargetX, TargetY);
 
 
             List<FloorTile> expected = new List<FloorTile>();
@@ -221,7 +221,7 @@ namespace PathFindingTest
             tw.WriteLine(StartX + "," + StartY + "," + TargetX + "," + TargetY + "," + t);
             tw.Close();
 
-            visualizeFloorPlan(floorPlan, StartX, StartY, TargetX, TargetY);
+            //visualizeFloorPlan(floorPlan, StartX, StartY, TargetX, TargetY);
 
 
         }

@@ -25,7 +25,7 @@ namespace LocalBrain
         private const byte DRIVING_CMD = 0x11;
         private const byte SOUND_CMD = 0x00;
         private const int SERVER_CMD_SIZE = 10;
-        private const int MOTOR_PACKET_SIZE = 8;
+        private const int MOTOR_PACKET_SIZE = 7;
         private const short FIX_SPEED = 350;
         private const string server_IP = "192.168.2.166";
         short rightSpeed;
@@ -171,10 +171,10 @@ namespace LocalBrain
 			{
                 if (buffer.Length >= SERVER_CMD_SIZE)
                 {
-                    byte[] newbuffer = new byte[MOTOR_PACKET_SIZE - 1];
+                    byte[] newbuffer = new byte[MOTOR_PACKET_SIZE];
                     for (int i = 1; i < MOTOR_PACKET_SIZE -1; i++)
                         newbuffer[i - 1] = buffer[i];
-                    buffer[MOTOR_PACKET_SIZE - 1] = EOT; // end byte
+                    newbuffer[MOTOR_PACKET_SIZE - 1] = EOT; // end byte
                     // disable last driving if new driving cmd recieved
                     if (newbuffer[1] == DRIVING_CMD)
                         drivingtimer.Enabled = false; // disable last driving
@@ -187,7 +187,13 @@ namespace LocalBrain
                     if (newbuffer[1] == DRIVING_CMD)
                     {
                         // obtain driving time from command buffer, which are the last 2 bytes before the end byte
-                        ushort duration = BitConverter.ToUInt16(buffer, SERVER_CMD_SIZE - 3); // driving time (ms)
+                        byte[] B_duration = new byte[2];
+                        B_duration[0] = buffer[SERVER_CMD_SIZE - 2];
+                        B_duration[1] = buffer[SERVER_CMD_SIZE - 3];
+                        ushort duration = BitConverter.ToUInt16(B_duration,0); // driving time (ms)
+                        msg = "Duration = ";
+                        msg += duration.ToString();
+                        PostMessage(msg); 
                         if (duration > 0)
                         {
                             // reset driving time

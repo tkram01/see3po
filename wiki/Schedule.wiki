@@ -14,14 +14,21 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 
 ===March===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| *[LiveDemo1 Live Demo 1]*         || 03/02/2010   ||              ||              ||						||
+|| *[LiveDemo1 Live Demo 1]*         || 03/02/2010   || rescheduled  ||              ||						||
+|| Hardware Order Submitted          || 03/11/2010   ||              ||[Frank] [Hao] [Jacky]||				||
+|| *[LiveDemo1 Live Demo 1]*         || 03/11/2010   ||              ||     all      ||						||
+|| UML up to date                    || 03/19/2010   ||              ||     all      ||						|| 
+|| Code Review Complete              || 03/19/2010   ||              ||     all      ||						|| 
+|| Tyler's Program recieved		     || 03/19/2010   ||              ||              ||                     ||
+|| Tyler's Program Integrated into Host|| 03/26/2010 ||              ||              ||                     ||
 
 ===April===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| *[LiveDemo2 Live Demo 2]*                 || 04/01/2010     ||              ||              ||				        ||
+|| *[LiveDemo2 Live Demo 2]*         || 05/15/2010   ||              ||              ||				        ||
 
 ===May===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
+
 || *Deliverable Due*                 || 05/21/09     ||              ||              ||				        ||
  
 

@@ -197,7 +197,7 @@ namespace LocalBrain
                         if (duration > 0)
                         {
                             // reset driving time
-                            drivingtimer.Interval = duration;
+                            drivingtimer.Interval = duration * 50;
                             drivingtimer.Enabled = true;
                         }
                     }
@@ -256,49 +256,53 @@ namespace LocalBrain
         protected void driveButton_Click(object sender, EventArgs e)
         {
             //short speed = (short)speedBar.Value;
-            short speed = FIX_SPEED;
+            //short speed = FIX_SPEED;
+            short lspeed = 0;
+            short rspeed = 0;
             byte command = byte.Parse((string)((Button)sender).Tag);
-            
+
+            lspeed = System.Int16.Parse(txtleftspeed.Text);
+            rspeed = System.Int16.Parse(txtrightspeed.Text);
 
             switch (command)
             {
                 case 0x01: // forward
-                    rightSpeed = speed;
-                    leftSpeed = speed;
+                    rightSpeed = rspeed;
+                    leftSpeed = lspeed;
                     break;
 
                 case 0x02: // forward left
                     rightSpeed = 0;
-                    leftSpeed = speed;
+                    leftSpeed = lspeed;
                     break;
 
                 case 0x03: // forward right
-                    rightSpeed = speed;
+                    rightSpeed = rspeed;
                     leftSpeed = 0;
                     break;
 
                 case 0x04: // left
-                    rightSpeed = (short)-speed;
-                    leftSpeed = speed;
+                    rightSpeed = (short)-rspeed;
+                    leftSpeed = lspeed;
                     break;
 
                 case 0x05: // right
-                    rightSpeed = speed;
-                    leftSpeed = (short)-speed;
+                    rightSpeed = rspeed;
+                    leftSpeed = (short)-lspeed;
                     break;
 
                 case 0x06: // backward
-                    rightSpeed = (short)-speed;
-                    leftSpeed = (short)-speed;
+                    rightSpeed = (short)-rspeed;
+                    leftSpeed = (short)-lspeed;
                     break;
 
                 case 0x07: // backward left
                     rightSpeed = 0;
-                    leftSpeed = (short)-speed;
+                    leftSpeed = (short)-lspeed;
                     break;
 
                 case 0x08: // backward right
-                    rightSpeed = (short)-speed;
+                    rightSpeed = (short)-rspeed;
                     leftSpeed = 0;
                     break;
             }
@@ -364,6 +368,7 @@ namespace LocalBrain
             System.Threading.Thread.Sleep(50);
             stopButton_Click(stopButton, e);
         }
+
 
    	}
 }

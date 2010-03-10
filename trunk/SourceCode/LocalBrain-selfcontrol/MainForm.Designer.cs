@@ -64,6 +64,11 @@ namespace LocalBrain
             this.button9 = new System.Windows.Forms.Button();
             this.movementtimer = new System.Windows.Forms.Timer();
             this.drivingtimer = new System.Windows.Forms.Timer();
+            this.txtrightspeed = new System.Windows.Forms.TextBox();
+            this.txtleftspeed = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -305,7 +310,7 @@ namespace LocalBrain
             this.IPaddr.Name = "IPaddr";
             this.IPaddr.Size = new System.Drawing.Size(104, 23);
             this.IPaddr.TabIndex = 84;
-            this.IPaddr.Text = "192.168.2.166";
+            this.IPaddr.Text = "192.168.2.137";
             // 
             // label1
             // 
@@ -316,7 +321,7 @@ namespace LocalBrain
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(212, 108);
+            this.button7.Location = new System.Drawing.Point(221, 202);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(54, 49);
             this.button7.TabIndex = 98;
@@ -325,23 +330,23 @@ namespace LocalBrain
             // 
             // T_left90
             // 
-            this.T_left90.Location = new System.Drawing.Point(212, 80);
+            this.T_left90.Location = new System.Drawing.Point(221, 174);
             this.T_left90.Name = "T_left90";
             this.T_left90.Size = new System.Drawing.Size(54, 23);
             this.T_left90.TabIndex = 99;
-            this.T_left90.Text = "600";
+            this.T_left90.Text = "2100";
             // 
             // T_block
             // 
-            this.T_block.Location = new System.Drawing.Point(272, 80);
+            this.T_block.Location = new System.Drawing.Point(281, 174);
             this.T_block.Name = "T_block";
             this.T_block.Size = new System.Drawing.Size(54, 23);
             this.T_block.TabIndex = 101;
-            this.T_block.Text = "600";
+            this.T_block.Text = "2000";
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(272, 108);
+            this.button8.Location = new System.Drawing.Point(281, 202);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(54, 49);
             this.button8.TabIndex = 100;
@@ -350,15 +355,15 @@ namespace LocalBrain
             // 
             // T_right90
             // 
-            this.T_right90.Location = new System.Drawing.Point(332, 80);
+            this.T_right90.Location = new System.Drawing.Point(341, 174);
             this.T_right90.Name = "T_right90";
             this.T_right90.Size = new System.Drawing.Size(54, 23);
             this.T_right90.TabIndex = 103;
-            this.T_right90.Text = "500";
+            this.T_right90.Text = "1800";
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(332, 108);
+            this.button9.Location = new System.Drawing.Point(341, 202);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(54, 49);
             this.button9.TabIndex = 102;
@@ -373,12 +378,54 @@ namespace LocalBrain
             // 
             this.drivingtimer.Tick += new System.EventHandler(this.drivingtimer_Tick);
             // 
+            // txtrightspeed
+            // 
+            this.txtrightspeed.Location = new System.Drawing.Point(314, 109);
+            this.txtrightspeed.Name = "txtrightspeed";
+            this.txtrightspeed.Size = new System.Drawing.Size(54, 23);
+            this.txtrightspeed.TabIndex = 107;
+            this.txtrightspeed.Text = "150";
+            // 
+            // txtleftspeed
+            // 
+            this.txtleftspeed.Location = new System.Drawing.Point(254, 109);
+            this.txtleftspeed.Name = "txtleftspeed";
+            this.txtleftspeed.Size = new System.Drawing.Size(54, 23);
+            this.txtleftspeed.TabIndex = 106;
+            this.txtleftspeed.Text = "179";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(194, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Text = "Speed:";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(254, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.Text = "left";
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(313, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.Text = "right";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(638, 455);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtrightspeed);
+            this.Controls.Add(this.txtleftspeed);
             this.Controls.Add(this.T_right90);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.T_block);
@@ -449,6 +496,11 @@ namespace LocalBrain
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Timer movementtimer;
         private System.Windows.Forms.Timer drivingtimer;
+        private System.Windows.Forms.TextBox txtrightspeed;
+        private System.Windows.Forms.TextBox txtleftspeed;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
 	}
 }
 

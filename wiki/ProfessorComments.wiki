@@ -2,6 +2,14 @@
 #labels Featured,Phase-Support
 = Comments and questions from the Professor =
 
+== March 11 ==
+
+Will I see a sprint 1 demo at 4 today (just over an hour from now)?
+
+When will I see a sprint 2 schedule? That schedule must include explicit work on team-switch (instructions for your guest builders and assignments of guest builders to other projects) and plans to deal with Issue 13, which is one of my requirements for this sprint. It should also include updating the wiki - anyone reading it now would think the camera problem was still unresolved.
+
+----
+
 == February 11 ==
 
 *Still* holding my breath waiting for camera problem resolution. I see no indication of progress.

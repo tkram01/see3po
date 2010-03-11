@@ -175,12 +175,21 @@ namespace LocalBrainEmulator
                 Invoke(new DGuiCallBuffer(HandleMotorsMessage), buffer);
                 return;
             }
+            byte[] B_duration = new byte[2];
+            B_duration[0] = buffer[3];
+            B_duration[1] = buffer[4];
+            short LeftSpeed = (short)(BitConverter.ToInt16(B_duration, 0)); // driving time (ms)
 
-            int[] moveSpeeds = new int[2];
-            moveSpeeds[0] = BytesToInt(buffer[3], buffer[4]);
-            moveSpeeds[1] = BytesToInt(buffer[5], buffer[6]);
+            B_duration = new byte[2];
+            B_duration[0] = buffer[5];
+            B_duration[1] = buffer[6];
+            short RightSpeed = (short)(BitConverter.ToInt16(B_duration, 0)); // driving time (ms)
 
-            int duration = BytesToInt(buffer[7], buffer[8]);
+            B_duration = new byte[2];
+            B_duration[0] = buffer[7];
+            B_duration[1] = buffer[8];
+            ushort Duration = (ushort)(BitConverter.ToUInt16(B_duration, 0) * 50); // driving time (ms)
+
 
             string msg = "Motors Message Received: ";
 
@@ -188,8 +197,8 @@ namespace LocalBrainEmulator
                 msg += buffer[i] + "\n\r ";
             PostMessage(msg);
 
-            PostMessage( "\n\r speeds: " + moveSpeeds[0] + " " + moveSpeeds[1]);
-            PostMessage( "\n\r duration: " + duration);
+            PostMessage( "\n\r speeds: " + LeftSpeed + " " + RightSpeed);
+            PostMessage( "\n\r duration: " + Duration);
             
             //t_MoveTimer = new Timer(t_moveCallback, moveSpeeds, 0, 500);
             //t_MoveTimer.Dispose();

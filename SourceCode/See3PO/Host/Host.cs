@@ -343,20 +343,21 @@ namespace See3PO
             switch (move.direction)
             {
                 case MoveCommand.Direction.Forward:
-                    speeds[0] = speeds[1] = FORWARD_SPEED;
-                    speeds[2] = move.duration;
+                    speeds[0] = FORWARD_L;
+                    speeds[1] = FORWARD_R;
+                    speeds[2] = move.duration / DURATION_INC;
                     break;
 
                 case MoveCommand.Direction.CCW:
-                    speeds[0] = -TURN_SPEED;
-                    speeds[1] = TURN_SPEED;
-                    speeds[2] = move.duration;
+                    speeds[0] = -TURN_CCW;
+                    speeds[1] = TURN_CCW;
+                    speeds[2] = move.duration / DURATION_INC; ;
                     break;
 
                 case MoveCommand.Direction.CW:
-                    speeds[0] = TURN_SPEED;
-                    speeds[1] = -TURN_SPEED;
-                    speeds[2] = move.duration;
+                    speeds[0] = TURN_CW;
+                    speeds[1] = -TURN_CW;
+                    speeds[2] = move.duration / DURATION_INC; ;
                     break;
             }
             return speeds;
@@ -391,11 +392,17 @@ namespace See3PO
 //************************************************************************************************
 //       Private Attributes
 //************************************************************************************************
-        private const int FORWARD_SPEED = 350;      // Forward Wheel Speed Default
-        private const int FORWARD_MS = 750;         // forward durations in ms
-        private const int TURN_SPEED = 350;         // Turning Wheel Speed Default
-        private const int TURN_CW_MS = 550;         // Turning durations in ms
-        private const int TURN_CCW_MS = 600;
+        private const int FORWARD_L = 179;      // Forward Wheel Speed Default
+        private const int FORWARD_R = 150;      // Forward Wheel Speed Default
+        private const int FORWARD_MS = 2000;         // forward durations in ms
+
+        private const int TURN_CW = 155;         // Turning Wheel Speed Default
+        private const int TURN_CW_MS = 1800;         // Turning durations in ms
+        
+        private const int TURN_CCW = 170;         // Turning Wheel Speed Default
+        private const int TURN_CCW_MS = 2100;
+
+        private const int DURATION_INC = 50;        // 
 
         private UI m_UI;                            // The User Interface
 

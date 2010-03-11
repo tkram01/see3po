@@ -116,6 +116,13 @@ namespace See3PO
 
         public List<FloorTile> getPath()
         {
+            if (this.fp != null)
+            {
+                startPoint = this.fp.getStartTile().Position.X + "_" + this.fp.getStartTile().Position.Y;
+                targetPoint = this.fp.getTargetTile().Position.X + "_" + this.fp.getTargetTile().Position.Y;
+            }
+
+
             this.messages += "- Start Get Path\n";
             //startPoint = txtStartPoint.Text;
             //targetPoint = txtTargetPoint.Text;

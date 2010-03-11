@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 using See3PO;
-using FloorPlanAndTile;
 
 namespace See3PO
 {

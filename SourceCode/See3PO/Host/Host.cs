@@ -82,13 +82,13 @@ namespace See3PO
                 }
 
                 SendMove(ConvertMove(nextMove));
-
+                m_UI.PostMessage(nextMove.toString());
                 Thread.Sleep(nextMove.duration);
 
                 m_UI.updateUI();
             }
 
-            Status.Position = new Position(Status.Path[Status.Path.Count -1 ].Position, Status.Position.facing);
+            Status.Position = new Position(Status.Path[Status.Path.Count].Position, Status.Position.facing);
 
             m_UI.updateUI();
         }
@@ -256,11 +256,11 @@ namespace See3PO
 
                 int forwardDist = 0;                                    // If we have multiple forwards, it will combine them to one move 
 
-                for (int i = 0; i < Status.Path.Count -1; i++)          // we go to the second to last point, the last move will take us from 2nd-to-last to the last point. 
+                for (int i = 0; i < Status.Path.Count; i++)          // we go to the second to last point, the last move will take us from 2nd-to-last to the last point. 
                 {
-                    Point current = Status.Path[i].Position;            // Robot's current point
+                    Point current = Status.Position.location; ;            // Robot's current point
 
-                    Point next = Status.Path[i + 1].Position;           // Robot's next point, necessary for deciding if we need to turn. 
+                    Point next = Status.Path[i].Position;           // Robot's next point, necessary for deciding if we need to turn. 
 
                     Point lastDisplacement = new Point(current.X - previous.X, current.Y - previous.Y);// what direction are we currently facing?
 
@@ -269,7 +269,8 @@ namespace See3PO
                     if (lastDisplacement.X == nextDisplacement.X || lastDisplacement.Y == nextDisplacement.Y) // not turning 
                     {
                         forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
-                        newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
+                        if (forwardDist > 0)
+                            newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
                     }
                     else                                                // if we are turning
                     {
@@ -278,8 +279,8 @@ namespace See3PO
                         newPath.Enqueue(new MoveCommand(turnDirection, turnDirection == MoveCommand.Direction.CW ? TURN_CW_MS : TURN_CCW_MS)); // Enqueue your turn first
 
                         forwardDist = forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
-                        
-                        newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
+                        if (forwardDist > 0)
+                            newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
 
                         forwardDist = 0;                                // reset forward 
                     }

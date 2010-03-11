@@ -16,11 +16,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		PathFinding5.vsmdi = PathFinding5.vsmdi
 		PathFinding6.vsmdi = PathFinding6.vsmdi
 		PathFinding7.vsmdi = PathFinding7.vsmdi
+		PathFinding8.vsmdi = PathFinding8.vsmdi
+		PathFinding9.vsmdi = PathFinding9.vsmdi
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = PathFinding7.vsmdi
+		CategoryFile = PathFinding9.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

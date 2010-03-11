@@ -1,6 +1,5 @@
 ﻿using See3PO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FloorPlanAndTile;
 using System.Collections.Generic;
 using System.Drawing;
 using System;
@@ -95,10 +94,10 @@ namespace PathFindingTest
 
             Image myimage = new Bitmap("../../floorplan.bmp");
             FloorPlan floorPlan = new FloorPlan(myimage, 3); // TODO: Initialize to an appropriate value
-            int StartX = 58;
-            int StartY = 32;
-            int TargetX = 71;
-            int TargetY = 32;
+            int StartX = 106;
+            int StartY = 74;
+            int TargetX = 107;
+            int TargetY = 43;
             floorPlan.setStartTile(StartX, StartY);
             floorPlan.setTargetTile(TargetX, TargetY);
 
@@ -125,7 +124,7 @@ namespace PathFindingTest
             tw.WriteLine(qgpf.GetMessages());
             tw.Close();
 
-            //visualizeFloorPlan(floorPlan, StartX, StartY, TargetX, TargetY);
+            visualizeFloorPlan(floorPlan, StartX, StartY, TargetX, TargetY);
 
 
             List<FloorTile> expected = new List<FloorTile>();

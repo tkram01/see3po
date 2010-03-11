@@ -7,7 +7,6 @@ using QuickGraph;
 using QuickGraph.Algorithms.ShortestPath;
 using QuickGraph.Algorithms.Observers;
 using System.Text.RegularExpressions;
-using FloorPlanAndTile;
 using See3PO;
 
 namespace See3PO

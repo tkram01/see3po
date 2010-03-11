@@ -269,6 +269,7 @@ namespace See3PO
                     if (lastDisplacement.X == nextDisplacement.X || lastDisplacement.Y == nextDisplacement.Y) // not turning 
                     {
                         forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
+                        newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
                     }
                     else                                                // if we are turning
                     {

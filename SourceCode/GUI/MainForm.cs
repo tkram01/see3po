@@ -92,15 +92,15 @@ namespace GUI
         /// Posts any message to the screen
         /// </summary>
         /// <param name="msg"></param>
-        public void PostMessage(string message)
+        public void PostMessage(string msg)
         {
             if (InvokeRequired)
             {
-                Invoke(new DGuiCallString(PostMessage), message);
+                Invoke(new DGuiCallString(PostMessage), msg);
                 return;
             }
 
-            messageBox.Text = message + "\r\n" + messageBox.Text;
+            messageBox.Text = msg + "\r\n" + messageBox.Text;
         }
 
 //************************************************************************************************

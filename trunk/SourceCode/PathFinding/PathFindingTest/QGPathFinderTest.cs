@@ -165,7 +165,7 @@ namespace PathFindingTest
                             int TargetY = n;
                             if (floorPlan.getWalkableValue(i, j) == 1 & floorPlan.getWalkableValue(m, n) == 1)
                             {
-                                Int64 t = getPathExecutingTime(floorPlan, StartX, StartY, TargetX, TargetY);
+                                Int64 t = 0;// getPathExecutingTime(floorPlan, StartX, StartY, TargetX, TargetY);
                                 tw.WriteLine(StartX + "," + StartY + "," + TargetX + "," + TargetY + "," + t);
                             }
                         }
@@ -183,7 +183,7 @@ namespace PathFindingTest
         public Int64 getPathExecutingTime(FloorPlan floorPlan, int StartX, int StartY, int TargetX, int TargetY)
         {
             Int64 ExecutingTime = 0;
-
+            
             floorPlan.setStartTile(StartX, StartY);
             floorPlan.setTargetTile(TargetX, TargetY);
             QGPathFinder target = new QGPathFinder(floorPlan);

@@ -31,6 +31,7 @@ namespace GUI
             this.components = new System.ComponentModel.Container();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.InstructionsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDivider1 = new System.Windows.Forms.ToolStripSeparator();
@@ -61,7 +62,6 @@ namespace GUI
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeRobotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.InstructionsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -78,9 +78,9 @@ namespace GUI
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel,
             this.InstructionsLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 640);
+            this.statusStrip.Location = new System.Drawing.Point(0, 563);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1084, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1028, 22);
             this.statusStrip.TabIndex = 23;
             this.statusStrip.Text = "statusStrip";
             // 
@@ -91,6 +91,13 @@ namespace GUI
             this.statusLabel.Size = new System.Drawing.Size(200, 17);
             this.statusLabel.Text = "status: idle";
             // 
+            // InstructionsLabel
+            // 
+            this.InstructionsLabel.Margin = new System.Windows.Forms.Padding(100, 3, 0, 2);
+            this.InstructionsLabel.Name = "InstructionsLabel";
+            this.InstructionsLabel.Size = new System.Drawing.Size(64, 17);
+            this.InstructionsLabel.Text = "Instructions:";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -100,7 +107,7 @@ namespace GUI
             this.driveToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1084, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1028, 24);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "mainMenu";
             // 
@@ -113,36 +120,36 @@ namespace GUI
             this.saveFloorPlanToolStripMenuItem,
             this.importFloorPlanImageToolStripMenuItem});
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(37, 20);
+            this.fileMenu.Size = new System.Drawing.Size(35, 20);
             this.fileMenu.Text = "File";
             // 
             // menuDivider1
             // 
             this.menuDivider1.Name = "menuDivider1";
-            this.menuDivider1.Size = new System.Drawing.Size(196, 6);
+            this.menuDivider1.Size = new System.Drawing.Size(182, 6);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.exitMenuItem.Size = new System.Drawing.Size(185, 22);
             this.exitMenuItem.Text = "Exit";
             // 
             // loadFloorPlanToolStripMenuItem
             // 
             this.loadFloorPlanToolStripMenuItem.Name = "loadFloorPlanToolStripMenuItem";
-            this.loadFloorPlanToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.loadFloorPlanToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.loadFloorPlanToolStripMenuItem.Text = "Load FloorPlan";
             // 
             // saveFloorPlanToolStripMenuItem
             // 
             this.saveFloorPlanToolStripMenuItem.Name = "saveFloorPlanToolStripMenuItem";
-            this.saveFloorPlanToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.saveFloorPlanToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.saveFloorPlanToolStripMenuItem.Text = "Save FloorPlan";
             // 
             // importFloorPlanImageToolStripMenuItem
             // 
             this.importFloorPlanImageToolStripMenuItem.Name = "importFloorPlanImageToolStripMenuItem";
-            this.importFloorPlanImageToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.importFloorPlanImageToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.importFloorPlanImageToolStripMenuItem.Text = "Import FloorPlan Image";
             this.importFloorPlanImageToolStripMenuItem.Click += new System.EventHandler(this.Click_Import);
             // 
@@ -151,7 +158,7 @@ namespace GUI
             this.connectionMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectMenuItem});
             this.connectionMenu.Name = "connectionMenu";
-            this.connectionMenu.Size = new System.Drawing.Size(81, 20);
+            this.connectionMenu.Size = new System.Drawing.Size(73, 20);
             this.connectionMenu.Text = "Connection";
             // 
             // connectMenuItem
@@ -168,27 +175,27 @@ namespace GUI
             this.placeRobotToolStripMenuItem1,
             this.setDestinationToolStripMenuItem1});
             this.floorPlanToolStripMenuItem.Name = "floorPlanToolStripMenuItem";
-            this.floorPlanToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.floorPlanToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.floorPlanToolStripMenuItem.Text = "FloorPlan";
             // 
             // setScaleToolStripMenuItem
             // 
             this.setScaleToolStripMenuItem.Name = "setScaleToolStripMenuItem";
-            this.setScaleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.setScaleToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.setScaleToolStripMenuItem.Text = "Set Scale";
             this.setScaleToolStripMenuItem.Click += new System.EventHandler(this.Click_SetScale);
             // 
             // placeRobotToolStripMenuItem1
             // 
             this.placeRobotToolStripMenuItem1.Name = "placeRobotToolStripMenuItem1";
-            this.placeRobotToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.placeRobotToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
             this.placeRobotToolStripMenuItem1.Text = "Place Robot";
             this.placeRobotToolStripMenuItem1.Click += new System.EventHandler(this.Click_PlaceRobot);
             // 
             // setDestinationToolStripMenuItem1
             // 
             this.setDestinationToolStripMenuItem1.Name = "setDestinationToolStripMenuItem1";
-            this.setDestinationToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.setDestinationToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
             this.setDestinationToolStripMenuItem1.Text = "Set Destination";
             this.setDestinationToolStripMenuItem1.Click += new System.EventHandler(this.Click_SetDestination);
             // 
@@ -199,27 +206,27 @@ namespace GUI
             this.showPathToolStripMenuItem,
             this.manualToolStripMenuItem});
             this.driveToolStripMenuItem.Name = "driveToolStripMenuItem";
-            this.driveToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.driveToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.driveToolStripMenuItem.Text = "Drive";
             // 
             // goMenuItem
             // 
             this.goMenuItem.Name = "goMenuItem";
-            this.goMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.goMenuItem.Size = new System.Drawing.Size(129, 22);
             this.goMenuItem.Text = "Go";
             this.goMenuItem.Click += new System.EventHandler(this.Click_GoMenuItem);
             // 
             // showPathToolStripMenuItem
             // 
             this.showPathToolStripMenuItem.Name = "showPathToolStripMenuItem";
-            this.showPathToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.showPathToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.showPathToolStripMenuItem.Text = "Show Path";
             this.showPathToolStripMenuItem.Click += new System.EventHandler(this.Click_ShowPath);
             // 
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             // 
             // livePanel
@@ -227,7 +234,7 @@ namespace GUI
             this.livePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.livePanel.Location = new System.Drawing.Point(0, 0);
             this.livePanel.Name = "livePanel";
-            this.livePanel.Size = new System.Drawing.Size(360, 352);
+            this.livePanel.Size = new System.Drawing.Size(341, 308);
             this.livePanel.TabIndex = 25;
             // 
             // messageBox
@@ -238,7 +245,7 @@ namespace GUI
             this.messageBox.Multiline = true;
             this.messageBox.Name = "messageBox";
             this.messageBox.ReadOnly = true;
-            this.messageBox.Size = new System.Drawing.Size(360, 260);
+            this.messageBox.Size = new System.Drawing.Size(341, 227);
             this.messageBox.TabIndex = 58;
             // 
             // floorPlanPanel
@@ -246,7 +253,7 @@ namespace GUI
             this.floorPlanPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.floorPlanPanel.Location = new System.Drawing.Point(0, 0);
             this.floorPlanPanel.Name = "floorPlanPanel";
-            this.floorPlanPanel.Size = new System.Drawing.Size(720, 616);
+            this.floorPlanPanel.Size = new System.Drawing.Size(683, 539);
             this.floorPlanPanel.TabIndex = 65;
             this.floorPlanPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Paint_FloorPlanPanel);
             this.floorPlanPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.SetDestination);
@@ -270,8 +277,8 @@ namespace GUI
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.floorPlanPanel);
-            this.splitContainer1.Size = new System.Drawing.Size(1084, 616);
-            this.splitContainer1.SplitterDistance = 360;
+            this.splitContainer1.Size = new System.Drawing.Size(1028, 539);
+            this.splitContainer1.SplitterDistance = 341;
             this.splitContainer1.TabIndex = 66;
             // 
             // splitContainer2
@@ -288,8 +295,8 @@ namespace GUI
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.messageBox);
-            this.splitContainer2.Size = new System.Drawing.Size(360, 616);
-            this.splitContainer2.SplitterDistance = 352;
+            this.splitContainer2.Size = new System.Drawing.Size(341, 539);
+            this.splitContainer2.SplitterDistance = 308;
             this.splitContainer2.TabIndex = 0;
             // 
             // floorPlanContext
@@ -302,68 +309,60 @@ namespace GUI
             this.placeRobotToolStripMenuItem,
             this.setDestinationToolStripMenuItem});
             this.floorPlanContext.Name = "contextMenuStrip1";
-            this.floorPlanContext.Size = new System.Drawing.Size(203, 136);
+            this.floorPlanContext.Size = new System.Drawing.Size(189, 136);
             // 
             // loadFloorPlanToolStripMenuItem1
             // 
             this.loadFloorPlanToolStripMenuItem1.Name = "loadFloorPlanToolStripMenuItem1";
-            this.loadFloorPlanToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
+            this.loadFloorPlanToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.loadFloorPlanToolStripMenuItem1.Text = "Load Floor Plan";
             // 
             // saveFloorPlanToolStripMenuItem1
             // 
             this.saveFloorPlanToolStripMenuItem1.Name = "saveFloorPlanToolStripMenuItem1";
-            this.saveFloorPlanToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
+            this.saveFloorPlanToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.saveFloorPlanToolStripMenuItem1.Text = "Save Floor Plan";
             // 
             // importFloorPlanImageToolStripMenuItem1
             // 
             this.importFloorPlanImageToolStripMenuItem1.Name = "importFloorPlanImageToolStripMenuItem1";
-            this.importFloorPlanImageToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
+            this.importFloorPlanImageToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.importFloorPlanImageToolStripMenuItem1.Text = "Import Floor Plan Image";
             this.importFloorPlanImageToolStripMenuItem1.Click += new System.EventHandler(this.Click_Import);
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.addToolStripMenuItem.Text = "Set Scale";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.Click_SetScale);
             // 
             // placeRobotToolStripMenuItem
             // 
             this.placeRobotToolStripMenuItem.Name = "placeRobotToolStripMenuItem";
-            this.placeRobotToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.placeRobotToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.placeRobotToolStripMenuItem.Text = "Place Robot";
             this.placeRobotToolStripMenuItem.Click += new System.EventHandler(this.Click_PlaceRobot);
             // 
             // setDestinationToolStripMenuItem
             // 
             this.setDestinationToolStripMenuItem.Name = "setDestinationToolStripMenuItem";
-            this.setDestinationToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.setDestinationToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.setDestinationToolStripMenuItem.Text = "Set Destination";
             this.setDestinationToolStripMenuItem.Click += new System.EventHandler(this.Click_SetDestination);
-            // 
-            // InstructionsLabel
-            // 
-            this.InstructionsLabel.Margin = new System.Windows.Forms.Padding(100, 3, 0, 2);
-            this.InstructionsLabel.Name = "InstructionsLabel";
-            this.InstructionsLabel.Size = new System.Drawing.Size(72, 17);
-            this.InstructionsLabel.Text = "Instructions:";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 662);
+            this.ClientSize = new System.Drawing.Size(1028, 585);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "ViLAN Explorer";
-            //this.Load += new System.EventHandler(this.Load_MainForm);
+            this.Text = "see3PO";
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

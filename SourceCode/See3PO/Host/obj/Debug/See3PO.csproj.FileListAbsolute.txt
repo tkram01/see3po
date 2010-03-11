@@ -30,3 +30,15 @@ C:\Documents and Settings\frank\My Documents\see3po\See3PO\Host\bin\Debug\RobotH
 C:\Documents and Settings\frank\My Documents\see3po\See3PO\Host\bin\Debug\RobotCommands.pdb
 C:\Documents and Settings\frank\My Documents\see3po\See3PO\Host\bin\Debug\FloorPlanAndTile.pdb
 C:\Documents and Settings\frank\My Documents\see3po\See3PO\Host\obj\Debug\See3PO.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\obj\Debug\ResolveAssemblyReference.cache
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\obj\Debug\See3PO.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\obj\Debug\See3PO.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\See3PO.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\See3PO.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\FloorPlanAndTile.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\PathFinding.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\RobotCommands.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\RobotHost.dll
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\RobotHost.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\RobotCommands.pdb
+F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\FloorPlanAndTile.pdb

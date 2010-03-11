@@ -60,7 +60,8 @@ namespace See3PO
 
             m_status = new Status(FloorPlanImage, m_pixelsperfoot);
 
-            m_pathfinder = new QGPathFinder(m_status, this);
+            m_pathfinder = new QGPathFinder(m_status.FloorPlan);
+            
         }
 
         /// <summary>
@@ -416,7 +417,7 @@ namespace See3PO
 
         private Status m_status;                    // The main data struture
 
-        private PathFinder m_pathfinder;            // The Path Finder
+        private QGPathFinder m_pathfinder;            // The Path Finder
 
         private Locator m_Locator;                  // The Locator, usually Tyler's Program
 

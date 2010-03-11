@@ -286,6 +286,11 @@ namespace See3PO
                     previous = current;                                 // Increment the previous point 
                 }
             }
+            foreach (MoveCommand move in newPath)
+            {
+                String msg = "\n\r dir: " + move.direction + " duration" + move.duration;
+                m_UI.PostMessage(msg);
+            }
 
             return newPath;
         }
@@ -345,19 +350,19 @@ namespace See3PO
                 case MoveCommand.Direction.Forward:
                     speeds[0] = FORWARD_L;
                     speeds[1] = FORWARD_R;
-                    speeds[2] = move.duration / DURATION_INC;
+                    speeds[2] = move.duration;
                     break;
 
                 case MoveCommand.Direction.CCW:
                     speeds[0] = -TURN_CCW;
                     speeds[1] = TURN_CCW;
-                    speeds[2] = move.duration / DURATION_INC; ;
+                    speeds[2] = move.duration;
                     break;
 
                 case MoveCommand.Direction.CW:
                     speeds[0] = TURN_CW;
                     speeds[1] = -TURN_CW;
-                    speeds[2] = move.duration / DURATION_INC; ;
+                    speeds[2] = move.duration;
                     break;
             }
             return speeds;
@@ -370,20 +375,21 @@ namespace See3PO
         /// <param name="duration">seconds to travel before stopping</param>
         private void SendMove(int[] move)
         {
-            int leftSpeed = move[0]; // left
-            int rightSpeed = move[1]; // right
-            int duration = move[2];
+            short leftSpeed = (short)move[0]; // left
+            short rightSpeed = (short)move[1]; // right
+            ushort duration = (ushort)move[2];
 
             if (m_RobotHost.IsConnected)
             {
-                byte[] leftSpeeds = IntToBytes(leftSpeed);  // split the first 16 bits of the int into two 8-bit bytes
 
-                byte[] rightSpeeds = IntToBytes(rightSpeed);// now for the right weel
+                byte[] leftSpeeds = BitConverter.GetBytes(leftSpeed);//IntToBytes(leftSpeed);  // split the first 16 bits of the int into two 8-bit bytes
 
-                byte[] durations = IntToBytes(duration);        
+                byte[] rightSpeeds = BitConverter.GetBytes(rightSpeed);//IntToBytes(rightSpeed);// now for the right weel
 
-                String msg = "\n\r speeds: " + leftSpeed + " " + rightSpeed;
-                PostMessage(msg);
+                byte[] durations = BitConverter.GetBytes(duration / DURATION_INC);//IntToBytes(duration);        
+
+                String msg = "\n\r speeds: " + leftSpeed + " " + rightSpeed + " duration" + duration;
+                m_UI.PostMessage(msg);
 
                 m_RobotHost.Send(new byte[] { 0x01, 0x10, 0x11, leftSpeeds[0], leftSpeeds[1], rightSpeeds[0], rightSpeeds[1], durations[0], durations[1], 0xEF }, true);
             }

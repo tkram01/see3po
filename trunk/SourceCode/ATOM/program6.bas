@@ -10,7 +10,7 @@ SYSTEM con 0x00
 CONTINUOUS_DRIVE con 0x11
 
 'timer counter
-PULSOUT_COUNT con 39 ' 20 ms
+'PULSOUT_COUNT con 1 ' 20 ms
 
 inPacket var byte(7)	' recieving buffer for serial port
 i var word
@@ -36,10 +36,8 @@ low p13
 sound p9, [200\3000]
 
 ONINTERRUPT TIMERAINT,drive
-' set timer to tick every 8192 clock cycles
-' ATOM Pro's clock speed is 16MHz. 
-' Therefore, 8192 clock cycles is about 0.5 ms
-TMA = (TMA & 0xF0 ) | 0x00 
+' set timer to tick every 4096 clock cycles = 20ms
+TMA = (TMA & 0xF0 ) | 0x1 
 ENABLE TIMERAINT ' enable timerA by setting timerA's bit
 ENABLE           ' enable timerA to start counting
 
@@ -102,13 +100,15 @@ return
 
 
 drive:
-   timercount = timercount + 1
+'   timercount = timercount + 1
    ' pulsout to motor when every 20ms
-   if timercount >= PULSOUT_COUNT then
-      DISABLE ' disable the interrupt before sending out motor puls 
+'   if timercount >= PULSOUT_COUNT then
+      DISABLE TIMERAINT ' disable the interrupt before sending out motor puls 
       pulsout p12, rightSpeed		' Left Scorpion channel.
       pulsout p13, leftSpeed		' Right Scorpion channel.
-      timercount = 0
-      ENABLE  ' enable the interrupt after sending out motor puls 
-   endif 
+'      timercount = 0
+      'sound p9, [200\3000]
+      ENABLE TIMERAINT
+      'ENABLE  ' enable the interrupt after sending out motor puls 
+'   endif 
 resume

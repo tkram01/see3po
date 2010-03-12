@@ -153,17 +153,20 @@ namespace LocalBrain
 			}
 		}
 
-		public void HandleMotorsMessage(byte[] buffer)
+		public void HandleMotorsMessage(byte[] rbuffer)
 		{
 			if(InvokeRequired)
 			{
-				Invoke(new DGuiCallBuffer(HandleMotorsMessage), buffer);
+				Invoke(new DGuiCallBuffer(HandleMotorsMessage), rbuffer);
 				return;
 			}
-
+            byte[] buffer = new byte[rbuffer.Length];
 			string msg = "Motors Message Received: ";
-			for(int i = 0; i < buffer.Length; i++)
-				msg += buffer[i] + " ";
+            for (int i = 0; i < rbuffer.Length; i++)
+            {
+                buffer[i] = rbuffer[i];
+                msg += buffer[i] + " ";
+            }
 
 			PostMessage(msg);
 
@@ -172,7 +175,7 @@ namespace LocalBrain
                 if (buffer.Length >= SERVER_CMD_SIZE)
                 {
                     byte[] newbuffer = new byte[MOTOR_PACKET_SIZE];
-                    for (int i = 1; i < MOTOR_PACKET_SIZE -1; i++)
+                    for (int i = 1; i < MOTOR_PACKET_SIZE ; i++)
                         newbuffer[i - 1] = buffer[i];
                     newbuffer[MOTOR_PACKET_SIZE - 1] = EOT; // end byte
                     // disable last driving if new driving cmd recieved
@@ -180,10 +183,9 @@ namespace LocalBrain
                         drivingtimer.Enabled = false; // disable last driving
                     // send same motor command 3 times due to the hardware issue
                     motors.Send(newbuffer);
-                    System.Threading.Thread.Sleep(50);
+                    System.Threading.Thread.Sleep(200);
                     motors.Send(newbuffer);
-                    System.Threading.Thread.Sleep(50);
-                    motors.Send(newbuffer);
+                    
                     if (newbuffer[1] == DRIVING_CMD)
                     {
                         // obtain driving time from command buffer, which are the last 2 bytes before the end byte
@@ -201,6 +203,11 @@ namespace LocalBrain
                             drivingtimer.Enabled = true;
                         }
                     }
+                    msg = "Message sent: ";
+        			for(int i = 0; i < newbuffer.Length; i++)
+		    		msg += newbuffer[i] + " ";
+
+			        PostMessage(msg);
                 }
 			}
 		}
@@ -310,24 +317,47 @@ namespace LocalBrain
             byte leftHigh = (byte)(leftSpeed >> 8);
             byte rightLow = (byte)rightSpeed;
             byte rightHigh = (byte)(rightSpeed >> 8);
-            motors.Send(new byte[] { MOTOR_CMD, DRIVING_CMD , leftHigh, leftLow, rightHigh, rightLow, EOT });
+            byte[] sendb = new byte[] { MOTOR_CMD, DRIVING_CMD, leftHigh, leftLow, rightHigh, rightLow, EOT };
+            string msg = "Message sent: ";
+            for (int i = 0; i < sendb.Length; i++)
+                msg += sendb[i] + " ";
+
+            PostMessage(msg);
+            motors.Send(sendb);
+            //motors.Send(new byte[] { MOTOR_CMD, DRIVING_CMD , leftHigh, leftLow, rightHigh, rightLow, EOT });
         }
 
        
         private void button1_Click_1(object sender, EventArgs e)
         {
-            motors.Send(new byte[] { MOTOR_CMD, SOUND_CMD, byte.Parse((string)((Button)sender).Tag), 0x00, 0x00, 0x00, EOT });
+            //motors.Send(new byte[] { MOTOR_CMD, SOUND_CMD, byte.Parse((string)((Button)sender).Tag), 0x00, 0x00, 0x00, EOT });
+            byte[] sendb = new byte[] { MOTOR_CMD, SOUND_CMD, byte.Parse((string)((Button)sender).Tag), 0x00, 0x00, 0x00, EOT };
+            string msg = "Message sent: ";
+            for (int i = 0; i < sendb.Length; i++)
+                msg += sendb[i] + " ";
+
+            PostMessage(msg);
+            motors.Send(sendb);
         }
 
         private void stopButton_Click(object sender, EventArgs e)
         {
             //rightSpeed = 0;
             //leftSpeed = 0;
-            motors.Send(new byte[] { MOTOR_CMD, DRIVING_CMD, 0, 0, 0, 0, EOT });
+            //motors.Send(new byte[] { MOTOR_CMD, DRIVING_CMD, 0, 0, 0, 0, EOT });
+            byte[] sendb = new byte[] { MOTOR_CMD, DRIVING_CMD, 0, 0, 0, 0, EOT };
+            string msg = "Message sent: ";
+            for (int i = 0; i < sendb.Length; i++)
+                msg += sendb[i] + " ";
+
+            PostMessage(msg);
+            motors.Send(sendb);
         }
 
         private void button7_Click_1(object sender, EventArgs e)
         {
+            driveButton_Click(turnLeftButton, e);
+            System.Threading.Thread.Sleep(200);
             driveButton_Click(turnLeftButton, e);
             movementtimer.Interval = Int32.Parse( T_left90.Text);
             movementtimer.Enabled = true;
@@ -338,14 +368,14 @@ namespace LocalBrain
             movementtimer.Enabled = false;
             // send same stop motor command 3 times due to the hardware issue
             stopButton_Click(stopButton, e);
-            System.Threading.Thread.Sleep(50);
-            stopButton_Click(stopButton, e);
-            System.Threading.Thread.Sleep(50);
+            System.Threading.Thread.Sleep(200);
             stopButton_Click(stopButton, e);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            driveButton_Click(forwardButton, e);
+            System.Threading.Thread.Sleep(200);
             driveButton_Click(forwardButton, e);
             movementtimer.Interval = Int32.Parse(T_block .Text);
             movementtimer.Enabled = true;
@@ -353,6 +383,8 @@ namespace LocalBrain
 
         private void button9_Click(object sender, EventArgs e)
         {
+            driveButton_Click(turnRightButton, e);
+            System.Threading.Thread.Sleep(200);
             driveButton_Click(turnRightButton, e);
             movementtimer.Interval = Int32.Parse(T_right90.Text);
             movementtimer.Enabled = true;
@@ -363,9 +395,7 @@ namespace LocalBrain
             drivingtimer.Enabled = false;
             // send same stop motor command 3 times due to the hardware issue
             stopButton_Click(stopButton, e);
-            System.Threading.Thread.Sleep(50);
-            stopButton_Click(stopButton, e);
-            System.Threading.Thread.Sleep(50);
+            System.Threading.Thread.Sleep(200);
             stopButton_Click(stopButton, e);
         }
 

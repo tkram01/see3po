@@ -17,7 +17,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || *[LiveDemo1 Live Demo 1]*         || 03/02/2010   || rescheduled  ||              ||						||
 || Hardware Order Submitted          || 03/11/2010   ||              ||[Frank] [Hao] [Jacky]||				||
 || *[LiveDemo1 Live Demo 1]*         || 03/11/2010   ||              ||     all      ||						||
-|| UML up to date                    || 03/19/2010   ||              ||     all      ||						|| 
+|| [UMLDiagram UML] up to date                    || 03/19/2010   ||              ||     all      ||						|| 
 || Code Review Complete              || 03/19/2010   ||              ||     all      ||						|| 
 || Tyler's Program recieved		     || 03/19/2010   ||              ||              ||                     ||
 || Tyler's Program Integrated into Host|| 03/26/2010 ||              ||              ||                     ||

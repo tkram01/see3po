@@ -44,7 +44,7 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
  # power by battery
 
 
-= New embedded computer chosen =
+= New embedded computer choices =
  # advantech - PCM-9562
   ** <font color = Red>[http://www.advantech.com/products/PCM-9562/mod_1-E0EHC7.aspx PCM-9562] main board
   ** [http://www.advantech.com/products/MIO-3120/mod_1-2JKFYV.aspx MIO-3120] Wireless 802.11 b/g Communication Module

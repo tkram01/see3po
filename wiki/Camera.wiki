@@ -50,9 +50,9 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
   ** [http://www.advantech.com/products/MIO-3120/mod_1-2JKFYV.aspx MIO-3120] Wireless 802.11 b/g Communication Module
   ** [http://www.advantech.com/products/PCM-3115/mod_1-2JKGQH.aspx PCM-3115] 2-slot Card Bus Module to plug in our 2 Firewire ports adapter with PCMCIA interface that we have now. 
   ** Pre-install Windows XPe
-  ** Wiring kit for PCM-9562 (Part# PCM-10586-9562E)</font>
+  ** Wiring kit for PCM-9562 (Part# PCM-10586-9562E)
   ** CompactFlash 50-pin to IDE 44-pin adapter (Part# CF-HDD-ADP)
-  ** AT Cable 4P x 2/4200-H-4P 15 cm (Part# 170304015K)
+  ** AT Cable 4P x 2/4200-H-4P 15 cm (Part# 170304015K)</font>
   ** 2G DDR2 SDRAM (667 MHz, 200-pin SODIMM)
   ** 1 CompactFlach Card TYPE I/II (at least 2Gb)
   ** 12V battery 13W 1.2A
@@ -60,3 +60,6 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
   ** <font color = Red>[http://www.liantec.com/product/emboard/EMB-5740.htm EMB-5740] main board with 512MB on-board SDRAM
   ** [http://www.liantec.com/product/tbm/TBM-1260.htm TBM-1260] Tiny-Bus IEEE1394 Firewire Module with 3 External IEEE1394 Firewire Ports and Mini-PCI Type-IIIA/B Socket</font>
   ** Mini-PCI Type-III wireless 802.11 a/b/g(WLAN)
+  ** 1G DDR2 SDRAM
+  ** 1 CompactFlach Card TYPE I/II (at least 2Gb)
+  ** 12V battery 

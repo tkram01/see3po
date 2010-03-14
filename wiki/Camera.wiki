@@ -40,7 +40,7 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
  # WiFi connection
  # 2 Firefire (IEEE 1394) ports
  # Windows XP embedded or Windows XP
- # on-board boot up device, such as CompactFlash/DOM 
+ # on-board boot up device, such as  DOM (DiskOnModule), CFC (CompactFlash Card), PFD (PATA/IDE Flash Disk), SFD (SATA Flash Disk)
  # power by battery
 
 
@@ -48,7 +48,7 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
  # advantech - PCM-9562
   ** <font color = Red>[http://www.advantech.com/products/PCM-9562/mod_1-E0EHC7.aspx PCM-9562] main board
   ** [http://www.advantech.com/products/MIO-3120/mod_1-2JKFYV.aspx MIO-3120] Wireless 802.11 b/g Communication Module
-  ** [http://www.advantech.com/products/PCM-3115/mod_1-2JKGQH.aspx PCM-3115] 2-slot Card Bus Module to plug in our 2 firewire ports adapter with PCMCIA interface that we have now. 
+  ** [http://www.advantech.com/products/PCM-3115/mod_1-2JKGQH.aspx PCM-3115] 2-slot Card Bus Module to plug in our 2 Firewire ports adapter with PCMCIA interface that we have now. 
   ** Pre-install Windows XPe
   ** Wiring kit for PCM-9562 (Part# PCM-10586-9562E)</font>
   ** CompactFlash 50-pin to IDE 44-pin adapter (Part# CF-HDD-ADP)

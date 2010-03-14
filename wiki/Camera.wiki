@@ -33,4 +33,12 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
 "FriendlyName"="Dragonfly Digital Camera 1.0.0.20"
 
 
- 
+= Solution =
+
+ We have decided to replace the embedded computer on robot with a new one which must be able to run Windows XP embedded or Windows XP. The requirements of this replacing computer are as following:
+ # 2 serial ports (RS232)
+ # WiFi connection
+ # 2 Firefire (IEEE 1394) ports
+ # Windows XP embedded or Windows XP
+ # on-board boot up device, such as CompactFlash/DOM 
+ # power by battery

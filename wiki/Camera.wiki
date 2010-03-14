@@ -42,3 +42,10 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
  # Windows XP embedded or Windows XP
  # on-board boot up device, such as CompactFlash/DOM 
  # power by battery
+
+
+= New embedded computer chosen =
+ # advantech - PCM-9362
+  ** [http://www.advantech.com/products/PCM-9362/mod_1-DWE9TJ.aspx PCM-9362] main board
+  ** [http://www.advantech.com/products/MIO-6255/mod_1-2JKLJA.aspx MIO-6255] MIO module with 2x cardbus (PCMCIA) to plug in our 2 firewire ports adapter with PCMCIA interface which we have now. 
+  ** 

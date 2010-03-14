@@ -49,10 +49,12 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
   ** [http://www.advantech.com/products/PCM-9562/mod_1-E0EHC7.aspx PCM-9562] main board
   ** [http://www.advantech.com/products/MIO-3120/mod_1-2JKFYV.aspx MIO-3120] Wireless 802.11 b/g Communication Module
   ** [http://www.advantech.com/products/PCM-3115/mod_1-2JKGQH.aspx PCM-3115] 2-slot Card Bus Module to plug in our 2 firewire ports adapter with PCMCIA interface that we have now. 
-  ** 1 CompactFlach Card TYPE I/II (at least 2Gb)
   ** Pre-install Windows XPe
   ** Wiring kit for PCM-9562 (Part# PCM-10586-9562E)
   ** CompactFlash 50-pin to IDE 44-pin adapter (Part# CF-HDD-ADP)
   ** AT Cable 4P x 2/4200-H-4P 15 cm (Part# 170304015K)
+
+  ** 2G DDR2 667 MHz  (200-pin SODIMM)
+  ** 1 CompactFlach Card TYPE I/II (at least 2Gb)
   ** 12V battery 13W 1.2A
  

@@ -6,21 +6,30 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 
 
 ===February===
-|| *Task*							 || *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date*   	||
-|| FloorPlan serializable            || 02/15/2010	|| Completed				|| [Debarati]   || 02/11/2010					    ||
-|| Host and RemoteBrain comply with Protocol Document || 02/15/2010	|| 				|| [Nick] ||			||
-|| [BossMeeting5 Boss Meeting 5]     || 02/18/2010  ||              || Everyone     ||                      ||
-|| Manual Locator Completed          || 02/20/2010	|| 				|| [Frank]      ||					    ||
+|| *Task*							 || *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date* ||
+|| FloorPlan serializable            || 02/15/2010	|| Completed	|| [Debarati]   || 02/11/2010		||
+|| Protocol Document Updated         || 02/15/2010  || Completed    || [Jacky]      || 02/15/2010       ||
+|| Host and RemoteBrain comply with Protocol Document || 02/15/2010 || Complete ||[Frank][Jacky]|| 02/15/2010||
+|| [BossMeeting5 Boss Meeting 5]     || 02/18/2010  || Completed    || Everyone      ||   02/218/2010   ||
+|| Manual Locator Completed          || 02/18/2010	|| Completed    || [Frank]      || 02/18/2010		||
+|| Path Conversion to Move Commands  || 02/28/2010	|| Completed    || [Frank]      || 02/28/2010		||
 
 ===March===
-|| *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| *[LiveDemo1 Live Demo 1]*         || 03/02/2010   || rescheduled  ||              ||						||
-|| Hardware Order Submitted          || 03/11/2010   ||              ||[Frank] [Hao] [Jacky]||				||
-|| *[LiveDemo1 Live Demo 1]*         || 03/11/2010   ||              ||     all      ||						||
-|| [UMLDiagram UML] up to date                    || 03/19/2010   ||              ||     all      ||						|| 
-|| Code Review Complete              || 03/19/2010   ||              ||     all      ||						|| 
-|| Tyler's Program recieved		     || 03/19/2010   ||              ||              ||                     ||
-|| Tyler's Program Integrated into Host|| 03/26/2010 ||              ||              ||                     ||
+|| *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*||
+|| Floor Measured and Drawn Up       || 03/02/2010   || Completed    || [Nick]       || 03/02/2010      ||
+|| *[LiveDemo1 Live Demo 1]*         || 03/02/2010   || rescheduled  ||              ||					||
+|| Hardware Order Submitted          || 03/11/2010   || rescheduled  ||[Frank] [Hao] [Jacky]||		    ||
+|| Pathfinding Bug Fixes             || 03/11/2010   || Completed    || [Nick]       || 03/11/2010      || 
+|| Path Correctly Sent from Host to Robot || 03/11/2010 || Completed ||[Jacky][Frank][Hao]|| 03/11/2010 || 
+|| *[LiveDemo1 Live Demo 1]*         || 03/11/2010   || rescheduled  ||     all      ||					||
+|| [UMLDiagram UML] up to date       || 03/19/2010   ||              ||     all      ||					|| 
+|| Code Review Complete              || 03/19/2010   ||              ||     all      ||					|| 
+|| Tyler's Program recieved		     || 03/23/2010   ||              ||   Tyler      ||                 ||
+|| Hardware Order Submitted          || 03/23/2010   ||              ||[Frank] [Hao] [Jacky]||		    ||
+|| *[LiveDemo1 Live Demo 1]*         || 03/23/2010   ||              ||     all      ||					||
+|| Tyler's Program Integrated into Host|| 03/30/2010 ||              || [Frank]      ||                 ||
+|| One-Step Build Completed          || 03/30/2010   ||              || [Debarati]   ||                 ||
+|| System Tests Designed             || 03/30/2010   ||              || [Debarati]   ||                 ||
 
 ===April===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
@@ -31,7 +40,3 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 
 || *Deliverable Due*                 || 05/21/09     ||              ||              ||				        ||
  
-
-= Note =
-
-Edit this in an editor, it's tabbed so that the columns line up, but that makes it look terrible in the online edit window. 

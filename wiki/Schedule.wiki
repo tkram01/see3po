@@ -28,6 +28,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || Hardware Order Submitted          || 03/23/2010   ||              ||[Frank] [Hao] [Jacky]||		    ||
 || *[LiveDemo1 Live Demo 1]*         || 03/23/2010   ||              ||     all      ||					||
 || Evaluation of Multi-threading Implementation|| 03/30/2010 ||              || [Nick]      ||                 ||
+|| Sending Images from LocalBrain to Host || 03/30/2010 ||              || [Nick] [Jacky]      ||                 ||
 || Tyler's Program Integrated into Host|| 03/30/2010 ||              || [Frank]      ||                 ||
 || One-Step Build Completed          || 03/30/2010   ||              || [Debarati]   ||                 ||
 || System Tests Designed             || 03/30/2010   ||              || [Debarati]   ||                 ||

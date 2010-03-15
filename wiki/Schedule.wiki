@@ -25,7 +25,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || [UMLDiagram UML] up to date       || 03/19/2010   ||              ||     
 FloorPlan / FloorTile [Debarati] <br> 
 PathFinder [Nick] <br>
-Host [Frank][Nick]
+Host [Frank][Nick] <br>
 Sequence Diagram [Frank][Nick] <br>||					|| 
 || Code Review Complete              || 03/19/2010   ||              ||     all      ||					|| 
 || Tyler's Program recieved		     || 03/23/2010   ||              ||   Tyler      ||                 ||

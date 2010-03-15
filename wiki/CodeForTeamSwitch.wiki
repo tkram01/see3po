@@ -5,7 +5,7 @@
 
 ==First step: Prepare for the project== 
  * Use SVN to checkout the documents from http://see3po.googlecode.com/svn/trunk/
- * Install Visual Studio.
+ * Install Visual Studio 2008.
 ==Second step: Overall view== 
   Go to the "Documents" directory and find the See3PO_Config.doc file. 
   This is the configuration file of this project. We should konw that this project contains two main parts--Desktop computer and Robot. 
@@ -15,7 +15,7 @@
  The protocal "Documents\Hardware\communication protocal.doc" helps us to understand how the robot knows the command, and also this will show in the robot display. Till now, we just need to know two commands. 
   =====1. Motors Comtrol Commands=====
   If you take a look the commands display in the robot. It will show like this "1 16 17 0 179 0 150 0 42 239".The first three numbers keep the same; the fourth and fifth numbers(0 179) are the left wheel speed; the sixth, seventh numbers(0 150) are the right wheels speed; the next two numbers (0, 42)is the timer, this stands for 42*50 ms=2100ms. The last number 239 is the end number, tell the robot this is the end of a command. This command tells the robot to move forward at left speed 179 right speed 150 for 2100 ms.
-  =====2. Disconnect Command.===== 
+  =====2. Disconnect Command===== 
   Disconnect Command "0 2 239" tells the robot to disconnect from the host.
  ====Souce code:====
   =====1. Code for ATOM===== 

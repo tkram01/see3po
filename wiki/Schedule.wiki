@@ -27,6 +27,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || Tyler's Program recieved		     || 03/23/2010   ||              ||   Tyler      ||                 ||
 || Hardware Order Submitted          || 03/23/2010   ||              ||[Frank] [Hao] [Jacky]||		    ||
 || *[LiveDemo1 Live Demo 1]*         || 03/23/2010   ||              ||     all      ||					||
+|| Evaluation of Multi-threading Implementation|| 03/30/2010 ||              || [Nick]      ||                 ||
 || Tyler's Program Integrated into Host|| 03/30/2010 ||              || [Frank]      ||                 ||
 || One-Step Build Completed          || 03/30/2010   ||              || [Debarati]   ||                 ||
 || System Tests Designed             || 03/30/2010   ||              || [Debarati]   ||                 ||

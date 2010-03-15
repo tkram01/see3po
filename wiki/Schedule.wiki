@@ -22,7 +22,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || Pathfinding Bug Fixes             || 03/11/2010   || Completed    || [Nick]       || 03/11/2010      || 
 || Path Correctly Sent from Host to Robot || 03/11/2010 || Completed ||[Jacky][Frank][Hao]|| 03/11/2010 || 
 || *[LiveDemo1 Live Demo 1]*         || 03/11/2010   || rescheduled  ||     all      ||					||
-|| [UMLDiagram UML] up to date       || 03/19/2010   ||              ||     FloorPlan / FloorTile [Debarati], PathFinder [Nick], Host [Frank][Nick], Sequence Diagram [Frank][Nick] ||					|| 
+|| [UMLDiagram UML] up to date       || 03/19/2010   ||              ||     FloorPlan / FloorTile [Debarati]<br/>, PathFinder [Nick], Host [Frank] [Nick], Sequence Diagram [Frank] [Nick] ||					|| 
 || Code Review Complete              || 03/19/2010   ||              ||     all      ||					|| 
 || Tyler's Program recieved		     || 03/23/2010   ||              ||   Tyler      ||                 ||
 || Hardware Order Submitted          || 03/23/2010   ||              ||[Frank] [Hao] [Jacky]||		    ||

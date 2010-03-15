@@ -4,8 +4,8 @@
 = Details =
 
 ==First step: Prepare for the project== 
- * Use SVN to checkout the documents from http://see3po.googlecode.com/svn/trunk/
- * Install Visual Studio 2008.
+* Use SVN to checkout the documents from http://see3po.googlecode.com/svn/trunk/
+* Install Visual Studio 2008.
 ==Second step: Overall view== 
   Go to the "Documents" directory and find the See3PO_Config.doc file. 
   This is the configuration file of this project. We should konw that this project contains two main parts--Desktop computer and Robot. 

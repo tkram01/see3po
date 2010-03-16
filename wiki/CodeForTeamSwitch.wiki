@@ -19,8 +19,8 @@
   Disconnect Command "0 2 239" tells the robot to disconnect from the host.
  ===Souce code:===
   ====1. Code for ATOM==== 
-  Enter the "ATOM" directory. This project is compiled by "Basic Micro Studio", which is written by on lower level machine language called "Atom BASIC". Please refer to [http://code.google.com/p/see3po/source/browse/trunk/Manual/atom%20pro%20tutorial.pdf  atom pro tutorial.pdf] for detail. This program receive the command from local brain and then tells the robot how to move or react.
-  Till now we are using the program5.bas. To upload this program to the robot, we use a serial cable with "Basic Micro Studio". I suggest not trying this part.
+  Enter the "ATOM" directory. This project is compiled by "Basic Micro Studio", which is written by the lower level machine language called "Atom BASIC". This program receives the command from local brain and then tells the robot how to move or react.
+  Till now we are using the [http://code.google.com/p/see3po/source/browse/trunk/SourceCode/ATOM/program5.bas program5.bas]. To upload this program to the robot, we use a serial cable with "Basic Micro Studio". Please refer to [http://code.google.com/p/see3po/source/browse/trunk/Manual/atom%20pro%20tutorial.pdf  atom pro tutorial.pdf] for more detail.
   ====2 Familar with the robot====
   Test the robot with the control itself and then look through the code "LocalBrain-selfcontrol" directory. How to change the local brain? Build the code and find the "LocalBrain.exe" in the "LocalBrain-selfcontrol\bin\Debug" directory. 
 ==Fourth step: Host part==

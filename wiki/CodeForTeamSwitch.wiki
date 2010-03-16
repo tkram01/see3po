@@ -12,15 +12,15 @@
   If you are interested in the hardware part, please take a look at the files in "Manual" directory. This directory contains all the hardware parts of the robot.
 ==Third step: Robot part== 
  ===Protocal:===
- The protocal "Documents\Hardware\communication protocal.doc" helps us to understand how the robot knows the command, and also this will show in the robot display. Till now, we just need to know two commands. 
+ The protocal [http://code.google.com/p/see3po/source/browse/trunk/Documents/Hardware/communication%20protocols.doc "communication protocal.doc"] helps us to understand how the robot knows the command, and also this will show in the robot display. Till now, we just need to know two commands. 
   ====1. Motors Comtrol Commands====
   If you take a look the commands display in the robot. It will show like this "1 16 17 0 179 0 150 0 42 239".The first three numbers keep the same; the fourth and fifth numbers(0 179) are the left wheel speed; the sixth, seventh numbers(0 150) are the right wheels speed; the next two numbers (0, 42)are the timer, this stands for 42*50 ms=2100ms. The last number 239 is the end number, which tells the robot this is the end of a command. This command tells the robot to move forward at left speed 179 right speed 150 for 2100 ms.
   ====2. Disconnect Command==== 
   Disconnect Command "0 2 239" tells the robot to disconnect from the host.
  ===Souce code:===
   ====1. Code for ATOM==== 
-  Enter the "ATOM" directory. This project is compiled by VB, which is a lower level machine language.This program just tells the robot how to understand the command.
-  Till now we are using the program5.bas. to compile this to the robot, we use a data cable. I suggest not trying this part.
+  Enter the "ATOM" directory. This project is compiled by "Basic Micro Studio", which is written by on lower level machine language called "Atom BASIC". Please refer to [http://code.google.com/p/see3po/source/browse/trunk/Manual/atom%20pro%20tutorial.pdf  atom pro tutorial.pdf] for detail. This program receive the command from local brain and then tells the robot how to move or react.
+  Till now we are using the program5.bas. To upload this program to the robot, we use a serial cable with "Basic Micro Studio". I suggest not trying this part.
   ====2 Familar with the robot====
   Test the robot with the control itself and then look through the code "LocalBrain-selfcontrol" directory. How to change the local brain? Build the code and find the "LocalBrain.exe" in the "LocalBrain-selfcontrol\bin\Debug" directory. 
 ==Fourth step: Host part==

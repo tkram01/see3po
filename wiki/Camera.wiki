@@ -56,7 +56,6 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
   ** 2G DDR2 SDRAM (667 MHz, 200-pin SODIMM)
   ** 1 CompactFlach Card TYPE I/II (at least 2Gb)
   ** 12V battery 13W 1.2A
-
  # Liantec - EMB-5740
   ** <font color = Red>[http://www.liantec.com/product/emboard/EMB-5740.htm EMB-5740] main board with 512MB on-board SDRAM
   ** [http://www.liantec.com/product/tbm/TBM-1260.htm TBM-1260] Tiny-Bus IEEE1394 Firewire Module with 3 External IEEE1394 Firewire Ports and Mini-PCI Type-IIIA/B Socket</font>
@@ -64,7 +63,6 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
   ** 1G DDR2 SDRAM
   ** 1 CompactFlach Card TYPE I/II (at least 2Gb)
   ** 12V battery 
-
  # globalamericaninc - 3307830 
   ** <font color = Red>[http://www.globalamericaninc.com/p3307830/3307830_-_5.25%22_Embedded_Controller_with_Socket_P_for_Intel_Core_2_Duo_processor/product_info.html 3307830F] 5.25" Embedded Controller with Socket P for Intel Core 2 Duo processor and 1 GB DDR2 on-board SDRAM
   ** [http://www.globalamericaninc.com/Mini_PCI_Modules-IEEE_1394/c55_432/p1807613/1807613_-_Mini-PCI_IEEE_1394A_Firewire_400_Module/product_info.html MP-323] 1807613 Mini-PCI IEEE 1394A Firewire 400 Module

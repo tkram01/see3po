@@ -26,4 +26,4 @@
 ==Fourth step: Host part==
  ===FloorPlanProcessing (FloorPlanAndTile)===
  ===PathFinding===
- ===See3PO===
+ ===See3PO (UMLDiagram)===

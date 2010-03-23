@@ -66,8 +66,8 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
  # GlobalAmerican Inc - LS-571
   ** <font color = Red>[http://www.globalamericaninc.com/p3307830/3307830_-_5.25%22_Embedded_Controller_with_Socket_P_for_Intel_Core_2_Duo_processor/product_info.html LS-571] 3307830F - 5.25" Embedded Controller with Socket P for Intel Core 2 Duo processor and 1 GB DDR2 on-board SDRAM
   ** [http://www.globalamericaninc.com/Mini_PCI_Modules-IEEE_1394/c55_432/p1807613/1807613_-_Mini-PCI_IEEE_1394A_Firewire_400_Module/product_info.html MP-323] 1807613 Mini-PCI IEEE 1394A Firewire 400 Module
-  ** [http://www.globalamericaninc.com/Mini_PCI_Modules-LAN_/_Wireless_LAN/c55_430/p1507631/1507631_-_Mini-PCI_Wireless_LAN_Card/product_info.html MP-2501] 1507631 Mini-PCI Wireless LAN Card </font>
-  ** 1 CompactFlach Card TYPE II (at least 4Gb)
+  ** [http://www.globalamericaninc.com/Mini_PCI_Modules-LAN_/_Wireless_LAN/c55_430/p1507631/1507631_-_Mini-PCI_Wireless_LAN_Card/product_info.html MP-2501] 1507631 Mini-PCI Wireless LAN Card 
+  ** [http://www.globalamericaninc.com/p3704008/IDE_Disk_On_Module_-_Choose_Your_Options/product_info.html Disk On Module] - 8G </font>
   ** 12V battery
  # AAEON Tech - EPIC-9457 Rev. B
   ** <font color = Red>[http://www.aaeon.com/PD_Products_Detail_DCCAA0A1DF3344B7BB_C8064EACC7F34610B4_7345A4463FCD402DBC_TW_UTF-8.html EPIC-9457 Rev. B] main board with onboard DDRII 400/533 Memory 1 GB

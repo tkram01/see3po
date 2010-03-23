@@ -24,6 +24,7 @@
   ====2 Familar with the robot====
   Test the robot with the control itself and then look through the code "LocalBrain-selfcontrol" directory. How to change the local brain? Build the code with Visual Studio and find the "LocalBrain.exe" in the "LocalBrain-selfcontrol\bin\Debug" directory. Next, install "Microsoft ActiveSync" on PC and then connect robot with an USB cable. Atfter the connection, power up the robot, the ActiveSync applicaton will say a device is connected. Then, copy past "LocalBrain.exe" into IPSM folder of local brain storage.  
 ==Fourth step: Host part==
+All modules are developed in Visual Studio 2008. Double click *.sln in corresponding folders for detail.
  ===FloorPlanProcessing (FloorPlanAndTile)===
  ===PathFinding===
  ===See3PO ([UMLDiagram])===

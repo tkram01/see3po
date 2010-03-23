@@ -27,6 +27,8 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || Tyler's Program received || 03/23/2010   ||              ||   Tyler      ||                 ||
 || Hardware Order Submitted          || 03/23/2010   ||              ||[Frank] [Hao] [Jacky]||		    ||
 || *[LiveDemo1 Live Demo 1]*         || 03/23/2010   ||              ||     all      ||					||
+|| *[CodeForTeamSwitch  Team switch instruction]*         || 03/23/2010   ||              ||     [Hao]      ||					||
+|| Adding license agreement in codes || 03/25/2010   ||              || [Nick] [Jacky]   ||		||
 || Evaluation of Multi-threading Implementation|| 03/30/2010 ||              || [Nick]      ||                 ||
 || Sending Images from LocalBrain to Host || 03/30/2010 ||              || [Nick] [Jacky]      ||                 ||
 || Tyler's Program Integrated into Host|| 03/30/2010 ||              || [Frank]      ||                 ||

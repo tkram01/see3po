@@ -1,3 +1,6 @@
+' Lisence:
+' $license$  
+
 'end of transmission
 EOT con 0xEF
 

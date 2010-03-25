@@ -6,15 +6,15 @@
 ==Preparation== 
  * Use SVN to checkout the documents from http://see3po.googlecode.com/svn/trunk/
 	Folders that we need are:
-	    For the Atom: 
-		  Atom
-		For the LocalBrain: 
-		  LocalBrain-Self Control
-		For the Host PC: 
-		  Pathfinding
-		  FloorPlanAndTile
-		  GUI
-		  Host
+	   For the Atom: 
+	      Atom
+	   For the LocalBrain: 
+              LocalBrain-Self Control
+	   For the Host PC: 
+	      Pathfinding
+              FloorPlanAndTile
+              GUI
+              Host
  * Install Visual Studio 2008.
  * Install ActiveSync
  * Install Basic Micro Studio

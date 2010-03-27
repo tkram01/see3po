@@ -1,0 +1,49 @@
+C:\Data\Projects\ViLAN\ViLAN Explorer\obj\Debug\ResolveAssemblyReference.cache
+C:\Data\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN_Explorer.Properties.Resources.resources
+C:\Data\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN Explorer.csproj.GenerateResource.Cache
+C:\Data\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN_Explorer.MainForm.resources
+C:\Data\Projects\ViLAN\ViLAN Explorer\bin\Debug\ViLAN Explorer.exe
+C:\Data\Projects\ViLAN\ViLAN Explorer\bin\Debug\ViLAN Explorer.pdb
+C:\Data\Projects\ViLAN\ViLAN Explorer\bin\Debug\Nexus3Input.dll
+C:\Data\Projects\ViLAN\ViLAN Explorer\bin\Debug\Nexus3Input.pdb
+C:\Data\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN Explorer.exe
+C:\Data\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN Explorer.pdb
+C:\Data\Projects\ViLAN\ViLAN Explorer\bin\Debug\RobotCommands.dll
+C:\Data\Projects\ViLAN\ViLAN Explorer\bin\Debug\RobotCommands.pdb
+D:\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN Explorer.exe
+D:\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN Explorer.pdb
+D:\Projects\ViLAN\ViLAN Explorer\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN_Explorer.MainForm.resources
+D:\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN_Explorer.Properties.Resources.resources
+D:\Projects\ViLAN\ViLAN Explorer\obj\Debug\ViLAN Explorer.csproj.GenerateResource.Cache
+D:\Projects\ViLAN\ViLAN Explorer\bin\Debug\ViLAN Explorer.exe
+D:\Projects\ViLAN\ViLAN Explorer\bin\Debug\ViLAN Explorer.pdb
+D:\Projects\ViLAN\ViLAN Explorer\bin\Debug\RobotCommands.dll
+D:\Projects\ViLAN\ViLAN Explorer\bin\Debug\Nexus3Input.pdb
+D:\Projects\ViLAN\ViLAN Explorer\bin\Debug\RobotCommands.pdb
+D:\Projects\ViLAN\ViLAN Explorer\bin\Debug\RobotHost.dll
+D:\Projects\ViLAN\ViLAN Explorer\bin\Debug\RobotHost.pdb
+C:\see3po\SourceCode\ViLAN Explorer\obj\Debug\ViLAN Explorer.exe
+C:\see3po\SourceCode\ViLAN Explorer\obj\Debug\ViLAN Explorer.pdb
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\obj\Debug\ViLAN Explorer.exe
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\obj\Debug\ViLAN Explorer.pdb
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\bin\Debug\ViLAN Explorer.exe
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\bin\Debug\ViLAN Explorer.pdb
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\bin\Debug\RobotHost.pdb
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\bin\Debug\Nexus3Input.pdb
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\bin\Debug\RobotCommands.pdb
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\obj\Debug\ViLAN_Explorer.MainForm.resources
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\obj\Debug\ViLAN_Explorer.Properties.Resources.resources
+C:\Documents and Settings\yu\桌面\ViLAN Explorer\obj\Debug\ViLAN Explorer.csproj.GenerateResource.Cache
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\obj\Debug\ViLAN Explorer.exe
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\obj\Debug\ViLAN Explorer.pdb
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\obj\Debug\ResolveAssemblyReference.cache
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\obj\Debug\ViLAN_Explorer.MainForm.resources
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\obj\Debug\ViLAN_Explorer.Properties.Resources.resources
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\obj\Debug\ViLAN Explorer.csproj.GenerateResource.Cache
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\bin\Debug\ViLAN Explorer.exe
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\bin\Debug\ViLAN Explorer.pdb
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\bin\Debug\RobotHost.pdb
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\bin\Debug\Nexus3Input.pdb
+E:\cs682\see3PO\SourceCode\ViLAN Explorer\bin\Debug\RobotCommands.pdb

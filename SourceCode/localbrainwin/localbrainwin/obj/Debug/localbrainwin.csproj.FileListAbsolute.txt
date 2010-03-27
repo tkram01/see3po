@@ -1,0 +1,20 @@
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\bin\Debug\localbrainwin.exe
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\bin\Debug\localbrainwin.pdb
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\bin\Debug\RobotCommands.dll
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\bin\Debug\RobotCommands.pdb
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\obj\Debug\LocalBrain.MainForm.resources
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\obj\Debug\localbrainwin.Properties.Resources.resources
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\obj\Debug\localbrainwin.csproj.GenerateResource.Cache
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\obj\Debug\localbrainwin.exe
+C:\Documents and Settings\yu\桌面\LocalBrain-selfcontrol\localbrainwin\localbrainwin\obj\Debug\localbrainwin.pdb
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\obj\Debug\localbrainwin.exe
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\obj\Debug\localbrainwin.pdb
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\bin\Debug\localbrainwin.exe
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\bin\Debug\localbrainwin.pdb
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\bin\Debug\RobotCommands.dll
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\bin\Debug\RobotCommands.pdb
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\obj\Debug\LocalBrain.MainForm.resources
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\obj\Debug\localbrainwin.Properties.Resources.resources
+C:\Documents and Settings\yu\桌面\LocalBrain  win\localbrainwin\localbrainwin\obj\Debug\localbrainwin.csproj.GenerateResource.Cache

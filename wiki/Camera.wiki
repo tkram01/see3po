@@ -76,3 +76,9 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
   ** 1 CompactFlach Card TYPE I/II (at least 4Gb)
   ** +8.5~19V battery
   ** Touch Screen Supports 4/5/8-wire (optional)
+
+= We have chosen =
+ # Logic Supply [http://www.logicsupply.com/products/j7f2we_1g Jetway J7F2WE-1G Mini-ITX Mainboard] with 1GB memory ($132+$39 = $171)
+ # Logic Supply [http://www.logicsupply.com/products/picopsu_80 PicoPSU-80 DC-DC Power Converter] ($25)
+ # Logic Supply [http://www.logicsupply.com/products/fdm80sqi4g Emphase 40-pin Industrial Flash Disk Module 4 GB] ($72)
+ # USB wireless adapter

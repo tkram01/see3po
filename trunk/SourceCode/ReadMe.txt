@@ -15,5 +15,12 @@ Old: out-of-date codes (but might be still useful some day)
 
 PathFinding: A module that could take a FloorPlan as input and generate walkable path.
 
+ViLAN Explorer: Robot direct control host program.
 
+ATOM: motor and servo control program on ATOM board.
+
+LocalBrain-selfcontrol: program runs on robot embedded computer (WinCE) which is used to recieve 
+   command from Host as well as pass the command to ATOM.
+
+localbrainwin: Windows version LocalBrain program for testing purpose.
 

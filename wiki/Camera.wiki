@@ -81,8 +81,9 @@ Using a lo-res (640x480) Dragonfly requires the appropriate registry keys to be 
  * Logic Supply [http://www.logicsupply.com/products/j7f2we_1g Jetway J7F2WE-1G Mini-ITX Mainboard] with 1GB memory ($132+$39 = $171)
  * Logic Supply [http://www.logicsupply.com/products/picopsu_80 PicoPSU-80 DC-DC Power Converter] ($25)
  * Logic Supply [http://www.logicsupply.com/products/fdm80sqi4g Emphase 40-pin Industrial Flash Disk Module 4 GB] ($72)
+ * Logic Supply [http://www.logicsupply.com/products/g01_1394_1p IEEE 1394 (FireWire) Pin Header Cable] ($8.5)
  * USB wireless adapter - [http://www.amazon.com/gp/offer-listing/B000CRFI8A/ref=dp_olp_new_map?ie=UTF8&condition=new Linksys by Cisco WUSB54GC Compact Wireless-G USB Adapter] ($38.57) 
  * 12V/5A battery - [http://www.all-battery.com/12v5000mahflatnimhbatterypack11637.aspx 12V 5000mAh Flat NiMH Battery] ($77.84)
  * Battery charger - [http://www.all-battery.com/smartuniversalbatterypackcharger12v-168vcurrentselection.aspx Smart Universal Battery Pack Charger: 12V - 16.8V] ($22.99) 
 
-Therefore, the total cost is about $400
+Therefore, the total cost is about $410

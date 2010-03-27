@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Net;
+using System.Net.Sockets;
+using System.IO;
 using RobotCommands;
 
 namespace LocalBrain
@@ -21,15 +23,20 @@ namespace LocalBrain
 		private CServosController servos;
 		private CMotorsController motors;
         private const byte EOT = 0xEF;
+        private const byte IMG_CMD = 0x04;
         private const byte MOTOR_CMD = 0x10;
         private const byte DRIVING_CMD = 0x11;
         private const byte SOUND_CMD = 0x00;
         private const int SERVER_CMD_SIZE = 10;
         private const int MOTOR_PACKET_SIZE = 7;
+        private const int SOCKET_PORT1 = 9050;
         private const short FIX_SPEED = 350;
+        private const string imagefile = "flower.jpg";
         private const string server_IP = "192.168.2.166";
         short rightSpeed;
         short leftSpeed;
+        IPAddress HOSTaddress;
+        Boolean debug_model_on = false;
 
         //CRbotoHost host;
 
@@ -93,14 +100,37 @@ namespace LocalBrain
 
 		public void PostMessage(string message)
 		{
-			if(InvokeRequired)
-			{
-				Invoke(new DGuiCallString(PostMessage), message);
-				return;
-			}
+            if (debug_model_on)
+            {
+                if (InvokeRequired)
+                {
+                    Invoke(new DGuiCallString(PostMessage), message);
+                    return;
+                }
 
-			messageBox.Text = message + "\r\n" + messageBox.Text;
+                messageBox.Text = message + "\r\n" + messageBox.Text;
+            }
 		}
+
+        private void handle_image_transfer()
+        {
+            try
+            {
+                FileStream imgfile = File.OpenRead(imagefile);
+                byte[] clientData1 = new byte[imgfile.Length];
+                imgfile.Read(clientData1, 0, (int)imgfile.Length);
+
+                Socket clientSock1 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                clientSock1.Connect(new IPEndPoint(HOSTaddress, SOCKET_PORT1)); //target machine's ip address and the port number
+                clientSock1.Send(clientData1);
+                clientSock1.Close();
+            }
+            catch (Exception ex)
+            {
+                PostMessage("image request error:" + ex.ToString());
+            }
+
+        }
 
 		public void HandleSystemMessage(byte[] buffer)
 		{
@@ -122,6 +152,12 @@ namespace LocalBrain
 			        PostMessage("Disconnect message received from robot host.");
 			        client.Disconnect(false);
 			        break;
+
+                case IMG_CMD:
+                    PostMessage("Request image command received from robot host.");
+                    handle_image_transfer();
+                    client.Send(new byte[] {0x00, IMG_CMD, EOT }, true);
+                    break;
 
 			    default:
 			        PostMessage("Unknown system message received from robot host.");
@@ -214,7 +250,6 @@ namespace LocalBrain
 
 		private void remoteConnectMenuItem_Click(object sender, EventArgs e)
 		{
-            IPAddress address;
             String IPstr;
 
             if (client.IsConnected)
@@ -224,17 +259,17 @@ namespace LocalBrain
                 try
                 {
                     IPstr = IPaddr.Text;
-                    address = IPAddress.Parse(IPstr);
+                    HOSTaddress = IPAddress.Parse(IPstr);
                     PostMessage("Host IP is: " + IPstr);
                 }
                 catch
                 {
                     PostMessage("Host IP error!! Will use " + server_IP);
                     IPstr = server_IP;
-                    address = IPAddress.Parse(IPstr);
+                    HOSTaddress = IPAddress.Parse(IPstr);
                 }
                 PostMessage("Connecting to " + IPstr);
-                client.Connect(address);
+                client.Connect(HOSTaddress);
             }
 		}
 
@@ -397,6 +432,20 @@ namespace LocalBrain
             stopButton_Click(stopButton, e);
             System.Threading.Thread.Sleep(200);
             stopButton_Click(stopButton, e);
+        }
+
+        private void menuItem2_Click(object sender, EventArgs e)
+        {
+            if (debug_model_on)
+            {
+                menuItem2.Text = "ON";
+                debug_model_on = false;
+            }
+            else
+            {
+                menuItem2.Text = "OFF";
+                debug_model_on = true;
+            }
         }
 
 

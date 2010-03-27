@@ -36,6 +36,8 @@ namespace LocalBrain
             this.remoteConnectMenuItem = new System.Windows.Forms.MenuItem();
             this.servosConnectMenuItem = new System.Windows.Forms.MenuItem();
             this.motorsConnectMenuItem = new System.Windows.Forms.MenuItem();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.statusBar = new System.Windows.Forms.StatusBar();
             this.messageBox = new System.Windows.Forms.TextBox();
             this.speedBar = new System.Windows.Forms.TrackBar();
@@ -75,6 +77,7 @@ namespace LocalBrain
             // 
             this.mainMenu.MenuItems.Add(this.fileMenu);
             this.mainMenu.MenuItems.Add(this.connectionsMenuItem);
+            this.mainMenu.MenuItems.Add(this.menuItem1);
             // 
             // fileMenu
             // 
@@ -107,6 +110,16 @@ namespace LocalBrain
             // 
             this.motorsConnectMenuItem.Text = "Connect to Motors";
             this.motorsConnectMenuItem.Click += new System.EventHandler(this.motorsConnectMenuItem_Click);
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.MenuItems.Add(this.menuItem2);
+            this.menuItem1.Text = "Debug";
+            // 
+            // menuItem2
+            // 
+            this.menuItem2.Text = "ON";
+            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
             // 
             // statusBar
             // 
@@ -501,6 +514,8 @@ namespace LocalBrain
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MenuItem menuItem1;
+        private System.Windows.Forms.MenuItem menuItem2;
 	}
 }
 

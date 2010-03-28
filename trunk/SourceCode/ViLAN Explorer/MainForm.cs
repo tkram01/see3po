@@ -12,6 +12,7 @@ using Timer = System.Threading.Timer;
 using System.Net.Sockets;
 using System.IO;
 using System.Net;
+using System.Windows.Media.Imaging;
 
 using Nexus3Input;
 using RobotCommands;
@@ -36,6 +37,7 @@ namespace ViLAN_Explorer
 		Timer driveTimer;
 		short rightSpeed;
 		short leftSpeed;
+        Bitmap pic;
 
 		public MainForm()
 		{
@@ -326,6 +328,8 @@ namespace ViLAN_Explorer
                 BinaryWriter writer = new BinaryWriter(File.Open(receivedPath, FileMode.Append));
                 byte[] filedata = data.ToArray();
                 filedata.Reverse();
+                Stream datastream = new MemoryStream(filedata);
+                pic = new Bitmap(datastream);
                 writer.Write(filedata);
                 writer.Close();
                 Invoke(new MyDelegate(LabelWriter));
@@ -336,6 +340,12 @@ namespace ViLAN_Explorer
         public void LabelWriter()
         {
             label1.Text = "Data has been received";
+            PictureBox mypicbox = new PictureBox();
+            mypicbox.Image = pic;
+            mypicbox.Anchor = AnchorStyles.Top;
+            mypicbox.SizeMode = PictureBoxSizeMode.AutoSize;
+            livePanel.Controls.Add(mypicbox);
+            livePanel.Show();
         }
 
 

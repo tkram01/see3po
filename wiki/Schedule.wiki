@@ -30,7 +30,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || *[CodeForTeamSwitch  Team switch instruction]*         || 03/23/2010   ||              ||     [Hao]      ||					||
 || Adding license agreement in codes || 03/25/2010   ||              || [Nick] [Jacky]   ||		||
 || Evaluation of Multi-threading Implementation|| 03/30/2010 ||              || [Nick]      ||                 ||
-|| Sending Images from LocalBrain to Host || 03/30/2010 ||              || [Nick] [Jacky]      ||                 ||
+|| Sending Images from LocalBrain to Host || 03/30/2010 || LocalBrain part complete, Host part reschedule || [Nick] [Jacky]      ||                 ||
 || Tyler's Program Integrated into Host|| 03/30/2010 ||              || [Frank]      ||                 ||
 || One-Step Build Completed          || 03/30/2010   ||              || [Debarati]   ||                 ||
 || System Tests Designed             || 03/30/2010   ||              || [Debarati]   ||                 ||

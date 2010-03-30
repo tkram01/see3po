@@ -1,4 +1,8 @@
-﻿using System.Linq;
+﻿/*
+$license$
+$Rev$
+*/
+using System.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

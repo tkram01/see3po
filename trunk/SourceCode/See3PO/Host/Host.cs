@@ -1,5 +1,5 @@
 ﻿/*
-$license$
+$License$
 $Rev$
 */
 using System.Linq;

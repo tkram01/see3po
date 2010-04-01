@@ -21,7 +21,7 @@ namespace LocalBrain
 		{
 			parent = p;
 
-			m_SerialPort = new SerialPort("COM1", 115200, Parity.None, 8, StopBits.One);
+			m_SerialPort = new SerialPort("COM2", 115200, Parity.None, 8, StopBits.One);
 			m_SerialPort.Handshake = Handshake.None;
 			m_SerialPort.DiscardNull = false;
 			m_SerialPort.RtsEnable = true;
@@ -29,10 +29,18 @@ namespace LocalBrain
 
 		public void Connect()
 		{
-			//m_SerialPort.Open();
+            try
+            {
+                m_SerialPort.Open();
+                parent.PostMessage("Successfully connected to servos.");
+            }
+            catch (Exception ex)
+            {
+                parent.PostMessage("COM2 open error:" + ex.ToString());
+            }
 
 			parent.UpdateStatus();
-			parent.PostMessage("Successfully connected to servos.");
+			
 		}
 
 		public void Disconnect()

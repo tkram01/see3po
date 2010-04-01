@@ -29,10 +29,18 @@ namespace LocalBrain
 
         public void Connect()
         {
-            m_SerialPort.Open();
+            try
+            {
+                m_SerialPort.Open();
+                parent.PostMessage("Successfully connected to motors.");
+            }
+            catch (Exception ex)
+            {
+                parent.PostMessage("COM1 open error:"+ ex.ToString());
+            }
 
 			parent.UpdateStatus();
-			parent.PostMessage("Successfully connected to motors.");
+			
         }
 
         public void Disconnect()

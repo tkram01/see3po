@@ -12,7 +12,6 @@ using Timer = System.Threading.Timer;
 using System.Net.Sockets;
 using System.IO;
 using System.Net;
-using System.Windows.Media.Imaging;
 
 using Nexus3Input;
 using RobotCommands;

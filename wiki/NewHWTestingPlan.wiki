@@ -11,4 +11,4 @@
 || Use new LocalBrain program to control the motors/servo ||  ||
 || Able to connect to the Host ||  ||
 || Able to receive commands from Host ||   ||
-|| Able to be drove by the the remote control program || ||  
+|| Able to drive the robot through remote control program || ||  

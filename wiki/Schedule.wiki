@@ -42,7 +42,7 @@ For Events scheduled prior to December 2009, see our [ScheduleArchive Archived S
 || Sending Images from LocalBrain to Host / Host Part || 04/01/2010 ||              || [Nick]       ||                 ||
 || Fixed issue: Repeated Moves sent to robot || 04/01/2010 ||            || Frank      ||                 ||
 || New hardware received || 04/08/2010 ||      || [Frank]      ||        ||
-|| New hardware testing plan || 04/08/2010 ||      || [Jacky]      ||        ||
+|| [NewHWTestingPlan New hardware testing plan] || 04/08/2010 ||      || [Jacky]      ||        ||
 || LocalBrain program revision for XP || 04/15/2010 ||      || [Jacky]      ||        ||
 || New hardware assembly || 04/15/2010 ||      || [Hao]      ||        ||
 || New hardware test passed || 04/22/2010 ||      || [Hao] [Jacky]   ||        ||

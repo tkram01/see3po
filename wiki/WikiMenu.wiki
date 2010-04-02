@@ -19,6 +19,7 @@
   ** Hardware
      *** [HWQuestions Questions]
      *** [Camera] 
+     *** [NewHWTestingPlan New HW testing plan]
  * Group Member
   ** [Frank]
   ** [Nick]

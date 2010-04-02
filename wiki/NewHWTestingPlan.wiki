@@ -1,0 +1,14 @@
+#summary The testing plan for new embedded PC.
+
+= Introduction =
+
+ In order to make sure the new embedded PC can replace the old system, it has to pass the following tasks:
+
+
+= Task List =
+|| Check Item || Pass || 
+|| Download and run XP version LocalBrain executable file   ||  ||
+|| Use new LocalBrain program to control the motors/servo ||  ||
+|| Able to connect to the Host ||  ||
+|| Able to receive commands from Host ||   ||
+|| Able to be drove by the the remote control program || ||  

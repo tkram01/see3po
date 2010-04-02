@@ -6,9 +6,9 @@
 
 
 = Task List =
-|| Check Item || Pass || 
-|| Download and run XP version LocalBrain executable file   ||  ||
+|| *Check Item* || *Pass* || 
+|| Download and run XP version of LocalBrain executable file ||  ||
 || Use new LocalBrain program to control the motors/servo ||  ||
-|| Able to connect to the Host ||  ||
-|| Able to receive commands from Host ||   ||
-|| Able to drive the robot through remote control program || ||  
+|| Connect to the Host via wireless ||  ||
+|| Receive commands from Host ||   ||
+|| Drive the robot through remote control program || ||  

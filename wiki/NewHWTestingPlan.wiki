@@ -6,7 +6,7 @@
 
 
 = Task List =
-|| == Check Item == || == Pass == || 
+|| Check Item || Pass || 
 || Download and run XP version LocalBrain executable file   ||  ||
 || Use new LocalBrain program to control the motors/servo ||  ||
 || Able to connect to the Host ||  ||

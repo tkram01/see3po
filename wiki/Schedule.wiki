@@ -1,50 +1,22 @@
-#summary Schedule for the See3po project
 #labels Featured,Phase-Implementation,Scheduling
+the#summary Schedule for the See3po project
 = Schedule for the See3PO project =
 
 For Events scheduled prior to December 2009, see our [ScheduleArchive Archived Schedule]
 
 
-===February===
-|| *Task*							 || *Due* 		|| *Status*		|| *Taken By* 	|| *Completed Date* ||
-|| FloorPlan serializable            || 02/15/2010	|| Completed	|| [Debarati]   || 02/11/2010		||
-|| Protocol Document Updated         || 02/15/2010  || Completed    || [Jacky]      || 02/15/2010       ||
-|| Host and RemoteBrain comply with Protocol Document || 02/15/2010 || Complete ||[Frank][Jacky]|| 02/15/2010||
-|| [BossMeeting5 Boss Meeting 5]     || 02/18/2010  || Completed    || Everyone      ||   02/218/2010   ||
-|| Manual Locator Completed          || 02/18/2010	|| Completed    || [Frank]      || 02/18/2010		||
-|| Path Conversion to Move Commands  || 02/28/2010	|| Completed    || [Frank]      || 02/28/2010		||
-
-===March===
-|| *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*||
-|| Floor Measured and Drawn Up       || 03/02/2010   || Completed    || [Nick]       || 03/02/2010      ||
-|| *[LiveDemo1 Live Demo 1]*         || 03/02/2010   || rescheduled  ||              ||					||
-|| Hardware Order Submitted          || 03/11/2010   || rescheduled  ||[Frank] [Hao] [Jacky]||		    ||
-|| Pathfinding Bug Fixes             || 03/11/2010   || Completed    || [Nick]       || 03/11/2010      || 
-|| Path Correctly Sent from Host to Robot || 03/11/2010 || Completed ||[Jacky][Frank][Hao]|| 03/11/2010 || 
-|| *[LiveDemo1 Live Demo 1]*         || 03/11/2010   || rescheduled  ||     all      ||					||
-|| [UMLDiagram UML] up to date       || 03/19/2010   || Completed  ||     FloorPlan / FloorTile [Debarati]<br/> PathFinder [Nick]<br/> Host [Frank] [Nick]<br/> LocalBrain [Jacky] [Hao] <br/> Sequence Diagram [Frank] [Nick]<br/> ||					|| 
-|| Code Review (understand each other's code) || 03/19/2010   ||              ||      FloorPlan/FloorTile [Frank] [Nick] <br/> PathFinder [Debarati] [Frank] <br/> Host [Debarati] [Nick] ||					|| 
-|| Tyler's Program received          || 03/23/2010   || Rescheduled   ||   Tyler     ||                 ||
-|| Hardware Order Submitted          || 03/23/2010   || Rescheduled   ||[Frank] [Hao] [Jacky]||		    ||
-|| *[LiveDemo1 Live Demo 1]*         || 03/23/2010   || Removed       ||     all      ||					||
-|| *[CodeForTeamSwitch  Team switch instruction]*|| 03/23/2010 ||  Completed          ||     [Hao]      ||					||
-|| Adding license agreement in codes || 03/30/2010   ||              || [Nick] [Jacky]   ||		||
-|| Hardware Order Submitted          || 03/30/2010   ||    ||[Frank] [Hao] [Jacky]||		    ||
-|| Evaluation of Multi-threading Implementation|| 03/30/2010 ||              || [Nick]      ||                 ||
-|| Sending Images from LocalBrain to Host || 03/30/2010 || LocalBrain part complete, Host part reschedule || [Nick] [Jacky]      ||                 ||
-|| Tyler's Program Integrated into Host|| 03/30/2010 ||  Rescheduled || [Frank]      ||                 ||
-|| One-Step Build Completed          || 03/30/2010   ||              || [Debarati]   ||                 ||
-|| System Tests Designed             || 03/30/2010   ||              || [Debarati]   ||                 ||
-
-
 ===April===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| Sending Images from LocalBrain to Host / Host Part || 04/01/2010 ||              || [Nick]       ||                 ||
-|| Fixed issue: Repeated Moves sent to robot || 04/01/2010 ||            || Frank      ||                 ||
+
 || New hardware received || 04/08/2010 ||      || [Frank]      ||        ||
+|| [Presentation2 Presenters] chosen || 04/06/2010 ||      || All      ||        ||
+|| [Presentation2 Presentation Functionality] finalized || 04/06/2010 ||      || All      ||        ||
 || [NewHWTestingPlan New hardware testing plan] || 04/08/2010 ||      || [Jacky]      ||        ||
+|| Fixed issue: Repeated Moves sent to robot || 04/13/2010 ||            || Frank      ||                 ||
+|| Sending Images from LocalBrain to Host / Host Part || 04/13/2010 ||              || [Nick]       ||                 ||
 || LocalBrain program revision for XP || 04/15/2010 ||      || [Jacky]      ||        ||
 || New hardware assembly || 04/15/2010 ||      || [Hao]      ||        ||
+|| [Presentation2 Presentation] || 04/20/2010 ||      || [Hao]      ||        ||
 || New hardware test passed || 04/22/2010 ||      || [Hao] [Jacky]   ||        ||
 || Tyler's Program received          || TBD   ||    ||   Tyler     ||                 ||
 || Tyler's Program Integrated into Host|| TBD ||  Rescheduled ||      ||       ||

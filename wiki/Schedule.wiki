@@ -2,12 +2,11 @@
 the#summary Schedule for the See3po project
 = Schedule for the See3PO project =
 
-For Events scheduled prior to December 2009, see our [ScheduleArchive Archived Schedule]
+For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Schedule]
 
 
 ===April===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-
 || New hardware received || 04/08/2010 ||      || [Frank]      ||        ||
 || [Presentation2 Presenters] chosen || 04/06/2010 ||      || All      ||        ||
 || [Presentation2 Presentation Functionality] finalized || 04/06/2010 ||      || All      ||        ||

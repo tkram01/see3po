@@ -7,6 +7,7 @@
 === Slide Overview ===
  # Stories - the idea behind this project
  # Application - what can you use it for?
+ # The members - software and hardware
  # [SystemArchitecture Architecture] - how we build it?
  # Host - [UMLDiagram UML Diagram], design patterns used in our system, and modules
  # [VoodooAlgorithm Voodoo Algorithm] - how we find the current location  
@@ -15,5 +16,6 @@
  # Unit test - Host, LocalBrain, and robot control
  # [Schedule] - where we stand now
  # Q&A
+ # Comments - google code wiki and google group
 
 === Demo Overview ===

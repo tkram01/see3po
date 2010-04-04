@@ -1,5 +1,5 @@
+#summary Schedule for the See3po project
 #labels Featured,Phase-Implementation,Scheduling
-the#summary Schedule for the See3po project
 = Schedule for the See3PO project =
 
 For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Schedule]

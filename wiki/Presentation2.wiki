@@ -8,10 +8,12 @@
  # Stories - the idea behind this project
  # Application - what can you use it for?
  # [SystemArchitecture Architecture] - how we build it?
- # Host - [UMLDiagram UML Diagram] and design patterns used in our system
+ # Host - [UMLDiagram UML Diagram], design patterns used in our system, and modules
  # [VoodooAlgorithm Voodoo Algorithm] - how we find the current location  
- # Communication - the [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc communication protocols] we defined  
  # [GUI GUI] - how to operate the system
- 
+ # Communication - the [http://see3po.googlecode.com/svn/trunk/Documents/Hardware/communication%20protocols.doc communication protocols] we defined  
+ # Unit test - Host, LocalBrain, and robot control
+ # [Schedule] - where we stand now
+ # Q&A
 
 === Demo Overview ===

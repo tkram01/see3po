@@ -7,9 +7,9 @@ For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Sche
 
 ===April===
 || *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| New hardware received || 04/08/2010 ||      || [Frank]      ||        ||
 || [Presentation2 Presenters] chosen || 04/06/2010 ||      || All      ||        ||
 || [Presentation2 Presentation Functionality] finalized || 04/06/2010 ||      || All      ||        ||
+|| New hardware received || 04/08/2010 ||      || [Frank]      ||        ||
 || [NewHWTestingPlan New hardware testing plan] || 04/08/2010 ||      || [Jacky]      ||        ||
 || Fixed issue: Repeated Moves sent to robot || 04/13/2010 ||            || Frank      ||                 ||
 || Sending Images from LocalBrain to Host / Host Part || 04/13/2010 ||              || [Nick]       ||                 ||

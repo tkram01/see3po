@@ -7,7 +7,7 @@
 === Slide Overview ===
  # Stories - the idea behind this project
  # Application - what can you use it for?
- # The members - software and hardware
+ # The members - software, hardware, Tyler
  # [SystemArchitecture Architecture] - how we build it?
  # Host - [UMLDiagram UML Diagram], design patterns used in our system, and modules
  # [VoodooAlgorithm Voodoo Algorithm] - how we find the current location  

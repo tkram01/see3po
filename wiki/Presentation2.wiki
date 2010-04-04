@@ -5,5 +5,10 @@
 === Functionality requirements ===
 
 === Slide Overview ===
+ # Stories - the idea behind this project
+ # Application - what can you use it for?
+ # [SystemArchitecture Architecture] - how we build it?
+ # Host - [UMLDiagram UML Diagram] and design patterns used in our system
+ # [VoodooAlgorithm Voodoo Algorithm] - how we find the current location       
 
 === Demo Overview ===

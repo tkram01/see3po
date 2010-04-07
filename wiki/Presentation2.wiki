@@ -1,7 +1,7 @@
 #summary A Technical Presentation of See3PO
 
 === Presenters ===
-
+[Hao] and [Debarati]
 === Functionality requirements ===
 
 === Slide Overview ===

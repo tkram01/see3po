@@ -2,7 +2,6 @@
 
 === Presenters ===
 [Hao] and [Debarati]
-=== Functionality requirements ===
 
 === Slide Overview ===
  # Stories - the idea behind this project
@@ -17,5 +16,3 @@
  # [Schedule] - where we stand now
  # Q&A
  # Comments - google code wiki and google group
-
-=== Demo Overview ===

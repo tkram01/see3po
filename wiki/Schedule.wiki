@@ -18,7 +18,7 @@ For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Sche
 || New hardware assembly || 04/15/2010 ||      || [Hao]      ||        ||
 || [Presentation2 Presentation] slides ready || 04/18/2010 ||      || [Hao] [Debarati] ||        ||
 || [Presentation2 Presentation] || 04/20/2010 ||      || [Hao] [Debarati] ||        ||
-|| New hardware test passed || 04/22/2010 ||      || [Hao] [Jacky]   ||        ||
+|| New hardware [NewHWTestingPlan test] passed || 04/22/2010 ||      || [Hao] [Jacky]   ||        ||
 || Tyler's Program received          || TBD   ||    ||   Tyler     ||                 ||
 || Tyler's Program Integrated into Host|| TBD ||  Rescheduled ||      ||       ||
 

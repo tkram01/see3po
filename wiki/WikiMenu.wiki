@@ -20,6 +20,7 @@
      *** [HWQuestions Questions]
      *** [Camera] 
      *** [NewHWTestingPlan New HW testing plan]
+     *** [newHWsetting NEw HW setting]
  * Group Member
   ** [Frank]
   ** [Nick]

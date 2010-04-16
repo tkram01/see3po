@@ -7,8 +7,12 @@
 
 = Task List =
 || *Check Item* || *Pass* || 
-|| Download and run XP version of LocalBrain executable file ||  ||
-|| Use new LocalBrain program to control the motors/servo ||  ||
-|| Connect to the Host via wireless ||  ||
-|| Receive commands from Host ||   ||
-|| Drive the robot through remote control program || ||  
+|| Download and run XP version of LocalBrain executable file || Passed ||
+|| Use new LocalBrain program to control the motors/servo || Passed ||
+|| Connect to the Host via wireless || Passed ||
+|| Receive commands from Host ||  Passed ||
+|| Drive the robot through remote control program || Passed || 
+|| Use auto logon || Passed ||
+|| Control through Remote Desktop || Passed ||  
+|| Mount the PC board onto robot ||  ||
+|| Run the system on battery ||  ||

@@ -13,7 +13,7 @@
  * Windows XP Por SP2
  * Computer Name: see3po
  * Account name: cs682
- * windows .Net 3.5 installed
+ * .Net 3.5 installed
 
 = How to remotely control the robot =
  # Power on the robot and then wait about 2 mins to let it connect to the router.

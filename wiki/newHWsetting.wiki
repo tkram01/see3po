@@ -21,3 +21,7 @@
  # Start Windows Remote Desktop application.
  # Type in "see3po" as the target computer name.
  # Type in "cs682" as user name and password when prompt. 
+
+== To do list ==
+ * Need to install a power switch.
+ * Camera driver/SDK

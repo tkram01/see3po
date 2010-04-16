@@ -15,10 +15,9 @@
  * Account name: cs682
  * windows .Net 3.5 installed
 
-= Remote Desktop =
+= How to remotely control the robot =
  # Power on the robot and then wait about 2 mins to let it connect to the router.
  # Use a PC connect to the same router that robot connect to.
  # Start Windows Remote Desktop application.
  # Type in "see3po" as the target computer name.
  # Type in "cs682" as user name and password when prompt. 
-   

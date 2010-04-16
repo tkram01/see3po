@@ -1,0 +1,24 @@
+#summary New hardware setting
+
+= Hardware =
+ * Logic Supply [http://www.logicsupply.com/products/j7f2we_1g Jetway J7F2WE-1G Mini-ITX Mainboard] with 1GB memory 
+ * Logic Supply [http://www.logicsupply.com/products/picopsu_80 PicoPSU-80 DC-DC Power Converter] 
+ * Logic Supply [http://www.logicsupply.com/products/fdm80sqi4g Emphase 40-pin Industrial Flash Disk Module 4 GB] 
+ * Logic Supply [http://www.logicsupply.com/products/g01_1394_1p IEEE 1394 (FireWire) Pin Header Cable] 
+ * USB wireless adapter - [http://www.amazon.com/gp/offer-listing/B000CRFI8A/ref=dp_olp_new_map?ie=UTF8&condition=new Linksys by Cisco WUSB54GC Compact Wireless-G USB Adapter] 
+ * 12V/5A battery - [http://www.all-battery.com/12v5000mahflatnimhbatterypack11637.aspx 12V 5000mAh Flat NiMH Battery] ($77.84)
+ * Battery charger - [http://www.all-battery.com/smartuniversalbatterypackcharger12v-168vcurrentselection.aspx Smart Universal Battery Pack Charger: 12V - 16.8V] 
+
+= OS =
+ * Windows XP Por SP2
+ * Computer Name: see3po
+ * Account name: cs682
+ * windows .Net 3.5 installed
+
+= Remote Desktop =
+ # Power on the robot and then wait about 2 mins to let it connect to the router.
+ # Use a PC connect to the same router that robot connect to.
+ # Start Windows Remote Desktop application.
+ # Type in "see3po" as the target computer name.
+ # Type in "cs682" as user name and password when prompt. 
+   

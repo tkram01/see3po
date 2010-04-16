@@ -14,8 +14,8 @@ For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Sche
 || Fixed issue: Repeated Moves sent to robot || 04/13/2010 ||            || Frank      ||                 ||
 || [Presentation2 Presentation] slides from each member send to [Hao] and [Debarati] || 04/13/2010 ||      || All ||        ||
 || Sending Images from LocalBrain to Host / Host Part || 04/13/2010 ||              || [Nick]       ||                 ||
-|| LocalBrain program revision for XP || 04/15/2010 ||      || [Jacky]  ||        ||
-|| New hardware assembly || 04/15/2010 ||      || [Hao]      ||        ||
+|| LocalBrain program revision for XP || 04/15/2010 ||  Complete  || [Jacky]  || 04/15/2010  ||
+|| New hardware assembly || 04/15/2010 ||  Complete  || [Hao]      ||  04/15/2010  ||
 || [Presentation2 Presentation] slides ready || 04/18/2010 ||      || [Hao] [Debarati] ||        ||
 || [Presentation2 Presentation] || 04/20/2010 ||      || [Hao] [Debarati] ||        ||
 || New hardware [NewHWTestingPlan test] passed || 04/22/2010 ||      || [Hao] [Jacky]   ||        ||

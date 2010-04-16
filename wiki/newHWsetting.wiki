@@ -6,7 +6,7 @@
  * Logic Supply [http://www.logicsupply.com/products/fdm80sqi4g Emphase 40-pin Industrial Flash Disk Module 4 GB] 
  * Logic Supply [http://www.logicsupply.com/products/g01_1394_1p IEEE 1394 (FireWire) Pin Header Cable] 
  * USB wireless adapter - [http://www.amazon.com/gp/offer-listing/B000CRFI8A/ref=dp_olp_new_map?ie=UTF8&condition=new Linksys by Cisco WUSB54GC Compact Wireless-G USB Adapter] 
- * 12V/5A battery - [http://www.all-battery.com/12v5000mahflatnimhbatterypack11637.aspx 12V 5000mAh Flat NiMH Battery] ($77.84)
+ * 12V/5A battery - [http://www.all-battery.com/12v5000mahflatnimhbatterypack11637.aspx 12V 5000mAh Flat NiMH Battery]
  * Battery charger - [http://www.all-battery.com/smartuniversalbatterypackcharger12v-168vcurrentselection.aspx Smart Universal Battery Pack Charger: 12V - 16.8V] 
 
 = OS =

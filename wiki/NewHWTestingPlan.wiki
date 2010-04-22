@@ -14,5 +14,8 @@
 || Drive the robot through remote control program || Passed || 
 || Use [http://support.microsoft.com/kb/315231 auto logon] || Passed ||
 || Control through [newHWsetting Remote Desktop] || Passed ||  
+|| Run the system on battery || Passed ||
+
+= To do list =
+|| Need install a power switch ||  ||
 || Mount the PC board onto robot ||  ||
-|| Run the system on battery ||  ||

@@ -19,15 +19,13 @@ For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Sche
 || [Presentation2 Presentation] slides ready || 04/18/2010 || Complete || [Hao] [Debarati] || 04/18/2010 ||
 || [Presentation2 Presentation] || 04/20/2010 ||  Complete || [Hao] [Debarati] || 04/20/2010 ||
 || New hardware [NewHWTestingPlan test] passed || 04/22/2010 || Complete || [Hao] [Jacky]   || 04/22/2010 ||
+|| Project poster due || 4/29/2010 || || TBD || ||
 || Tyler's Program received          || TBD   ||    ||   Tyler     ||                 ||
 || Tyler's Program Integrated into Host|| TBD ||  Rescheduled ||      ||       ||
 
 ===May===
 || *Task*                            || *Due*        || *Status*     || *Taken By* || *Completed Date* ||
-|| Project poster draft || 05/01/2010 || || TBD || ||
-|| Project poster submit || 05/07/2010 || || TBD || ||
-|| Project poster ready || 05/14/2010 || || TBD || ||
-|| Final release bug lists || 05/20/2010 || || TBD || ||
+|| Final release bug lists || 05/11/2010 || || All || ||
 
 ===End===
 || *Deliverable Due*     || 05/21/10     ||         ||     ||   ||

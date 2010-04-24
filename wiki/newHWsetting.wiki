@@ -23,5 +23,5 @@
  # Type in "cs682" as user name and password when prompt. 
 
 == To do list ==
- * Need to install a power switch.
+ * Need to install a power switch. - Done
  * Camera driver/SDK

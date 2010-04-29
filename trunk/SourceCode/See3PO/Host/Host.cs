@@ -77,6 +77,7 @@ namespace See3PO
 
             while (path.Count != 0) 
             {
+                m_UI.updateUI();
                 MoveCommand nextMove = path.Dequeue();
 
                 if (nextMove.direction == MoveCommand.Direction.Forward)
@@ -88,12 +89,9 @@ namespace See3PO
 
                 SendMove(ConvertMove(nextMove));
                 m_UI.PostMessage(nextMove.toString());
+
                 Thread.Sleep(nextMove.duration);
-
-                m_UI.updateUI();
             }
-
-            Status.Position = new Position(Status.Path[Status.Path.Count].Position, Status.Position.facing);
 
             m_UI.updateUI();
         }
@@ -188,8 +186,8 @@ namespace See3PO
         public void SetDestination(Point dest)
         {
             m_status.EndPoint = dest;               // Set the endpoint in the Host's status
-
-            m_status.Path = m_pathfinder.getPath(); // Recalculate the path
+            if (m_status.Position != null)
+                m_status.Path = m_pathfinder.getPath(); // Recalculate the path
         }
 
         /// <summary>
@@ -257,15 +255,14 @@ namespace See3PO
 
                 Point previous = new Point(Status.Path[0].Position.X, Status.Path[0].Position.Y);
 
-                previous.Offset(facing);// Make a fake previous point for later calculations. 
+                previous.Offset(new Point(-facing.X, -facing.Y));// Make a fake previous point for later calculations. 
 
                 int forwardDist = 0;                                    // If we have multiple forwards, it will combine them to one move 
-
+                Point current = Status.Position.location;               // Robot's current point
+                Point next;
                 for (int i = 0; i < Status.Path.Count; i++)          // we go to the second to last point, the last move will take us from 2nd-to-last to the last point. 
                 {
-                    Point current = Status.Position.location; ;            // Robot's current point
-
-                    Point next = Status.Path[i].Position;           // Robot's next point, necessary for deciding if we need to turn. 
+                    next = Status.Path[i].Position;           // Robot's next point, necessary for deciding if we need to turn. 
 
                     Point lastDisplacement = new Point(current.X - previous.X, current.Y - previous.Y);// what direction are we currently facing?
 
@@ -276,6 +273,7 @@ namespace See3PO
                         forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
                         if (forwardDist > 0)
                             newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
+                        forwardDist = 0;   
                     }
                     else                                                // if we are turning
                     {
@@ -283,14 +281,16 @@ namespace See3PO
 
                         newPath.Enqueue(new MoveCommand(turnDirection, turnDirection == MoveCommand.Direction.CW ? TURN_CW_MS : TURN_CCW_MS)); // Enqueue your turn first
 
-                        forwardDist = forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
+                        forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
+
                         if (forwardDist > 0)
                             newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
 
                         forwardDist = 0;                                // reset forward 
                     }
 
-                    previous = current;                                 // Increment the previous point 
+                    previous = current;
+                    current = next;// Increment the previous point 
                 }
             }
             foreach (MoveCommand move in newPath)

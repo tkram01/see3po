@@ -193,7 +193,7 @@ namespace GUI
         /// <param name="e"></param>
         private void Click_GoMenuItem(object sender, EventArgs e)
         {
-            if (m_host.Status != null && m_host.Status.Path != null)
+            if (m_fpState == fpState.HAVEPATH && m_host.Status != null && m_host.Status.Path != null)
             {
                 m_host.Drive();
             }
@@ -212,13 +212,11 @@ namespace GUI
             try
             {
                 m_floorPlanImage = new Bitmap(Image.FromFile(importImageDialog.FileName));      // hopefully, they opened an image
+                m_fpState = fpState.NOSCALE;                                                          // The state changes to reflecft our new image
+
+                SetScale(10);                                                                       // Call set scale automatically - we can remove this
             }
             catch (Exception) { }
-
-            m_fpState = fpState.NOSCALE;                                                          // The state changes to reflecft our new image
-
-            SetScale(10);                                                                       // Call set scale automatically - we can remove this
-
             DrawFloor();                                                                        // draw the new floor plan
         }
 
@@ -230,14 +228,12 @@ namespace GUI
         private void Click_PlaceRobot(object sender, EventArgs e)
         {
             m_fpState = fpState.SETROBOT;
-
             DrawFloor();
         }
 
         private void Click_SetDestination(object sender, EventArgs e)
         {
             m_fpState = fpState.SETDEST;
-
             DrawFloor();
         }
 
@@ -457,7 +453,6 @@ namespace GUI
         private void SetDestination(object sender, MouseEventArgs e)
         {
             m_host.SetDestination(PanelToFloorPlan(new Point(e.X, e.Y)));       // Set the endpoint in the Host's status
-
             m_fpState = fpState.HAVEPATH;                                       // Update the state
 
             DrawFloor();                                                        // Draw the floor

@@ -374,7 +374,7 @@ namespace GUI
 
                 lineEnd = FloorPlanToPanel(tile.Position);                      // Set the new endpoint to the next waypoint
 
-                s.DrawLine(new Pen(new SolidBrush(Color.Blue)), lineStart, lineEnd); // Draw the line
+                s.DrawLine(new Pen(new SolidBrush(Color.Blue),2), lineStart, lineEnd); // Draw the line
             }
 
             if (m_highlighted)

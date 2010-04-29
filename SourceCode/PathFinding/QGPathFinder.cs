@@ -53,9 +53,6 @@ namespace See3PO
                 targetPoint = "4_6";
             }
 
-
-
-            //
             buildGraph();
         }
 

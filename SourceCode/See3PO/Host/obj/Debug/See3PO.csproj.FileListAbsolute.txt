@@ -42,3 +42,5 @@ F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\RobotHost.dll
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\RobotHost.pdb
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\RobotCommands.pdb
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\FloorPlanAndTile.pdb
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\PathFinding.dll
+D:\Documents\School\see3po\See3PO\Host\bin\Debug\PathFinding.pdb

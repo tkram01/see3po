@@ -9,3 +9,14 @@ F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\P
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\PathFindingTest.pdb
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\WindowsFormsApplication1.Form1.resources
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\PathFindingTest\obj\Debug\PathFindingTest.csproj.GenerateResource.Cache
+D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFindingTest.dll
+D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFindingTest.pdb
+D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\FloorPlanAndTile.dll
+D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFinding.dll
+D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\QuickGraph.dll
+D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFinding.pdb
+D:\Documents\School\see3po\PathFinding\PathFindingTest\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\see3po\PathFinding\PathFindingTest\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\Documents\School\see3po\PathFinding\PathFindingTest\obj\Debug\PathFindingTest.csproj.GenerateResource.Cache
+D:\Documents\School\see3po\PathFinding\PathFindingTest\obj\Debug\PathFindingTest.dll
+D:\Documents\School\see3po\PathFinding\PathFindingTest\obj\Debug\PathFindingTest.pdb

@@ -5,3 +5,10 @@ F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\bin\Debug\FloorPlanAndTile.
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\bin\Debug\QuickGraph.dll
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\obj\Debug\PathFinding.dll
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\PathFinding\obj\Debug\PathFinding.pdb
+D:\Documents\School\see3po\PathFinding\bin\Debug\PathFinding.dll
+D:\Documents\School\see3po\PathFinding\bin\Debug\PathFinding.pdb
+D:\Documents\School\see3po\PathFinding\bin\Debug\FloorPlanAndTile.dll
+D:\Documents\School\see3po\PathFinding\bin\Debug\QuickGraph.dll
+D:\Documents\School\see3po\PathFinding\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\see3po\PathFinding\obj\Debug\PathFinding.dll
+D:\Documents\School\see3po\PathFinding\obj\Debug\PathFinding.pdb

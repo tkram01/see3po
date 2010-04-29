@@ -34,6 +34,8 @@ namespace See3PO
             this.m_myImage = new Bitmap(myimage);
             this.m_pixelsperfoot = pixelsPerFoot;
             createArray();
+            setStartTile(0, 0);
+            setTargetTile(0, 0);
             Connect();
         }
 
@@ -42,6 +44,8 @@ namespace See3PO
             this.m_myImage = new Bitmap(myimage);
             this.m_pixelsperfoot = 5;
             createArray();
+            setStartTile(0, 0);
+            setTargetTile(0, 0);
             Connect();
         }
 

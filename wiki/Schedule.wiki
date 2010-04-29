@@ -1,36 +1,4 @@
-#summary Schedule for the See3po project
 #labels Featured,Phase-Implementation,Scheduling
-= Schedule for the See3PO project =
-
-For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Schedule]
-
-
-===April===
-|| *Task*                            || *Due*        || *Status*     || *Taken By*   || *Completed Date*   	||
-|| [Presentation2 Presenters] chosen || 04/06/2010 || Complete 	|| All    || 04/06/2010 ||
-|| [Presentation2 Presentation Outline] finalized || 04/08/2010 || Complete || All      || 04/08/2010 ||
-|| New hardware received || 04/08/2010 || Complete || [Frank]  || 04/19/2010 ||
-|| [NewHWTestingPlan New hardware testing plan] || 04/08/2010 || Complete || [Jacky]      || 04/08/2010 ||
-|| Fixed issue: Repeated Moves sent to robot || 04/13/2010 ||            || Frank      ||                 ||
-|| [Presentation2 Presentation] slides from each member send to [Hao] and [Debarati] || 04/13/2010 || Complete  || All || 04/13/2010 ||
-|| Sending Images from LocalBrain to Host / Host Part || 04/13/2010 ||              || [Nick]       ||    ||
-|| LocalBrain program revision for XP || 04/15/2010 ||  Complete  || [Jacky]  || 04/15/2010  ||
-|| New hardware assembly || 04/15/2010 ||  Complete  || [Hao]      ||  04/15/2010  ||
-|| [Presentation2 Presentation] slides ready || 04/18/2010 || Complete || [Hao] [Debarati] || 04/18/2010 ||
-|| [Presentation2 Presentation] || 04/20/2010 ||  Complete || [Hao] [Debarati] || 04/20/2010 ||
-|| New hardware [NewHWTestingPlan test] passed || 04/22/2010 || Complete || [Hao] [Jacky]   || 04/22/2010 ||
-|| Project poster due || 4/29/2010 || || TBD || ||
-|| Tyler's Program received          || TBD   ||    ||   Tyler     ||                 ||
-|| Tyler's Program Integrated into Host|| TBD ||  Rescheduled ||      ||       ||
-
-===May===
-|| *Task*                            || *Due*        || *Status*     || *Taken By* || *Completed Date* ||
-|| Final release bug lists || 05/11/2010 || || All || ||
-
-===End===
-|| *Deliverable Due*     || 05/21/10     ||         ||     ||   ||#summary Schedule for the See3po project
-= Schedule for the See3PO project =
-
 For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Schedule]
 
 

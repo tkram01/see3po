@@ -16,11 +16,13 @@ For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Sche
 || [Presentation2 Presentation] slides ready || 04/18/2010 || Complete || [Hao] [Debarati] || 04/18/2010 ||
 || [Presentation2 Presentation] || 04/20/2010 ||  Complete || [Hao] [Debarati] || 04/20/2010 ||
 || New hardware [NewHWTestingPlan test] passed || 04/22/2010 || Complete || [Hao] [Jacky]   || 04/22/2010 ||
-|| Project poster due || 4/29/2010 || || [Nick][Debarati] || ||
 
 ===May===
 || *Task*                            || *Due*        || *Status*     || *Taken By* || *Completed Date* ||
+|| Project poster draft due || 05/04/2010 || || [Nick] [Debarati] || ||
+|| Project poster due || 05/11/2010 || || [Nick] [Debarati] || ||
 || Final release bug lists || 05/11/2010 || || All || ||
+|| Department annual alumni event - demo || 05/19/2010 || || TBA || ||
 
 ===End===
 || *Deliverable Due*     || 05/21/10     ||         ||     ||   ||

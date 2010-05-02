@@ -206,7 +206,6 @@ namespace See3PO
 
             FloorTile lastTile = path[0];
 
-
             condensedList.Add(path[0]);
 
             for (int i = 1; i < path.Count; i++)

@@ -461,7 +461,6 @@ namespace GUI
         {
             m_host.SetDestination(PanelToFloorPlan(new Point(e.X, e.Y)));       // Set the endpoint in the Host's status
             m_fpState = fpState.HAVEPATH;                                       // Update the state
-
             DrawFloor();                                                        // Draw the floor
         }
 

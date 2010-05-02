@@ -67,7 +67,7 @@ namespace See3PO
             if (m_target)
                 return Color.Blue;
             if (m_path)
-                return Color.DarkBlue;
+                return Color.LightGreen;
             if (m_walkable)
                 return Color.White;
             else

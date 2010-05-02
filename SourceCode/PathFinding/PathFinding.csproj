@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="FloorPlanAndTile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\FloorPlanAndTile.dll</HintPath>
+      <HintPath>..\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\bin\Debug\FloorPlanAndTile.dll</HintPath>
     </Reference>
     <Reference Include="QuickGraph, Version=3.2.40610.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL" />
     <Reference Include="System" />

@@ -12,3 +12,4 @@ D:\Documents\School\see3po\PathFinding\bin\Debug\QuickGraph.dll
 D:\Documents\School\see3po\PathFinding\obj\Debug\ResolveAssemblyReference.cache
 D:\Documents\School\see3po\PathFinding\obj\Debug\PathFinding.dll
 D:\Documents\School\see3po\PathFinding\obj\Debug\PathFinding.pdb
+D:\Documents\School\see3po\PathFinding\bin\Debug\FloorPlanAndTile.pdb

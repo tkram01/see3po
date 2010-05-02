@@ -65,7 +65,6 @@ namespace See3PO
             m_status = new Status(FloorPlanImage, m_pixelsperfoot);
 
             m_pathfinder = new QGPathFinder(m_status.FloorPlan);
-            
         }
 
         /// <summary>
@@ -78,40 +77,42 @@ namespace See3PO
             while (m_RobotHost.IsConnected && path.Count != 0) 
             {
                 m_UI.updateUI();
+
                 MoveCommand nextMove = path.Dequeue();
 
-
-                Status.Path[0].SetPath(false);
-                
-                
-
                 SendMove(ConvertMove(nextMove));
+
                 m_UI.PostMessage(nextMove.toString());
+
                 DateTime sent = DateTime.Now;
+
                 long ticks = 0;
+
+                Point oldPoint = new Point(Status.Position.location.X, Status.Position.location.Y);
+
                 while (ticks < nextMove.duration)
                 {
                     if (nextMove.direction == MoveCommand.Direction.Forward && ticks > 10)
                     {
-                        Point oldPoint = new Point(Status.Position.location.X, Status.Position.location.Y);
                         Point nextPoint = new Point(Status.Path[0].Position.X, Status.Path[0].Position.Y);
                         double ratio = (double)ticks / (double)nextMove.duration;
-                        Point currentPoint = new Point((int)(oldPoint.X * (1 - ratio) + nextPoint.X * ratio), 
-                            (int)(oldPoint.Y * (1 - ratio) + nextPoint.Y * ratio));
+                        Point currentPoint = new Point((int)(oldPoint.X * ratio + nextPoint.X * (1.0 - ratio)),
+                            (int)(oldPoint.Y * ratio + nextPoint.Y * (1.0 - ratio)));
                         Status.Position = new Position(currentPoint, Status.Position.facing);
-                        
+                        m_status.FloorPlan.getTile(currentPoint.X, currentPoint.Y).SetPath(false);
                     }
                     else 
                     {
+                        Status.Path[0].SetPath(false);
                         Status.Position = new Position(Status.Path[0].Position, Status.Position.facing);
                     }
                     
                     m_UI.updateUI();
                     ticks = (long)DateTime.Now.Subtract(sent).TotalMilliseconds;
                 }
-                Status.Path.RemoveAt(0);
+                if (nextMove.direction == MoveCommand.Direction.Forward && ticks > 10)
+                    Status.Path.RemoveAt(0);
             }
-
             m_UI.updateUI();
         }
 
@@ -298,8 +299,10 @@ namespace See3PO
                     if (lastDisplacement.X == nextDisplacement.X || lastDisplacement.Y == nextDisplacement.Y) // not turning 
                     {
                         forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
+                        
                         if (forwardDist > 0)
                             newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
+                        
                         forwardDist = 0;   
                     }
                     else                                                // if we are turning

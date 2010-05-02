@@ -210,15 +210,13 @@ namespace See3PO
             if (m_start_tile != null)
                 m_start_tile.SetStart(false);
 
+            if (start_tile!= null && start_tile.Iswalkable())
             {
-
-                if (start_tile.Iswalkable())
-                {
-                    m_start_tile = start_tile;
-                    m_start_tile.SetStart(true);
-                    return true;
-                }
+                m_start_tile = start_tile;
+                m_start_tile.SetStart(true);
+                return true;
             }
+            
             return false;
         }
 

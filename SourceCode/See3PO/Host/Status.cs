@@ -89,8 +89,11 @@ namespace See3PO
             get { return m_Position; }
             set
             {
-                m_Position = value;
-                m_FloorPlan.setStartTile(m_Position.location.X, m_Position.location.Y);
+                if (value.location.X > 0 && value.location.X < m_FloorPlan.getXTileNum() && value.location.Y > 0 && value.location.Y < m_FloorPlan.getYTileNum())
+                {
+                    m_Position = value;
+                    m_FloorPlan.setStartTile(m_Position.location.X, m_Position.location.Y);
+                }
             }
         }
 
@@ -102,8 +105,11 @@ namespace See3PO
             get { return m_EndPoint; }
             set
             {
-                m_EndPoint = value;
-                m_FloorPlan.setTargetTile(m_EndPoint.X, m_EndPoint.Y);
+                if (value.X > 0 && value.X < m_FloorPlan.getXTileNum() && value.Y > 0 && value.Y < m_FloorPlan.getYTileNum())
+                {
+                    m_EndPoint = value;
+                    m_FloorPlan.setTargetTile(m_EndPoint.X, m_EndPoint.Y);
+                }
             }
         }
 

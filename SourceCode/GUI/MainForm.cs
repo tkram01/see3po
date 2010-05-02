@@ -171,7 +171,6 @@ namespace GUI
                                 SetDestination(sender, e);
                             }
                             break;
-
                     }
                     break;
 
@@ -194,7 +193,7 @@ namespace GUI
         /// <param name="e"></param>
         private void Click_GoMenuItem(object sender, EventArgs e)
         {
-            if (m_fpState == fpState.HAVEPATH && m_host.Status != null && m_host.Status.Path != null)
+            if ( m_fpState == fpState.HAVEPATH && m_host.Status != null && m_host.Status.Path != null)
             {
                 m_host.Drive();
             }
@@ -349,6 +348,7 @@ namespace GUI
                 }
                 bg.FillRectangle(overlay, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);   // draw the overlay
                 bg.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit; // stretch the pixels
+                m_fg = Graphics.FromHwnd(floorPlanPanel.Handle);
                 m_fg.DrawImage(buffer, 0, 0);                                                   // Draw the entire image to the panel
                 InstructionsLabel.Text = instructions;                                          // display instructions
             }
@@ -665,6 +665,10 @@ namespace GUI
             get { return m_host; } 
         }
 
+        private void onResize(object sender, EventArgs e)
+        {
+            DrawFloor();
+        }
 	}
 }
 //Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South

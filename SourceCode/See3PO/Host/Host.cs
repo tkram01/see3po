@@ -75,17 +75,15 @@ namespace See3PO
         {
             Queue<MoveCommand> path = ConvertPath();
 
-            while (path.Count != 0) 
+            while (m_RobotHost.IsConnected && path.Count != 0) 
             {
                 m_UI.updateUI();
                 MoveCommand nextMove = path.Dequeue();
 
-                if (nextMove.direction == MoveCommand.Direction.Forward)
-                {
-                    Status.Position = new Position(Status.Path[0].Position, Status.Position.facing);
 
-                    Status.Path.RemoveAt(0);
-                }
+                Status.Path[0].SetPath(false);
+                
+                
 
                 SendMove(ConvertMove(nextMove));
                 m_UI.PostMessage(nextMove.toString());
@@ -98,12 +96,20 @@ namespace See3PO
                         Point oldPoint = new Point(Status.Position.location.X, Status.Position.location.Y);
                         Point nextPoint = new Point(Status.Path[0].Position.X, Status.Path[0].Position.Y);
                         double ratio = (double)ticks / (double)nextMove.duration;
-                        Point currentPoint = new Point((int)(oldPoint.X * (1 - ratio) + nextPoint.X * ratio),(int)(oldPoint.Y * (1 - ratio) + nextPoint.Y * ratio));
+                        Point currentPoint = new Point((int)(oldPoint.X * (1 - ratio) + nextPoint.X * ratio), 
+                            (int)(oldPoint.Y * (1 - ratio) + nextPoint.Y * ratio));
                         Status.Position = new Position(currentPoint, Status.Position.facing);
+                        
                     }
+                    else 
+                    {
+                        Status.Position = new Position(Status.Path[0].Position, Status.Position.facing);
+                    }
+                    
                     m_UI.updateUI();
                     ticks = (long)DateTime.Now.Subtract(sent).TotalMilliseconds;
                 }
+                Status.Path.RemoveAt(0);
             }
 
             m_UI.updateUI();
@@ -272,19 +278,18 @@ namespace See3PO
 
             if (Status.Path != null && Status.Path.Count > 0) 
             {
-                //Point[] currentDir = facingToVector(Status.Position.facing); 
                 Point facing = facingToVector(Status.Position.facing);  // We'll use this to figure out the current facing and use it as a vector
 
                 Point previous = new Point(Status.Path[0].Position.X, Status.Path[0].Position.Y);
 
-                previous.Offset(new Point(-facing.X, -facing.Y));// Make a fake previous point for later calculations. 
+                previous.Offset(new Point(-facing.X, -facing.Y));       // Make a fake previous point for later calculations. 
 
                 int forwardDist = 0;                                    // If we have multiple forwards, it will combine them to one move 
                 Point current = Status.Position.location;               // Robot's current point
                 Point next;
-                for (int i = 0; i < Status.Path.Count; i++)          // we go to the second to last point, the last move will take us from 2nd-to-last to the last point. 
+                for (int i = 0; i < Status.Path.Count; i++)             // we go to the second to last point, the last move will take us from 2nd-to-last to the last point. 
                 {
-                    next = Status.Path[i].Position;           // Robot's next point, necessary for deciding if we need to turn. 
+                    next = Status.Path[i].Position;                     // Robot's next point, necessary for deciding if we need to turn. 
 
                     Point lastDisplacement = new Point(current.X - previous.X, current.Y - previous.Y);// what direction are we currently facing?
 

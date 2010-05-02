@@ -41,6 +41,7 @@ namespace GUI
             t_DrawFloorDelegate = new DDrawFloor(DrawFloor);                    //it's necessary for the drawscale thread
                                 
             m_fpState = fpState.START;                                           // Set the fpState to none, since nothing has been done
+            Click_ConnectMenuItem(this, null);
         }
 
 //************************************************************************************************
@@ -114,7 +115,7 @@ namespace GUI
         /// <param name="e">not used</param>
         private void Click_ConnectMenuItem(object sender, EventArgs e)
         {
-            m_host.ToggleConnection();
+            connectMenuItem.Text = (m_host.ToggleConnection());
         }
         
         /// <summary>
@@ -227,14 +228,20 @@ namespace GUI
         /// <param name="e"></param>
         private void Click_PlaceRobot(object sender, EventArgs e)
         {
-            m_fpState = fpState.SETROBOT;
-            DrawFloor();
+            if (m_fpState == fpState.SETDEST || m_fpState == fpState.HAVEPATH || m_fpState == fpState.SETROBOT)
+            {
+                m_fpState = fpState.SETROBOT;
+                DrawFloor();
+            }
         }
 
         private void Click_SetDestination(object sender, EventArgs e)
         {
-            m_fpState = fpState.SETDEST;
-            DrawFloor();
+            if (m_fpState == fpState.SETDEST || m_fpState == fpState.HAVEPATH || m_fpState == fpState.SETROBOT)
+            {
+                m_fpState = fpState.SETDEST;
+                DrawFloor();
+            }
         }
 
         /// <summary>
@@ -309,14 +316,14 @@ namespace GUI
                         break;
 
                     case fpState.SETROBOT:                                                      // We're placing the robot by hand       
-                        bg.DrawImage(m_host.Status.FloorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        bg.DrawImage(m_host.Status.FloorPlan.toImage( floorPlanPanel.Width, floorPlanPanel.Height), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         instructions = "Click the floor plan to set the robot's current location";
                         overlay = new SolidBrush(Color.FromArgb(10, Color.Red));
                         break;
 
                     case fpState.SETFACING:
                         instructions = "Draw your line to indicate facing: Current FAcing ";
-                        bg.DrawImage(m_floorPlanImage, 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        bg.DrawImage(m_host.Status.FloorPlan.toImage(floorPlanPanel.Width, floorPlanPanel.Height), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         overlay = new SolidBrush(Color.FromArgb(10, Color.Green));
                         Point panelPosition = (FloorPlanToPanel(m_host.Status.Position.location));
                         Point mousePosition = floorPlanPanel.PointToClient(System.Windows.Forms.Control.MousePosition);
@@ -328,12 +335,12 @@ namespace GUI
 
                     case fpState.SETDEST:
                         instructions = "Click the floor plan to set the destination";           // We're choosing a destination
-                        bg.DrawImage(m_host.Status.FloorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        bg.DrawImage(m_host.Status.FloorPlan.toImage(floorPlanPanel.Width, floorPlanPanel.Height), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         break;
 
                     case fpState.HAVEPATH:
                         instructions = "Click the floor plan to change the destination";        // We have a path and are ready to drive
-                        bg.DrawImage(m_host.Status.FloorPlan.toImage(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        bg.DrawImage(m_host.Status.FloorPlan.toImage(floorPlanPanel.Width, floorPlanPanel.Height), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         if (m_host.Status.Path != null)
                             bg.DrawImage(DrawPath(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         else
@@ -658,6 +665,7 @@ namespace GUI
         { 
             get { return m_host; } 
         }
+
 	}
 }
 //Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South

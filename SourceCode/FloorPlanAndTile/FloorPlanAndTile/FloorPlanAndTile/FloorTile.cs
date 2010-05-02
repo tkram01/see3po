@@ -18,6 +18,7 @@ namespace See3PO
         private List<FloorTile> m_neighbours;
         private bool m_start;
         private bool m_target;
+        private bool m_path;
 
         public FloorTile()
         {
@@ -30,6 +31,11 @@ namespace See3PO
         public void SetTarget(bool target)
         {
             m_target = target;
+        }
+
+        public void SetPath(bool path) 
+        {
+            m_path = path;
         }
 
         public FloorTile(int x, int y, bool walkable, FloorPlan floorPlan)
@@ -60,6 +66,8 @@ namespace See3PO
                 return Color.Red;
             if (m_target)
                 return Color.Blue;
+            if (m_path)
+                return Color.DarkBlue;
             if (m_walkable)
                 return Color.White;
             else
@@ -87,6 +95,11 @@ namespace See3PO
         {
             get { return m_endPoint; }
             set { m_endPoint = value; }
+        }
+
+        public bool IsPath()
+        { 
+            return m_path; 
         }
 
         public List<FloorTile> getNeighbours()

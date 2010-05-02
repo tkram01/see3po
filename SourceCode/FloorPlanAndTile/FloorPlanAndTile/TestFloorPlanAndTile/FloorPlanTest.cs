@@ -150,7 +150,7 @@ namespace TestFloorPlanAndTile
         public void TestCreateImageOfBlockFive()
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 5);
-            Bitmap b = image1.toImage();
+            Bitmap b = image1.toImage(image1.getXTileNum(), image1.getYTileNum());
             b.Save("../../testImage_block5.bmp");
         }
 
@@ -158,7 +158,7 @@ namespace TestFloorPlanAndTile
         public void TestCreateImageOfBlockOne()
         {
             FloorPlan image1 = new FloorPlan(new Bitmap("../../testImage.jpg"), 1);
-            Bitmap test_image = image1.toImage();
+            Bitmap test_image = image1.toImage(image1.getXTileNum(), image1.getYTileNum());
             test_image.Save("../../testImage_block1.bmp");
         }
         [TestMethod]

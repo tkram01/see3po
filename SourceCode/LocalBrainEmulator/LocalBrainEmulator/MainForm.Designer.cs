@@ -35,26 +35,25 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToRemoteBrainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.livePanel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusBar
             // 
-            this.statusBar.Location = new System.Drawing.Point(0, 563);
+            this.statusBar.Location = new System.Drawing.Point(0, 179);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(527, 22);
+            this.statusBar.Size = new System.Drawing.Size(259, 22);
             this.statusBar.TabIndex = 4;
             // 
             // messageBox
             // 
             this.messageBox.BackColor = System.Drawing.Color.White;
-            this.messageBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.messageBox.Location = new System.Drawing.Point(0, 326);
+            this.messageBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.messageBox.Location = new System.Drawing.Point(0, 24);
             this.messageBox.Multiline = true;
             this.messageBox.Name = "messageBox";
             this.messageBox.ReadOnly = true;
-            this.messageBox.Size = new System.Drawing.Size(527, 237);
+            this.messageBox.Size = new System.Drawing.Size(259, 155);
             this.messageBox.TabIndex = 5;
             // 
             // menuStrip1
@@ -64,7 +63,7 @@
             this.connectionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(527, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(259, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,19 +97,11 @@
             this.connectToRemoteBrainToolStripMenuItem.Text = "Connect to Remote Brain";
             this.connectToRemoteBrainToolStripMenuItem.Click += new System.EventHandler(this.remoteConnectMenuItem_Click);
             // 
-            // livePanel
-            // 
-            this.livePanel.Location = new System.Drawing.Point(0, 27);
-            this.livePanel.Name = "livePanel";
-            this.livePanel.Size = new System.Drawing.Size(527, 293);
-            this.livePanel.TabIndex = 27;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 585);
-            this.Controls.Add(this.livePanel);
+            this.ClientSize = new System.Drawing.Size(259, 201);
             this.Controls.Add(this.messageBox);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.menuStrip1);
@@ -134,7 +125,6 @@
         private System.Windows.Forms.ToolStripMenuItem connectionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectToRemoteBrainToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Panel livePanel;
     }
 }
 

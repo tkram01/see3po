@@ -22,6 +22,7 @@ namespace See3PO
         private FloorTile[,] m_floorPlanArray;
         private int m_height;
         private int m_width;
+        private List<FloorTile> m_path;
         private FloorTile m_start_tile;
         private FloorTile m_target_tile;
 
@@ -37,6 +38,7 @@ namespace See3PO
             setStartTile(0, 0);
             setTargetTile(0, 0);
             Connect();
+            m_path = new List<FloorTile>();
         }
 
         public FloorPlan(Image myimage)
@@ -47,6 +49,11 @@ namespace See3PO
             setStartTile(0, 0);
             setTargetTile(0, 0);
             Connect();
+        }
+
+        public void setPath() 
+        {
+            
         }
 
         public void createArray()
@@ -125,16 +132,25 @@ namespace See3PO
                 }
             }
         }
+
         // create bitmap from a given array.
-        public Bitmap toImage()
+        public Bitmap toImage(int width, int height)
         {
-            Bitmap image = new Bitmap(m_width, m_height);
+            //Bitmap image = new Bitmap(m_width, m_height);
             FloorTile[,] arr = m_floorPlanArray;
+
+            Bitmap image = new Bitmap(width, height);
+            Graphics g = Graphics.FromImage(image);
+
+            int xTile = width / m_width;            //size of a tile on the image, after scaling
+            int yTile = height / m_height;
+
             for (int row = 0; row < m_height; row++)
             {
                 for (int column = 0; column < m_width; column++)
                 {
-                    image.SetPixel(column, row, arr[row, column].toPixel());
+                    
+                    g.FillRectangle(new SolidBrush(arr[row, column].toPixel()), column * xTile, row * yTile, xTile, yTile);
                 }
             }
             return image;

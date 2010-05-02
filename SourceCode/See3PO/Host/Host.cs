@@ -89,8 +89,21 @@ namespace See3PO
 
                 SendMove(ConvertMove(nextMove));
                 m_UI.PostMessage(nextMove.toString());
-
-                Thread.Sleep(nextMove.duration);
+                DateTime sent = DateTime.Now;
+                long ticks = 0;
+                while (ticks < nextMove.duration)
+                {
+                    if (nextMove.direction == MoveCommand.Direction.Forward && ticks > 10)
+                    {
+                        Point oldPoint = new Point(Status.Position.location.X, Status.Position.location.Y);
+                        Point nextPoint = new Point(Status.Path[0].Position.X, Status.Path[0].Position.Y);
+                        double ratio = (double)ticks / (double)nextMove.duration;
+                        Point currentPoint = new Point((int)(oldPoint.X * (1 - ratio) + nextPoint.X * ratio),(int)(oldPoint.Y * (1 - ratio) + nextPoint.Y * ratio));
+                        Status.Position = new Position(currentPoint, Status.Position.facing);
+                    }
+                    m_UI.updateUI();
+                    ticks = (long)DateTime.Now.Subtract(sent).TotalMilliseconds;
+                }
             }
 
             m_UI.updateUI();
@@ -185,7 +198,7 @@ namespace See3PO
         /// </summary>
         public void SetDestination(Point dest)
         {
-            m_status.EndPoint = dest;               // Set the endpoint in the Host's status
+            m_status.EndPoint = dest;                   // Set the endpoint in the Host's status
             if (m_status.Position != null)
                 m_status.Path = m_pathfinder.getPath(); // Recalculate the path
         }
@@ -193,14 +206,23 @@ namespace See3PO
         /// <summary>
         /// Changes the connection status between IsListening, IsConnected and Not Connected
         /// </summary>
-        public void ToggleConnection()
+        public String ToggleConnection()
         {
             if (m_RobotHost.IsListening)
+            {
                 m_RobotHost.StopListening();
+                return "Listen";
+            }
             else if (m_RobotHost.IsConnected)
+            {
                 m_RobotHost.Disconnect(true);
+                return "Listen";
+            }
             else
+            {
                 m_RobotHost.StartListening();
+                return "Stop Listening";
+            }
         }
 
         /// <summary>

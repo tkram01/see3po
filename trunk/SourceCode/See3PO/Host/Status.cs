@@ -41,6 +41,26 @@ namespace See3PO
             m_EndPoint = new Point(0, 0);
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="floorPlan">An image of the floorplan to be constructed</param>
+        /// <param name="scale">The scale of the image provided in pixels per foot</param>
+        public Status(FloorPlan fp)
+        {
+            m_FloorPlan = fp;
+
+            m_Moves = new List<FloorTile>();
+
+            m_Images = null;
+
+            m_Moves = new List<FloorTile>();
+
+            m_Position = new Position(new Point(0, 0), 0);
+
+            m_EndPoint = new Point(0, 0);
+        }
+
 
         //************************************************************************************************
         //      private attributes

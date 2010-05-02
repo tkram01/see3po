@@ -13,7 +13,9 @@ using See3PO;
 using Nexus3Input;
 using Timer = System.Threading.Timer;
 using FloorTile = See3PO.FloorTile;
-
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace GUI
 { 
@@ -208,16 +210,7 @@ namespace GUI
         {
             importImageDialog.InitialDirectory = ".\floorplan";                                 // Look in the floorplan directory
 
-            importImageDialog.ShowDialog();                                                     // Show the file dialogue  
-            try
-            {
-                m_floorPlanImage = new Bitmap(Image.FromFile(importImageDialog.FileName));      // hopefully, they opened an image
-                m_fpState = fpState.NOSCALE;                                                          // The state changes to reflecft our new image
-
-                SetScale(10);                                                                       // Call set scale automatically - we can remove this
-            }
-            catch (Exception) { }
-            DrawFloor();                                                                        // draw the new floor plan
+            importImageDialog.ShowDialog();                                                     // Show the file dialogue                                                                        // draw the new floor plan
         }
 
         /// <summary>
@@ -478,7 +471,7 @@ namespace GUI
                 {
                     m_scale = sf.m_scale;                                           // When we return, get the scale from the form
 
-                    m_host.CreateFloorPlan(m_floorPlanImage, m_scale);              // Create a new floorplan
+                    m_host.CreateStatus(m_floorPlanImage, m_scale);              // Create a new floorplan
 
                     m_ratioX = (double)(m_host.Status.FloorPlan.getXTileNum()) / (double)(floorPlanPanel.Width); // figure out the ratio of the size of
                     m_ratioY = (double)m_host.Status.FloorPlan.getYTileNum() / (double)floorPlanPanel.Height; // the floorplan to the panel
@@ -669,6 +662,58 @@ namespace GUI
         {
             DrawFloor();
         }
+
+        private void loadFloorPlanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFloorPlanDialog.InitialDirectory = ".\floorplan";                                 // Look in the floorplan directory
+            openFloorPlanDialog.ShowDialog();                                                     // Show the file dialogue  
+        }                     
+
+        private void saveFloorPlanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFloorPlanDialog.InitialDirectory = ".\floorplan";                                 // Look in the floorplan directory
+            saveFloorPlanDialog.ShowDialog();                                                     // Show the file dialogue  
+        } 
+
+        private void saveFloorPlanDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                Stream stream = File.Open(saveFloorPlanDialog.FileName, FileMode.Create);
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                bFormatter.Serialize(stream, m_host.Status.FloorPlan);
+                stream.Close();
+            }
+            catch (Exception) { }
+        }
+
+        private void openFloorPlanDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                FloorPlan fp;
+                Stream stream = File.Open(openFloorPlanDialog.FileName, FileMode.Open);
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                fp = (FloorPlan)bFormatter.Deserialize(stream);
+                stream.Close();
+                m_host.CreateStatus(fp);
+            }
+            catch (Exception) { }
+        }
+
+        private void importImageDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                m_floorPlanImage = new Bitmap(Image.FromFile(importImageDialog.FileName));      // hopefully, they opened an image
+                m_fpState = fpState.NOSCALE;                                                    // The state changes to reflecft our new image
+
+                SetScale(10);                                                                   // Call set scale automatically - we can remove this
+            }
+            catch (Exception) { }
+            DrawFloor();  
+        }
+
 	}
 }
 //Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South

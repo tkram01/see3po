@@ -98,7 +98,6 @@ namespace See3PO
                                 neighbors[k].Position.X + "_" + neighbors[k].Position.Y);
                             edges.Add(myedge);
                             graph.AddEdge(myedge);
-                            //this.messages += "    edges: " + fp.getTile(i, j).Position.X + "_" + fp.getTile(i, j).Position.Y + "->" + neighbors[k].Position.X + "_" + neighbors[k].Position.Y + "\n";
                             edgeCost.Add(myedge, 1);
                         }
                     }
@@ -113,11 +112,13 @@ namespace See3PO
 
         public List<FloorTile> getPath()
         {
-            if (this.fp != null)
-            {
-                startPoint = this.fp.getStartTile().Position.X + "_" + this.fp.getStartTile().Position.Y;
-                targetPoint = this.fp.getTargetTile().Position.X + "_" + this.fp.getTargetTile().Position.Y;
-            }
+            List<FloorTile> retval = new List<FloorTile>();
+            if (this.fp == null || this.fp.getStartTile() == null || this.fp.getTargetTile() == null)
+                return retval;
+
+            startPoint = this.fp.getStartTile().Position.X + "_" + this.fp.getStartTile().Position.Y;
+            targetPoint = this.fp.getTargetTile().Position.X + "_" + this.fp.getTargetTile().Position.Y;
+            
 
 
             this.messages += "- Start Get Path\n";
@@ -148,7 +149,7 @@ namespace See3PO
                 foreach (var u in path)
                     outString += u + ";";
 
-            List<FloorTile> retval = new List<FloorTile>();
+            
 
             string[] outEdges = Regex.Split(outString, ";");
             if (outEdges.Length > 0)

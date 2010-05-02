@@ -62,6 +62,8 @@ namespace GUI
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeRobotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFloorPlanDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFloorPlanDialog = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -140,12 +142,14 @@ namespace GUI
             this.loadFloorPlanToolStripMenuItem.Name = "loadFloorPlanToolStripMenuItem";
             this.loadFloorPlanToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.loadFloorPlanToolStripMenuItem.Text = "Load FloorPlan";
+            this.loadFloorPlanToolStripMenuItem.Click += new System.EventHandler(this.loadFloorPlanToolStripMenuItem_Click);
             // 
             // saveFloorPlanToolStripMenuItem
             // 
             this.saveFloorPlanToolStripMenuItem.Name = "saveFloorPlanToolStripMenuItem";
             this.saveFloorPlanToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.saveFloorPlanToolStripMenuItem.Text = "Save FloorPlan";
+            this.saveFloorPlanToolStripMenuItem.Click += new System.EventHandler(this.saveFloorPlanToolStripMenuItem_Click);
             // 
             // importFloorPlanImageToolStripMenuItem
             // 
@@ -264,8 +268,9 @@ namespace GUI
             // 
             // importImageDialog
             // 
-            this.importImageDialog.Filter = "\"IMAGES|*jpg;*bmp|All|*.*\";";
+            this.importImageDialog.Filter = "IMAGES|*jpg;*bmp|All|*.*";
             this.importImageDialog.InitialDirectory = "\"\"";
+            this.importImageDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.importImageDialog_FileOk);
             // 
             // splitContainer1
             // 
@@ -354,6 +359,18 @@ namespace GUI
             this.setDestinationToolStripMenuItem.Text = "Set Destination";
             this.setDestinationToolStripMenuItem.Click += new System.EventHandler(this.Click_SetDestination);
             // 
+            // openFloorPlanDialog
+            // 
+            this.openFloorPlanDialog.Filter = "FLOORPLANS|*.fp";
+            this.openFloorPlanDialog.InitialDirectory = "\"\"";
+            this.openFloorPlanDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFloorPlanDialog_FileOk);
+            // 
+            // saveFloorPlanDialog
+            // 
+            this.saveFloorPlanDialog.Filter = "FLOORPLANS|*.fp";
+            this.saveFloorPlanDialog.InitialDirectory = "\"\"";
+            this.saveFloorPlanDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFloorPlanDialog_FileOk);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,6 +436,8 @@ namespace GUI
         private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showPathToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel InstructionsLabel;
+        private System.Windows.Forms.OpenFileDialog openFloorPlanDialog;
+        private System.Windows.Forms.SaveFileDialog saveFloorPlanDialog;
 
 	}
 }

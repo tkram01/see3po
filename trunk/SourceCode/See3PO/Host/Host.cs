@@ -58,7 +58,7 @@ namespace See3PO
         /// </summary>
         /// <param name="FloorPlanImage">an image of the floorplan</param>
         /// <param name="ppf">the scale of the image, in pixels per foot</param>
-        public void CreateFloorPlan(Image FloorPlanImage, double ppf)
+        public void CreateStatus(Image FloorPlanImage, double ppf)
         {
             m_pixelsperfoot = ppf;
 
@@ -68,52 +68,74 @@ namespace See3PO
         }
 
         /// <summary>
+        /// Creates a new FloorPlan object in m_Status, then uses that to create a new PathFinder object
+        /// </summary>
+        /// <param name="FloorPlanImage">an image of the floorplan</param>
+        /// <param name="ppf">the scale of the image, in pixels per foot</param>
+        public void CreateStatus(FloorPlan fp)
+        {
+            m_status = new Status(fp);
+
+            m_pathfinder = new QGPathFinder(m_status.FloorPlan);
+        }
+
+        /// <summary>
         /// Sends each move in the path to the robot
         /// </summary>
         public void Drive() 
         {
-            Queue<MoveCommand> path = ConvertPath();
-
-            while (m_RobotHost.IsConnected && path.Count != 0) 
+            if (m_RobotHost.IsConnected)
             {
-                m_UI.updateUI();
+                Queue<MoveCommand> path = ConvertPath();
 
-                MoveCommand nextMove = path.Dequeue();
-
-                SendMove(ConvertMove(nextMove));
-
-                m_UI.PostMessage(nextMove.toString());
-
-                DateTime sent = DateTime.Now;
-
-                long ticks = 0;
-
-                Point oldPoint = new Point(Status.Position.location.X, Status.Position.location.Y);
-
-                while (ticks < nextMove.duration)
+                while (m_RobotHost.IsConnected && path.Count != 0)
                 {
-                    if (nextMove.direction == MoveCommand.Direction.Forward && ticks > 10)
+                    m_UI.updateUI();
+
+                    MoveCommand nextMove = path.Dequeue();
+
+                    SendMove(ConvertMove(nextMove));
+
+                    m_UI.PostMessage(nextMove.toString());
+
+                    DateTime sent = DateTime.Now;
+
+                    long ticks = 0;
+
+                    if (nextMove.direction == MoveCommand.Direction.Forward)
                     {
-                        Point nextPoint = new Point(Status.Path[0].Position.X, Status.Path[0].Position.Y);
-                        double ratio = (double)ticks / (double)nextMove.duration;
-                        Point currentPoint = new Point((int)(oldPoint.X * ratio + nextPoint.X * (1.0 - ratio)),
-                            (int)(oldPoint.Y * ratio + nextPoint.Y * (1.0 - ratio)));
-                        Status.Position = new Position(currentPoint, Status.Position.facing);
-                        m_status.FloorPlan.getTile(currentPoint.X, currentPoint.Y).SetPath(false);
+                        Point oldPoint = new Point(Status.Position.location.X, Status.Position.location.Y);
+                        Point nextPoint = new Point(Status.Path[1].Position.X, Status.Path[1].Position.Y);
+                        m_UI.PostMessage(oldPoint.ToString() + " to " + nextPoint.ToString());
+                        while (ticks < nextMove.duration)
+                        {
+                            double ratio = (double)ticks / (double)nextMove.duration;
+                            Point currentPoint = new Point((int)(oldPoint.X * (1.0 - ratio) + nextPoint.X * ratio),
+                                (int)(oldPoint.Y * (1.0 - ratio) + nextPoint.Y * ratio));
+                            
+                            Status.Position = new Position(currentPoint, Status.Position.facing);
+                            m_status.FloorPlan.getTile(currentPoint.X, currentPoint.Y).SetPath(false);
+
+                            m_UI.updateUI();
+                            ticks = (long)DateTime.Now.Subtract(sent).TotalMilliseconds;
+                        }
+                        Status.Path.RemoveAt(0);
                     }
-                    else 
+                    else
                     {
+                        while (ticks < nextMove.duration)
+                        { 
+                            ticks = (long)DateTime.Now.Subtract(sent).TotalMilliseconds; 
+                        }
                         Status.Path[0].SetPath(false);
                         Status.Position = new Position(Status.Path[0].Position, Status.Position.facing);
+                        
                     }
-                    
-                    m_UI.updateUI();
-                    ticks = (long)DateTime.Now.Subtract(sent).TotalMilliseconds;
+
                 }
-                if (nextMove.direction == MoveCommand.Direction.Forward && ticks > 10)
-                    Status.Path.RemoveAt(0);
+                Status.Position = new Position(Status.EndPoint, Status.Position.facing);
+                m_UI.updateUI();
             }
-            m_UI.updateUI();
         }
 
         /// <summary>

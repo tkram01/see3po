@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8c71be27-dc55-4533-984b-7c95145f5fcd" name="Frank@DESKTOP 2010-04-29 14:51:57" runUser="Desktop\Frank" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="f157de38-9661-4faf-9b32-9c14c4c65cf7">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="D:\Documents\School\see3po\PathFinding\TestResults\Frank_DESKTOP 2010-04-29 14_51_57">
+      <DeploymentItem filename="D:\Documents\School\see3po\PathFinding\bin\Debug\PathFinding.dll" />
+      <DeploymentItem filename="D:\Documents\School\see3po\PathFinding\FloorPlanAndTile.dll" />
+      <DeploymentItem filename="D:\Documents\School\see3po\PathFinding\QuickGraph.dll" />
+    </Deployment>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" error="0" failed="6" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2010-04-29T14:51:57.4442758-04:00" queuing="2010-04-29T14:51:59.9964218-04:00" start="2010-04-29T14:52:00.1434302-04:00" finish="2010-04-29T14:52:00.7004621-04:00" />
+  <TestDefinitions>
+    <UnitTest name="getTileByIndexTest" storage="d:\documents\school\see3po\pathfinding\pathfindingtest\bin\debug\pathfindingtest.dll" id="7b0db109-b23e-1fe2-ba55-4b34dfeec5f8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="95f80d3f-c926-48ad-983e-ba3786d83c0f" />
+      <TestMethod codeBase="D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFindingTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="PathFindingTest.QGPathFinderTest, PathFindingTest" name="getTileByIndexTest" />
+    </UnitTest>
+    <UnitTest name="buildGraphTest" storage="d:\documents\school\see3po\pathfinding\pathfindingtest\bin\debug\pathfindingtest.dll" id="a5fd3ca5-65b8-c888-d3aa-0cf11336dc2f">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="c64813fe-91ef-4a36-9f98-dec5689a0512" />
+      <TestMethod codeBase="D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFindingTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="PathFindingTest.QGPathFinderTest, PathFindingTest" name="buildGraphTest" />
+    </UnitTest>
+    <UnitTest name="getPathTest" storage="d:\documents\school\see3po\pathfinding\pathfindingtest\bin\debug\pathfindingtest.dll" id="5fe5e714-a407-4071-b3ab-213aadd2824a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="a2437f0f-408a-4963-b407-37cec07a1bae" />
+      <TestMethod codeBase="D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFindingTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="PathFindingTest.QGPathFinderTest, PathFindingTest" name="getPathTest" />
+    </UnitTest>
+    <UnitTest name="getPathTimeTest" storage="d:\documents\school\see3po\pathfinding\pathfindingtest\bin\debug\pathfindingtest.dll" id="560cb2e1-8453-2acc-5586-fbdff080d819">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="37d591f1-9ef4-4441-a6b7-39959bd2bfa4" />
+      <TestMethod codeBase="D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFindingTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="PathFindingTest.QGPathFinderTest, PathFindingTest" name="getPathTimeTest" />
+    </UnitTest>
+    <UnitTest name="QGPathFinderConstructorTest" storage="d:\documents\school\see3po\pathfinding\pathfindingtest\bin\debug\pathfindingtest.dll" id="1f025164-97b9-37ea-c885-36a236001671">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ae321f79-7c17-402d-9545-8968e94a156f" />
+      <TestMethod codeBase="D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFindingTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="PathFindingTest.QGPathFinderTest, PathFindingTest" name="QGPathFinderConstructorTest" />
+    </UnitTest>
+    <UnitTest name="getPathVisualizationTest" storage="d:\documents\school\see3po\pathfinding\pathfindingtest\bin\debug\pathfindingtest.dll" id="dde715ed-fae3-50c7-0f00-cbbbec57ed20">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="f48f3b78-3fd9-40e1-916e-8e3112b2bb7b" />
+      <TestMethod codeBase="D:\Documents\School\see3po\PathFinding\PathFindingTest\bin\Debug\PathFindingTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="PathFindingTest.QGPathFinderTest, PathFindingTest" name="getPathVisualizationTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="7b0db109-b23e-1fe2-ba55-4b34dfeec5f8" executionId="95f80d3f-c926-48ad-983e-ba3786d83c0f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5fe5e714-a407-4071-b3ab-213aadd2824a" executionId="a2437f0f-408a-4963-b407-37cec07a1bae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="560cb2e1-8453-2acc-5586-fbdff080d819" executionId="37d591f1-9ef4-4441-a6b7-39959bd2bfa4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dde715ed-fae3-50c7-0f00-cbbbec57ed20" executionId="f48f3b78-3fd9-40e1-916e-8e3112b2bb7b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f025164-97b9-37ea-c885-36a236001671" executionId="ae321f79-7c17-402d-9545-8968e94a156f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5fd3ca5-65b8-c888-d3aa-0cf11336dc2f" executionId="c64813fe-91ef-4a36-9f98-dec5689a0512" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="95f80d3f-c926-48ad-983e-ba3786d83c0f" testId="7b0db109-b23e-1fe2-ba55-4b34dfeec5f8" testName="getTileByIndexTest" computerName="DESKTOP" duration="00:00:00.0330905" startTime="2010-04-29T14:52:00.2134342-04:00" endTime="2010-04-29T14:52:00.5194517-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method PathFindingTest.QGPathFinderTest.getTileByIndexTest threw exception:  System.ArgumentException: Parameter is not valid..</Message>
+          <StackTrace>    at System.Drawing.Bitmap..ctor(String filename)
+   at PathFindingTest.QGPathFinderTest.getTileByIndexTest() in D:\Documents\School\see3po\PathFinding\PathFindingTest\QGPathFinderTest.cs:line 78
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a2437f0f-408a-4963-b407-37cec07a1bae" testId="5fe5e714-a407-4071-b3ab-213aadd2824a" testName="getPathTest" computerName="DESKTOP" duration="00:00:00.0075638" startTime="2010-04-29T14:52:00.5204518-04:00" endTime="2010-04-29T14:52:00.5294523-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method PathFindingTest.QGPathFinderTest.getPathTest threw exception:  System.ArgumentException: Parameter is not valid..</Message>
+          <StackTrace>    at System.Drawing.Bitmap..ctor(String filename)
+   at PathFindingTest.QGPathFinderTest.getPathTest() in D:\Documents\School\see3po\PathFinding\PathFindingTest\QGPathFinderTest.cs:line 95
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="37d591f1-9ef4-4441-a6b7-39959bd2bfa4" testId="560cb2e1-8453-2acc-5586-fbdff080d819" testName="getPathTimeTest" computerName="DESKTOP" duration="00:00:00.0053672" startTime="2010-04-29T14:52:00.5364527-04:00" endTime="2010-04-29T14:52:00.5534537-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method PathFindingTest.QGPathFinderTest.getPathTimeTest threw exception:  System.ArgumentException: Parameter is not valid..</Message>
+          <StackTrace>    at System.Drawing.Bitmap..ctor(String filename)
+   at PathFindingTest.QGPathFinderTest.getPathTimeTest() in D:\Documents\School\see3po\PathFinding\PathFindingTest\QGPathFinderTest.cs:line 149
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f48f3b78-3fd9-40e1-916e-8e3112b2bb7b" testId="dde715ed-fae3-50c7-0f00-cbbbec57ed20" testName="getPathVisualizationTest" computerName="DESKTOP" duration="00:00:00.0049326" startTime="2010-04-29T14:52:00.5564539-04:00" endTime="2010-04-29T14:52:00.5624542-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method PathFindingTest.QGPathFinderTest.getPathVisualizationTest threw exception:  System.ArgumentException: Parameter is not valid..</Message>
+          <StackTrace>    at System.Drawing.Bitmap..ctor(String filename)
+   at PathFindingTest.QGPathFinderTest.getPathVisualizationTest() in D:\Documents\School\see3po\PathFinding\PathFindingTest\QGPathFinderTest.cs:line 211
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ae321f79-7c17-402d-9545-8968e94a156f" testId="1f025164-97b9-37ea-c885-36a236001671" testName="QGPathFinderConstructorTest" computerName="DESKTOP" duration="00:00:00.0048688" startTime="2010-04-29T14:52:00.5664544-04:00" endTime="2010-04-29T14:52:00.5724548-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method PathFindingTest.QGPathFinderTest.QGPathFinderConstructorTest threw exception:  System.ArgumentException: Parameter is not valid..</Message>
+          <StackTrace>    at System.Drawing.Bitmap..ctor(String filename)
+   at PathFindingTest.QGPathFinderTest.QGPathFinderConstructorTest() in D:\Documents\School\see3po\PathFinding\PathFindingTest\QGPathFinderTest.cs:line 254
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c64813fe-91ef-4a36-9f98-dec5689a0512" testId="a5fd3ca5-65b8-c888-d3aa-0cf11336dc2f" testName="buildGraphTest" computerName="DESKTOP" duration="00:00:00.0226586" startTime="2010-04-29T14:52:00.5774551-04:00" endTime="2010-04-29T14:52:00.6004564-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method PathFindingTest.QGPathFinderTest.buildGraphTest threw exception:  System.ArgumentException: Parameter is not valid..</Message>
+          <StackTrace>    at System.Drawing.Bitmap..ctor(String filename)
+   at PathFindingTest.QGPathFinderTest.buildGraphTest() in D:\Documents\School\see3po\PathFinding\PathFindingTest\QGPathFinderTest.cs:line 268
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

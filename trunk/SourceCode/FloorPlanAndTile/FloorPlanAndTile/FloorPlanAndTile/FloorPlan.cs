@@ -41,6 +41,19 @@ namespace See3PO
             m_path = new List<FloorTile>();
         }
 
+        private void ReplacePath(List<FloorTile> newpath) 
+        {
+            foreach (FloorTile tile in m_path) 
+            {
+                tile.SetPath(false);
+            }
+            m_path = newpath;
+            foreach (FloorTile tile in m_path)
+            {
+                tile.SetPath(true);
+            }
+        }
+
         public FloorPlan(Image myimage)
         {
             this.m_myImage = new Bitmap(myimage);

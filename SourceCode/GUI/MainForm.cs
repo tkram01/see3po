@@ -341,8 +341,8 @@ namespace GUI
                     case fpState.HAVEPATH:
                         instructions = "Click the floor plan to change the destination";        // We have a path and are ready to drive
                         bg.DrawImage(m_host.Status.FloorPlan.toImage(floorPlanPanel.Width, floorPlanPanel.Height), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
-                        if (m_host.Status.Path != null)
-                            bg.DrawImage(DrawPath(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
+                        if (m_host.Status.Path != null) { }
+                        //   bg.DrawImage(DrawPath(), 0, 0, floorPlanPanel.Width, floorPlanPanel.Height);
                         else
                             instructions = "unwalkable destination";
                         break;

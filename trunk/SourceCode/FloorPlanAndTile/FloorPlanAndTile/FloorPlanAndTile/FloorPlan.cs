@@ -41,18 +41,6 @@ namespace See3PO
             m_path = new List<FloorTile>();
         }
 
-        private void ReplacePath(List<FloorTile> newpath) 
-        {
-            foreach (FloorTile tile in m_path) 
-            {
-                tile.SetPath(false);
-            }
-            m_path = newpath;
-            foreach (FloorTile tile in m_path)
-            {
-                tile.SetPath(true);
-            }
-        }
 
         public FloorPlan(Image myimage)
         {
@@ -64,9 +52,17 @@ namespace See3PO
             Connect();
         }
 
-        public void setPath() 
+        public void setPath(List<FloorTile> newpath) 
         {
-            
+            foreach (FloorTile tile in m_path)
+            {
+                tile.SetPath(false);
+            }
+            m_path = newpath;
+            foreach (FloorTile tile in m_path)
+            {
+                tile.SetPath(true);
+            }
         }
 
         public void createArray()
@@ -155,15 +151,15 @@ namespace See3PO
             Bitmap image = new Bitmap(width, height);
             Graphics g = Graphics.FromImage(image);
 
-            int xTile = width / m_width;            //size of a tile on the image, after scaling
-            int yTile = height / m_height;
+            float xTile = (float)width / (float)m_width;            //size of a tile on the image, after scaling
+            float yTile = (float)height / (float)m_height;
 
             for (int row = 0; row < m_height; row++)
             {
                 for (int column = 0; column < m_width; column++)
                 {
-                    
-                    g.FillRectangle(new SolidBrush(arr[row, column].toPixel()), column * xTile, row * yTile, xTile, yTile);
+
+                    g.FillRectangle(new SolidBrush(arr[row, column].toPixel()), (float)(column * xTile), (float)(row * yTile), xTile, yTile);
                 }
             }
             return image;

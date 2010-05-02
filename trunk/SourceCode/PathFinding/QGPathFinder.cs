@@ -174,9 +174,9 @@ namespace See3PO
                 return null;
             }
 
-
+            fp.setPath(retval);
             //return retval;
-
+            
             return condenseList(retval);
         }
 

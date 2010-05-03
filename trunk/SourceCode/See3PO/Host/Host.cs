@@ -45,18 +45,6 @@ namespace See3PO
 //************************************************************************************************
 
         /// <summary>
-        /// Returns a live feed from a webcam
-        /// </summary>
-        /// <returns>the CWebcam object</returns>
-        public CWebcam Camera(System.Windows.Forms.Panel panel)
-        {
-            CWebcam camera = new CWebcam(panel, null, false);
-            camera.Initialize();
-            camera.SetReady();
-            return camera;
-        }
-
-        /// <summary>
         /// Creates a new FloorPlan object in m_Status, then uses that to create a new PathFinder object
         /// </summary>
         /// <param name="FloorPlanImage">an image of the floorplan</param>
@@ -90,11 +78,9 @@ namespace See3PO
             if (m_RobotHost.IsConnected)
             {
                 Queue<MoveCommand> path = ConvertPath();
-
+                RequestImage();
                 while (m_RobotHost.IsConnected && path.Count != 0)
                 {
-                    m_UI.updateUI();
-
                     MoveCommand nextMove = path.Dequeue();
 
                     SendMove(ConvertMove(nextMove));
@@ -152,10 +138,11 @@ namespace See3PO
                 case CLocalBrainMessage.DISCONNECT:
                     PostMessage("Client disconnect message received.");
                     m_RobotHost.Disconnect(false);
+                    m_UI.PostConnection("Disconnected");
                     break;
 
                 default:
-                    PostMessage("Unknown system message received from robot client.");
+                    PostMessage("Unknown system message received from robot client." + buffer);
                     break;
             }
         }
@@ -238,22 +225,22 @@ namespace See3PO
         /// <summary>
         /// Changes the connection status between IsListening, IsConnected and Not Connected
         /// </summary>
-        public String ToggleConnection()
+        public void ToggleConnection()
         {
             if (m_RobotHost.IsListening)
             {
                 m_RobotHost.StopListening();
-                return "Listen";
+                m_UI.PostConnection("Disconnected");
             }
             else if (m_RobotHost.IsConnected)
             {
                 m_RobotHost.Disconnect(true);
-                return "Listen";
+                m_UI.PostConnection("Disconnected");
             }
             else
             {
                 m_RobotHost.StartListening();
-                return "Stop Listening";
+                m_UI.PostConnection("Connected");
             }
         }
 
@@ -274,7 +261,7 @@ namespace See3PO
             {
                 connectionStatus += "Robot Status: Connected";
                 m_UI.PostConnection("Connected");
-
+                RequestImage();
                 m_RobotHost.Send((char)CRemoteBrainMessage.SERVO + "#16 P1500 #17 P1500 #18 P1500 #19 P1500 #20 P 1500\r", true);
             }
             else
@@ -507,7 +494,7 @@ namespace See3PO
             }
             catch (Exception ex)
             {
-                m_UI.PostMessage(ex.ToString());
+                m_UI.PostMessage("Failed to Recieve Image");
             }
 
         }
@@ -560,7 +547,6 @@ namespace See3PO
             }
             else
             {
-
                 BinaryWriter writer = new BinaryWriter(File.Open(receivedPath, FileMode.Append));
                 byte[] filedata = data.ToArray();
                 filedata.Reverse();

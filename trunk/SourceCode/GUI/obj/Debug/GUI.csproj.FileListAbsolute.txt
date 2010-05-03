@@ -55,3 +55,4 @@ C:\Documents and Settings\frank\My Documents\see3po\GUI\bin\Debug\See3PO.pdb
 C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.FacingForm.resources
 D:\Documents\School\see3po\GUI\bin\Debug\PathFinding.dll
 D:\Documents\School\see3po\GUI\bin\Debug\PathFinding.pdb
+D:\Documents\School\see3po\GUI\bin\Debug\GUI.XML

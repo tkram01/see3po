@@ -31,8 +31,6 @@ namespace GUI
 
             m_host = new See3PO.Host(this);                                     // Create a Host
 
-            m_camera = m_host.Camera(livePanel);                                // get a Webcam from the host
-
             m_center = new Point(floorPlanPanel.Width / 2, floorPlanPanel.Height / 2); //find the center of the image
             
             m_fg = Graphics.FromHwnd(floorPlanPanel.Handle);                    // create a graphics object to draw on the floorplanpanel    
@@ -88,6 +86,10 @@ namespace GUI
         /// <param name="msg"></param>
         public void PostConnection(String msg)
         {
+            if (msg == "Connected")
+                connectMenuItem.Text = ("Disconnect");
+            if (msg == "Disconnected")
+                connectMenuItem.Text = ("Listen");
             statusLabel.Text = msg;                                             // Update Connection Messages
         }
 
@@ -106,6 +108,22 @@ namespace GUI
             messageBox.Text = msg + "\r\n" + messageBox.Text;
         }
 
+        /// <summary>
+        /// Posts any message to the screen
+        /// </summary>
+        /// <param name="msg"></param>
+        public void PostImage(Image img)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new DGuiCallImg(PostImage), img);
+                return;
+            }
+
+            Graphics g = Graphics.FromHwnd(livePanel.Handle);
+            g.DrawImage(img, 0, 0, livePanel.Width, livePanel.Height);
+        }
+
 //************************************************************************************************
 //       Menu Clicks
 //************************************************************************************************
@@ -117,7 +135,7 @@ namespace GUI
         /// <param name="e">not used</param>
         private void Click_ConnectMenuItem(object sender, EventArgs e)
         {
-            connectMenuItem.Text = (m_host.ToggleConnection());
+            m_host.ToggleConnection();
         }
         
         /// <summary>
@@ -578,6 +596,7 @@ namespace GUI
         private Bitmap m_floorPlanImage;            // The original image of the floorplan
 
         delegate void DGuiCallString(string str);
+        delegate void DGuiCallImg(Image img);
 
         delegate void DDrawFloor();                 // Delegate for the DrawFloor thread
         private DDrawFloor t_DrawFloorDelegate;

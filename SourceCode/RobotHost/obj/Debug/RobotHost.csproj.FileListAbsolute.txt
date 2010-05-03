@@ -11,3 +11,10 @@ D:\Documents\School\CS682\Robot Host\bin\Debug\RobotCommands.pdb
 D:\Documents\School\CS682\Robot Host\obj\Debug\ResolveAssemblyReference.cache
 D:\Documents\School\CS682\Robot Host\obj\Debug\RobotHost.dll
 D:\Documents\School\CS682\Robot Host\obj\Debug\RobotHost.pdb
+D:\Documents\School\see3po\RobotHost\bin\Debug\RobotHost.dll
+D:\Documents\School\see3po\RobotHost\bin\Debug\RobotHost.pdb
+D:\Documents\School\see3po\RobotHost\bin\Debug\RobotCommands.dll
+D:\Documents\School\see3po\RobotHost\bin\Debug\RobotCommands.pdb
+D:\Documents\School\see3po\RobotHost\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\School\see3po\RobotHost\obj\Debug\RobotHost.dll
+D:\Documents\School\see3po\RobotHost\obj\Debug\RobotHost.pdb

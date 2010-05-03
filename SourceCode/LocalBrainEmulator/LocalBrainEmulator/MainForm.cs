@@ -10,6 +10,8 @@ using System.Threading;
 using Timer = System.Threading.Timer;
 
 using RobotCommands;
+using System.IO;
+using System.Net.Sockets;
 
 namespace LocalBrainEmulator
 {
@@ -23,22 +25,30 @@ namespace LocalBrainEmulator
         delegate void DGuiCallString(string str);
         delegate void DGuiCallBuffer(byte[] buffer);
 
-        private const int HEIGHT = 20;
-        private const int WIDTH = 20;
-        private RobotSprite sprite;
-        private Image floorPlan;
-        private Image buffer;
-        private Graphics bg;
-        private Graphics fg;
+        private const byte EOT = 0xEF;
+        private const byte IMG_CMD = 0x04;
+        private const byte MOTOR_CMD = 0x10;
+        private const byte DRIVING_CMD = 0x11;
+        private const byte SOUND_CMD = 0x00;
+        private const int SERVER_CMD_SIZE = 10;
+        private const int MOTOR_PACKET_SIZE = 7;
+        private const int SOCKET_PORT1 = 9050;
+        private const short FIX_SPEED = 350;
+        private const string imagefile = ".\\sendImages\\flower";
+        private const string server_IP = "127.0.0.1";
         private CRobotClient client;
+        IPAddress HOSTaddress;
         //private CServosController servos;
         //private CMotorsController motors;
+
+        int imagecounter;
 
         public MainForm()
         {
             InitializeComponent();
             client = new CRobotClient(this);
             tryConnect();
+            imagecounter = 0;
 
         }
 
@@ -98,6 +108,12 @@ namespace LocalBrainEmulator
                     tryConnect();
                     break;
 
+                case IMG_CMD:
+                    PostMessage("Request image command received from robot host.");
+                    handle_image_transfer();
+                    client.Send(new byte[] { 0x00, IMG_CMD, EOT }, true);
+                    break;
+
                 default:
                     PostMessage("Unknown system message received from robot host.");
                     if (!client.IsConnected)
@@ -149,12 +165,28 @@ namespace LocalBrainEmulator
 
         private void remoteConnectMenuItem_Click(object sender, EventArgs e)
         {
+            String IPstr;
+
             if (client.IsConnected)
                 client.Disconnect(true);
             else
-                tryConnect();
+            {
+                try
+                {
+                    IPstr = server_IP; //IPaddr.Text;
+                    HOSTaddress = IPAddress.Parse(IPstr);
+                    PostMessage("Host IP is: " + IPstr);
+                }
+                catch
+                {
+                    PostMessage("Host IP error!! Will use " + server_IP);
+                    IPstr = server_IP;
+                    HOSTaddress = IPAddress.Parse(IPstr);
+                }
+                PostMessage("Connecting to " + IPstr);
+                client.Connect(HOSTaddress);
+            }
         }
-
         private void servosConnectMenuItem_Click(object sender, EventArgs e)
         {
         }
@@ -181,7 +213,7 @@ namespace LocalBrainEmulator
         private void tryConnect() 
         {
             while (!client.IsConnected)
-                client.Connect(IPAddress.Parse("127.0.0.1"));
+                remoteConnectMenuItem_Click(this, null);
         }
 
         private int BytesToInt(byte high, byte low)
@@ -189,6 +221,27 @@ namespace LocalBrainEmulator
             int value = ((sbyte)high)<< 8; 
             value += low;
             return value;
+        }
+
+        private void handle_image_transfer()
+        {
+
+            try
+            {
+                imagecounter = (imagecounter + 1) % 3;
+                FileStream imgfile = File.OpenRead(imagefile + imagecounter + ".jpg");
+                byte[] clientData1 = new byte[imgfile.Length];
+                imgfile.Read(clientData1, 0, (int)imgfile.Length);
+
+                Socket clientSock1 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                clientSock1.Connect(new IPEndPoint(HOSTaddress, SOCKET_PORT1)); //target machine's ip address and the port number
+                clientSock1.Send(clientData1);
+                clientSock1.Close();
+            }
+            catch (Exception ex)
+            {
+                PostMessage("image request error:" + ex.ToString());
+            }
         }
 
     }

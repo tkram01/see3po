@@ -106,6 +106,12 @@
             </summary>
             <param name="msg"></param>
         </member>
+        <member name="M:GUI.MainForm.PostImage(System.Drawing.Image)">
+            <summary>
+            Posts any message to the screen
+            </summary>
+            <param name="msg"></param>
+        </member>
         <member name="M:GUI.MainForm.Click_ConnectMenuItem(System.Object,System.EventArgs)">
             <summary>
             Result of clicking the "Connect" menu item - connect the host to the robot

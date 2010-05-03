@@ -26,6 +26,12 @@ namespace See3PO
         /// <param name="status">the connection status</param>
         void PostConnection(String status);
 
+        /// <summary>
+        /// Passes information about the status of the connection between Host and Remote
+        /// </summary>
+        /// <param name="status">the connection status</param>
+        void PostImage(System.Drawing.Image image);
+
         void updateUI();
     }
 }

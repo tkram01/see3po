@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="0c5477ee-8405-4c69-a333-b7c5a766df5b" name="Nick@NICK-PC 2010-04-30 11:46:56" runUser="NICK-PC\Nick" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="7cbad126-7cfa-403e-8ab3-d2aca0177fe4">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\TestResults\Nick_NICK-PC 2010-04-30 11_46_56">
+      <DeploymentItem filename="F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\PathFinding.dll" />
+      <DeploymentItem filename="F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\QuickGraph.dll" />
+      <DeploymentItem filename="F:\Nick\UMassBoston\CS682\SVN\SourceCode\RobotHost\bin\Debug\RobotCommands.dll" />
+      <DeploymentItem filename="F:\Nick\UMassBoston\CS682\SVN\SourceCode\FloorPlanAndTile\FloorPlanAndTile\FloorPlanAndTile\bin\Debug\FloorPlanAndTile.dll" />
+      <DeploymentItem filename="F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\Nexus3Input.dll" />
+      <DeploymentItem filename="F:\Nick\UMassBoston\CS682\SVN\SourceCode\RobotHost\bin\Debug\RobotHost.dll" />
+      <DeploymentItem filename="F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\See3PO.dll" />
+    </Deployment>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2010-04-30T11:46:56.3906250-04:00" queuing="2010-04-30T11:46:59.9687500-04:00" start="2010-04-30T11:47:00.5468750-04:00" finish="2010-04-30T11:47:09.7968750-04:00" />
+  <TestDefinitions>
+    <UnitTest name="RequestImageTest" storage="f:\nick\umassboston\cs682\svn\sourcecode\see3po\see3potest\bin\debug\see3potest.dll" id="093b37ea-7017-100d-520c-2108b63aa2c0">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <DeploymentItems>
+        <DeploymentItem filename="See3PO.dll" />
+      </DeploymentItems>
+      <Execution id="a4c8ffb8-8463-47a4-9b93-3a0a2d86aa5d" />
+      <TestMethod codeBase="F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\See3POTest\bin\Debug\See3POTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="See3POTest.HostTest, See3POTest" name="RequestImageTest" />
+    </UnitTest>
+    <UnitTest name="isConnectedTest" storage="f:\nick\umassboston\cs682\svn\sourcecode\see3po\see3potest\bin\debug\see3potest.dll" id="689555cd-f3f5-0b49-4120-20be7e97bc1f">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="634d1878-ade7-4bce-b41f-5e43647708f4" />
+      <TestMethod codeBase="F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\See3POTest\bin\Debug\See3POTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="See3POTest.HostTest, See3POTest" name="isConnectedTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="093b37ea-7017-100d-520c-2108b63aa2c0" executionId="a4c8ffb8-8463-47a4-9b93-3a0a2d86aa5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="689555cd-f3f5-0b49-4120-20be7e97bc1f" executionId="634d1878-ade7-4bce-b41f-5e43647708f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a4c8ffb8-8463-47a4-9b93-3a0a2d86aa5d" testId="093b37ea-7017-100d-520c-2108b63aa2c0" testName="RequestImageTest" computerName="NICK-PC" duration="00:00:08.3671891" startTime="2010-04-30T11:47:00.6406250-04:00" endTime="2010-04-30T11:47:09.6406250-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="634d1878-ade7-4bce-b41f-5e43647708f4" testId="689555cd-f3f5-0b49-4120-20be7e97bc1f" testName="isConnectedTest" computerName="NICK-PC" duration="00:00:00.0002938" startTime="2010-04-30T11:47:09.6406250-04:00" endTime="2010-04-30T11:47:09.6562500-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -18,6 +18,9 @@ using See3PO;
 using FloorTile = See3PO.FloorTile;
 using FloorPlan = See3PO.FloorPlan;
 using System.Drawing.Drawing2D;
+using System.Net.Sockets;
+using System.Net;
+using System.IO;
 
 namespace See3PO
 {
@@ -453,6 +456,122 @@ namespace See3PO
                 m_RobotHost.Send(new byte[] { 0x01, 0x10, 0x11, leftSpeeds[0], leftSpeeds[1], rightSpeeds[0], rightSpeeds[1], durations[0], durations[1], 0xEF }, true);
             }
         }
+
+        //************************************************************************************************
+        //       Image Transferring
+        //*************************************************************************************
+
+        Thread t1;
+        int flag = 0;
+        string receivedPath = @"my pic.jpg";
+        Queue<byte> data = new Queue<byte>();
+        public delegate void MyDelegate();
+        Bitmap pic;
+
+        public void RequestImage()
+        {
+            t1 = new Thread(new ThreadStart(ImgStartListening));
+            t1.Start();
+            m_RobotHost.Send(new byte[] { 0, 4, 0xEF }, true);
+        }
+
+        public class StateObject
+        {
+            // Client socket.
+            public Socket workSocket = null;
+
+            public const int BufferSize = 1024;
+            // Receive buffer.
+            public byte[] buffer = new byte[BufferSize];
+        }
+
+
+        public static ManualResetEvent allDone = new ManualResetEvent(false);
+
+        public void ImgStartListening()
+        {
+            byte[] bytes = new Byte[1024];
+            IPEndPoint ipEnd = new IPEndPoint(IPAddress.Any, 9050);
+            Socket listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            try
+            {
+                listener.Bind(ipEnd);
+                listener.Listen(100);
+                while (true)
+                {
+                    allDone.Reset();
+                    listener.BeginAccept(new AsyncCallback(AcceptCallback), listener);
+                    allDone.WaitOne();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                m_UI.PostMessage(ex.ToString());
+            }
+
+        }
+
+        public void AcceptCallback(IAsyncResult ar)
+        {
+
+            allDone.Set();
+
+
+            Socket listener = (Socket)ar.AsyncState;
+            Socket handler = listener.EndAccept(ar);
+
+
+            StateObject state = new StateObject();
+            state.workSocket = handler;
+            handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
+            new AsyncCallback(ReadCallback), state);
+            flag = 0;
+        }
+
+        public void ReadCallback(IAsyncResult ar)
+        {
+            String content = String.Empty;
+            StateObject state = (StateObject)ar.AsyncState;
+            Socket handler = state.workSocket;
+            int bytesRead = handler.EndReceive(ar);
+            if (bytesRead > 0)
+            {
+
+                if (flag == 0)
+                {
+                    for (int i = 0; i < bytesRead; i++)
+                    {
+                        data.Enqueue(state.buffer[i]);
+                    }
+
+                    flag++;
+                    handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0, new AsyncCallback(ReadCallback), state);
+                }
+                else
+                {
+                    for (int i = 0; i < bytesRead; i++)
+                    {
+                        data.Enqueue(state.buffer[i]);
+                    }
+                    handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0, new AsyncCallback(ReadCallback), state);
+                }
+
+            }
+            else
+            {
+
+                BinaryWriter writer = new BinaryWriter(File.Open(receivedPath, FileMode.Append));
+                byte[] filedata = data.ToArray();
+                filedata.Reverse();
+                Stream datastream = new MemoryStream(filedata);
+                pic = new Bitmap(datastream);
+                writer.Write(filedata);
+                writer.Close();
+                m_UI.PostImage(pic);
+            }
+        }
+
  
 //************************************************************************************************
 //       Private Attributes

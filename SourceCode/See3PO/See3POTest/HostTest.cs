@@ -67,7 +67,7 @@ namespace See3POTest
         [TestMethod()]
         public void isConnectedTest()
         {
-            Host target = new Host(); // TODO: Initialize to an appropriate value
+            Host target = new Host(new EmptyUI()); // TODO: Initialize to an appropriate value
             bool expected = false; // TODO: Initialize to an appropriate value
             bool actual;
             actual = target.isConnected();
@@ -82,7 +82,7 @@ namespace See3POTest
         [DeploymentItem("See3PO.dll")]
         public void RequestImageTest()
         {
-            Host target = new Host(); // TODO: Initialize to an appropriate value
+            Host target = new Host(new EmptyUI()); // TODO: Initialize to an appropriate value
             target.ToggleConnection();
             bool expected = true; // TODO: Initialize to an appropriate value
             bool actual;
@@ -101,8 +101,6 @@ namespace See3POTest
 
             //disconnect
             target.ToggleConnection();
-            
-
         }
     }
 }

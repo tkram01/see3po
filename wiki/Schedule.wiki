@@ -21,6 +21,7 @@ For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Sche
 || *Task*                            || *Due*        || *Status*     || *Taken By* || *Completed Date* ||
 || Project poster draft due || 05/04/2010 || || [Nick] [Debarati] || ||
 || Project poster due || 05/11/2010 || || [Nick] [Debarati] || ||
+|| Code Comments and Docs completed || 05/11/2010 || || All || ||
 || Final release bug lists || 05/11/2010 || || All || ||
 || Department annual alumni event - demo || 05/19/2010 || || TBA || ||
 

@@ -733,6 +733,11 @@ namespace GUI
             DrawFloor();  
         }
 
+        private void loadSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_host.loadSettings();
+        }
+
 	}
 }
 //Point[] currentDir = new Point[1];// get starting facing : 0 = East, 90 = North, 180 = West, 270 = South

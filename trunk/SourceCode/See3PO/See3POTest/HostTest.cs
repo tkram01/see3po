@@ -100,7 +100,6 @@ namespace See3POTest
             Assert.AreEqual(expected, actual);
 
             //disconnect
-            target.ToggleConnection();
         }
     }
 }

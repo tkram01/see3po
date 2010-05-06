@@ -38,11 +38,13 @@ namespace See3PO
             m_RobotHost = new CRobotHost(this);         // The CRobotHost that will handle communication
 
             m_pixelsperfoot = 2.0;                      // This is the floorplan scale, and we may not need it
+
+            loadSettings();
         }
 
-//************************************************************************************************
-//       Public Methods
-//************************************************************************************************
+        //************************************************************************************************
+        //       Public Methods
+        //************************************************************************************************
 
         /// <summary>
         /// Creates a new FloorPlan object in m_Status, then uses that to create a new PathFinder object
@@ -52,7 +54,6 @@ namespace See3PO
         public void CreateStatus(Image FloorPlanImage, double ppf)
         {
             m_pixelsperfoot = ppf;
-
             m_status = new Status(FloorPlanImage, m_pixelsperfoot);
 
             m_pathfinder = new QGPathFinder(m_status.FloorPlan);
@@ -73,7 +74,7 @@ namespace See3PO
         /// <summary>
         /// Sends each move in the path to the robot
         /// </summary>
-        public void Drive() 
+        public void Drive()
         {
             if (m_RobotHost.IsConnected)
             {
@@ -101,7 +102,7 @@ namespace See3PO
                             double ratio = (double)ticks / (double)nextMove.duration;
                             Point currentPoint = new Point((int)(oldPoint.X * (1.0 - ratio) + nextPoint.X * ratio),
                                 (int)(oldPoint.Y * (1.0 - ratio) + nextPoint.Y * ratio));
-                            
+
                             Status.Position = new Position(currentPoint, Status.Position.facing);
                             m_status.FloorPlan.getTile(currentPoint.X, currentPoint.Y).SetPath(false);
 
@@ -113,12 +114,12 @@ namespace See3PO
                     else
                     {
                         while (ticks < nextMove.duration)
-                        { 
-                            ticks = (long)DateTime.Now.Subtract(sent).TotalMilliseconds; 
+                        {
+                            ticks = (long)DateTime.Now.Subtract(sent).TotalMilliseconds;
                         }
                         Status.Path[0].SetPath(false);
                         Status.Position = new Position(Status.Path[0].Position, Status.Position.facing);
-                        
+
                     }
 
                 }
@@ -277,19 +278,19 @@ namespace See3PO
             }
         }
 
-//************************************************************************************************
-//       Private Methods
-//************************************************************************************************
+        //************************************************************************************************
+        //       Private Methods
+        //************************************************************************************************
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        private Queue<MoveCommand> ConvertPath() 
+        private Queue<MoveCommand> ConvertPath()
         {
             Queue<MoveCommand> newPath = new Queue<MoveCommand>();
 
-            if (Status.Path != null && Status.Path.Count > 0) 
+            if (Status.Path != null && Status.Path.Count > 0)
             {
                 Point facing = facingToVector(Status.Position.facing);  // We'll use this to figure out the current facing and use it as a vector
 
@@ -311,11 +312,11 @@ namespace See3PO
                     if (lastDisplacement.X == nextDisplacement.X || lastDisplacement.Y == nextDisplacement.Y) // not turning 
                     {
                         forwardDist += Math.Abs(nextDisplacement.X + nextDisplacement.Y); // One of these will be zero, and we're just looking for the magnitude. 
-                        
+
                         if (forwardDist > 0)
                             newPath.Enqueue(new MoveCommand(MoveCommand.Direction.Forward, forwardDist * FORWARD_MS)); // Then enqueue your forward
-                        
-                        forwardDist = 0;   
+
+                        forwardDist = 0;
                     }
                     else                                                // if we are turning
                     {
@@ -354,7 +355,7 @@ namespace See3PO
         {
             Matrix CW = new Matrix(0, 1, -1, 0, 0, 0);                  // rotation matrices
 
-            Point [] CWarray = {PC};                                    // The matrix methods take point arrays
+            Point[] CWarray = { PC };                                    // The matrix methods take point arrays
 
             CW.TransformPoints(CWarray);                                // Perform a clockwise transform on the point
 
@@ -369,10 +370,11 @@ namespace See3PO
         /// </summary>
         /// <param name="facing"></param>
         /// <returns></returns>
-        private Point facingToVector(int facing){
+        private Point facingToVector(int facing)
+        {
             Point currentDir;     // get starting facing : 0 = East, 90 = North, 180 = West, 270 = South
             if (facing > 315 || facing <= 45)       // East
-                currentDir= new Point(1, 0);
+                currentDir = new Point(1, 0);
 
             else if (facing > 45 && facing <= 135)  // North
                 currentDir = new Point(0, -1);
@@ -385,7 +387,7 @@ namespace See3PO
 
             return currentDir;
         }
-    
+
         /// <summary>
         /// Converts a MoveCommand objec to a corresponding int array of wheel speeds
         /// </summary>
@@ -558,21 +560,21 @@ namespace See3PO
             }
         }
 
- 
-//************************************************************************************************
-//       Private Attributes
-//************************************************************************************************
-        private const int FORWARD_L = 179;      // Forward Wheel Speed Default
-        private const int FORWARD_R = 150;      // Forward Wheel Speed Default
-        private const int FORWARD_MS = 2000;         // forward durations in ms
 
-        private const int TURN_CW = 155;         // Turning Wheel Speed Default
-        private const int TURN_CW_MS = 1800;         // Turning durations in ms
-        
-        private const int TURN_CCW = 170;         // Turning Wheel Speed Default
-        private const int TURN_CCW_MS = 2100;
+        //************************************************************************************************
+        //       Private Attributes
+        //************************************************************************************************
+        private  int FORWARD_L = 179;      // Forward Wheel Speed Default
+        private  int FORWARD_R = 150;      // Forward Wheel Speed Default
+        private  int FORWARD_MS = 2000;         // forward durations in ms
 
-        private const int DURATION_INC = 50;        // 
+        private  int TURN_CW = 155;         // Turning Wheel Speed Default
+        private  int TURN_CW_MS = 1800;         // Turning durations in ms
+
+        private  int TURN_CCW = 170;         // Turning Wheel Speed Default
+        private  int TURN_CCW_MS = 2100;
+
+        private  int DURATION_INC = 50;        // 
 
         private UI m_UI;                            // The User Interface
 
@@ -597,9 +599,9 @@ namespace See3PO
         private TimerCallback m_callback;
 
 
-//************************************************************************************************
-//       Getters and Setters for private attributes
-//************************************************************************************************
+        //************************************************************************************************
+        //       Getters and Setters for private attributes
+        //************************************************************************************************
 
         /// <summary>
         /// The Locator (Tyler's Program)
@@ -635,7 +637,72 @@ namespace See3PO
                 m_status.Position = new Position(value.location.X, value.location.Y, value.facing);
             }
         }
-            
+
+
+
+        // open a defaults file and load the defaults
+        public void loadSettings()
+        {
+            string file = ".\\settings\\settings.txt";
+            try
+            {
+                if (!File.Exists(file))
+                {
+
+                    using (StreamWriter sw = File.CreateText(file))
+                    {
+                        m_UI.PostMessage("No Defaults File Found");
+                    }
+                }
+
+                using (StreamReader reader = new StreamReader(File.OpenRead(file)))
+                {
+                    string line = reader.ReadLine();
+                    string[] words = line.Split('=');
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        try{
+                            if (words[0] == "FORWARD_L")
+                            {
+                                FORWARD_L = int.Parse(words[1]);
+                            }
+                            if (words[0] == "FORWARD_R")
+                            {
+                                FORWARD_R = int.Parse(words[1]);
+                            }
+                            if (words[0] == "FORWARD_MS")
+                            {
+                                FORWARD_MS = int.Parse(words[1]);
+                            }
+                            if (words[0] == "TURN_CW")
+                            {
+                                TURN_CW = int.Parse(words[1]);
+                            }
+                            if (words[0] == "TURN_CW_MS")
+                            {
+                                TURN_CW_MS = int.Parse(words[1]);
+                            }
+                            if (words[0] == "TURN_CCW")
+                            {
+                                TURN_CCW = int.Parse(words[1]);
+                            }
+                            if (words[0] == "TURN_CCW_MS")
+                            {
+                                TURN_CCW_MS = int.Parse(words[1]);
+                            }
+                            if (words[0] == "DURATION_INC")
+                            {
+                                DURATION_INC = int.Parse(words[1]);
+                            }
+                        } catch (Exception e){m_UI.PostMessage("error parsing: " + line);}
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                m_UI.PostMessage("file not found:" + file);
+            }
+        }
     }
 }
 

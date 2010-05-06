@@ -64,6 +64,7 @@ namespace GUI
             this.setDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFloorPlanDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFloorPlanDialog = new System.Windows.Forms.SaveFileDialog();
+            this.loadSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -121,7 +122,8 @@ namespace GUI
             this.exitMenuItem,
             this.loadFloorPlanToolStripMenuItem,
             this.saveFloorPlanToolStripMenuItem,
-            this.importFloorPlanImageToolStripMenuItem});
+            this.importFloorPlanImageToolStripMenuItem,
+            this.loadSettingsToolStripMenuItem});
             this.fileMenu.Name = "fileMenu";
             this.fileMenu.Size = new System.Drawing.Size(37, 20);
             this.fileMenu.Text = "File";
@@ -371,6 +373,13 @@ namespace GUI
             this.saveFloorPlanDialog.InitialDirectory = "\"\"";
             this.saveFloorPlanDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFloorPlanDialog_FileOk);
             // 
+            // loadSettingsToolStripMenuItem
+            // 
+            this.loadSettingsToolStripMenuItem.Name = "loadSettingsToolStripMenuItem";
+            this.loadSettingsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.loadSettingsToolStripMenuItem.Text = "Load Settings";
+            this.loadSettingsToolStripMenuItem.Click += new System.EventHandler(this.loadSettingsToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +447,7 @@ namespace GUI
         private System.Windows.Forms.ToolStripStatusLabel InstructionsLabel;
         private System.Windows.Forms.OpenFileDialog openFloorPlanDialog;
         private System.Windows.Forms.SaveFileDialog saveFloorPlanDialog;
+        private System.Windows.Forms.ToolStripMenuItem loadSettingsToolStripMenuItem;
 
 	}
 }

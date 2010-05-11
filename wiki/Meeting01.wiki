@@ -1,5 +1,5 @@
 #summary Meeting #1, 10/1/2009
-#labels Meeting
+#labels Deprecated
 
 =Team Meeting=
 	* Date: 10/1/2009

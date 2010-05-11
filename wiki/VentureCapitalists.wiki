@@ -1,4 +1,5 @@
 #summary Presentation for pseudo-potential investor.
+#labels Deprecated
 
 = Assignments = 
 

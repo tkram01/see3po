@@ -1,4 +1,5 @@
 #summary See3PO's camera
+#labels Deprecated
 
 
 = Camera Options =

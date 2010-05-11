@@ -1,4 +1,5 @@
 #summary Live Demo 1
+#labels Deprecated
 
 == Introduction ==
 

@@ -1,4 +1,5 @@
 #summary Project Name Discussion
+#labels Deprecated
 
 We were trying to figure out the name of the project. First, we were thinking of the features that the robot can do. The features can be served as the acronyms.
 

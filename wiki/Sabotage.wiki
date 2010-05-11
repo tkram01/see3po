@@ -1,4 +1,5 @@
 #summary Sometimes, you need to go the extra mile
+#labels Deprecated
 
 = Inter-Group Sabotage=
 

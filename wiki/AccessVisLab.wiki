@@ -1,4 +1,5 @@
 #summary Detail of gaining access of VisLab
+#labels Deprecated
 
 We obtained Marc Pomplun's (lab director) agreement to access VisLab.
 However, department administrator might consider the security of lab and he was not able to create accounts for all team members.

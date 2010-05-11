@@ -56,3 +56,26 @@ C:\Documents and Settings\frank\My Documents\see3po\GUI\obj\Debug\GUI.FacingForm
 D:\Documents\School\see3po\GUI\bin\Debug\PathFinding.dll
 D:\Documents\School\see3po\GUI\bin\Debug\PathFinding.pdb
 D:\Documents\School\see3po\GUI\bin\Debug\GUI.XML
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\GUI.exe
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\GUI.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\FloorPlanAndTile.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\Nexus3Input.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\RobotCommands.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\RobotHost.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\See3PO.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\PathFinding.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\RobotHost.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\RobotCommands.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\FloorPlanAndTile.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\See3PO.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\PathFinding.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\GUI.FacingForm.resources
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\GUI.MainForm.resources
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\GUI.PathForm.resources
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\GUI.ScaleForm.resources
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\GUI.exe
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\GUI.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\GUI\bin\Debug\GUI.XML

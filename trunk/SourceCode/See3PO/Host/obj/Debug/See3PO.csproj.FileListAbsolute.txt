@@ -44,3 +44,16 @@ F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\RobotCommands.pdb
 F:\Nick\UMassBoston\CS682\SVN\SourceCode\See3PO\Host\bin\Debug\FloorPlanAndTile.pdb
 D:\Documents\School\see3po\See3PO\Host\bin\Debug\PathFinding.dll
 D:\Documents\School\see3po\See3PO\Host\bin\Debug\PathFinding.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\See3PO.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\See3PO.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\FloorPlanAndTile.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\PathFinding.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\RobotCommands.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\RobotHost.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\RobotHost.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\RobotCommands.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\FloorPlanAndTile.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\bin\Debug\PathFinding.pdb
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\obj\Debug\See3PO.dll
+C:\Documents and Settings\Jacky\Desktop\see\see\SourceCode\See3PO\Host\obj\Debug\See3PO.pdb

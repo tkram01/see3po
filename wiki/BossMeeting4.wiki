@@ -1,5 +1,5 @@
 #summary BossMeeting4
-#labels Meeting
+#labels Deprecated
 =Meeting with Tyler=
 	* Date: 12/01/2009
 	* Time: 5:30 PM

@@ -1,4 +1,5 @@
 #summary A Technical Presentation of See3PO
+#labels Deprecated
 
 === Presenters ===
 [Hao] and [Debarati]

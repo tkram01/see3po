@@ -1,4 +1,5 @@
-#summary A Central Data Structure used and edited by all components
+#summary This has been replaced by Status
+#labels depreciated
 
 = CORE =
 

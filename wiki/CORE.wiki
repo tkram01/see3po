@@ -1,5 +1,5 @@
 #summary This has been replaced by Status
-#labels depreciated
+#labels Deprecated
 
 = CORE =
 

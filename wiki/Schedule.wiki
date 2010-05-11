@@ -19,9 +19,12 @@ For Events scheduled prior to April 2009, see our [ScheduleArchive Archived Sche
 
 ===May===
 || *Task*                            || *Due*        || *Status*     || *Taken By* || *Completed Date* ||
-|| Project poster draft due || 05/04/2010 || || [Nick] [Debarati] || ||
-|| Project poster due || 05/11/2010 || || [Nick] [Debarati] || ||
-|| Code Comments and Docs completed || 05/11/2010 || || All || ||
+|| Project poster draft due || 05/04/2010 || || [Nick] [Debarati] || 05/04/2010 ||
+|| Hao Sequence/Use Case Image completed || 05/11/2010 || Complete || [Hao] ||5/10/2010 ||
+|| Floor Plan/Path images redone || 05/11/2010 || Complete  || [Frank] || 5/11/2010 ||
+|| Human Head Poster image competed || 05/11/2010 || Complete  || [Jacky] || 5/11/2010 ||
+|| Project poster due || 05/12/2010 || || [Nick] [Debarati] || ||
+|| Code Comments and Docs completed || 05/12/2010 || || All || ||
 || Final release bug lists || 05/11/2010 || || All || ||
 || Department annual alumni event - demo || 05/19/2010 || || TBA || ||
 

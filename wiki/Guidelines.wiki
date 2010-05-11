@@ -1,4 +1,5 @@
 #summary The programming guideline for team members *(DRAFT)*
+#labels Deprecated
 
 = Introduction =
 

@@ -1,4 +1,5 @@
 #summary Potential Logos for the project
+#labels Deprecated
 
 =Logos=
 

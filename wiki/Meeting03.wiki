@@ -1,4 +1,5 @@
 #summary Meeting #3, 10/15/2009
+#labels Deprecated
 
 =Weekly Team Meeting #3=
 	* Date: 10/15/2009

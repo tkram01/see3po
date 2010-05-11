@@ -405,14 +405,14 @@ namespace See3PO
                     break;
 
                 case MoveCommand.Direction.CCW:
-                    speeds[0] = -TURN_CCW;
-                    speeds[1] = TURN_CCW;
+                    speeds[0] = TURN_CCW_L;
+                    speeds[1] = TURN_CCW_R;
                     speeds[2] = move.duration;
                     break;
 
                 case MoveCommand.Direction.CW:
-                    speeds[0] = TURN_CW;
-                    speeds[1] = -TURN_CW;
+                    speeds[0] = TURN_CW_L;
+                    speeds[1] = TURN_CW_R;
                     speeds[2] = move.duration;
                     break;
             }
@@ -442,7 +442,7 @@ namespace See3PO
                 String msg = "\n\r speeds: " + leftSpeed + " " + rightSpeed + " duration" + duration;
                 m_UI.PostMessage(msg);
 
-                m_RobotHost.Send(new byte[] { 0x01, 0x10, 0x11, leftSpeeds[0], leftSpeeds[1], rightSpeeds[0], rightSpeeds[1], durations[0], durations[1], 0xEF }, true);
+                m_RobotHost.Send(new byte[] { 0x01, 0x10, 0x11, rightSpeeds[1], rightSpeeds[0], leftSpeeds[1], leftSpeeds[0], durations[1], durations[0], 0xEF }, true);
             }
         }
 
@@ -568,10 +568,12 @@ namespace See3PO
         private  int FORWARD_R = 150;      // Forward Wheel Speed Default
         private  int FORWARD_MS = 2000;         // forward durations in ms
 
-        private  int TURN_CW = 155;         // Turning Wheel Speed Default
-        private  int TURN_CW_MS = 1800;         // Turning durations in ms
+        private  int TURN_CW_L =155;         // Turning Wheel Speed Default
+        private int TURN_CW_R = -155;         // Turning Wheel Speed Default
+        private int TURN_CW_MS = 1800;         // Turning durations in ms
 
-        private  int TURN_CCW = 170;         // Turning Wheel Speed Default
+        private  int TURN_CCW_L = -170;         // Turning Wheel Speed Default
+        private int TURN_CCW_R = 170;
         private  int TURN_CCW_MS = 2100;
 
         private  int DURATION_INC = 50;        // 
@@ -643,7 +645,7 @@ namespace See3PO
         // open a defaults file and load the defaults
         public void loadSettings()
         {
-            string file = ".\\settings\\settings.txt";
+            string file = "Settings.txt";
             try
             {
                 if (!File.Exists(file))
@@ -658,10 +660,11 @@ namespace See3PO
                 using (StreamReader reader = new StreamReader(File.OpenRead(file)))
                 {
                     string line = reader.ReadLine();
-                    string[] words = line.Split('=');
+                    
                     while ((line = reader.ReadLine()) != null)
                     {
                         try{
+                            string[] words = line.Split('=');
                             if (words[0] == "FORWARD_L")
                             {
                                 FORWARD_L = int.Parse(words[1]);
@@ -674,17 +677,25 @@ namespace See3PO
                             {
                                 FORWARD_MS = int.Parse(words[1]);
                             }
-                            if (words[0] == "TURN_CW")
+                            if (words[0] == "TURN_CW_L")
                             {
-                                TURN_CW = int.Parse(words[1]);
+                                TURN_CW_L = int.Parse(words[1]);
+                            } 
+                            if (words[0] == "TURN_CW_R")
+                            {
+                                TURN_CW_R = int.Parse(words[1]);
                             }
                             if (words[0] == "TURN_CW_MS")
                             {
                                 TURN_CW_MS = int.Parse(words[1]);
                             }
-                            if (words[0] == "TURN_CCW")
+                            if (words[0] == "TURN_CCW_L")
                             {
-                                TURN_CCW = int.Parse(words[1]);
+                                TURN_CCW_L = int.Parse(words[1]);
+                            }
+                            if (words[0] == "TURN_CCW_R")
+                            {
+                                TURN_CCW_R = int.Parse(words[1]);
                             }
                             if (words[0] == "TURN_CCW_MS")
                             {

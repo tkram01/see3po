@@ -1,4 +1,5 @@
 #summary Questions about hardware
+#labels Deprecated
 
  ** How to upload/update files onto robot's embedded computer?
  Ans: (old version)

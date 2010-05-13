@@ -19,4 +19,4 @@
 = To do list =
 || Need install a power switch || done ||
 || Mount the PC board onto robot || done ||
-|| Battery connector (2 pin) ||  ||
+|| Battery connector (2 pin) || done ||

@@ -2,6 +2,12 @@
 #labels Featured,Phase-Support
 = Comments and questions from the Professor =
 
+== May 19 ==
+
+Congratulations on a difficult job well done. The obstacles were formidable - hardware incompatibilities, no voodoo program from your client - but you overcame them.
+
+----
+
 == March 11 ==
 
 Will I see a sprint 1 demo at 4 today (just over an hour from now)?
